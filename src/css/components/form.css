@@ -1,0 +1,77 @@
+form {
+  max-width: 35em;
+  margin: 0 auto;
+}
+
+label,
+legend {
+  display: block;
+  margin-bottom: var(--space-xs);
+  color: var(--theme-dark-text);
+}
+
+label.label-inline {
+  display: inline;
+  color: var(--black);
+}
+
+.label-inline + input[type=radio],
+.label-inline + input[type=checkbox] {
+  margin-left: var(--space-xs);
+}
+
+.form__group {
+  position: relative;
+  display: block;
+}
+
+.form__group + .form__group {
+  margin-top: var(--space-l);
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.overlay-button {
+  position: absolute;
+  right: var(--space-l);
+  top: 1.25em;
+  background: 0;
+  border: 0;
+  width: 15px;
+  height: 15px;
+}
+
+.search__group {
+  position: relative;
+}
+
+.overlayed-button .icon-search {
+  height: 15px;
+  width: 15px;
+}
+
+.input__group {
+  display: flex;
+  flex-direction: row;
+}
+
+.input__group .icon-button,
+.input__group .icon-button:active {
+  margin-left: var(--space-s);
+  padding: 0 0.8em;
+}
+
+.input__group .icon-button .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.input__group .button {
+  flex-shrink: 0;
+  margin-left: var(--space-s);
+}
