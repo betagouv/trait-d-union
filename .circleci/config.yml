@@ -70,7 +70,7 @@ jobs:
             - "17:26:2d:c8:49:c4:19:cc:83:83:78:91:9c:75:e9:d3"
       - run:
           name: Deploy to scalingo production instance
-          command: git push git@scalingo.com:traitdunion.git $CIRCLE_SHA1:master
+          command: GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:traitdunion.git $CIRCLE_SHA1:master
 
 workflows:
   version: 2
