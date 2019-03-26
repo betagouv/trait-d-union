@@ -4,6 +4,7 @@ defaults: &defaults
       environment:
         JOBS: 1
   working_directory: ~/front
+  build_dir: front
 
 version: 2
 jobs:
