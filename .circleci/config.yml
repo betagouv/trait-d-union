@@ -3,8 +3,7 @@ defaults: &defaults
     - image: circleci/node:10-browsers
       environment:
         JOBS: 1
-  working_directory: ~/front
-  build_dir: front
+  working_directory: ~/project/front
 
 version: 2
 jobs:
