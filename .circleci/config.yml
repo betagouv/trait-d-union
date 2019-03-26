@@ -42,23 +42,23 @@ jobs:
     steps:
       - attach_workspace:
           at: .
-      - run: echo 'export PATH=~/front/node_modules/.bin:$PATH' >> $BASH_ENV
+      - run: echo 'export PATH=~/project/front/node_modules/.bin:$PATH' >> $BASH_ENV
       - run:
           name: Lint Handlebars
-          command: npm run lint:hbs
+          command: cd front && npm run lint:hbs
       - run:
           name: Lint JavaScript
-          command: npm run lint:js
+          command: cd front && npm run lint:js
 
   test:
     <<: *defaults
     steps:
       - attach_workspace:
           at: .
-      - run: echo 'export PATH=~/front/node_modules/.bin:$PATH' >> $BASH_ENV
+      - run: echo 'export PATH=~/project/front/node_modules/.bin:$PATH' >> $BASH_ENV
       - run:
           name: Run Tests
-          command: npm run test
+          command: cd front && npm run test
 
 workflows:
   version: 2
