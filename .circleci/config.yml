@@ -60,6 +60,15 @@ jobs:
           name: Run Tests
           command: cd front && npm run test
 
+  deploy:
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "17:26:2d:c8:49:c4:19:cc:83:83:78:91:9c:75:e9:d3"
+      - run:
+          name: Deploy to scalingo production instance
+          command: git push git@scalingo.com:traitdunion.git $CIRCLE_SHA1:master
+
 workflows:
   version: 2
   build_and_test:
@@ -74,3 +83,7 @@ workflows:
       - test:
           requires:
             - install_dependencies
+      - deploy:
+          requires:
+            - lint
+            - test
