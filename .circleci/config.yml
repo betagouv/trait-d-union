@@ -3,7 +3,7 @@ defaults: &defaults
     - image: circleci/node:10-browsers
       environment:
         JOBS: 1
-  working_directory: ~/project/front
+  working_directory: ~/project
 
 version: 2
 jobs:
@@ -23,15 +23,15 @@ jobs:
           at: .
       - restore_cache:
           keys:
-            - front-node10-v1-{{ checksum "package-lock.json" }}
-      - run: npm config set spin false
+            - front-node10-v1-{{ checksum "front/package-lock.json" }}
+      - run: cd front && npm config set spin false
       - run:
           name: NPM Install
-          command: npm install
+          command: cd front && npm install
       - save_cache:
-          key: front-node10-v1-{{ checksum "package-lock.json" }}
+          key: front-node10-v1-{{ checksum "front/package-lock.json" }}
           paths:
-            - ~/front/node_modules
+            - ~/project/front/node_modules
       - persist_to_workspace:
           root: .
           paths:
