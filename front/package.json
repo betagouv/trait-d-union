@@ -54,6 +54,6 @@
     "qunit-dom": "^0.8.0"
   },
   "engines": {
-    "node": "lts/dubnium"
+    "node": "10.x"
   }
 }
