@@ -76,8 +76,8 @@ jobs:
             git config user.name "Circle CI"
             git tag $(node -p "require('./package.json').version")
             git commit -am 'Bumped version'
-            git push origin master
-            git push --tags
+            GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push origin master
+            GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push --tags
       - run:
           name: Deploy to scalingo production instance
           command: GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:traitdunion.git $CIRCLE_SHA1:master
