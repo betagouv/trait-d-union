@@ -5,7 +5,7 @@
   "description": "Front end application for Trait d'Union",
   "repository": "",
   "license": "MIT",
-  "author": "",
+  "author": "beta.gouv",
   "directories": {
     "doc": "doc",
     "test": "tests"
