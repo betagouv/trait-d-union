@@ -76,7 +76,7 @@ jobs:
             git config user.email "circle-ci@traitdunion.fr"
             git config user.name "Circle CI"
             git tag $(node -p "require('./package.json').version")
-            git commit -am "Deploy version $(node -p "require('./package.json').version")"
+            git commit -am "Deploy version $(node -p "require('./package.json').version") [skip ci]"
             git push -q https://${GITHUB_TOKEN}@github.com/betagouv/trait-d-union.git master
             git push -q https://${GITHUB_TOKEN}@github.com/betagouv/trait-d-union.git --tags
       - run:
