@@ -72,11 +72,12 @@ jobs:
           name: Update version
           command: |
             cd front && npm version patch
+            git config user.email "circle-ci@traitdunion.fr"
+            git config user.name "Circle CI"
             git tag $(node -p "require('./package.json').version")
             git commit -m 'Bumped version'
             git push origin master
             git push --tags
-            GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" npm version patch
       - run:
           name: Deploy to scalingo production instance
           command: GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:traitdunion.git $CIRCLE_SHA1:master
