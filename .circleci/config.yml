@@ -72,12 +72,13 @@ jobs:
           name: Update version
           command: |
             cd front && npm version patch
+            git config credential.helper 'cache --timeout=120'
             git config user.email "circle-ci@traitdunion.fr"
             git config user.name "Circle CI"
             git tag $(node -p "require('./package.json').version")
             git commit -am 'Bumped version'
-            GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push origin master
-            GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push --tags
+            git push -q https://${GITHUB_TOKEN}@github.com/betagouv/trait-d-union.git master
+            git push -q https://${GITHUB_TOKEN}@github.com/betagouv/trait-d-union.git --tags
       - run:
           name: Deploy to scalingo production instance
           command: GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:traitdunion.git $CIRCLE_SHA1:master
