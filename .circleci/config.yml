@@ -75,7 +75,7 @@ jobs:
             git config user.email "circle-ci@traitdunion.fr"
             git config user.name "Circle CI"
             git tag $(node -p "require('./package.json').version")
-            git commit -m 'Bumped version'
+            git commit -am 'Bumped version'
             git push origin master
             git push --tags
       - run:
