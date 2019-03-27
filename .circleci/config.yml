@@ -76,12 +76,12 @@ jobs:
             git config user.email "circle-ci@traitdunion.fr"
             git config user.name "Circle CI"
             git tag $(node -p "require('./package.json').version")
-            git commit -am 'Bumped version'
+            git commit -am "Deploy version $(node -p "require('./package.json').version")"
             git push -q https://${GITHUB_TOKEN}@github.com/betagouv/trait-d-union.git master
             git push -q https://${GITHUB_TOKEN}@github.com/betagouv/trait-d-union.git --tags
       - run:
           name: Deploy to scalingo production instance
-          command: GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:traitdunion.git $CIRCLE_SHA1:master
+          command: GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:traitdunion.git master
 
 workflows:
   version: 2
