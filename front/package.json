@@ -1,11 +1,11 @@
 {
   "name": "front",
-  "version": "0.0.0",
+  "version": "0.0.5",
   "private": true,
-  "description": "Small description for front goes here",
+  "description": "Front end application for Trait d'Union",
   "repository": "",
   "license": "MIT",
-  "author": "",
+  "author": "beta.gouv",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -15,7 +15,8 @@
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember test",
+    "start:test": "ember test -s"
   },
   "devDependencies": {
     "@ember/jquery": "^0.5.2",
@@ -23,6 +24,7 @@
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^4.0.1",
     "ember-auto-import": "1.2.21",
+    "ember-circleci": "1.2.0",
     "ember-cli": "~3.8.1",
     "ember-cli-app-version": "^3.2.0",
     "ember-cli-babel": "^7.1.2",
@@ -42,11 +44,17 @@
     "ember-resolver": "^5.0.1",
     "ember-source": "~3.8.0",
     "ember-welcome-page": "^3.2.0",
+    "eslint": "5.15.3",
+    "eslint-config-standard": "12.0.0",
     "eslint-plugin-ember": "^5.2.0",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-node": "8.0.1",
+    "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-standard": "4.0.0",
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.8.0"
   },
   "engines": {
-    "node": "6.* || 8.* || >= 10.*"
+    "node": "10.x"
   }
 }
