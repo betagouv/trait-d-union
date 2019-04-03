@@ -1,0 +1,32 @@
+.table {
+  background: var(--theme-background-white);
+  border: 1px solid var(--theme-border-lighter);
+  border-left: 0;
+  border-right: 0;
+  border-radius: 2px;
+  position: relative;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table td,
+.table th {
+  padding: var(--space-s);
+  text-align: left;
+}
+
+.table td {
+  border-top: 1px solid var(--lighter-grey);
+}
+
+.table thead th {
+  background: var(--lightest-grey);
+  border-bottom: 1px solid var(--theme-border-lighter);
+  font-size: 0.875em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.table tr:hover {
+  background: var(--lightest-grey);
+}
