@@ -1,0 +1,29 @@
+{
+  "name": "traitdunion",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "npm run build:api && npm run build:front",
+    "build:front": "cd front && npm run build",
+    "build:api": "cd backend && npm run build",
+    "test": "npm run test:api && npm run test:front",
+    "test:front": "cd front && npm run test",
+    "test:api": "cd backend && npm run test",
+    "lint": "npm run lint:api && npm run lint:front",
+    "lint:front": "cd front && npm run lint",
+    "lint:api": "cd backend && npm run lint",
+    "start": "npm run start:api && npm run start:front",
+    "start:front": "cd front && npm run start",
+    "start:api": "cd backend && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betagouv/trait-d-union.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/betagouv/trait-d-union/issues"
+  },
+  "homepage": "https://github.com/betagouv/trait-d-union#readme"
+}
