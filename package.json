@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "install": "run-p install:front install:api",
+    "postinstall": "run-p --print-label install:front install:api",
     "install:front": "cd front && npm install",
     "install:api": "cd api && npm install",
     "build": "run-p build:front",
