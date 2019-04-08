@@ -37,7 +37,7 @@
     "type": "git"
   },
   "author": "",
-  "license": "",
+  "license": "MIT",
   "files": [
     "README.md",
     "index.js",
@@ -57,7 +57,7 @@
     "@loopback/service-proxy": "^1.1.2"
   },
   "devDependencies": {
-    "@loopback/build": "^1.4.1",
+    "@loopback/build": "1.4.1",
     "@loopback/testlab": "^1.2.2",
     "@loopback/tslint-config": "^2.0.4",
     "@types/node": "^10.11.2",
