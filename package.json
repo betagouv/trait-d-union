@@ -15,8 +15,8 @@
     "lint:front": "cd front && npm run lint",
     "lint:api": "cd api && npm run lint",
     "start": "run-p --print-label start:front start:api",
-    "start:front": "cd front && npm run start",
-    "start:api": "cd api && npm run start"
+    "start:front": "cd front && PORT=$FRONT_PORT npm run start",
+    "start:api": "cd api && PORT=$API_PORT npm run start"
   },
   "repository": {
     "type": "git",
