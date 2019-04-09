@@ -6,17 +6,17 @@
     "postinstall": "run-p --print-label install:front install:api",
     "install:front": "cd front && npm install",
     "install:api": "cd api && npm install",
-    "build": "run-p --print-label build:front",
+    "build": "run-s --print-label build:front cp:front",
     "build:front": "cd front && npm run build",
+    "cp:front": "cp -r front/dist/* api/client",
     "test": "run-p --print-label test:front test:api",
     "test:front": "cd front && npm run test",
     "test:api": "cd api && npm run test",
     "lint": "run-p --print-label lint:front lint:api",
     "lint:front": "cd front && npm run lint",
     "lint:api": "cd api && npm run lint",
-    "start": "run-p --print-label start:front start:api",
-    "start:front": "cd front && PORT=$FRONT_PORT npm run start",
-    "start:api": "cd api && PORT=$API_PORT npm run start"
+    "start": "run-p --print-label start:api",
+    "start:api": "cd api && npm run start"
   },
   "repository": {
     "type": "git",
