@@ -59,7 +59,7 @@ jobs:
           paths:
             - .
 
-  lint_front:
+  lint:
     <<: *defaults
     steps:
       - attach_workspace:
