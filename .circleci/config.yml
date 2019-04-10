@@ -88,6 +88,7 @@ jobs:
       - run:
           name: Update version
           command: |
+            git status
             git config credential.helper 'cache --timeout=120'
             git config user.email "circle-ci@traitdunion.fr"
             git config user.name "Circle CI"
