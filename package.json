@@ -16,8 +16,7 @@
     "lint:front": "cd front && npm run lint",
     "lint:api": "cd api && npm run lint",
     "start": "run-p --print-label start:api",
-    "start:api": "cd api && npm run start",
-    "preversion": "cd api && npm version patch && cd ../front && npm version patch"
+    "start:api": "cd api && npm run start"
   },
   "husky": {
     "hooks": {
