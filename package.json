@@ -21,14 +21,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm version patch"
+      "pre-push": "npm test"
     }
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/betagouv/trait-d-union.git"
   },
-  "author": "",
+  "author": "Beta Gouv",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/betagouv/trait-d-union/issues"

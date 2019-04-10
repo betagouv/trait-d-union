@@ -1,6 +1,6 @@
 {
   "name": "front",
-  "version": "0.0.11",
+  "version": "0.0.0-see-root-version",
   "private": true,
   "description": "Front end application for Trait d'Union",
   "repository": "",

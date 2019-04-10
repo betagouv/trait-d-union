@@ -1,6 +1,6 @@
 {
   "name": "api",
-  "version": "0.0.11",
+  "version": "0.0.0-see-root-version",
   "main": "server/server.js",
   "engines": {
     "node": ">=6"

@@ -86,5 +86,15 @@ jobs:
           fingerprints:
             - "17:26:2d:c8:49:c4:19:cc:83:83:78:91:9c:75:e9:d3"
       - run:
+          name: Update version
+          command: |
+            git config credential.helper 'cache --timeout=120'
+            git config user.email "circle-ci@traitdunion.fr"
+            git config user.name "Circle CI"
+            npm version patch
+            git tag $(node -p "require('./package.json').version")
+            git push -q https://${GITHUB_TOKEN}@github.com/betagouv/trait-d-union.git master
+            git push -q https://${GITHUB_TOKEN}@github.com/betagouv/trait-d-union.git --tags
+      - run:
           name: Deploy to scalingo production instance
           command: GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:traitdunion.git master
