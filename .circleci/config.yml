@@ -41,10 +41,19 @@ jobs:
     steps:
       - attach_workspace:
           at: .
+      - restore_cache:
+          keys:
+            - traitdunion-node10-v1-{{ checksum "package-lock.json" }}
       - run: npm config set spin false
       - run:
           name: NPM Install
-          command: npm ci
+          command: npm install
+      - save_cache:
+          key: traitdunion-node10-v1-{{ checksum "package-lock.json" }}
+          paths:
+            - ~/project/node_modules
+            - ~/project/api/node_modules
+            - ~/project/front/node_modules
       - persist_to_workspace:
           root: .
           paths:
@@ -79,7 +88,7 @@ jobs:
       - run:
           name: Update version
           command: |
-            git st
+            git status
             git config credential.helper 'cache --timeout=120'
             git config user.email "circle-ci@traitdunion.fr"
             git config user.name "Circle CI"
