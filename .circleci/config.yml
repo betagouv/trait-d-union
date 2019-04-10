@@ -47,7 +47,7 @@ jobs:
       - run: npm config set spin false
       - run:
           name: Update NPM to latest version
-          command: npm install -g npm@latest
+          command: sudo npm install -g npm@latest
       - run:
           name: Check npm and node version
           command: |
