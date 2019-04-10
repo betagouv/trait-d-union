@@ -91,7 +91,7 @@ jobs:
             git config credential.helper 'cache --timeout=120'
             git config user.email "circle-ci@traitdunion.fr"
             git config user.name "Circle CI"
-            npm version patch
+            npm version patch -m "Deploy %s [skip ci]"
             git push -q https://${GITHUB_TOKEN}@github.com/betagouv/trait-d-union.git master
             git push -q https://${GITHUB_TOKEN}@github.com/betagouv/trait-d-union.git --tags
       - run:
