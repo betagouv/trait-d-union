@@ -21,9 +21,8 @@ defaults: &defaults
   docker:
     - image: circleci/node:10.15.3-browsers
       environment:
-        JOBS: 2
+        JOBS: 1
   working_directory: ~/project
-  parallelism: 3
 
 version: 2
 jobs:
