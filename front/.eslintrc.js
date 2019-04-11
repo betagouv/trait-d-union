@@ -8,8 +8,8 @@ module.exports = {
     'ember'
   ],
   extends: [
-    'standard',
-    'plugin:ember/recommended'
+    'plugin:ember/recommended',
+    '../.eslintrc'
   ],
   env: {
     browser: true

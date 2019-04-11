@@ -21,10 +21,6 @@
     "loopback-component-explorer": "6.3.1",
     "loopback": "3.25.1"
   },
-  "devDependencies": {
-    "eslint": "3.19.0",
-    "eslint-config-loopback": "8.0.0"
-  },
   "repository": {
     "type": "",
     "url": ""
