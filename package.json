@@ -20,7 +20,8 @@
     "lint:api:fix": "cd api && npm run lint -- --fix",
     "start": "run-p --print-label start:api",
     "start:api": "cd api && npm run start",
-    "start:dev": "cd api && nodemon ."
+    "start:dev": "cd api && nodemon .",
+    "test:e2e:api": "cd api && npm run test:e2e"
   },
   "husky": {
     "hooks": {
@@ -48,6 +49,7 @@
   },
   "devDependencies": {
     "cucumber": "5.1.0",
+    "cucumber-pretty": "1.5.0",
     "eslint": "5.16.0",
     "eslint-config-loopback": "13.1.0",
     "eslint-config-standard": "12.0.0",
@@ -56,6 +58,7 @@
     "eslint-plugin-node": "8.0.1",
     "eslint-plugin-promise": "4.1.1",
     "eslint-plugin-standard": "4.0.0",
+    "mosic": "1.2.0",
     "nodemon": "1.18.11"
   }
 }
