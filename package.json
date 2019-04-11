@@ -12,6 +12,7 @@
     "test": "run-p --print-label test:front test:api",
     "test:front": "cd front && npm run test",
     "test:api": "cd api && npm run test",
+    "test:api:watch": "cd api && npm run test:watch",
     "lint": "run-p --print-label lint:front lint:api",
     "lint:fix": "run-p --print-label lint:front:fix lint:api:fix",
     "lint:front": "cd front && npm run lint",

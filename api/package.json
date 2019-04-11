@@ -10,6 +10,8 @@
     "lint": "eslint .",
     "start": "node .",
     "test:e2e": "cucumber-js tests/e2e/** --require tests/e2e/step-definitions/steps.js --format ../node_modules/cucumber-pretty",
+    "test": "mocha **/*.test.js --exclude **/node_modules/**",
+    "test:watch": "npm run test -- --watch --reporter=min",
     "posttest": "npm run lint"
   },
   "dependencies": {
@@ -21,7 +23,8 @@
     "serve-favicon": "2.5.0",
     "strong-error-handler": "3.2.0",
     "loopback-component-explorer": "6.3.1",
-    "loopback": "3.25.1"
+    "loopback": "3.25.1",
+    "joi": "14.3.1"
   },
   "repository": {
     "type": "",
