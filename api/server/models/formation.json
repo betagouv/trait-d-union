@@ -1,0 +1,55 @@
+{
+  "name": "Formation",
+  "plural": "Formations",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "exercice": {
+      "type": "number",
+      "required": true
+    },
+    "numero": {
+      "type": "number",
+      "required": true
+    },
+    "intitule": {
+      "type": "string",
+      "required": true
+    },
+    "modalite_intervention": {
+      "type": "string",
+      "required": true
+    },
+    "date_debut": {
+      "type": "date",
+      "required": true
+    },
+    "date_fin": {
+      "type": "date",
+      "required": true
+    },
+    "statut": {
+      "type": "string",
+      "required": true
+    },
+    "code_diplome": {
+      "type": "string",
+      "required": true
+    },
+    "commune": {
+      "type": "string",
+      "required": true
+    },
+    "localisation": {
+      "type": "geopoint",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

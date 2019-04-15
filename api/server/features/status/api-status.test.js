@@ -1,4 +1,4 @@
-const { expect } = require('mosic')
+const { expect } = require('../../../tests/test-utils')
 const apiStatus = require('./api-status')
 
 describe('API Status', () => {

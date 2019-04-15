@@ -1,0 +1,7 @@
+{
+  "loopback-seed": {
+    "datasource": "db",
+    "fakerLocale": "fr",
+    "seedsDir": "./database"
+  }
+}
