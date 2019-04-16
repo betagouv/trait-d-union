@@ -1,0 +1,28 @@
+{
+  "name": "Metier",
+  "plural": "Metiers",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "http": {
+    "path": "metiers"
+  },
+  "properties": {
+    "codeROME": {
+      "type": "number",
+      "id": true,
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "diplomes": {
+      "type": "hasAndBelongsToMany",
+      "model": "Diplome"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

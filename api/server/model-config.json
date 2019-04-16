@@ -42,5 +42,25 @@
   "Offre": {
     "dataSource": null,
     "public": true
+  },
+  "Metier": {
+    "dataSource": "db",
+    "public": true
+  },
+  "SessionFormation": {
+    "dataSource": "db",
+    "public": true
+  },
+  "ActionFormation": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Diplome": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Commune": {
+    "dataSource": "db",
+    "public": true
   }
 }

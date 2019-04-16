@@ -1,0 +1,31 @@
+{
+  "name": "Diplome",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "http": {
+    "path": "diplomes"
+  },
+  "properties": {
+    "codeDiplome": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "intitule": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "metiers": {
+      "type": "hasAndBelongsToMany",
+      "model": "Metier"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

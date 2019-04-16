@@ -1,0 +1,29 @@
+{
+  "name": "SessionFormation",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "numero": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "action": {
+      "type": "belongsTo",
+      "model": "ActionFormation",
+      "foreignKey": "actionNumero"
+    },
+    "commune": {
+      "type": "hasOne",
+      "model": "Commune",
+      "foreignKey": "sessionId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

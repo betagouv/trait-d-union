@@ -1,0 +1,30 @@
+{
+  "name": "ActionFormation",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "numero": {
+      "type": "number",
+      "id": true,
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "sessions": {
+      "type": "hasMany",
+      "model": "SessionFormation",
+      "foreignKey": ""
+    },
+    "diplome": {
+      "type": "belongsTo",
+      "model": "Diplome",
+      "foreignKey": "codeDiplome"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

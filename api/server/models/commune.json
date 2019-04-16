@@ -1,0 +1,25 @@
+{
+  "name": "Commune",
+  "plural": "communes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "codeInsee": {
+      "type": "number",
+      "required": true
+    },
+    "nom": {
+      "type": "string"
+    },
+    "coordonnees": {
+      "type": "geopoint"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
