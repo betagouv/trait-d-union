@@ -1,14 +1,15 @@
 const HttpErrors = require('http-errors')
 
-module.exports = ({ Formation }) => async ({ around }) => {
-  const formation = await Formation.find()
+module.exports = ({ SessionFormation }) => async ({ around }) => {
+  const formation = await SessionFormation.find()
+  console.log(formation)
   if (formation.length) {
     throw noOffresFoundError()
   }
   throw noFormationFoundError()
 }
 
-const noFormationFoundError = () => buildError('no-formation-found')
+const noFormationFoundError = () => buildError('no-session-formation-found')
 const noOffresFoundError = () => buildError('no-offre-found')
 
 function buildError (errorCode) {
@@ -18,8 +19,8 @@ function buildError (errorCode) {
 }
 
 const errors = {
-  'no-formation-found': 'Aucune formation n\'est disponible. ' +
+  'no-session-formation-found': 'Aucune session de formation n\'est disponible. ' +
     'Vérifiez que vous avez bien inséré le PRF en base ou réessayer en changeant de zone géographique.',
-  'no-offre-found': 'Aucune offre accessible avec une formation ' +
+  'no-offre-found': 'Aucune offre accessible avec une session de formation ' +
           'n\'a été trouvée dans la zone demandée.'
 }

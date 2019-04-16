@@ -36,6 +36,6 @@
   "devDependencies": {
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
-    "loopback-seed": "1.0.1"
+    "nock": "10.0.6"
   }
 }

@@ -3,7 +3,7 @@ module.exports = async ({ ActionFormation, Diplome, Metier, SessionFormation },
   await loadReferentiel(ActionFormation, referentielActions)
   await loadReferentiel(Diplome, referentielDiplomes)
   await loadReferentielMetiers(Metier, referentielMetiers)
-  await loadReferentielSessions({ SessionFormation, ActionFormation }, referentielSessions)
+  await loadReferentiel(SessionFormation, referentielSessions)
 }
 
 async function loadReferentielMetiers (Metier, referentielMetiers) {
@@ -12,16 +12,6 @@ async function loadReferentielMetiers (Metier, referentielMetiers) {
     await Promise.all(metier.diplomes.map(async (diplome) => insertedMetier.diplomes.add(diplome)))
   })
   await Promise.all(createMetiersPromises)
-}
-
-async function loadReferentielSessions ({ SessionFormation, ActionFormation }, referentielSessions) {
-  const createSessionsPromises = referentielSessions.map(async (session) => {
-    const insertedSession = await SessionFormation.create(session)
-    const action = await ActionFormation.findById(session.actionNumero)
-    console.log(action)
-    console.log(insertedSession)
-  })
-  await Promise.all(createSessionsPromises)
 }
 
 async function loadReferentiel (Model, referentiel) {

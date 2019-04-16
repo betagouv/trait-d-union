@@ -1,29 +1,29 @@
 const app = require('../../../server/server')
-const { BeforeAll, AfterAll, Given, When, Then } = require('cucumber')
+const { Before, BeforeAll, AfterAll, Given, When, Then } = require('cucumber')
 const { expect } = require('chai')
 const path = require('path')
 const got = require('got')
 const Joi = require('joi')
-
+const loadReferentiels = require('../../../server/features/referentiels/load-referentiels')
 const applicationBaseUrl = 'http://localhost:3000/api/v0'
 let response
 let server
 
 BeforeAll(async () => {
   server = await app.start()
-  await app.seeder.migrateAll()
+})
+
+Before(() => {
+  const referentiels = require('../referentiels')
+  return loadReferentiels(app.models, referentiels)
 })
 
 AfterAll(() => {
   server.close()
 })
 
-Given('No formation are seed', async () => {
-  await app.models.Formation.destroyAll()
-})
-
-Given(/^Formations are seed from '(.*)'$/, async (seedFile) => {
-  await app.seeder.migrate('Formation', 1)
+Given('No session formation is seed', async () => {
+  await app.models.SessionFormation.destroyAll()
 })
 
 When(/^GET '(\/[\S-.?=/]+)'$/, async (route) => {
@@ -46,7 +46,7 @@ Then(/^response payload conforms to '(.*)'$/, (schemaName) => {
 })
 
 Then(/^response payload is '(.*)'$/, (payloadFilename) => {
-  const filePath = path.join(process.cwd(), 'features/', payloadFilename)
+  const filePath = path.join(process.cwd(), 'tests/e2e', payloadFilename)
   const expectedPayload = require(filePath)
   expect(response.body).to.eql(expectedPayload)
 })

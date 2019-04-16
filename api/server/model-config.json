@@ -35,10 +35,6 @@
     "dataSource": "db",
     "public": false
   },
-  "Formation": {
-    "dataSource": "db",
-    "public": true
-  },
   "Offre": {
     "dataSource": null,
     "public": true
