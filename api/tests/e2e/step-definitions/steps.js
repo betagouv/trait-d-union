@@ -1,5 +1,5 @@
 const app = require('../../../server/server')
-const { Before, BeforeAll, AfterAll, Given, When, Then } = require('cucumber')
+const { BeforeAll, AfterAll, Given, When, Then } = require('cucumber')
 const { expect } = require('chai')
 const path = require('path')
 const got = require('got')
@@ -13,13 +13,14 @@ BeforeAll(async () => {
   server = await app.start()
 })
 
-Before(() => {
-  const referentiels = require('../referentiels')
-  return loadReferentiels(app.models, referentiels)
-})
-
 AfterAll(() => {
   server.close()
+})
+
+Given(/^Referentiel is seed from '(.*)'$/, async (referentielsPath) => {
+  await app.datasources.db.automigrate()
+  const referentiels = require(path.join(process.cwd(), 'tests/e2e/referentiels/', referentielsPath))
+  return loadReferentiels(app.models, referentiels)
 })
 
 Given('No session formation is seed', async () => {

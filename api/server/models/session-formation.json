@@ -19,9 +19,9 @@
       "foreignKey": "actionNumero"
     },
     "commune": {
-      "type": "hasOne",
+      "type": "belongsTo",
       "model": "Commune",
-      "foreignKey": "sessionId"
+      "foreignKey": "communeCodeInsee"
     }
   },
   "acls": [],

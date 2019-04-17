@@ -1,0 +1,1237 @@
+[
+  {
+    "codeDiplome": 18866,
+    "intitule": "BTS comptabilité et gestion des organisations",
+    "metiers": [
+      "M1203"
+    ]
+  },
+  {
+    "codeDiplome": 18990,
+    "intitule": "BTS management des unités commerciales",
+    "metiers": [
+      "D1301",
+      "D1406",
+      "D1503",
+      "D1508",
+      "M1701"
+    ]
+  },
+  {
+    "codeDiplome": 19004,
+    "intitule": "BTS négociation et relation client",
+    "metiers": [
+      "D1402",
+      "D1403",
+      "D1408"
+    ]
+  },
+  {
+    "codeDiplome": 20182,
+    "intitule": "Bac pro commerce",
+    "metiers": [
+      "D1211",
+      "D1212",
+      "D1214",
+      "D1408"
+    ]
+  },
+  {
+    "codeDiplome": 20311,
+    "intitule": "Bac pro technicien d'usinage",
+    "metiers": [
+      "H2903"
+    ]
+  },
+  {
+    "codeDiplome": 20326,
+    "intitule": "Bac pro vente, prospection, négociation, suivi de clientèle",
+    "metiers": [
+      "D1402",
+      "D1403",
+      "D1408"
+    ]
+  },
+  {
+    "codeDiplome": 21129,
+    "intitule": "CAP agent polyvalent de restauration",
+    "metiers": [
+      "G1603",
+      "G1803"
+    ]
+  },
+  {
+    "codeDiplome": 21306,
+    "intitule": "CAP cuisine",
+    "metiers": [
+      "G1602"
+    ]
+  },
+  {
+    "codeDiplome": 21365,
+    "intitule": "CAP employé de vente spécialisé option B : produits d'équipement courant",
+    "metiers": [
+      "D1211",
+      "D1212",
+      "D1214"
+    ]
+  },
+  {
+    "codeDiplome": 21412,
+    "intitule": "CAP fleuriste",
+    "metiers": [
+      "D1209"
+    ]
+  },
+  {
+    "codeDiplome": 21450,
+    "intitule": "CAP installateur sanitaire",
+    "metiers": [
+      "F1603"
+    ]
+  },
+  {
+    "codeDiplome": 21609,
+    "intitule": "CAP peintre-applicateur de revêtements",
+    "metiers": [
+      "F1606",
+      "F1609",
+      "F1611"
+    ]
+  },
+  {
+    "codeDiplome": 21685,
+    "intitule": "CAP services hôteliers",
+    "metiers": [
+      "G1501"
+    ]
+  },
+  {
+    "codeDiplome": 22077,
+    "intitule": "MC aide à domicile",
+    "metiers": [
+      "K1302"
+    ]
+  },
+  {
+    "codeDiplome": 23160,
+    "intitule": "CQPM opérateur-régleur sur machine-outil à commande numérique par enlèvement de matière",
+    "metiers": [
+      "H2903"
+    ]
+  },
+  {
+    "codeDiplome": 23163,
+    "intitule": "CQPM soudeur industriel",
+    "metiers": [
+      "H2913"
+    ]
+  },
+  {
+    "codeDiplome": 23190,
+    "intitule": "CQPM tourneur(euse) industriel",
+    "metiers": [
+      "H2903"
+    ]
+  },
+  {
+    "codeDiplome": 23199,
+    "intitule": "CQPM tuyauteur(euse) industriel(le)",
+    "metiers": [
+      "H2902",
+      "H2911",
+      "H2913",
+      "H2914",
+      "H3302"
+    ]
+  },
+  {
+    "codeDiplome": 23533,
+    "intitule": "BAPAAT option loisirs du jeune et de l'enfant",
+    "metiers": [
+      "G1203"
+    ]
+  },
+  {
+    "codeDiplome": 23774,
+    "intitule": "BPJEPS spécialité activités physiques pour tous",
+    "metiers": [
+      "G1204"
+    ]
+  },
+  {
+    "codeDiplome": 25022,
+    "intitule": "Titre professionnel conducteur(trice) d'appareils de l'industrie chimique",
+    "metiers": [
+      "H2301"
+    ]
+  },
+  {
+    "codeDiplome": 25038,
+    "intitule": "Titre professionnel conducteur(trice) d'installations et de machines automatisées",
+    "metiers": [
+      "H2906",
+      "H3301"
+    ]
+  },
+  {
+    "codeDiplome": 25039,
+    "intitule": "Titre professionnel conducteur(trice) du transport routier de marchandises sur porteur",
+    "metiers": [
+      "N4101",
+      "N4105"
+    ]
+  },
+  {
+    "codeDiplome": 25049,
+    "intitule": "Titre professionnel conducteur(trice) livreur(euse) sur véhicule utilitaire léger",
+    "metiers": [
+      "N4105"
+    ]
+  },
+  {
+    "codeDiplome": 25050,
+    "intitule": "Titre professionnel conducteur(trice) du transport routier de marchandises sur tous véhicules",
+    "metiers": [
+      "N4101",
+      "N4105"
+    ]
+  },
+  {
+    "codeDiplome": 25075,
+    "intitule": "Titre professionnel électricien(ne) d'équipement",
+    "metiers": [
+      "F1602",
+      "H2602"
+    ]
+  },
+  {
+    "codeDiplome": 25082,
+    "intitule": "Titre professionnel façadier(ière)-peintre",
+    "metiers": [
+      "F1611"
+    ]
+  },
+  {
+    "codeDiplome": 25086,
+    "intitule": "Titre professionnel formateur(trice) professionnel(le) d'adultes",
+    "metiers": [
+      "K2111"
+    ]
+  },
+  {
+    "codeDiplome": 25212,
+    "intitule": "Titre professionnel poseur(se) installateur(trice) menuiseries, fermetures et équipements",
+    "metiers": [
+      "F1607"
+    ]
+  },
+  {
+    "codeDiplome": 25238,
+    "intitule": "Titre professionnel secrétaire comptable",
+    "metiers": [
+      "M1608"
+    ]
+  },
+  {
+    "codeDiplome": 25301,
+    "intitule": "Titre professionnel technicien(ne) de maintenance industrielle",
+    "metiers": [
+      "I1304",
+      "I1309",
+      "I1310"
+    ]
+  },
+  {
+    "codeDiplome": 30958,
+    "intitule": "Agent d'accompagnement auprès des personnes âgées et des personnes dépendantes",
+    "metiers": [
+      "K1302",
+      "K2204"
+    ]
+  },
+  {
+    "codeDiplome": 31512,
+    "intitule": "Responsable en gestion",
+    "metiers": [
+      "K1403",
+      "M1205",
+      "M1301",
+      "M1302"
+    ]
+  },
+  {
+    "codeDiplome": 31969,
+    "intitule": "Titre professionnel technicien(ne) supérieur(e) de maintenance industrielle",
+    "metiers": [
+      "I1302",
+      "I1304"
+    ]
+  },
+  {
+    "codeDiplome": 31991,
+    "intitule": "Bac pro maintenance des équipements industriels",
+    "metiers": [
+      "I1310"
+    ]
+  },
+  {
+    "codeDiplome": 31999,
+    "intitule": "CAP boucher",
+    "metiers": [
+      "D1101"
+    ]
+  },
+  {
+    "codeDiplome": 46770,
+    "intitule": "CAP plâtrier-plaquiste",
+    "metiers": [
+      "F1604",
+      "F1703"
+    ]
+  },
+  {
+    "codeDiplome": 50486,
+    "intitule": "CQPM équipier(ère) autonome de production industrielle",
+    "metiers": [
+      "H2903"
+    ]
+  },
+  {
+    "codeDiplome": 52840,
+    "intitule": "Concepteur en architecture informatique",
+    "metiers": [
+      "M1801",
+      "M1805"
+    ]
+  },
+  {
+    "codeDiplome": 52900,
+    "intitule": "Responsable ressources humaines",
+    "metiers": [
+      "M1502",
+      "M1503"
+    ]
+  },
+  {
+    "codeDiplome": 53272,
+    "intitule": "Assistant de gestion",
+    "metiers": [
+      "D1401",
+      "M1203",
+      "M1501",
+      "M1605"
+    ]
+  },
+  {
+    "codeDiplome": 53280,
+    "intitule": "Gestionnaire en maintenance et support informatique",
+    "metiers": [
+      "I1401",
+      "M1810"
+    ]
+  },
+  {
+    "codeDiplome": 53384,
+    "intitule": "CAP pâtissier",
+    "metiers": [
+      "D1104"
+    ]
+  },
+  {
+    "codeDiplome": 54647,
+    "intitule": "CAP conducteur routier marchandises",
+    "metiers": [
+      "N4101"
+    ]
+  },
+  {
+    "codeDiplome": 54913,
+    "intitule": "Diplôme d'État d'aide-soignant",
+    "metiers": [
+      "J1501"
+    ]
+  },
+  {
+    "codeDiplome": 55515,
+    "intitule": "Service de sécurité incendie et d'assistance aux personnes de niveau 1 (SSIAP 1) - diplôme d'agent de service",
+    "metiers": [
+      "K1706",
+      "K2502",
+      "K2503"
+    ]
+  },
+  {
+    "codeDiplome": 55722,
+    "intitule": "BPA option travaux de la vigne et du vin spécialité travaux de la vigne",
+    "metiers": [
+      "A1405"
+    ]
+  },
+  {
+    "codeDiplome": 55724,
+    "intitule": "BPA option travaux des aménagements paysagers spécialité travaux de création et d'entretien",
+    "metiers": [
+      "A1203"
+    ]
+  },
+  {
+    "codeDiplome": 55730,
+    "intitule": "BPA option travaux forestiers spécialité travaux de bûcheronnage",
+    "metiers": [
+      "A1101",
+      "A1205",
+      "A1405"
+    ]
+  },
+  {
+    "codeDiplome": 56310,
+    "intitule": "BP option responsable d'exploitation agricole",
+    "metiers": [
+      "A1405",
+      "A1407",
+      "A1411",
+      "A1414",
+      "A1416"
+    ]
+  },
+  {
+    "codeDiplome": 56315,
+    "intitule": "Titre professionnel secrétaire assistant(e) médico-social(e)",
+    "metiers": [
+      "M1609"
+    ]
+  },
+  {
+    "codeDiplome": 56918,
+    "intitule": "Titre professionnel secrétaire assistant(e)",
+    "metiers": [
+      "M1607"
+    ]
+  },
+  {
+    "codeDiplome": 57473,
+    "intitule": "BTS assistant de manager",
+    "metiers": [
+      "M1604"
+    ]
+  },
+  {
+    "codeDiplome": 57707,
+    "intitule": "CQP agent machiniste classique en propreté",
+    "metiers": [
+      "K2204"
+    ]
+  },
+  {
+    "codeDiplome": 57804,
+    "intitule": "CQPM technicien(ne) en maintenance industrielle",
+    "metiers": [
+      "I1304",
+      "I1310"
+    ]
+  },
+  {
+    "codeDiplome": 57928,
+    "intitule": "Titre professionnel technicien(ne) supérieur(e) en méthodes et exploitation logistique",
+    "metiers": [
+      "N1302",
+      "N1303"
+    ]
+  },
+  {
+    "codeDiplome": 58475,
+    "intitule": "MC accueil-réception",
+    "metiers": [
+      "G1703"
+    ]
+  },
+  {
+    "codeDiplome": 59627,
+    "intitule": "Assistant(e) de comptabilité et d'administration",
+    "metiers": [
+      "M1203",
+      "M1602",
+      "M1608"
+    ]
+  },
+  {
+    "codeDiplome": 62686,
+    "intitule": "Conducteur de train",
+    "metiers": [
+      "N4301"
+    ]
+  },
+  {
+    "codeDiplome": 63027,
+    "intitule": "Entrepreneur(euse) de petite entreprise",
+    "metiers": [
+      "M1302"
+    ]
+  },
+  {
+    "codeDiplome": 63193,
+    "intitule": "BTS assistant de gestion de PME-PMI à référentiel commun européen",
+    "metiers": [
+      "M1203",
+      "M1604",
+      "M1605"
+    ]
+  },
+  {
+    "codeDiplome": 63446,
+    "intitule": "BP option aménagements paysagers",
+    "metiers": [
+      "A1203"
+    ]
+  },
+  {
+    "codeDiplome": 63669,
+    "intitule": "Employé(e) familial(e)",
+    "metiers": [
+      "K1302",
+      "K1303",
+      "K1304"
+    ]
+  },
+  {
+    "codeDiplome": 63670,
+    "intitule": "Assistant(e) de vie dépendance",
+    "metiers": [
+      "K1302"
+    ]
+  },
+  {
+    "codeDiplome": 63671,
+    "intitule": "Assistant(e) maternel(le) / garde d'enfants",
+    "metiers": [
+      "K1303"
+    ]
+  },
+  {
+    "codeDiplome": 63757,
+    "intitule": "BEP métiers des services administratifs",
+    "metiers": [
+      "M1602"
+    ]
+  },
+  {
+    "codeDiplome": 63799,
+    "intitule": "BEP métiers de la relation aux clients et aux usagers",
+    "metiers": [
+      "D1211",
+      "D1212",
+      "D1214"
+    ]
+  },
+  {
+    "codeDiplome": 63806,
+    "intitule": "BEP maintenance des systèmes énergétiques et climatiques",
+    "metiers": [
+      "F1603"
+    ]
+  },
+  {
+    "codeDiplome": 66237,
+    "intitule": "CAP gardien d'immeubles",
+    "metiers": [
+      "K2501"
+    ]
+  },
+  {
+    "codeDiplome": 68507,
+    "intitule": "Cuisinier",
+    "metiers": [
+      "G1602"
+    ]
+  },
+  {
+    "codeDiplome": 68986,
+    "intitule": "CAP agent de sécurité",
+    "metiers": [
+      "K2503"
+    ]
+  },
+  {
+    "codeDiplome": 69623,
+    "intitule": "CQP animateur périscolaire",
+    "metiers": [
+      "G1203",
+      "K1206"
+    ]
+  },
+  {
+    "codeDiplome": 69812,
+    "intitule": "Titre professionnel chaudronnier(ière)",
+    "metiers": [
+      "H2902"
+    ]
+  },
+  {
+    "codeDiplome": 74844,
+    "intitule": "Attaché(e) commercial(e)",
+    "metiers": [
+      "C1102",
+      "C1206",
+      "D1402",
+      "D1403",
+      "D1407"
+    ]
+  },
+  {
+    "codeDiplome": 76930,
+    "intitule": "Bac pro gestion-administration",
+    "metiers": [
+      "D1401",
+      "M1203",
+      "M1501",
+      "M1607"
+    ]
+  },
+  {
+    "codeDiplome": 77069,
+    "intitule": "Titre professionnel vendeur(se)-conseil en magasin",
+    "metiers": [
+      "D1209",
+      "D1210",
+      "D1211",
+      "D1212",
+      "D1214"
+    ]
+  },
+  {
+    "codeDiplome": 77099,
+    "intitule": "Agent de prévention et de sécurité",
+    "metiers": [
+      "K2503"
+    ]
+  },
+  {
+    "codeDiplome": 77480,
+    "intitule": "Bac pro pilote de ligne de production",
+    "metiers": [
+      "H2301",
+      "H2701",
+      "H2904",
+      "H2907"
+    ]
+  },
+  {
+    "codeDiplome": 77531,
+    "intitule": "Responsable de programme immobilier",
+    "metiers": [
+      "C1503",
+      "C1504"
+    ]
+  },
+  {
+    "codeDiplome": 77533,
+    "intitule": "Vendeur conseiller commercial",
+    "metiers": [
+      "D1212",
+      "D1214",
+      "D1401",
+      "D1403",
+      "D1408"
+    ]
+  },
+  {
+    "codeDiplome": 80139,
+    "intitule": "CQPM conducteur de systèmes de production automatisée",
+    "metiers": [
+      "H2903",
+      "H2904",
+      "H2905",
+      "H2906",
+      "H2907"
+    ]
+  },
+  {
+    "codeDiplome": 80272,
+    "intitule": "Titre professionnel technicien(ne) d'assistance en informatique",
+    "metiers": [
+      "I1401"
+    ]
+  },
+  {
+    "codeDiplome": 80728,
+    "intitule": "Titre professionnel commercial(e)",
+    "metiers": [
+      "D1403"
+    ]
+  },
+  {
+    "codeDiplome": 80735,
+    "intitule": "Titre professionnel plaquiste",
+    "metiers": [
+      "F1604"
+    ]
+  },
+  {
+    "codeDiplome": 80737,
+    "intitule": "Titre professionnel concepteur(trice)-développeur(se) informatique",
+    "metiers": [
+      "M1805"
+    ]
+  },
+  {
+    "codeDiplome": 80739,
+    "intitule": "Titre professionnel technicien(ne) supérieur(e) de support en informatique",
+    "metiers": [
+      "I1401",
+      "M1801"
+    ]
+  },
+  {
+    "codeDiplome": 80740,
+    "intitule": "Titre professionnel technicien(ne) supérieur(e) en réseaux informatiques et télécommunications",
+    "metiers": [
+      "M1801",
+      "M1810"
+    ]
+  },
+  {
+    "codeDiplome": 80752,
+    "intitule": "Titre professionnel électromécanicien de maintenance industrielle",
+    "metiers": [
+      "I1309",
+      "I1310"
+    ]
+  },
+  {
+    "codeDiplome": 81020,
+    "intitule": "Titre professionnel conducteur(trice) de travaux aménagement finitions",
+    "metiers": [
+      "F1201"
+    ]
+  },
+  {
+    "codeDiplome": 81022,
+    "intitule": "Titre professionnel technicien(ne) d'équipement en électricité",
+    "metiers": [
+      "F1602"
+    ]
+  },
+  {
+    "codeDiplome": 81023,
+    "intitule": "Titre professionnel conducteur(trice) du transport routier interurbain de voyageurs",
+    "metiers": [
+      "N4103"
+    ]
+  },
+  {
+    "codeDiplome": 81025,
+    "intitule": "Titre professionnel technicien(ne) supérieur(e) d'études en génie climatique",
+    "metiers": [
+      "F1104",
+      "F1106"
+    ]
+  },
+  {
+    "codeDiplome": 81122,
+    "intitule": "Titre professionnel agent(e) de propreté et d'hygiène",
+    "metiers": [
+      "J1301",
+      "K2204"
+    ]
+  },
+  {
+    "codeDiplome": 81129,
+    "intitule": "Titre professionnel monteur(se) dépanneur(se) frigoriste",
+    "metiers": [
+      "I1306"
+    ]
+  },
+  {
+    "codeDiplome": 81194,
+    "intitule": "Titre professionnel peintre en bâtiment",
+    "metiers": [
+      "F1606"
+    ]
+  },
+  {
+    "codeDiplome": 81319,
+    "intitule": "Titre professionnel métallier(ière)",
+    "metiers": [
+      "H2911"
+    ]
+  },
+  {
+    "codeDiplome": 81321,
+    "intitule": "Titre professionnel installateur(trice) de réseaux câblés de communications",
+    "metiers": [
+      "F1605"
+    ]
+  },
+  {
+    "codeDiplome": 81373,
+    "intitule": "DUT gestion des entreprises et des administrations option gestion comptable et financière",
+    "metiers": [
+      "C1401",
+      "M1203"
+    ]
+  },
+  {
+    "codeDiplome": 81401,
+    "intitule": "DUT techniques de commercialisation",
+    "metiers": [
+      "C1102",
+      "C1202",
+      "D1401",
+      "D1502",
+      "E1103"
+    ]
+  },
+  {
+    "codeDiplome": 81418,
+    "intitule": "Titre professionnel responsable de rayon",
+    "metiers": [
+      "D1502",
+      "D1503"
+    ]
+  },
+  {
+    "codeDiplome": 81440,
+    "intitule": "Titre professionnel agent(e) magasinier(ière)",
+    "metiers": [
+      "N1103"
+    ]
+  },
+  {
+    "codeDiplome": 81451,
+    "intitule": "Bac pro technicien d'études du bâtiment option études et économie",
+    "metiers": [
+      "F1104"
+    ]
+  },
+  {
+    "codeDiplome": 81455,
+    "intitule": "Bac pro technicien de maintenance des systèmes énergétiques et climatiques",
+    "metiers": [
+      "I1306"
+    ]
+  },
+  {
+    "codeDiplome": 81492,
+    "intitule": "Titre professionnel employé(e) administratif(ve) et d'accueil",
+    "metiers": [
+      "M1601",
+      "M1602",
+      "M1606"
+    ]
+  },
+  {
+    "codeDiplome": 81504,
+    "intitule": "Titre professionnel comptable gestionnaire",
+    "metiers": [
+      "M1203",
+      "M1206"
+    ]
+  },
+  {
+    "codeDiplome": 81505,
+    "intitule": "Titre professionnel assistant(e) commercial(e)",
+    "metiers": [
+      "D1401"
+    ]
+  },
+  {
+    "codeDiplome": 82180,
+    "intitule": "Titre professionnel cuisinier(ière)",
+    "metiers": [
+      "G1602"
+    ]
+  },
+  {
+    "codeDiplome": 82182,
+    "intitule": "Titre professionnel d'accompagnateur(trice) de tourisme",
+    "metiers": [
+      "G1201"
+    ]
+  },
+  {
+    "codeDiplome": 82184,
+    "intitule": "Titre professionnel d'animateur(trice) d'activités touristiques et de loisirs",
+    "metiers": [
+      "G1202"
+    ]
+  },
+  {
+    "codeDiplome": 82191,
+    "intitule": "Titre professionnel agent(e) de maintenance en chauffage",
+    "metiers": [
+      "F1603",
+      "I1308"
+    ]
+  },
+  {
+    "codeDiplome": 82458,
+    "intitule": "Titre professionnel électricien(ne) de maintenance de systèmes automatisés",
+    "metiers": [
+      "I1302",
+      "I1309"
+    ]
+  },
+  {
+    "codeDiplome": 82509,
+    "intitule": "Titre professionnel manager(euse) d'univers marchand",
+    "metiers": [
+      "D1502",
+      "D1503"
+    ]
+  },
+  {
+    "codeDiplome": 82511,
+    "intitule": "Titre professionnel négociateur(trice) technico-commercial(e)",
+    "metiers": [
+      "D1402",
+      "D1407"
+    ]
+  },
+  {
+    "codeDiplome": 82669,
+    "intitule": "Titre professionnel technicien(ne) d'exploitation en transports terrestres de marchandises",
+    "metiers": [
+      "N1201",
+      "N4203"
+    ]
+  },
+  {
+    "codeDiplome": 82685,
+    "intitule": "Titre professionnel assistant(e) de direction",
+    "metiers": [
+      "M1604"
+    ]
+  },
+  {
+    "codeDiplome": 82686,
+    "intitule": "Titre professionnel installateur(trice) dépanneur(se) en informatique",
+    "metiers": [
+      "I1401"
+    ]
+  },
+  {
+    "codeDiplome": 82687,
+    "intitule": "Titre professionnel gestionnaire de paie",
+    "metiers": [
+      "M1203",
+      "M1501"
+    ]
+  },
+  {
+    "codeDiplome": 82693,
+    "intitule": "Titre professionnel monteur(se) qualifié(e) d'équipements industriels",
+    "metiers": [
+      "H2901",
+      "H2909"
+    ]
+  },
+  {
+    "codeDiplome": 82703,
+    "intitule": "CAP boulanger",
+    "metiers": [
+      "D1102"
+    ]
+  },
+  {
+    "codeDiplome": 82774,
+    "intitule": "Titre professionnel serveur(se) en restauration",
+    "metiers": [
+      "G1801",
+      "G1803"
+    ]
+  },
+  {
+    "codeDiplome": 82779,
+    "intitule": "BTS maintenance des systèmes option A : systèmes de production",
+    "metiers": [
+      "I1302",
+      "I1304",
+      "I1309",
+      "I1310"
+    ]
+  },
+  {
+    "codeDiplome": 82780,
+    "intitule": "Titre professionnel réceptionniste en hôtellerie",
+    "metiers": [
+      "G1703"
+    ]
+  },
+  {
+    "codeDiplome": 82940,
+    "intitule": "CAP maintenance des véhicules option voitures particulières",
+    "metiers": [
+      "I1604"
+    ]
+  },
+  {
+    "codeDiplome": 83076,
+    "intitule": "Titre professionnel technicien(ne) de maintenance des équipements thermiques",
+    "metiers": [
+      "I1306",
+      "I1308"
+    ]
+  },
+  {
+    "codeDiplome": 83079,
+    "intitule": "Titre professionnel employé(e) commercial(e) en magasin",
+    "metiers": [
+      "D1106",
+      "D1507"
+    ]
+  },
+  {
+    "codeDiplome": 83257,
+    "intitule": "CQP commis de cuisine",
+    "metiers": [
+      "G1602"
+    ]
+  },
+  {
+    "codeDiplome": 83419,
+    "intitule": "Titre professionnel agent(e) de sûreté et de sécurité privée",
+    "metiers": [
+      "K2503"
+    ]
+  },
+  {
+    "codeDiplome": 83652,
+    "intitule": "CQPM technicien(ne) d'usinage sur machines-outils à commande numérique",
+    "metiers": [
+      "H1502",
+      "H2502",
+      "H2503",
+      "H2903"
+    ]
+  },
+  {
+    "codeDiplome": 83968,
+    "intitule": "Titre professionnel tuyauteur(se) industriel(le)",
+    "metiers": [
+      "H2914"
+    ]
+  },
+  {
+    "codeDiplome": 83970,
+    "intitule": "Titre professionnel soudeur(se)",
+    "metiers": [
+      "H2913"
+    ]
+  },
+  {
+    "codeDiplome": 83971,
+    "intitule": "Titre professionnel opérateur(trice) régleur(se) d'usinage en commande numérique",
+    "metiers": [
+      "H2903",
+      "H2906"
+    ]
+  },
+  {
+    "codeDiplome": 83997,
+    "intitule": "Soudeur TIG et semi-automatique",
+    "metiers": [
+      "H2902",
+      "H2913"
+    ]
+  },
+  {
+    "codeDiplome": 84238,
+    "intitule": "Titre professionnel installateur(trice) en thermique et sanitaire",
+    "metiers": [
+      "F1603"
+    ]
+  },
+  {
+    "codeDiplome": 84242,
+    "intitule": "Titre professionnel cariste d'entrepôt",
+    "metiers": [
+      "N1101"
+    ]
+  },
+  {
+    "codeDiplome": 84244,
+    "intitule": "Titre professionnel préparateur(trice) de commandes en entrepôt",
+    "metiers": [
+      "N1103"
+    ]
+  },
+  {
+    "codeDiplome": 84517,
+    "intitule": "TOSA",
+    "metiers": [
+      "M1607"
+    ]
+  },
+  {
+    "codeDiplome": 84554,
+    "intitule": "Formation initiale minimale obligatoire (FIMO) - transport de marchandises",
+    "metiers": [
+      "N4101",
+      "N4104",
+      "N4105"
+    ]
+  },
+  {
+    "codeDiplome": 84564,
+    "intitule": "Qualification de soudeur suivant la norme NF EN ISO 9606-1 (anciennement NF EN 287-1)",
+    "metiers": [
+      "H2902",
+      "H2909",
+      "H2911"
+    ]
+  },
+  {
+    "codeDiplome": 84578,
+    "intitule": "Titre professionnel de technicien(ne) de bureau d'études en électricité",
+    "metiers": [
+      "F1202",
+      "H1202"
+    ]
+  },
+  {
+    "codeDiplome": 84808,
+    "intitule": "CAP menuisier fabricant de menuiserie, mobilier et agencement",
+    "metiers": [
+      "F1503",
+      "H2202",
+      "H2206"
+    ]
+  },
+  {
+    "codeDiplome": 85007,
+    "intitule": "Formation spécifique en matière d'hygiène alimentaire adaptée à l'activité des établissements de restauration commerciale",
+    "metiers": [
+      "G1603"
+    ]
+  },
+  {
+    "codeDiplome": 85117,
+    "intitule": "CAP agricole jardinier paysagiste",
+    "metiers": [
+      "A1202",
+      "A1203"
+    ]
+  },
+  {
+    "codeDiplome": 86005,
+    "intitule": "Titre professionnel technicien(ne) de maintenance d'équipements de chauffage, de climatisation et d'énergies renouvelables",
+    "metiers": [
+      "I1306",
+      "I1308"
+    ]
+  },
+  {
+    "codeDiplome": 87137,
+    "intitule": "Titre professionnel maçon(ne)",
+    "metiers": [
+      "F1703"
+    ]
+  },
+  {
+    "codeDiplome": 87185,
+    "intitule": "Diplôme d'État d'accompagnant éducatif et social spécialité accompagnement de la vie à domicile",
+    "metiers": [
+      "J1501",
+      "K1301",
+      "K1302",
+      "K1303"
+    ]
+  },
+  {
+    "codeDiplome": 88073,
+    "intitule": "Bac pro systèmes numériques option C réseaux informatiques et systèmes communicants",
+    "metiers": [
+      "I1305",
+      "I1307"
+    ]
+  },
+  {
+    "codeDiplome": 88121,
+    "intitule": "Titre professionnel coffreur(euse) bancheur(euse)",
+    "metiers": [
+      "F1701"
+    ]
+  },
+  {
+    "codeDiplome": 88309,
+    "intitule": "Titre professionnel assistant(e) de vie aux familles",
+    "metiers": [
+      "K1302",
+      "K1303",
+      "K1304",
+      "K1305"
+    ]
+  },
+  {
+    "codeDiplome": 88525,
+    "intitule": "Titre professionnel agent(e) d'entretien du bâtiment",
+    "metiers": [
+      "I1203"
+    ]
+  },
+  {
+    "codeDiplome": 88533,
+    "intitule": "Titre professionnel carreleur(se)",
+    "metiers": [
+      "F1608"
+    ]
+  },
+  {
+    "codeDiplome": 88543,
+    "intitule": "CAP cuisine",
+    "metiers": [
+      "G1602"
+    ]
+  },
+  {
+    "codeDiplome": 88571,
+    "intitule": "Titre professionnel constructeur(trice) bois",
+    "metiers": [
+      "F1501"
+    ]
+  },
+  {
+    "codeDiplome": 88675,
+    "intitule": "Titre professionnel enseignant(e) de la conduite et de la sécurité routière",
+    "metiers": [
+      "K2110"
+    ]
+  },
+  {
+    "codeDiplome": 89409,
+    "intitule": "CQP agent de restauration",
+    "metiers": [
+      "G1603"
+    ]
+  },
+  {
+    "codeDiplome": 89457,
+    "intitule": "Tractoriste",
+    "metiers": [
+      "A1101",
+      "A1405"
+    ]
+  },
+  {
+    "codeDiplome": 89805,
+    "intitule": "BPJEPS spécialité éducateur sportif mention activités physiques pour tous",
+    "metiers": [
+      "G1204"
+    ]
+  },
+  {
+    "codeDiplome": 90685,
+    "intitule": "Titre professionnel menuisier(ière) agenceur(se)",
+    "metiers": [
+      "H2206"
+    ]
+  },
+  {
+    "codeDiplome": 90831,
+    "intitule": "BPJEPS spécialité éducateur sportif mention activités de la forme option cours collectifs",
+    "metiers": [
+      "G1204"
+    ]
+  }
+]

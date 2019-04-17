@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  api:
+    image: node:10.15.3
+    command: ['node', 'api']
+    working_dir: /usr/src/api
+    restart: on-failure:5
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/src/api
+    environment:
+      - NODE_ENV=development
+    networks:
+      - storage
+
+  db:
+    image: postgres:9.6
+    ports:
+      - 5433:5432
+    environment:
+      - POSTGRES_DB=traitdunion-database
+      - POSTGRES_USER=trait
+      - POSTGRES_PASSWORD=dunion
+    networks:
+      - storage
+
+networks:
+  storage:
+    driver: bridge

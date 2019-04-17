@@ -2,7 +2,6 @@ const HttpErrors = require('http-errors')
 
 module.exports = ({ SessionFormation }) => async ({ around }) => {
   const formation = await SessionFormation.find()
-  console.log(formation)
   if (formation.length) {
     throw noOffresFoundError()
   }

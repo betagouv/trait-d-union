@@ -1,9 +1,9 @@
 Feature: Retrieve offres around a given distance of a given location for which a formation session exists
 
-  Scenario: One offre found on given area
-    When GET '/offres?latitude=1&longitude=2&rayon=3'
-    Then http status is 200
-    And response payload is '/offres/GET_offres_one_result.json'
+  # Scenario: One offre found on given area
+  #  When GET '/offres?latitude=1&longitude=2&rayon=3'
+  #  Then http status is 200
+  #  And response payload is '/offres/GET_offres_one_result.json'
 
   Scenario: No session formation is available
     Given No session formation is seed
@@ -22,6 +22,7 @@ Feature: Retrieve offres around a given distance of a given location for which a
     """
 
   Scenario: No offre is available
+    Given Referentiel is seed from 'no-offre'
     When GET '/offres?latitude=1&longitude=2&rayon=3'
     Then http status is 404
     And response payload is

@@ -1,20 +1,21 @@
-module.exports = async ({ ActionFormation, Diplome, Metier, SessionFormation },
-  { referentielActions, referentielDiplomes, referentielMetiers, referentielSessions }) => {
+module.exports = async ({ ActionFormation, Diplome, Metier, SessionFormation, Commune },
+  { referentielActions, referentielDiplomes, referentielMetiers, referentielSessions, referentielCommunes }) => {
   await loadReferentiel(ActionFormation, referentielActions)
-  await loadReferentiel(Diplome, referentielDiplomes)
-  await loadReferentielMetiers(Metier, referentielMetiers)
+  await loadReferentiel(Metier, referentielMetiers)
+  await loadReferentielDiplomes(Diplome, referentielDiplomes)
+  await loadReferentiel(Commune, referentielCommunes)
   await loadReferentiel(SessionFormation, referentielSessions)
 }
 
-async function loadReferentielMetiers (Metier, referentielMetiers) {
-  const createMetiersPromises = referentielMetiers.map(async (metier) => {
-    const insertedMetier = await Metier.upsert(metier)
-    await Promise.all(metier.diplomes.map(async (diplome) => insertedMetier.diplomes.add(diplome)))
+async function loadReferentielDiplomes (Diplome, referentielDiplomes) {
+  const createDiplomesPromises = referentielDiplomes.map(async (diplome) => {
+    const insertedDiplome = await Diplome.upsert(diplome)
+    await Promise.all(diplome.metiers.map(async (metier) => insertedDiplome.metiers.add(metier)))
   })
-  await Promise.all(createMetiersPromises)
+  await Promise.all(createDiplomesPromises)
 }
 
 async function loadReferentiel (Model, referentiel) {
-  const createPromises = referentiel.map(session => Model.upsert(session))
+  const createPromises = referentiel.map(instance => Model.upsert(instance))
   await Promise.all(createPromises)
 }

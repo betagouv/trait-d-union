@@ -11,9 +11,12 @@
   },
   "properties": {
     "codeROME": {
-      "type": "number",
+      "type": "string",
       "id": true,
       "required": true
+    },
+    "categorie": {
+      "type": "string"
     }
   },
   "validations": [],
