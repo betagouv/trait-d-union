@@ -126,6 +126,7 @@ describe('Offres Pole Emploi Repository', () => {
       const offres = await offresPoleEmploiRepository.getOffres({ codeROME })
 
       expect(offres).to.deep.equal([{
+        id: '086QKQK',
         url: 'https://candidat.pole-emploi.fr/offres/recherche/detail/086QKQK'
       }])
     })

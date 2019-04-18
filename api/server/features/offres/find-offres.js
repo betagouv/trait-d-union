@@ -1,8 +1,8 @@
-module.exports = ({ Metier }, { getOffres }) => async ({ around }) => {
+module.exports = ({ Metier }, { getOffres }, { executePromisesSequentially }) => async ({ around }) => {
+  const getOffresForMetier = createGetOffresForMetier(getOffres)
   const metiers = await Metier.find()
   const filteredMetiers = keepMetiersWithSessions(metiers)
-  const getOffresPromises = filteredMetiers.map(getOffreForMetier(getOffres))
-  const allOffres = await Promise.all(getOffresPromises)
+  const allOffres = await executePromisesSequentially(filteredMetiers, getOffresForMetier)
   const offres = flatten(allOffres)
   return removeDuplicates(offres)
 }
@@ -24,11 +24,12 @@ function assignSessionsToOffres (offres, sessions) {
   return offres.map(offre => Object.assign(offre, { sessions }))
 }
 
-const getOffreForMetier = (getOffres) => async (metier) => {
+const createGetOffresForMetier = (getOffres) => async (metier) => {
   const allOffres = await getOffres({ codeROME: metier.codeROME })
   const offres = removeDuplicates(allOffres)
   const sessions = extractSessionsFrom(metier)
-  return assignSessionsToOffres(offres, sessions)
+  const enrichedOffres = await assignSessionsToOffres(offres, sessions)
+  return enrichedOffres
 }
 
 const flatten = _flatten

@@ -9,6 +9,6 @@ module.exports = ({ poleEmploiApiService }) => ({
       sort: 2
     }
     const offres = await poleEmploiApiService.request('/offres/search', searchParameters)
-    return offres.resultats.map(offre => ({ url: offre.origineOffre.urlOrigine }))
+    return offres.resultats.map(offre => ({ id: offre.id, url: offre.origineOffre.urlOrigine }))
   }
 })

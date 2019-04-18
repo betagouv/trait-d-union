@@ -21,7 +21,7 @@
     "lint:api:fix": "cd api && npm run lint -- --fix",
     "start": "run-p --print-label start:api",
     "start:api": "cd api && npm run start",
-    "start:dev": "cd api && NODE_ENV=dev nodemon .",
+    "start:dev": "cd api && export $(cat .dev.env | xargs) && nodemon .",
     "test:e2e:api": "cd api && npm run test:e2e"
   },
   "husky": {

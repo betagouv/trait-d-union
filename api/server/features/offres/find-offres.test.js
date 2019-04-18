@@ -1,5 +1,7 @@
 const { sinon, expect } = require('../../../tests/test-utils')
 const createFindOffres = require('./find-offres')
+const wait = require('../../infrastructure/wait')(1)
+const executePromisesSequentially = require('../../infrastructure/execute-promise-sequentially')(wait)
 
 describe('Find Offres', () => {
   const givenArea = {
@@ -21,13 +23,12 @@ describe('Find Offres', () => {
       codeROME,
       diplomes: () => [diplomeWithActionsAndSession]
     }
-
     const offreFromRepository = { some: 'offer' }
     const offresRepository = {
       getOffres: sinon.spy(async () => [offreFromRepository])
     }
     const Metier = mockMetierModel([metierWithSession])
-    const findOffres = createFindOffres({ Metier }, offresRepository)
+    const findOffres = createFindOffres({ Metier }, offresRepository, { executePromisesSequentially })
 
     it('retrieves all Metiers related to Sessions Formations', async () => {
       await findOffres({ around: givenArea })
@@ -76,7 +77,7 @@ describe('Find Offres', () => {
       getOffres: sinon.spy(async () => [offreFromRepository])
     }
     const Metier = mockMetierModel([firstMetierWithSession, secondMetierWithSession])
-    const findOffres = createFindOffres({ Metier }, offresRepository)
+    const findOffres = createFindOffres({ Metier }, offresRepository, { executePromisesSequentially })
 
     it('retrieves all Metiers related to Sessions Formations', async () => {
       await findOffres({ around: givenArea })
@@ -112,7 +113,7 @@ describe('Find Offres', () => {
       getOffres: sinon.spy(async () => [offreFromRepository])
     }
     const Metier = mockMetierModel([metierWithSession])
-    const findOffres = createFindOffres({ Metier }, offresRepository)
+    const findOffres = createFindOffres({ Metier }, offresRepository, { executePromisesSequentially })
 
     it('searches for offres', async () => {
       await findOffres({ around: givenArea })
@@ -140,7 +141,7 @@ describe('Find Offres', () => {
       getOffres: sinon.spy(async () => [offreFromRepository])
     }
     const Metier = mockMetierModel([metierWithActionButWithoutSession])
-    const findOffres = createFindOffres({ Metier }, offresRepository)
+    const findOffres = createFindOffres({ Metier }, offresRepository, { executePromisesSequentially })
 
     it('searches for offres', async () => {
       await findOffres({ around: givenArea })
@@ -172,7 +173,7 @@ describe('Find Offres', () => {
       getOffres: sinon.spy(async () => [offreFromRepository])
     }
     const Metier = mockMetierModel([metierWithActionButWithoutSession])
-    const findOffres = createFindOffres({ Metier }, offresRepository)
+    const findOffres = createFindOffres({ Metier }, offresRepository, { executePromisesSequentially })
 
     it('searches for offres', async () => {
       await findOffres({ around: givenArea })
