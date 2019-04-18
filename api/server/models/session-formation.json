@@ -2,6 +2,9 @@
   "name": "SessionFormation",
   "base": "PersistedModel",
   "idInjection": true,
+  "http": {
+    "path": "session-formations"
+  },
   "options": {
     "validateUpsert": true
   },
