@@ -32,6 +32,7 @@ const getOffreForMetier = (getOffres) => async (metier) => {
 }
 
 const flatten = _flatten
+
 function _flatten (element) {
   return element instanceof Array
     ? [].concat([], ...element.map(_flatten))
@@ -39,11 +40,18 @@ function _flatten (element) {
 }
 
 const isFilled = _isFilled
+
 function _isFilled (array) {
   return array.length > 0
 }
 
 const removeDuplicates = _removeDuplicates
-function _removeDuplicates (array) {
-  return Array.from(new Set(array))
+
+function _removeDuplicates (arr) {
+  return arr
+    .map(e => e.id)
+    // store the keys of the unique objects
+    .map((e, i, final) => final.indexOf(e) === i && i)
+    // eliminate the dead keys & store unique objects
+    .filter(e => arr[e]).map(e => arr[e])
 }
