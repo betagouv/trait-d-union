@@ -15,16 +15,18 @@
     "posttest": "npm run lint"
   },
   "dependencies": {
+    "boom": "7.3.0",
     "compression": "1.7.4",
     "cors": "2.8.5",
     "got": "9.6.0",
     "helmet": "3.16.0",
-    "http-errors": "1.7.2",
     "joi": "14.3.1",
     "loopback": "3.25.1",
     "loopback-boot": "2.28.0",
     "loopback-component-explorer": "6.3.1",
     "loopback-connector-postgresql": "3.6.1",
+    "lru-cache": "5.1.1",
+    "request-promise-native": "1.0.7",
     "serve-favicon": "2.5.0",
     "strong-error-handler": "3.2.0"
   },

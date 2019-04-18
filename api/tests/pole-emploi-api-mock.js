@@ -4,7 +4,7 @@ const poleEmploiAPI = nock(API_BASE_URL)
 
 exports.set = () => {
   poleEmploiAPI
-    .get('/offres/search?range=1-149&experience=1&sort=2&codeROME=1234&distance=3&commune=Metz')
+    .get('/offres/search?range=1-149&experience=1&sort=2&codeROME=1234&distance=3&commune=42')
     .reply(200, {
       resultats: [
         {
