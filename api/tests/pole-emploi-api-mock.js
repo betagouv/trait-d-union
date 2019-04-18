@@ -1,10 +1,38 @@
 const nock = require('nock')
 const API_BASE_URL = 'https://api.emploi-store.fr/partenaire/offresdemploi/v2'
 const poleEmploiAPI = nock(API_BASE_URL)
+const AUTHENT_API_BASE_URL = 'https://entreprise.pole-emploi.fr/connexion/oauth2/access_token'
+const poleEmploiAuthentApi = nock(AUTHENT_API_BASE_URL)
 
 exports.set = () => {
+  poleEmploiAuthentApi
+    .post('')
+    .query({
+      realm: '/partenaire',
+      grant_type: 'client_credentials',
+      client_id: 'clientId',
+      client_secret: 'clientSecret',
+      scope: 'api_offresdemploiv2 application_clientId o2dsoffre'
+    })
+    .reply(200, {
+      scope: 'api_offresdemploiv2 o2dsoffre',
+      expires_in: 1500,
+      token_type: 'Bearer',
+      access_token: 'api_key'
+    })
+    .persist()
+
   poleEmploiAPI
-    .get('/offres/search?range=1-149&experience=1&sort=2&codeROME=1234&distance=3&commune=42')
+    .get('/offres/search')
+    .query({
+      range: '1-149',
+      experience: 1,
+      sort: 2,
+      codeROME: 'metier-avec-une-seule-offre',
+      distance: 10,
+      commune: 57463
+    })
+    .matchHeader('Authorization', 'Bearer api_key')
     .reply(200, {
       resultats: [
         {
@@ -15,7 +43,7 @@ exports.set = () => {
             {
               'code': '101901',
               'exigence': 'S',
-              'libelle': "Accueillir le client et l'installer"
+              'libelle': 'Accueillir le client et l\'installer'
             },
             {
               'code': '124015',
@@ -51,7 +79,7 @@ exports.set = () => {
           'dateActualisation': '2019-04-15T16:45:13+02:00',
           'dateCreation': '2019-04-15T16:45:10+02:00',
           // eslint-disable-next-line max-len
-          'description': "Nous recherchons un serveur(se) (H/F) CDI à temps plein 39H hebdomadaire pour le service du soir.\nMissions\n- Accueillir les clients et les installer\n- Présenter la carte et prendre la commande\n- Servir les plats et boissons\n- S'assurer du bon déroulement du service\n- Encaissement\nProfil \n- Créer une relation avec les clients\n- Travailler en équipe\n- Dynamique et motivé(e)\nRémunération en fonction de l'expérience.\nPoste à pourvoir immédiatement.",
+          'description': 'Nous recherchons un serveur(se) (H/F) CDI à temps plein 39H hebdomadaire pour le service du soir.\nMissions\n- Accueillir les clients et les installer\n- Présenter la carte et prendre la commande\n- Servir les plats et boissons\n- S\'assurer du bon déroulement du service\n- Encaissement\nProfil \n- Créer une relation avec les clients\n- Travailler en équipe\n- Dynamique et motivé(e)\nRémunération en fonction de l\'expérience.\nPoste à pourvoir immédiatement.',
           'dureeTravailLibelle': '39H Horaires normaux',
           'entreprise': {
             'nom': 'H PUB'

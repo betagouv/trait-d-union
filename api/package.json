@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
-    "test:e2e": "NODE_ENV=e2e cucumber-js tests/e2e/** --require tests/e2e/step-definitions/steps.js --format ../node_modules/cucumber-pretty",
+    "test:e2e": "source .e2e.env && cucumber-js tests/e2e/** --require tests/e2e/step-definitions/steps.js --format ../node_modules/cucumber-pretty",
     "test": "mocha **/*.test.js --exclude **/node_modules/**",
     "test:watch": "npm run test -- --watch --reporter=min",
     "posttest": "npm run lint"

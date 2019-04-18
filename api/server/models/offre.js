@@ -1,5 +1,9 @@
 const createFindOffres = require('../features/offres/find-offres')
-const offresRepository = require('../repositories/offres-pole-emploi-repository')
+const cache = require('../infrastructure/cache')
+const apiConfiguration = require('../infrastructure/api-configuration')
+
+const poleEmploiApiService = require('../repositories/pole-emploi-api-service')({ apiConfiguration, cache })
+const offresRepository = require('../repositories/offres-pole-emploi-repository')({ poleEmploiApiService })
 
 module.exports = (Offre) => {
   Offre.sortedOffres = async () => {

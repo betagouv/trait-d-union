@@ -1,13 +1,9 @@
-const LRU = require('lru-cache')
 const request = require('request-promise-native')
 const Boom = require('boom')
 
-const maxAge = 60 * 60 * 1000 // 1 hour
-const _cache = new LRU({ maxAge })
-
 const PE_API_KEY_CACHE_NAME = 'PE_API_KEY'
 
-module.exports = ({ apiConfiguration, cache = _cache }) => {
+module.exports = ({ apiConfiguration, cache }) => {
   const getApiKey = createGetApiKey({ apiConfiguration, cache })
   const getEndpointResponse = createGetEndpointResponse({ apiConfiguration, cache })
   return {

@@ -94,9 +94,7 @@ describe('Pole Emploi API Service', () => {
         })
 
         it('stores API key in cache', async () => {
-          // WHEN
           await poleEmploiApiService.request('/fakeUrl')
-          // THEN
           expect(cache.set).to.have.been.calledWith(
             'PE_API_KEY',
             'fake_apikey'
