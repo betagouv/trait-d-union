@@ -9,7 +9,8 @@ module.exports = {
           {
             'code': '107495',
             'exigence': 'S',
-            'libelle': 'Concevoir le projet thérapeutique et arrêter les modalités d\'intervention selon l\'âge, la pathologie, l\'activité du patient'
+            'libelle': 'Concevoir le projet thérapeutique et arrêter les modalités d\'intervention ' +
+              'selon l\'âge, la pathologie, l\'activité du patient'
           },
           {
             'code': '107496',
@@ -29,10 +30,17 @@ module.exports = {
         },
         'dateActualisation': '2019-04-11T10:50:23+02:00',
         'dateCreation': '2019-04-10T18:50:09+02:00',
-        'description': 'Vous exercez dans un établissement de Soins de Suite et de Réadaptation de 206 lits (travail de jour)  au sein du Plateau de Rééducation.\n\n2 Postes sont  à pourvoir : 1  CDD de 2 mois (prise de poste immédiate), 1 CDD de 6 mois (prise de poste immédiate).',
+        'description': 'Vous exercez dans un établissement de Soins de Suite et de Réadaptation de ' +
+          '206 lits (travail de jour)  au sein du Plateau de Rééducation.\n\n2 Postes sont  à pourvoir' +
+          ' : 1  CDD de 2 mois (prise de poste immédiate), 1 CDD de 6 mois (prise de poste immédiate).',
         'dureeTravailLibelle': '35H Horaires normaux',
         'entreprise': {
-          'description': 'Établissement de Soins de Suite et de Réadaptation composé de 206 lits d\'hospitalisation complète autorisés en Soins de suite polyvalents, Rééducation spécialisée des affections neurologiques, Rééducation spécialisée des affections de l\'appareil locomoteur, Prise en charge spécialisée des affections de l\'appareil digestif, métaboliques et nutritionnelles.\n\nL\'Établissement est pourvu d\'une importante équipe pluridisciplinaire (dont 11 médecins)  et d\'un plateau médico-technique de qualité.',
+          'description': 'Établissement de Soins de Suite et de Réadaptation composé de 206 lits ' +
+            'd\'hospitalisation complète autorisés en Soins de suite polyvalents, Rééducation spécialisée ' +
+            'des affections neurologiques, Rééducation spécialisée des affections de l\'appareil locomoteur, ' +
+            'Prise en charge spécialisée des affections de l\'appareil digestif, métaboliques et nutritionnelles.' +
+            '\n\nL\'Établissement est pourvu d\'une importante équipe pluridisciplinaire (dont 11 médecins)  et ' +
+            'd\'un plateau médico-technique de qualité.',
           'nom': 'ETS SOINS SUITE ET READAPTATION 3 EPIS -',
           'url': 'http://mgen.fr'
         },
@@ -65,15 +73,21 @@ module.exports = {
         'qualificationCode': '7',
         'qualitesProfessionnelles': [
           {
-            'description': 'Capacité à travailler et à se coordonner avec les autres au sein de l’entreprise en confiance et en transparence pour réaliser les objectifs fixés. Exemple : aider ses collègues, savoir demander de l’aide',
+            'description': 'Capacité à travailler et à se coordonner avec les autres au sein de' +
+              ' l’entreprise en confiance et en transparence pour réaliser les objectifs fixés. ' +
+              'Exemple : aider ses collègues, savoir demander de l’aide',
             'libelle': 'Travail en équipe'
           },
           {
-            'description': 'Capacité à prendre en charge son activité sans devoir être encadré de façon continue. Exemple : travailler efficacement sans responsable',
+            'description': 'Capacité à prendre en charge son activité sans devoir être encadré ' +
+              'de façon continue. Exemple : travailler efficacement sans responsable',
             'libelle': 'Autonomie'
           },
           {
-            'description': 'Capacité à respecter les règles et codes de l’entreprise; à réaliser des tâches en suivant avec précision les procédures et instructions fournies ; à transmettre des informations avec exactitude. Exemple : être ponctuel, respecter les engagements, résister à la distraction',
+            'description': 'Capacité à respecter les règles et codes de l’entreprise; à réaliser ' +
+              'des tâches en suivant avec précision les procédures et instructions fournies ; ' +
+              'à transmettre des informations avec exactitude. Exemple : être ponctuel, respecter ' +
+              'les engagements, résister à la distraction',
             'libelle': 'Rigueur'
           }
         ],
