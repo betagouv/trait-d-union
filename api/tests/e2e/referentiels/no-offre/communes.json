@@ -1,8 +1,7 @@
 [
   {
-    "codePostal": 57666,
-    "codeInsee": 42,
-    "coordonnees": "1,2",
-    "nom": "Une ville dans le Grand Est"
+    "nom": "Metz",
+    "codeInsee": "57463",
+    "coordonnees": "6.190572692218349,49.111451650406565"
   }
 ]

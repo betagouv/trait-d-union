@@ -1,25 +1,49 @@
-const HttpErrors = require('http-errors')
-
-module.exports = ({ SessionFormation }) => async ({ around }) => {
-  const formation = await SessionFormation.find()
-  if (formation.length) {
-    throw noOffresFoundError()
-  }
-  throw noFormationFoundError()
+module.exports = ({ Metier }, { getOffres }) => async ({ around }) => {
+  const metiers = await Metier.find()
+  const filteredMetiers = keepMetiersWithSessions(metiers)
+  const getOffresPromises = filteredMetiers.map(getOffreForMetier(getOffres))
+  const allOffres = await Promise.all(getOffresPromises)
+  const offres = flatten(allOffres)
+  return removeDuplicates(offres)
 }
 
-const noFormationFoundError = () => buildError('no-session-formation-found')
-const noOffresFoundError = () => buildError('no-offre-found')
-
-function buildError (errorCode) {
-  const error = new HttpErrors.NotFound(errors[errorCode])
-  error.code = errorCode
-  return error
+function keepMetiersWithSessions (metiers) {
+  return metiers.filter(metier =>
+    isFilled(metier.diplomes()) && metier.diplomes().some(diplome =>
+      isFilled(diplome.actions()) && diplome.actions().some(action =>
+        isFilled(action.sessions()))))
 }
 
-const errors = {
-  'no-session-formation-found': 'Aucune session de formation n\'est disponible. ' +
-    'Vérifiez que vous avez bien inséré le PRF en base ou réessayer en changeant de zone géographique.',
-  'no-offre-found': 'Aucune offre accessible avec une session de formation ' +
-          'n\'a été trouvée dans la zone demandée.'
+function extractSessionsFrom (metier) {
+  const actions = metier.diplomes().map(({ actions }) => actions())
+  const sessions = flatten(actions).map(({ sessions }) => sessions())
+  return flatten(sessions)
+}
+
+function assignSessionsToOffres (offres, sessions) {
+  return offres.map(offre => Object.assign(offre, { sessions }))
+}
+
+const getOffreForMetier = (getOffres) => async (metier) => {
+  const allOffres = await getOffres({ codeROME: metier.codeROME })
+  const offres = removeDuplicates(allOffres)
+  const sessions = extractSessionsFrom(metier)
+  return assignSessionsToOffres(offres, sessions)
+}
+
+const flatten = _flatten
+function _flatten (element) {
+  return element instanceof Array
+    ? [].concat([], ...element.map(_flatten))
+    : element
+}
+
+const isFilled = _isFilled
+function _isFilled (array) {
+  return array.length > 0
+}
+
+const removeDuplicates = _removeDuplicates
+function _removeDuplicates (array) {
+  return Array.from(new Set(array))
 }

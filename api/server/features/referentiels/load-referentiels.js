@@ -1,8 +1,8 @@
 module.exports = async ({ ActionFormation, Diplome, Metier, SessionFormation, Commune },
   { referentielActions, referentielDiplomes, referentielMetiers, referentielSessions, referentielCommunes }) => {
-  await loadReferentiel(ActionFormation, referentielActions)
   await loadReferentiel(Metier, referentielMetiers)
   await loadReferentielDiplomes(Diplome, referentielDiplomes)
+  await loadReferentiel(ActionFormation, referentielActions)
   await loadReferentiel(Commune, referentielCommunes)
   await loadReferentiel(SessionFormation, referentielSessions)
 }

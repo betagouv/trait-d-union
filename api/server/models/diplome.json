@@ -24,6 +24,11 @@
     "metiers": {
       "type": "hasAndBelongsToMany",
       "model": "Metier"
+    },
+    "actions": {
+      "type": "hasMany",
+      "model": "ActionFormation",
+      "foreignKey": "codeDiplome"
     }
   },
   "acls": [],

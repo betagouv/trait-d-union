@@ -2,5 +2,8 @@
   "extends": "standard",
   "rules": {
     "max-len": ["error", { "code": 150 }]
+  },
+  "env": {
+    "mocha": true
   }
 }

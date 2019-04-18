@@ -1,5 +1,11 @@
 [
   {
+    "sessions": [{
+      "id": 1,
+      "numero": 20191,
+      "communeCodeInsee": 42,
+      "actionNumero": 1928
+    }],
     "accessibleTH": false,
     "alternance": false,
     "appellationlibelle": "Masseur / Masseuse kinésithérapeute",

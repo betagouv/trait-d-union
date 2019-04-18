@@ -7,13 +7,9 @@
     "validateUpsert": true
   },
   "properties": {
-    "codePostal": {
-      "type": "number",
-      "required": true
-    },
     "codeInsee": {
-      "id": true,
       "type": "number",
+      "id": true,
       "required": true
     },
     "nom": {
