@@ -4,110 +4,7 @@ const createOffresPoleEmploiRepository = require('./offres-pole-emploi-repositor
 describe('Offres Pole Emploi Repository', () => {
   describe('.getOffres({codeROME})', () => {
     const codeROME = 'codeROME'
-    const offre = {
-      'accessibleTH': false,
-      'alternance': false,
-      'appellationlibelle': 'Serveur / Serveuse de bar',
-      'competences': [
-        {
-          'code': '101901',
-          'exigence': 'S',
-          'libelle': 'Accueillir le client et l\'installer'
-        },
-        {
-          'code': '124015',
-          'exigence': 'S',
-          'libelle': 'Débarrasser une table'
-        },
-        {
-          'code': '104304',
-          'exigence': 'S',
-          'libelle': 'Prendre la commande des clients'
-        },
-        {
-          'code': '124961',
-          'exigence': 'S',
-          'libelle': 'Préparer des boissons chaudes ou froides'
-        },
-        {
-          'code': '124962',
-          'exigence': 'S',
-          'libelle': 'Réaliser un service au bar'
-        },
-        {
-          'code': '124963',
-          'exigence': 'S',
-          'libelle': 'Réaliser un service en salle'
-        }
-      ],
-      'contact': {
-        'coordonnees2': 'RUE RUE DE L EMINEE',
-        'coordonnees3': '63000 CLERMONT FERRAND',
-        'nom': 'H PUB - M. PHILIPPE ARNALD'
-      },
-      'permis': [
-        {
-          'exigence': 'E',
-          'libelle': 'B - Véhicule léger Exigé'
-        }
-      ],
-      'dateActualisation': '2019-04-15T16:45:13+02:00',
-      'dateCreation': '2019-04-15T16:45:10+02:00',
-      // eslint-disable-next-line max-len
-      'description': 'Nous recherchons un serveur(se) (H/F) CDI à temps plein 39H hebdomadaire pour le service du soir.\nMissions\n- Accueillir les clients et les installer\n- Présenter la carte et prendre la commande\n- Servir les plats et boissons\n- S\'assurer du bon déroulement du service\n- Encaissement\nProfil \n- Créer une relation avec les clients\n- Travailler en équipe\n- Dynamique et motivé(e)\nRémunération en fonction de l\'expérience.\nPoste à pourvoir immédiatement.',
-      'dureeTravailLibelle': '39H Horaires normaux',
-      'entreprise': {
-        'nom': 'H PUB'
-      },
-      'experienceExige': 'D',
-      'experienceLibelle': 'Débutant accepté',
-      'formations': [],
-      'id': '086QKQK',
-      'intitule': 'Serveur/Serveuse (H/F)',
-      'langues': [],
-      'lieuTravail': {
-        'codePostal': '63000',
-        'latitude': 45.77972222,
-        'libelle': '63 - CLERMONT FERRAND',
-        'longitude': 3.086944444
-      },
-      'natureContrat': 'Contrat travail',
-      'nombrePostes': 1,
-      'origineOffre': {
-        'origine': '1',
-        'partenaires': [],
-        'urlOrigine': 'https://candidat.pole-emploi.fr/offres/recherche/detail/086QKQK'
-      },
-      'qualificationCode': '6',
-      'qualitesProfessionnelles': [
-        {
-          // eslint-disable-next-line max-len
-          'description': 'Capacité à s’adapter à des situations variées et à s’ajuster à des organisations, des collectifs de travail, des habitudes et des valeurs propres à l’entreprise. Exemple : être souple, agile, s’adapter à une situation imprévue',
-          'libelle': 'Capacité d’adaptation'
-        },
-        {
-          // eslint-disable-next-line max-len
-          'description': 'Capacité à planifier, à prioriser, à anticiper des actions en tenant compte des moyens, des ressources, des objectifs et du calendrier pour les réaliser. Exemple : planifier, ordonner ses actions par priorité',
-          'libelle': 'Sens de l’organisation'
-        },
-        {
-          // eslint-disable-next-line max-len
-          'description': 'Capacité à réagir rapidement face à des évènements et à des imprévus, en hiérarchisant les actions, en fonction de leur degré d’urgence / d’importance. Exemple : faire preuve de dynamisme, vivacité, énergie, comprendre vite',
-          'libelle': 'Réactivité'
-        }
-      ],
-      'romeCode': 'G1801',
-      'romeLibelle': 'Café, bar brasserie',
-      'salaire': {
-        'libelle': 'Horaire de 10.03 Euros à 12.00 Euros sur 12 mois'
-      },
-      'secteurActivite': '56',
-      'secteurActiviteLibelle': 'Restauration traditionnelle',
-      'trancheEffectifEtab': '20 à 49 salariés',
-      'typeContrat': 'CDI',
-      'typeContratLibelle': 'Contrat à durée indéterminée'
-    }
-
+    const offre = createFullOffre()
     const poleEmploiApiService = {
       request: sinon.spy(async () => {
         return { resultats: [offre] }
@@ -129,140 +26,15 @@ describe('Offres Pole Emploi Repository', () => {
     })
 
     context('when offer contains an undefined property', async () => {
-      ['typeContrat', 'description', 'dureeTravailLibelle'].forEach((undefinedProperty) => {
-        const expectedOffre = {
-          'id': '086QKQK',
-          'courriel': 'some@email.fr',
-          // eslint-disable-next-line max-len
-          'description': 'Nous recherchons un serveur(se) (H/F) CDI à temps plein 39H hebdomadaire pour le service du soir.\nMissions\n- Accueillir les clients et les installer\n- Présenter la carte et prendre la commande\n- Servir les plats et boissons\n- S\'assurer du bon déroulement du service\n- Encaissement\nProfil \n- Créer une relation avec les clients\n- Travailler en équipe\n- Dynamique et motivé(e)\nRémunération en fonction de l\'expérience.\nPoste à pourvoir immédiatement.',
-          'dureeTravailLibelle': '39H Horaires normaux',
-          'lieuTravail': {
-            'codePostal': '63000',
-            'latitude': 45.77972222,
-            'libelle': '63 - CLERMONT FERRAND',
-            'longitude': 3.086944444
-          },
-          'natureContrat': 'Contrat travail',
-          'permis': [
-            {
-              'exigence': 'E',
-              'libelle': 'B - Véhicule léger Exigé'
-            }
-          ],
-          'salaire': {
-            'libelle': 'Horaire de 10.03 Euros à 12.00 Euros sur 12 mois'
-          },
-          'secteurActiviteLibelle': 'Restauration traditionnelle',
-          'typeContrat': 'CDI',
-          'appellationlibelle': 'Serveur / Serveuse de bar',
-          'url': 'https://candidat.pole-emploi.fr/offres/recherche/detail/086QKQK'
-        }
-        const fullOffre = {
-          'accessibleTH': false,
-          'alternance': false,
-          'appellationlibelle': 'Serveur / Serveuse de bar',
-          'competences': [
-            {
-              'code': '101901',
-              'exigence': 'S',
-              'libelle': 'Accueillir le client et l\'installer'
-            },
-            {
-              'code': '124015',
-              'exigence': 'S',
-              'libelle': 'Débarrasser une table'
-            },
-            {
-              'code': '104304',
-              'exigence': 'S',
-              'libelle': 'Prendre la commande des clients'
-            },
-            {
-              'code': '124961',
-              'exigence': 'S',
-              'libelle': 'Préparer des boissons chaudes ou froides'
-            },
-            {
-              'code': '124962',
-              'exigence': 'S',
-              'libelle': 'Réaliser un service au bar'
-            },
-            {
-              'code': '124963',
-              'exigence': 'S',
-              'libelle': 'Réaliser un service en salle'
-            }
-          ],
-          'contact': {
-            'coordonnees2': 'RUE RUE DE L EMINEE',
-            'coordonnees3': '63000 CLERMONT FERRAND',
-            'nom': 'H PUB - M. PHILIPPE ARNALD'
-          },
-          'permis': [
-            {
-              'exigence': 'E',
-              'libelle': 'B - Véhicule léger Exigé'
-            }
-          ],
-          'dateActualisation': '2019-04-15T16:45:13+02:00',
-          'dateCreation': '2019-04-15T16:45:10+02:00',
-          // eslint-disable-next-line max-len
-          'description': 'Nous recherchons un serveur(se) (H/F) CDI à temps plein 39H hebdomadaire pour le service du soir.\nMissions\n- Accueillir les clients et les installer\n- Présenter la carte et prendre la commande\n- Servir les plats et boissons\n- S\'assurer du bon déroulement du service\n- Encaissement\nProfil \n- Créer une relation avec les clients\n- Travailler en équipe\n- Dynamique et motivé(e)\nRémunération en fonction de l\'expérience.\nPoste à pourvoir immédiatement.',
-          'dureeTravailLibelle': '39H Horaires normaux',
-          'entreprise': {
-            'nom': 'H PUB'
-          },
-          'experienceExige': 'D',
-          'experienceLibelle': 'Débutant accepté',
-          'formations': [],
-          'id': '086QKQK',
-          'intitule': 'Serveur/Serveuse (H/F)',
-          'langues': [],
-          'lieuTravail': {
-            'codePostal': '63000',
-            'latitude': 45.77972222,
-            'libelle': '63 - CLERMONT FERRAND',
-            'longitude': 3.086944444
-          },
-          'natureContrat': 'Contrat travail',
-          'nombrePostes': 1,
-          'origineOffre': {
-            'origine': '1',
-            'partenaires': [],
-            'urlOrigine': 'https://candidat.pole-emploi.fr/offres/recherche/detail/086QKQK'
-          },
-          'qualificationCode': '6',
-          'qualitesProfessionnelles': [
-            {
-              // eslint-disable-next-line max-len
-              'description': 'Capacité à s’adapter à des situations variées et à s’ajuster à des organisations, des collectifs de travail, des habitudes et des valeurs propres à l’entreprise. Exemple : être souple, agile, s’adapter à une situation imprévue',
-              'libelle': 'Capacité d’adaptation'
-            },
-            {
-              // eslint-disable-next-line max-len
-              'description': 'Capacité à planifier, à prioriser, à anticiper des actions en tenant compte des moyens, des ressources, des objectifs et du calendrier pour les réaliser. Exemple : planifier, ordonner ses actions par priorité',
-              'libelle': 'Sens de l’organisation'
-            },
-            {
-              // eslint-disable-next-line max-len
-              'description': 'Capacité à réagir rapidement face à des évènements et à des imprévus, en hiérarchisant les actions, en fonction de leur degré d’urgence / d’importance. Exemple : faire preuve de dynamisme, vivacité, énergie, comprendre vite',
-              'libelle': 'Réactivité'
-            }
-          ],
-          'romeCode': 'G1801',
-          'romeLibelle': 'Café, bar brasserie',
-          'salaire': {
-            'libelle': 'Horaire de 10.03 Euros à 12.00 Euros sur 12 mois'
-          },
-          'secteurActivite': '56',
-          'secteurActiviteLibelle': 'Restauration traditionnelle',
-          'trancheEffectifEtab': '20 à 49 salariés',
-          'typeContrat': 'CDI',
-          'typeContratLibelle': 'Contrat à durée indéterminée'
-        }
+      ['id', 'description', 'dureeTravailLibelle', 'secteurActiviteLibelle', 'lieuTravail',
+        'appellationlibelle', 'salaire', 'permis', 'natureContrat', 'typeContrat'].forEach((undefinedProperty) => {
+        const expectedOffre = createExpectedOffre()
+        const fullOffre = createFullOffre()
         it(`returns sanitized poleEmploiApi offres without ${undefinedProperty}`, async () => {
           delete fullOffre[undefinedProperty]
-          poleEmploiApiService.request = sinon.spy(async () => { return { resultats: [fullOffre] } })
+          poleEmploiApiService.request = sinon.spy(async () => {
+            return { resultats: [fullOffre] }
+          })
           delete expectedOffre[undefinedProperty]
           const offres = await offresPoleEmploiRepository.getOffres({ codeROME })
 
@@ -274,33 +46,148 @@ describe('Offres Pole Emploi Repository', () => {
     it('returns sanitized poleEmploiApi offres', async () => {
       const offres = await offresPoleEmploiRepository.getOffres({ codeROME })
 
-      expect(offres).to.deep.equal([{
-        'id': '086QKQK',
-        'courriel': 'some@email.fr',
-        // eslint-disable-next-line max-len
-        'description': 'Nous recherchons un serveur(se) (H/F) CDI à temps plein 39H hebdomadaire pour le service du soir.\nMissions\n- Accueillir les clients et les installer\n- Présenter la carte et prendre la commande\n- Servir les plats et boissons\n- S\'assurer du bon déroulement du service\n- Encaissement\nProfil \n- Créer une relation avec les clients\n- Travailler en équipe\n- Dynamique et motivé(e)\nRémunération en fonction de l\'expérience.\nPoste à pourvoir immédiatement.',
-        'dureeTravailLibelle': '39H Horaires normaux',
-        'lieuTravail': {
-          'codePostal': '63000',
-          'latitude': 45.77972222,
-          'libelle': '63 - CLERMONT FERRAND',
-          'longitude': 3.086944444
-        },
-        'natureContrat': 'Contrat travail',
-        'permis': [
-          {
-            'exigence': 'E',
-            'libelle': 'B - Véhicule léger Exigé'
-          }
-        ],
-        'salaire': {
-          'libelle': 'Horaire de 10.03 Euros à 12.00 Euros sur 12 mois'
-        },
-        'secteurActiviteLibelle': 'Restauration traditionnelle',
-        'typeContrat': 'CDI',
-        'appellationlibelle': 'Serveur / Serveuse de bar',
-        'url': 'https://candidat.pole-emploi.fr/offres/recherche/detail/086QKQK'
-      }])
+      expect(offres).to.deep.equal([createExpectedOffre()])
     })
   })
 })
+
+function createFullOffre () {
+  return {
+    'accessibleTH': false,
+    'alternance': false,
+    'appellationlibelle': 'Serveur / Serveuse de bar',
+    'competences': [
+      {
+        'code': '101901',
+        'exigence': 'S',
+        'libelle': 'Accueillir le client et l\'installer'
+      },
+      {
+        'code': '124015',
+        'exigence': 'S',
+        'libelle': 'Débarrasser une table'
+      },
+      {
+        'code': '104304',
+        'exigence': 'S',
+        'libelle': 'Prendre la commande des clients'
+      },
+      {
+        'code': '124961',
+        'exigence': 'S',
+        'libelle': 'Préparer des boissons chaudes ou froides'
+      },
+      {
+        'code': '124962',
+        'exigence': 'S',
+        'libelle': 'Réaliser un service au bar'
+      },
+      {
+        'code': '124963',
+        'exigence': 'S',
+        'libelle': 'Réaliser un service en salle'
+      }
+    ],
+    'contact': {
+      'coordonnees2': 'RUE RUE DE L EMINEE',
+      'coordonnees3': '63000 CLERMONT FERRAND',
+      'nom': 'H PUB - M. PHILIPPE ARNALD'
+    },
+    'permis': [
+      {
+        'exigence': 'E',
+        'libelle': 'B - Véhicule léger Exigé'
+      }
+    ],
+    'dateActualisation': '2019-04-15T16:45:13+02:00',
+    'dateCreation': '2019-04-15T16:45:10+02:00',
+    // eslint-disable-next-line max-len
+    'description': 'Nous recherchons un serveur(se) (H/F) CDI à temps plein 39H hebdomadaire pour le service du soir.\nMissions\n- Accueillir les clients et les installer\n- Présenter la carte et prendre la commande\n- Servir les plats et boissons\n- S\'assurer du bon déroulement du service\n- Encaissement\nProfil \n- Créer une relation avec les clients\n- Travailler en équipe\n- Dynamique et motivé(e)\nRémunération en fonction de l\'expérience.\nPoste à pourvoir immédiatement.',
+    'dureeTravailLibelle': '39H Horaires normaux',
+    'entreprise': {
+      'nom': 'H PUB'
+    },
+    'experienceExige': 'D',
+    'experienceLibelle': 'Débutant accepté',
+    'formations': [],
+    'id': '086QKQK',
+    'intitule': 'Serveur/Serveuse (H/F)',
+    'langues': [],
+    'lieuTravail': {
+      'codePostal': '63000',
+      'latitude': 45.77972222,
+      'libelle': '63 - CLERMONT FERRAND',
+      'longitude': 3.086944444
+    },
+    'natureContrat': 'Contrat travail',
+    'nombrePostes': 1,
+    'origineOffre': {
+      'origine': '1',
+      'partenaires': [],
+      'urlOrigine': 'https://candidat.pole-emploi.fr/offres/recherche/detail/086QKQK'
+    },
+    'qualificationCode': '6',
+    'qualitesProfessionnelles': [
+      {
+        // eslint-disable-next-line max-len
+        'description': 'Capacité à s’adapter à des situations variées et à s’ajuster à des organisations, des collectifs de travail, des habitudes et des valeurs propres à l’entreprise. Exemple : être souple, agile, s’adapter à une situation imprévue',
+        'libelle': 'Capacité d’adaptation'
+      },
+      {
+        // eslint-disable-next-line max-len
+        'description': 'Capacité à planifier, à prioriser, à anticiper des actions en tenant compte des moyens, des ressources, des objectifs et du calendrier pour les réaliser. Exemple : planifier, ordonner ses actions par priorité',
+        'libelle': 'Sens de l’organisation'
+      },
+      {
+        // eslint-disable-next-line max-len
+        'description': 'Capacité à réagir rapidement face à des évènements et à des imprévus, en hiérarchisant les actions, en fonction de leur degré d’urgence / d’importance. Exemple : faire preuve de dynamisme, vivacité, énergie, comprendre vite',
+        'libelle': 'Réactivité'
+      }
+    ],
+    'romeCode': 'G1801',
+    'romeLibelle': 'Café, bar brasserie',
+    'salaire': {
+      'libelle': 'Horaire de 10.03 Euros à 12.00 Euros sur 12 mois'
+    },
+    'secteurActivite': '56',
+    'secteurActiviteLibelle': 'Restauration traditionnelle',
+    'trancheEffectifEtab': '20 à 49 salariés',
+    'typeContrat': 'CDI',
+    'typeContratLibelle': 'Contrat à durée indéterminée'
+  }
+}
+
+function createExpectedOffre () {
+  return {
+    'id': '086QKQK',
+    'courriel': 'some@email.fr',
+    // eslint-disable-next-line max-len
+    'description': 'Nous recherchons un serveur(se) (H/F) CDI à temps plein 39H hebdomadaire pour le service du soir.\nMissions\n- Accueillir les clients et les installer\n- Présenter la carte et prendre la commande\n- Servir les plats et boissons\n- S\'assurer du bon déroulement du service\n- Encaissement\nProfil \n- Créer une relation avec les clients\n- Travailler en équipe\n- Dynamique et motivé(e)\nRémunération en fonction de l\'expérience.\nPoste à pourvoir immédiatement.',
+    'dureeTravailLibelle': '39H Horaires normaux',
+    'lieuTravail': {
+      'codePostal': '63000',
+      'latitude': 45.77972222,
+      'libelle': '63 - CLERMONT FERRAND',
+      'longitude': 3.086944444
+    },
+    'natureContrat': 'Contrat travail',
+    'permis': [
+      {
+        'exigence': 'E',
+        'libelle': 'B - Véhicule léger Exigé'
+      }
+    ],
+    'salaire': {
+      'libelle': 'Horaire de 10.03 Euros à 12.00 Euros sur 12 mois'
+    },
+    'contact': {
+      'coordonnees2': 'RUE RUE DE L EMINEE',
+      'coordonnees3': '63000 CLERMONT FERRAND',
+      'nom': 'H PUB - M. PHILIPPE ARNALD'
+    },
+    'secteurActiviteLibelle': 'Restauration traditionnelle',
+    'typeContrat': 'CDI',
+    'appellationlibelle': 'Serveur / Serveuse de bar',
+    'url': 'https://candidat.pole-emploi.fr/offres/recherche/detail/086QKQK'
+  }
+}

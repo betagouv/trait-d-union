@@ -23,7 +23,7 @@ const searchOffres = (poleEmploiApiService) => async (codeROME) => {
 function sanitizeOffre (offre) {
   const properties = [
     'id', 'description', 'dureeTravailLibelle', 'secteurActiviteLibelle', 'lieuTravail',
-    'appellationlibelle', 'salaire', 'permis', 'natureContrat', 'typeContrat'
+    'appellationlibelle', 'salaire', 'permis', 'natureContrat', 'typeContrat', 'contact'
   ]
 
   const result = keepDefinedProperties(offre, properties)
