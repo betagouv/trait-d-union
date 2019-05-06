@@ -29,7 +29,7 @@ function sanitizeOffre (offre) {
   const result = keepDefinedProperties(offre, properties)
 
   result.url = offre.origineOffre && offre.origineOffre.urlOrigine
-  result.courriel = 'some@email.fr'
+  result.contact.courriel = 'some@email.fr'
 
   return result
 }

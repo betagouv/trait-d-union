@@ -160,7 +160,6 @@ function createFullOffre () {
 function createExpectedOffre () {
   return {
     'id': '086QKQK',
-    'courriel': 'some@email.fr',
     // eslint-disable-next-line max-len
     'description': 'Nous recherchons un serveur(se) (H/F) CDI à temps plein 39H hebdomadaire pour le service du soir.\nMissions\n- Accueillir les clients et les installer\n- Présenter la carte et prendre la commande\n- Servir les plats et boissons\n- S\'assurer du bon déroulement du service\n- Encaissement\nProfil \n- Créer une relation avec les clients\n- Travailler en équipe\n- Dynamique et motivé(e)\nRémunération en fonction de l\'expérience.\nPoste à pourvoir immédiatement.',
     'dureeTravailLibelle': '39H Horaires normaux',
@@ -181,6 +180,7 @@ function createExpectedOffre () {
       'libelle': 'Horaire de 10.03 Euros à 12.00 Euros sur 12 mois'
     },
     'contact': {
+      'courriel': 'some@email.fr',
       'coordonnees2': 'RUE RUE DE L EMINEE',
       'coordonnees3': '63000 CLERMONT FERRAND',
       'nom': 'H PUB - M. PHILIPPE ARNALD'
