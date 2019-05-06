@@ -89,6 +89,7 @@ function createFullOffre () {
       }
     ],
     'contact': {
+      'coordonnees1': 'Courriel : philippe@entreprise.fr',
       'coordonnees2': 'RUE RUE DE L EMINEE',
       'coordonnees3': '63000 CLERMONT FERRAND',
       'nom': 'H PUB - M. PHILIPPE ARNALD'
@@ -180,10 +181,11 @@ function createExpectedOffre () {
       'libelle': 'Horaire de 10.03 Euros à 12.00 Euros sur 12 mois'
     },
     'contact': {
-      'courriel': 'some@email.fr',
-      'coordonnees2': 'RUE RUE DE L EMINEE',
-      'coordonnees3': '63000 CLERMONT FERRAND',
-      'nom': 'H PUB - M. PHILIPPE ARNALD'
+      courriel: 'philippe@entreprise.fr',
+      coordonnees1: 'Courriel : philippe@entreprise.fr',
+      coordonnees2: 'RUE RUE DE L EMINEE',
+      coordonnees3: '63000 CLERMONT FERRAND',
+      nom: 'H PUB - M. PHILIPPE ARNALD'
     },
     'secteurActiviteLibelle': 'Restauration traditionnelle',
     'typeContrat': 'CDI',

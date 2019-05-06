@@ -1,3 +1,5 @@
+const computeCourrielFromContact = require('./compute-courriel-from-contact')
+
 module.exports = ({ poleEmploiApiService }) => {
   return {
     getOffres: async ({ codeROME }) => {
@@ -29,7 +31,7 @@ function sanitizeOffre (offre) {
   const result = keepDefinedProperties(offre, properties)
 
   result.url = offre.origineOffre && offre.origineOffre.urlOrigine
-  result.contact.courriel = 'some@email.fr'
+  result.contact.courriel = computeCourrielFromContact(offre.contact)
 
   return result
 }
