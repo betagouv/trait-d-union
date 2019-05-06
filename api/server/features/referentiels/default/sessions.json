@@ -2,271 +2,379 @@
   {
     "actionNumero": 1852,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-06-19",
+    "dateFin": "2020-07-03"
   },
   {
     "actionNumero": 2418,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-06-24",
+    "dateFin": "2020-03-13"
   },
   {
     "actionNumero": 2525,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-06-28",
+    "dateFin": "2020-04-28"
   },
   {
     "actionNumero": 2417,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-07-01",
+    "dateFin": "2020-02-21"
   },
   {
     "actionNumero": 2424,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-07-01",
+    "dateFin": "2020-03-20"
   },
   {
     "actionNumero": 2426,
     "numero": 20192,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-07-03",
+    "dateFin": "2020-04-30"
   },
   {
     "actionNumero": 2431,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-07-04",
+    "dateFin": "2020-04-24"
   },
   {
     "actionNumero": 2413,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-07-08",
+    "dateFin": "2020-03-27"
   },
   {
     "actionNumero": 2581,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-07-08",
+    "dateFin": "2020-06-11"
   },
   {
     "actionNumero": 2401,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-07-09",
+    "dateFin": "2019-12-19"
   },
   {
     "actionNumero": 2584,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-07-11",
+    "dateFin": "2020-03-27"
   },
   {
     "actionNumero": 1843,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-07-27",
+    "dateFin": "2020-06-25"
   },
   {
     "actionNumero": 2412,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-08-27",
+    "dateFin": "2020-03-19"
   },
   {
     "actionNumero": 2429,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-08-27",
+    "dateFin": "2020-06-19"
   },
   {
     "actionNumero": 2428,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-08-29",
+    "dateFin": "2020-05-15"
   },
   {
     "actionNumero": 2410,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-09-02",
+    "dateFin": "2020-02-12"
   },
   {
     "actionNumero": 2416,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-09-02",
+    "dateFin": "2020-03-11"
   },
   {
     "actionNumero": 2418,
     "numero": 20192,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-09-03",
+    "dateFin": "2020-05-28"
   },
   {
     "actionNumero": 2536,
     "numero": 20193,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-09-09",
+    "dateFin": "2019-11-22"
   },
   {
     "actionNumero": 2343,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-09-25",
+    "dateFin": "2020-05-20"
   },
   {
     "actionNumero": 13116,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-09-25",
+    "dateFin": "2020-06-30"
   },
   {
     "actionNumero": 13116,
     "numero": 20192,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-09-25",
+    "dateFin": "2020-06-30"
   },
   {
     "actionNumero": 13116,
     "numero": 20193,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-09-25",
+    "dateFin": "2020-06-30"
   },
   {
     "actionNumero": 13116,
     "numero": 20194,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-09-25",
+    "dateFin": "2020-06-30"
   },
   {
     "actionNumero": 13116,
     "numero": 20195,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-09-25",
+    "dateFin": "2020-06-30"
   },
   {
     "actionNumero": 1863,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-09-26",
+    "dateFin": "2020-03-24"
   },
   {
     "actionNumero": 13217,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-09-26",
+    "dateFin": "2019-12-20"
   },
   {
     "actionNumero": 2343,
     "numero": 20192,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-09-30",
+    "dateFin": "2020-04-01"
   },
   {
     "actionNumero": 2357,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-09-30",
+    "dateFin": "2020-04-01"
   },
   {
     "actionNumero": 2345,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-10-01",
+    "dateFin": "2020-05-20"
   },
   {
     "actionNumero": 2411,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-10-01",
+    "dateFin": "2020-04-09"
   },
   {
     "actionNumero": 1858,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-10-07",
+    "dateFin": "2020-03-27"
   },
   {
     "actionNumero": 1867,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-10-07",
+    "dateFin": "2020-04-23"
   },
   {
     "actionNumero": 2582,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-10-07",
+    "dateFin": "2020-04-28"
   },
   {
     "actionNumero": 13115,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-10-09",
+    "dateFin": "2020-06-02"
   },
   {
     "actionNumero": 13115,
     "numero": 20192,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-10-09",
+    "dateFin": "2020-06-02"
   },
   {
     "actionNumero": 13115,
     "numero": 20193,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-10-09",
+    "dateFin": "2020-06-02"
   },
   {
     "actionNumero": 13115,
     "numero": 20194,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-10-09",
+    "dateFin": "2020-06-02"
   },
   {
     "actionNumero": 13115,
     "numero": 20195,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-10-09",
+    "dateFin": "2020-06-02"
   },
   {
     "actionNumero": 1857,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-10-14",
+    "dateFin": "2020-03-31"
   },
   {
     "actionNumero": 13217,
     "numero": 20192,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-10-28",
+    "dateFin": "2020-02-04"
   },
   {
     "actionNumero": 13206,
     "numero": 20192,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-11-05",
+    "dateFin": "2019-12-18"
   },
   {
     "actionNumero": 2536,
     "numero": 20194,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-11-06",
+    "dateFin": "2020-01-31"
   },
   {
     "actionNumero": 13204,
     "numero": 20193,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-11-06",
+    "dateFin": "2019-12-18"
   },
   {
     "actionNumero": 2349,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-11-12",
+    "dateFin": "2020-06-04"
   },
   {
     "actionNumero": 2414,
     "numero": 20192,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-11-20",
+    "dateFin": "2020-07-03"
   },
   {
     "actionNumero": 13217,
     "numero": 20193,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-12-02",
+    "dateFin": "2020-03-04"
   },
   {
     "actionNumero": 2364,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-12-03",
+    "dateFin": "2020-06-17"
   },
   {
     "actionNumero": 13422,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-12-16",
+    "dateFin": "2020-09-10"
   },
   {
     "actionNumero": 13423,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-12-16",
+    "dateFin": "2020-09-10"
   },
   {
     "actionNumero": 13430,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-12-16",
+    "dateFin": "2020-09-07"
   },
   {
     "actionNumero": 13430,
     "numero": 20192,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-12-16",
+    "dateFin": "2020-09-07"
   },
   {
     "actionNumero": 13507,
     "numero": 20191,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-12-16",
+    "dateFin": "2020-04-29"
   },
   {
     "actionNumero": 13207,
     "numero": 20192,
-    "communeCodeInsee": 57463
+    "communeCodeInsee": 57463,
+    "dateDebut": "2019-12-19",
+    "dateFin": "2020-02-26"
   }
 ]
