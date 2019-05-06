@@ -15,11 +15,14 @@
     },
     "dateDebut": {
       "type": "date",
-      "required": true
+      "required": false
     },
     "dateFin": {
       "type": "date",
-      "required": true
+      "required": false
+    },
+    "duration": {
+      "type": "number"
     }
   },
   "validations": [],
@@ -36,5 +39,15 @@
     }
   },
   "acls": [],
-  "methods": {}
+  "methods": {},
+  "mixins": {
+    "Calculated": {
+      "properties": {
+        "duration": {
+          "recalculateOnUpdate": true,
+          "callback": "computeDuration"
+        }
+      }
+    }
+  }
 }

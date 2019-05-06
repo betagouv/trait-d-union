@@ -32,7 +32,8 @@
         "communeCodeInsee": 42,
         "actionNumero": 1928,
         "dateDebut": "2018-09-01T00:00:00.000Z",
-        "dateFin": "2018-10-01T00:00:00.000Z"
+        "dateFin": "2018-10-01T00:00:00.000Z",
+        "duration": 1
       }
     ],
     "url": "https://candidat.pole-emploi.fr/offres/recherche/detail/079DBQT"
