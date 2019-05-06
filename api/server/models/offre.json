@@ -1,12 +1,12 @@
 {
   "name": "Offre",
   "base": "Model",
-  "http": {
-    "path": "offres"
-  },
   "idInjection": true,
   "options": {
     "validateUpsert": true
+  },
+  "http": {
+    "path": "offres"
   },
   "properties": {},
   "validations": [],

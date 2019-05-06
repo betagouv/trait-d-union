@@ -9,6 +9,13 @@
   "http": {
     "path": "metiers"
   },
+  "scope": {
+    "include": {
+      "diplomes": {
+        "actions": "sessions"
+      }
+    }
+  },
   "properties": {
     "codeROME": {
       "type": "string",
@@ -19,13 +26,6 @@
       "type": "string"
     }
   },
-  "scope": {
-    "include": {
-      "diplomes": {
-        "actions": "sessions"
-      }
-    }
-  },
   "validations": [],
   "relations": {
     "diplomes": {
@@ -34,6 +34,5 @@
     }
   },
   "acls": [],
-  "methods": {
-  }
+  "methods": {}
 }

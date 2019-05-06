@@ -2,11 +2,11 @@
   "name": "ActionFormation",
   "base": "PersistedModel",
   "idInjection": false,
-  "http": {
-    "path": "action-formations"
-  },
   "options": {
     "validateUpsert": true
+  },
+  "http": {
+    "path": "action-formations"
   },
   "properties": {
     "numero": {

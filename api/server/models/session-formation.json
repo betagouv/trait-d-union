@@ -2,15 +2,23 @@
   "name": "SessionFormation",
   "base": "PersistedModel",
   "idInjection": true,
-  "http": {
-    "path": "session-formations"
-  },
   "options": {
     "validateUpsert": true
+  },
+  "http": {
+    "path": "session-formations"
   },
   "properties": {
     "numero": {
       "type": "number",
+      "required": true
+    },
+    "dateDebut": {
+      "type": "date",
+      "required": true
+    },
+    "dateFin": {
+      "type": "date",
       "required": true
     }
   },
