@@ -1,5 +1,6 @@
 const request = require('request-promise-native')
 const Boom = require('boom')
+const { debug } = require('../infrastructure/logger')
 
 const PE_API_KEY_CACHE_NAME = 'PE_API_KEY'
 
@@ -38,12 +39,14 @@ const createGetEndpointResponse = ({ apiConfiguration }) =>
     }
     const response = await request(options)
 
+    debug(`Pole Emploi API: Did get response from endpoint ${urlSuffix}`)
     return response.body
   }
 
 const createGetApiKey = ({ apiConfiguration, cache }) => async () => {
   let apiKey = cache.get(PE_API_KEY_CACHE_NAME)
   if (!apiKey) {
+    debug(`Pole Emploi API: Will get token`)
     const response = await request
       .post({
         uri: apiConfiguration.authentBaseUrl,
@@ -60,12 +63,14 @@ const createGetApiKey = ({ apiConfiguration, cache }) => async () => {
       })
       .catch(_throwApiError)
     apiKey = response.body.access_token
+    debug(`Pole Emploi API: Did get token and stored in cache`)
     cache.set(PE_API_KEY_CACHE_NAME, apiKey)
   }
   return apiKey
 }
 
 function _throwApiError (error) {
+  debug(`Error received from Pole Emploi API: ${error}`)
   const statusCode = error.statusCode !== 500 ? error.statusCode : 503
   Boom.boomify(error, { statusCode })
   throw error
