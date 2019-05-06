@@ -31,7 +31,10 @@ function sanitizeOffre (offre) {
   const result = keepDefinedProperties(offre, properties)
 
   result.url = offre.origineOffre && offre.origineOffre.urlOrigine
-  result.contact.courriel = computeCourrielFromContact(offre.contact)
+  const courriel = computeCourrielFromContact(offre.contact)
+  if (courriel) {
+    result.contact.courriel = courriel
+  }
 
   return result
 }

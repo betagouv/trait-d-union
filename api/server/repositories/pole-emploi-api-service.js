@@ -11,7 +11,7 @@ module.exports = ({ apiConfiguration, cache }) => {
     request: async (urlSuffix, query, method = 'GET') => {
       const apiKey = await getApiKey()
       return getEndpointResponse(urlSuffix, apiKey, query, method).catch(async error => {
-        if (error.statusCode !== 403) {
+        if (error.statusCode !== 403 && error.statusCode !== 401) {
           _throwApiError(error)
         }
         cache.del(PE_API_KEY_CACHE_NAME)

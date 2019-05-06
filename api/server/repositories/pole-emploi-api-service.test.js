@@ -130,12 +130,49 @@ describe('Pole Emploi API Service', () => {
           poleEmploiApi.done()
         })
 
-        describe('and is not valid any more', () => {
+        describe('and is not valid any more because of Forbidden token', () => {
           beforeEach(() => {
             poleEmploiApi
               .get('/fakeUrl')
               .matchHeader('Authorization', 'Bearer fake_apikey')
               .reply(403)
+            poleEmploiAuthentApi
+              .post('')
+              .query({
+                realm: '/partenaire',
+                grant_type: 'client_credentials',
+                client_id: apiConfiguration.clientId,
+                client_secret: apiConfiguration.clientSecret,
+                scope: 'api_offresdemploiv2 application_clientId o2dsoffre'
+              })
+              .reply(200, {
+                scope: 'api_offresdemploiv2 o2dsoffre',
+                expires_in: 1500,
+                token_type: 'Bearer',
+                access_token: 'fake_new_apikey'
+              })
+
+            poleEmploiApi
+              .get('/fakeUrl')
+              .matchHeader('Authorization', 'Bearer fake_new_apikey')
+              .reply(200)
+          })
+
+          it('gets a new API key and eventually forwards the request', async () => {
+            // WHEN
+            await poleEmploiApiService.request('/fakeUrl')
+            // THEN
+            poleEmploiApi.done()
+            poleEmploiAuthentApi.done()
+          })
+        })
+
+        describe('and is not valid any more because of Unauthorized token', () => {
+          beforeEach(() => {
+            poleEmploiApi
+              .get('/fakeUrl')
+              .matchHeader('Authorization', 'Bearer fake_apikey')
+              .reply(401)
             poleEmploiAuthentApi
               .post('')
               .query({
