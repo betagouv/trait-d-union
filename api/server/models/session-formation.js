@@ -8,5 +8,5 @@ module.exports = (Sessionformation) => {
 
 function durationBetween (dateDebut, dateFin) {
   const sessionInterval = Interval.fromDateTimes(dateDebut, dateFin)
-  return sessionInterval.length('months')
+  return Math.round(sessionInterval.length('months'))
 }
