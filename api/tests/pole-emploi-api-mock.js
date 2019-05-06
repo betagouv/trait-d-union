@@ -37,97 +37,87 @@ exports.set = () => {
       resultats: [
         {
           'accessibleTH': false,
+          'agence': {
+            'courriel': 'laurence.montaigu@pole-emploi.fr'
+          },
           'alternance': false,
-          'appellationlibelle': 'Serveur / Serveuse de bar',
+          'appellationlibelle': 'Attaché commercial / Attachée commerciale en clientèle d\'entreprises',
           'competences': [
             {
-              'code': '101901',
+              'code': '120146',
               'exigence': 'S',
-              'libelle': 'Accueillir le client et l\'installer'
+              'libelle': 'Conseiller une clientèle ou un public'
             },
             {
-              'code': '124015',
+              'code': '102318',
               'exigence': 'S',
-              'libelle': 'Débarrasser une table'
+              // eslint-disable-next-line max-len
+              'libelle': 'Définir le plan d\'action commercial et établir le plan de tournée (ciblage, interlocuteurs, préparation de dossiers techniques)'
             },
             {
-              'code': '104304',
+              'code': '121759',
               'exigence': 'S',
-              'libelle': 'Prendre la commande des clients'
+              'libelle': 'Effectuer une démonstration devant un client ou un public'
             },
             {
-              'code': '124961',
+              'code': '117344',
               'exigence': 'S',
-              'libelle': 'Préparer des boissons chaudes ou froides'
+              'libelle': 'Elaborer des propositions commerciales'
             },
             {
-              'code': '124962',
+              'code': '121417',
               'exigence': 'S',
-              'libelle': 'Réaliser un service au bar'
-            },
-            {
-              'code': '124963',
-              'exigence': 'S',
-              'libelle': 'Réaliser un service en salle'
+              'libelle': 'Méthodes de plan de prospection'
             }
           ],
           'contact': {
-            'coordonnees2': 'RUE RUE DE L EMINEE',
-            'coordonnees3': '63000 CLERMONT FERRAND',
-            'nom': 'H PUB - M. PHILIPPE ARNALD'
+            'coordonnees1': '15 RUE des artisans\nBP 20138',
+            'coordonnees2': '57300 HAGONDANGE',
+            'coordonnees3': 'Courriel : laurence.montaigu@pole-emploi.fr',
+            'nom': 'Pôle Emploi HAGONDANGE'
           },
-          'dateActualisation': '2019-04-15T16:45:13+02:00',
-          'dateCreation': '2019-04-15T16:45:10+02:00',
+          'dateActualisation': '2019-05-03T09:20:29+02:00',
+          'dateCreation': '2018-10-19T14:53:11+02:00',
+          'deplacementCode': '4',
+          'deplacementLibelle': 'Quotidiens Départemental',
           // eslint-disable-next-line max-len
-          'description': 'Nous recherchons un serveur(se) (H/F) CDI à temps plein 39H hebdomadaire pour le service du soir.\nMissions\n- Accueillir les clients et les installer\n- Présenter la carte et prendre la commande\n- Servir les plats et boissons\n- S\'assurer du bon déroulement du service\n- Encaissement\nProfil \n- Créer une relation avec les clients\n- Travailler en équipe\n- Dynamique et motivé(e)\nRémunération en fonction de l\'expérience.\nPoste à pourvoir immédiatement.',
-          'dureeTravailLibelle': '39H Horaires normaux',
-          'entreprise': {
-            'nom': 'H PUB'
-          },
+          'description': 'le leader du déménagements souhaite renforcer sa force de vente . vous effectuerez de la prospection et le développement de la clientèle uniquement de professionnel. Fichier existant et à développer. \nvous interviendrez sur THIONVILLE /METZ/NANCY\nVéhicule fourni et frais pris en charge. salaire attractif\naccepte débutant qui souhaite s\'épanouir dans ce métier. \n',
+          'dureeTravailLibelle': '35H Horaires normaux',
           'experienceExige': 'D',
           'experienceLibelle': 'Débutant accepté',
           'formations': [],
-          'id': '086QKQK',
-          'intitule': 'Serveur/Serveuse (H/F)',
+          'id': '079DBQT',
+          'intitule': 'Attaché commercial / Attachée commerciale en clientèle d\'entreprises',
           'langues': [],
           'lieuTravail': {
-            'codePostal': '63000',
-            'latitude': 45.77972222,
-            'libelle': '63 - CLERMONT FERRAND',
-            'longitude': 3.086944444
+            'codePostal': '57000',
+            'commune': '57463',
+            'latitude': 49.11972222,
+            'libelle': '57 - secteur de METZ',
+            'longitude': 6.176944443
           },
           'natureContrat': 'Contrat travail',
           'nombrePostes': 1,
           'origineOffre': {
             'origine': '1',
             'partenaires': [],
-            'urlOrigine': 'https://candidat.pole-emploi.fr/offres/recherche/detail/086QKQK'
+            'urlOrigine': 'https://candidat.pole-emploi.fr/offres/recherche/detail/079DBQT'
           },
-          'qualificationCode': '6',
-          'qualitesProfessionnelles': [
+          'permis': [
             {
-              // eslint-disable-next-line max-len
-              'description': 'Capacité à s’adapter à des situations variées et à s’ajuster à des organisations, des collectifs de travail, des habitudes et des valeurs propres à l’entreprise. Exemple : être souple, agile, s’adapter à une situation imprévue',
-              'libelle': 'Capacité d’adaptation'
-            },
-            {
-              // eslint-disable-next-line max-len
-              'description': 'Capacité à planifier, à prioriser, à anticiper des actions en tenant compte des moyens, des ressources, des objectifs et du calendrier pour les réaliser. Exemple : planifier, ordonner ses actions par priorité',
-              'libelle': 'Sens de l’organisation'
-            },
-            {
-              // eslint-disable-next-line max-len
-              'description': 'Capacité à réagir rapidement face à des évènements et à des imprévus, en hiérarchisant les actions, en fonction de leur degré d’urgence / d’importance. Exemple : faire preuve de dynamisme, vivacité, énergie, comprendre vite',
-              'libelle': 'Réactivité'
+              'exigence': 'E',
+              'libelle': 'B - Véhicule léger Exigé'
             }
           ],
-          'romeCode': 'G1801',
-          'romeLibelle': 'Café, bar brasserie',
+          'qualificationCode': '6',
+          'romeCode': 'D1402',
+          'romeLibelle': 'Relation commerciale grands comptes et entreprises',
           'salaire': {
-            'libelle': 'Horaire de 10.03 Euros à 12.00 Euros sur 12 mois'
+            'commentaire': 'fixe + prime sur CA',
+            'complement1': 'fixe + prime sur CA'
           },
-          'secteurActivite': '56',
-          'secteurActiviteLibelle': 'Restauration traditionnelle',
+          'secteurActivite': '49',
+          'secteurActiviteLibelle': 'Services de déménagement',
           'trancheEffectifEtab': '20 à 49 salariés',
           'typeContrat': 'CDI',
           'typeContratLibelle': 'Contrat à durée indéterminée'
