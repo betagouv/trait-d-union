@@ -8,12 +8,12 @@ describe('computeCourrielFromContact(contact)', () => {
 
       const courriel = computeCourrielFromContact(contact)
 
-      expect(courriel).to.be.undefined()
+      expect(courriel).to.be.null()
     })
   })
   context('when contact contains a courriel property', () => {
     it('returns the courriel address', () => {
-      const contact = { courriel: 'anotherEmail', coordonnees1: 'Courriel : some@email.fr' }
+      const contact = { courriel: 'anotherEmail', coordonnees1: 'courriel : some@email.fr' }
 
       const courriel = computeCourrielFromContact(contact)
 
@@ -49,6 +49,15 @@ describe('computeCourrielFromContact(contact)', () => {
       const courriel = computeCourrielFromContact(contact)
 
       expect(courriel).to.eql('some@email.fr')
+    })
+  })
+  context('when courriel is not in any coordonnees property', () => {
+    it('returns nullt', () => {
+      const contact = { coordonnees1: 'no courriel' }
+
+      const courriel = computeCourrielFromContact(contact)
+
+      expect(courriel).to.be.null()
     })
   })
 })
