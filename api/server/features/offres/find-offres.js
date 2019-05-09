@@ -1,10 +1,15 @@
-module.exports = ({ Metier }, { getOffres }, { executePromisesSequentially }) => async ({ around }) => {
-  const getOffresForMetier = createGetOffresForMetier(getOffres)
-  const metiers = await Metier.find()
-  const filteredMetiers = keepMetiersWithSessions(metiers)
-  const allOffres = await executePromisesSequentially(filteredMetiers, getOffresForMetier)
-  const offres = flatten(allOffres)
-  return removeDuplicates(offres)
+module.exports = ({ Metier }, repositories, { executePromisesSequentially }) => async ({ around }) => {
+  const offresFromAllRepositories = await Promise.all(repositories.map(getOffresFromRepository))
+  return flatten(offresFromAllRepositories)
+
+  async function getOffresFromRepository ({ getOffres }) {
+    const getOffresForMetier = createGetOffresForMetier(getOffres)
+    const metiers = await Metier.find()
+    const filteredMetiers = keepMetiersWithSessions(metiers)
+    const allOffres = await executePromisesSequentially(filteredMetiers, getOffresForMetier)
+    const offres = flatten(allOffres)
+    return removeDuplicates(offres)
+  }
 }
 
 function keepMetiersWithSessions (metiers) {

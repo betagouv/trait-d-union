@@ -6,10 +6,11 @@ const executePromisesSequentially = require('../infrastructure/execute-promise-s
 
 const poleEmploiApiService = require('../repositories/pole-emploi-api-service')({ apiConfiguration, cache })
 const offresRepository = require('../repositories/pole-emploi-offres/offres-pole-emploi-repository')({ poleEmploiApiService })
+const labonneboiteRepository = require('../repositories/la-bonne-boite/la-bonne-boite-repository')({ poleEmploiApiService })
 
 module.exports = (Offre) => {
   Offre.sortedOffres = async () => {
-    const findOffres = createFindOffres(Offre.app.models, offresRepository, { executePromisesSequentially })
+    const findOffres = createFindOffres(Offre.app.models, [offresRepository, labonneboiteRepository], { executePromisesSequentially })
     return findOffres({ around: {} })
   }
 

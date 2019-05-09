@@ -28,7 +28,7 @@ describe('Find Offres', () => {
       getOffres: sinon.spy(async () => [offreFromRepository])
     }
     const Metier = mockMetierModel([metierWithSession])
-    const findOffres = createFindOffres({ Metier }, offresRepository, { executePromisesSequentially })
+    const findOffres = createFindOffres({ Metier }, [offresRepository], { executePromisesSequentially })
 
     it('retrieves all Metiers related to Sessions Formations', async () => {
       await findOffres({ around: givenArea })
@@ -77,7 +77,7 @@ describe('Find Offres', () => {
       getOffres: sinon.spy(async () => [offreFromRepository])
     }
     const Metier = mockMetierModel([firstMetierWithSession, secondMetierWithSession])
-    const findOffres = createFindOffres({ Metier }, offresRepository, { executePromisesSequentially })
+    const findOffres = createFindOffres({ Metier }, [offresRepository], { executePromisesSequentially })
 
     it('retrieves all Metiers related to Sessions Formations', async () => {
       await findOffres({ around: givenArea })
@@ -113,7 +113,7 @@ describe('Find Offres', () => {
       getOffres: sinon.spy(async () => [offreFromRepository])
     }
     const Metier = mockMetierModel([metierWithSession])
-    const findOffres = createFindOffres({ Metier }, offresRepository, { executePromisesSequentially })
+    const findOffres = createFindOffres({ Metier }, [offresRepository], { executePromisesSequentially })
 
     it('searches for offres', async () => {
       await findOffres({ around: givenArea })
@@ -141,7 +141,7 @@ describe('Find Offres', () => {
       getOffres: sinon.spy(async () => [offreFromRepository])
     }
     const Metier = mockMetierModel([metierWithActionButWithoutSession])
-    const findOffres = createFindOffres({ Metier }, offresRepository, { executePromisesSequentially })
+    const findOffres = createFindOffres({ Metier }, [offresRepository], { executePromisesSequentially })
 
     it('searches for offres', async () => {
       await findOffres({ around: givenArea })
@@ -173,7 +173,7 @@ describe('Find Offres', () => {
       getOffres: sinon.spy(async () => [offreFromRepository])
     }
     const Metier = mockMetierModel([metierWithActionButWithoutSession])
-    const findOffres = createFindOffres({ Metier }, offresRepository, { executePromisesSequentially })
+    const findOffres = createFindOffres({ Metier }, [offresRepository], { executePromisesSequentially })
 
     it('searches for offres', async () => {
       await findOffres({ around: givenArea })
@@ -187,6 +187,44 @@ describe('Find Offres', () => {
       const actual = await findOffres({ around: givenArea })
 
       expect(actual).to.deep.equal([expected])
+    })
+  })
+
+  context('when using two repositories', () => {
+    const codeROME = 'H2903'
+    const session = { numero: 'some-session-numero' }
+    const actionWithSessions = {
+      sessions: () => [session]
+    }
+    const diplomeWithActionsAndSession = {
+      actions: () => [actionWithSessions]
+    }
+    const metierWithSession = {
+      codeROME,
+      diplomes: () => [diplomeWithActionsAndSession]
+    }
+    const offreFromRepository = { some: 'offer' }
+    const firstOffresRepository = {
+      getOffres: sinon.spy(async () => [offreFromRepository])
+    }
+    const secondOffresRepository = {
+      getOffres: sinon.spy(async () => [offreFromRepository])
+    }
+    const Metier = mockMetierModel([metierWithSession])
+    const findOffres = createFindOffres({ Metier }, [firstOffresRepository, secondOffresRepository], { executePromisesSequentially })
+
+    it('searches offres from both', async () => {
+      await findOffres({ around: givenArea })
+      expect(firstOffresRepository.getOffres).to.have.been.calledWith({ codeROME })
+      expect(secondOffresRepository.getOffres).to.have.been.calledWith({ codeROME })
+    })
+
+    it('returns offres from both', async () => {
+      const expected = Object.assign({}, offreFromRepository)
+      Object.assign(expected, { sessions: [session] })
+
+      const actual = await findOffres({ around: givenArea })
+      expect(actual).to.deep.equal([expected, expected])
     })
   })
 })
