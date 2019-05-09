@@ -28,7 +28,7 @@ exports.set = () => {
       range: '1-149',
       experience: 1,
       sort: 2,
-      codeROME: 'metier-avec-une-seule-offre',
+      codeROME: 'metier-avec-une-seule-offre-from-PE',
       distance: 10,
       commune: 57463
     })
@@ -124,4 +124,59 @@ exports.set = () => {
         }]
     })
     .persist()
+
+  poleEmploiAPI
+    .get('/offresdemploi/v2/offres/search')
+    .query({
+      range: '1-149',
+      experience: 1,
+      sort: 2,
+      codeROME: 'metier-avec-une-seule-offre-from-LBB',
+      distance: 10,
+      commune: 57463
+    })
+    .matchHeader('Authorization', 'Bearer api_key')
+    .reply(200, {
+      resultats: []
+    })
+    .persist()
+
+  poleEmploiAPI
+    .get('/labonneboite/v1/company')
+    .query({
+      commune_id: 57463,
+      rome_codes: 'metier-avec-une-seule-offre-from-LBB'
+    })
+    .matchHeader('Authorization', 'Bearer api_key')
+    .reply(200, {
+      companies: [
+        {
+          'address': 'Service des ressources humaines, 3 BOULEVARD PAIXHANS, 57000 METZ',
+          'alternance': false,
+          'boosted': false,
+          'city': 'METZ',
+          'contact_mode': 'Envoyer un CV et une lettre de motivation',
+          'distance': 1.4,
+          'headcount_text': '200 à 249 salariés',
+          'lat': 49.1207,
+          'lon': 6.18389,
+          'matched_rome_code': 'A1101',
+          'matched_rome_label': 'Conduite d\'engins agricoles et forestiers',
+          'matched_rome_slug': 'conduite-d-engins-agricoles-et-forestiers',
+          'naf': '0220Z',
+          'naf_text': 'Exploitation forestière',
+          'name': 'AGENCE DE METZ',
+          'siret': '66204311602105',
+          'social_network': '',
+          'stars': 2.5,
+          // eslint-disable-next-line max-len
+          'url': 'https://labonneboite.pole-emploi.fr/66204311602105/details?rome_code=A1101&utm_medium=web&utm_source=api__emploi_store_dev&utm_campaign=api__emploi_store_dev__test'
+        }
+      ],
+      'companies_count': 1,
+      'rome_code': 'A1101',
+      'rome_label': 'Conduite d\'engins agricoles et forestiers',
+      // eslint-disable-next-line max-len
+      'url': 'https://labonneboite.pole-emploi.fr/entreprises/commune/57463/rome/A1101?utm_medium=web&utm_source=api__emploi_store_dev&utm_campaign=api__emploi_store_dev__test&from=1&to=2&sort=score&d=10&h=1'
+    })
 }
