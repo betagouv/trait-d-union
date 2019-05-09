@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "start": "node .",
     "test:e2e": "export $(cat .e2e.env | xargs) && cucumber-js tests/e2e/** --require tests/e2e/step-definitions/steps.js --format ../node_modules/cucumber-pretty",
-    "test": "mocha **/*.test.js --exclude **/node_modules/**",
+    "test": "NODE_ENV=test mocha **/*.test.js --exclude **/node_modules/**",
     "test:watch": "npm run test -- --watch --reporter=min",
     "posttest": "npm run lint"
   },
