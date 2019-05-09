@@ -41,7 +41,7 @@ describe('Pole Emploi API Service', () => {
               grant_type: 'client_credentials',
               client_id: apiConfiguration.clientId,
               client_secret: apiConfiguration.clientSecret,
-              scope: 'api_offresdemploiv2 application_clientId o2dsoffre'
+              scope: 'api_labonneboitev1 api_offresdemploiv2 application_clientId o2dsoffre'
             })
             .reply(400)
 
@@ -65,10 +65,10 @@ describe('Pole Emploi API Service', () => {
               grant_type: 'client_credentials',
               client_id: apiConfiguration.clientId,
               client_secret: apiConfiguration.clientSecret,
-              scope: 'api_offresdemploiv2 application_clientId o2dsoffre'
+              scope: 'api_labonneboitev1 api_offresdemploiv2 application_clientId o2dsoffre'
             })
             .reply(200, {
-              scope: 'api_offresdemploiv2 o2dsoffre',
+              scope: 'api_labonneboitev1 api_offresdemploiv2 o2dsoffre',
               expires_in: 1500,
               token_type: 'Bearer',
               access_token: 'fake_apikey'
@@ -143,10 +143,10 @@ describe('Pole Emploi API Service', () => {
                 grant_type: 'client_credentials',
                 client_id: apiConfiguration.clientId,
                 client_secret: apiConfiguration.clientSecret,
-                scope: 'api_offresdemploiv2 application_clientId o2dsoffre'
+                scope: 'api_labonneboitev1 api_offresdemploiv2 application_clientId o2dsoffre'
               })
               .reply(200, {
-                scope: 'api_offresdemploiv2 o2dsoffre',
+                scope: 'api_labonneboitev1 api_offresdemploiv2 o2dsoffre',
                 expires_in: 1500,
                 token_type: 'Bearer',
                 access_token: 'fake_new_apikey'
@@ -180,10 +180,10 @@ describe('Pole Emploi API Service', () => {
                 grant_type: 'client_credentials',
                 client_id: apiConfiguration.clientId,
                 client_secret: apiConfiguration.clientSecret,
-                scope: 'api_offresdemploiv2 application_clientId o2dsoffre'
+                scope: 'api_labonneboitev1 api_offresdemploiv2 application_clientId o2dsoffre'
               })
               .reply(200, {
-                scope: 'api_offresdemploiv2 o2dsoffre',
+                scope: 'api_labonneboitev1 api_offresdemploiv2 o2dsoffre',
                 expires_in: 1500,
                 token_type: 'Bearer',
                 access_token: 'fake_new_apikey'

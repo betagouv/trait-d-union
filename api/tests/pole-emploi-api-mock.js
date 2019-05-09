@@ -12,7 +12,7 @@ exports.set = () => {
       grant_type: 'client_credentials',
       client_id: 'clientId',
       client_secret: 'clientSecret',
-      scope: 'api_offresdemploiv2 application_clientId o2dsoffre'
+      scope: 'api_labonneboitev1 api_offresdemploiv2 application_clientId o2dsoffre'
     })
     .reply(200, {
       scope: 'api_offresdemploiv2 o2dsoffre',

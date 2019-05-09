@@ -55,7 +55,7 @@ const createGetApiKey = ({ apiConfiguration, cache }) => async () => {
           grant_type: 'client_credentials',
           client_id: apiConfiguration.clientId,
           client_secret: apiConfiguration.clientSecret,
-          scope: `api_offresdemploiv2 application_${apiConfiguration.clientId} o2dsoffre`
+          scope: `api_labonneboitev1 api_offresdemploiv2 application_${apiConfiguration.clientId} o2dsoffre`
         },
         json: true,
         time: true,
