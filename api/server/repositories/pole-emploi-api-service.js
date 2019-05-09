@@ -1,6 +1,6 @@
 const request = require('request-promise-native')
 const Boom = require('boom')
-const { debug } = require('../infrastructure/logger')
+const { debug, error } = require('../infrastructure/logger')
 
 const PE_API_KEY_CACHE_NAME = 'PE_API_KEY'
 
@@ -65,13 +65,15 @@ const createGetApiKey = ({ apiConfiguration, cache }) => async () => {
     apiKey = response.body.access_token
     debug(`Pole Emploi API: Did get token and stored in cache`)
     cache.set(PE_API_KEY_CACHE_NAME, apiKey)
+  } else {
+    debug(`Pole Emploi API: token retrieved from cache`)
   }
   return apiKey
 }
 
-function _throwApiError (error) {
-  debug(`Error received from Pole Emploi API: ${error}`)
-  const statusCode = error.statusCode !== 500 ? error.statusCode : 503
-  Boom.boomify(error, { statusCode })
-  throw error
+function _throwApiError (apiError) {
+  error(`Error received from Pole Emploi API: ${apiError}`)
+  const statusCode = apiError.statusCode !== 500 ? apiError.statusCode : 503
+  Boom.boomify(apiError, { statusCode })
+  throw apiError
 }

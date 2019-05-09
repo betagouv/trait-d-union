@@ -1,5 +1,8 @@
 const bunyan = require('bunyan')
-const logger = bunyan.createLogger({ name: 'traitdunion-api', level: 'debug' })
+const bformat = require('bunyan-format')
+const formatOut = bformat({ outputMode: 'short' })
+
+const logger = bunyan.createLogger({ name: 'traitdunion-api', stream: formatOut, level: 'debug' })
 
 const debug = logger.debug.bind(logger)
 const warn = logger.warn.bind(logger)
