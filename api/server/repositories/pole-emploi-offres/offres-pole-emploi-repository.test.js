@@ -1,4 +1,4 @@
-const { expect, sinon } = require('../../tests/test-utils')
+const { expect, sinon } = require('../../../tests/test-utils')
 const createOffresPoleEmploiRepository = require('./offres-pole-emploi-repository')
 
 describe('Offres Pole Emploi Repository', () => {

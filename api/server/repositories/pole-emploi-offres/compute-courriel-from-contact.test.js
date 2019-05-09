@@ -1,4 +1,4 @@
-const { expect } = require('../../tests/test-utils')
+const { expect } = require('../../../tests/test-utils')
 const computeCourrielFromContact = require('./compute-courriel-from-contact')
 
 describe('computeCourrielFromContact(contact)', () => {

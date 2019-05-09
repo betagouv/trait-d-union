@@ -5,7 +5,7 @@ const wait = require('../infrastructure/wait')(1000)
 const executePromisesSequentially = require('../infrastructure/execute-promise-sequentially')(wait)
 
 const poleEmploiApiService = require('../repositories/pole-emploi-api-service')({ apiConfiguration, cache })
-const offresRepository = require('../repositories/offres-pole-emploi-repository')({ poleEmploiApiService })
+const offresRepository = require('../repositories/pole-emploi-offres/offres-pole-emploi-repository')({ poleEmploiApiService })
 
 module.exports = (Offre) => {
   Offre.sortedOffres = async () => {
