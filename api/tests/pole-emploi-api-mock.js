@@ -145,7 +145,8 @@ exports.set = () => {
     .get('/labonneboite/v1/company')
     .query({
       commune_id: 57463,
-      rome_codes: 'metier-avec-une-seule-offre-from-LBB'
+      rome_codes: 'metier-avec-une-seule-offre-from-LBB',
+      distance: 10
     })
     .matchHeader('Authorization', 'Bearer api_key')
     .reply(200, {
@@ -178,5 +179,17 @@ exports.set = () => {
       'rome_label': 'Conduite d\'engins agricoles et forestiers',
       // eslint-disable-next-line max-len
       'url': 'https://labonneboite.pole-emploi.fr/entreprises/commune/57463/rome/A1101?utm_medium=web&utm_source=api__emploi_store_dev&utm_campaign=api__emploi_store_dev__test&from=1&to=2&sort=score&d=10&h=1'
+    })
+
+  poleEmploiAPI
+    .get('/labonneboite/v1/company')
+    .query({
+      commune_id: 57463,
+      rome_codes: 'metier-avec-une-seule-offre-from-PE',
+      distance: 10
+    })
+    .matchHeader('Authorization', 'Bearer api_key')
+    .reply(200, {
+      companies: []
     })
 }
