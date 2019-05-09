@@ -18,7 +18,7 @@ const searchOffres = (poleEmploiApiService) => async (codeROME) => {
     range: '1-149',
     sort: 2
   }
-  const { resultats } = await poleEmploiApiService.request('/offres/search', searchParameters)
+  const { resultats } = await poleEmploiApiService.request('/offresdemploi/v2/offres/search', searchParameters)
   return resultats
 }
 

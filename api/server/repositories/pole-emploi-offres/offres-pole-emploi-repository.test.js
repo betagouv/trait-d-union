@@ -15,7 +15,7 @@ describe('Offres Pole Emploi Repository', () => {
     it('requests poleEmploiApi', async () => {
       await offresPoleEmploiRepository.getOffres({ codeROME })
 
-      expect(poleEmploiApiService.request).to.have.been.calledWith('/offres/search', {
+      expect(poleEmploiApiService.request).to.have.been.calledWith('/offresdemploi/v2/offres/search', {
         codeROME,
         range: '1-149',
         experience: 1,

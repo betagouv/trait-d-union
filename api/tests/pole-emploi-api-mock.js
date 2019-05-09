@@ -1,5 +1,5 @@
 const nock = require('nock')
-const API_BASE_URL = 'https://api.emploi-store.fr/partenaire/offresdemploi/v2'
+const API_BASE_URL = 'https://api.emploi-store.fr/partenaire'
 const poleEmploiAPI = nock(API_BASE_URL)
 const AUTHENT_API_BASE_URL = 'https://entreprise.pole-emploi.fr/connexion/oauth2/access_token'
 const poleEmploiAuthentApi = nock(AUTHENT_API_BASE_URL)
@@ -23,7 +23,7 @@ exports.set = () => {
     .persist()
 
   poleEmploiAPI
-    .get('/offres/search')
+    .get('/offresdemploi/v2/offres/search')
     .query({
       range: '1-149',
       experience: 1,
