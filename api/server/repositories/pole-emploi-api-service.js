@@ -34,8 +34,10 @@ const createGetEndpointResponse = ({ apiConfiguration }) =>
       resolveWithFullResponse: true,
       method
     }
+    debug(`Pole Emploi API: Will request endpoint ${urlSuffix}`)
     if (query) {
       Object.assign(options, { qs: query })
+      debug(`using query parameters: ${JSON.stringify(query)}`)
     }
     const response = await request(options)
 
