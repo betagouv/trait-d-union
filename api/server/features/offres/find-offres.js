@@ -1,3 +1,7 @@
+const flatten = require('../../utils/flatten-array')
+const isFilled = require('../../utils/is-filled')
+const removeDuplicates = require('../../utils/remove-duplicates')
+
 const { debug } = require('../../infrastructure/logger')
 
 module.exports = ({ Metier }, repositories, { executePromisesSequentially }) => async ({ around }) => {
@@ -40,29 +44,4 @@ const createGetOffresForMetier = (getOffres) => async (metier) => {
   const sessions = extractSessionsFrom(metier)
   const enrichedOffres = await assignSessionsToOffres(offres, sessions)
   return enrichedOffres
-}
-
-const flatten = _flatten
-
-function _flatten (element) {
-  return element instanceof Array
-    ? [].concat([], ...element.map(_flatten))
-    : element
-}
-
-const isFilled = _isFilled
-
-function _isFilled (array) {
-  return array.length > 0
-}
-
-const removeDuplicates = _removeDuplicates
-
-function _removeDuplicates (arr) {
-  return arr
-    .map(e => e.id)
-    // store the keys of the unique objects
-    .map((e, i, final) => final.indexOf(e) === i && i)
-    // eliminate the dead keys & store unique objects
-    .filter(e => arr[e]).map(e => arr[e])
 }
