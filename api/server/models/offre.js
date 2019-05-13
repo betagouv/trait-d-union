@@ -1,4 +1,5 @@
 const createFindOffres = require('../features/offres/find-offres')
+const { info } = require('../infrastructure/logger')
 const cache = require('../infrastructure/cache')
 const apiConfiguration = require('../infrastructure/api-configuration')
 const wait = require('../infrastructure/wait')(1000)
@@ -11,7 +12,11 @@ const labonneboiteRepository = require('../repositories/la-bonne-boite/la-bonne-
 module.exports = (Offre) => {
   Offre.sortedOffres = async () => {
     const findOffres = createFindOffres(Offre.app.models, [offresRepository, labonneboiteRepository], { executePromisesSequentially })
-    return findOffres({ around: {} })
+    const resultats = await findOffres({ around: {} })
+    info(`Found ${resultats.length} offres`)
+    const resultatsWithEmail = resultats.filter(({ contact }) => contact && contact.courriel)
+    info(`Found ${resultatsWithEmail.length} offres with email`)
+    return resultats
   }
 
   Offre.remoteMethod('sortedOffres', {
