@@ -1,15 +1,15 @@
 module.exports = ({ poleEmploiApiService }) => {
   return {
-    getOffres: async ({ codeROME }) => {
-      const offres = await searchEntreprises(poleEmploiApiService)(codeROME)
+    getOffres: async (codesROME) => {
+      const offres = await searchEntreprises(poleEmploiApiService)(codesROME)
       return offres.map(sanitizeEntreprise)
     }
   }
 }
 
-const searchEntreprises = (poleEmploiApiService) => async (codeROME) => {
+const searchEntreprises = (poleEmploiApiService) => async (codesROME) => {
   const searchParameters = {
-    rome_codes: codeROME,
+    rome_codes: codesROME.join(','),
     commune_id: 57463,
     distance: 10
   }
@@ -21,6 +21,7 @@ function sanitizeEntreprise (entreprise) {
   return {
     url: entreprise.url,
     id: entreprise.siret,
+    codeROME: entreprise.matched_rome_code,
     source: 'la-bonne-boite'
   }
 }
