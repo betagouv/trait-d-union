@@ -5,12 +5,14 @@ const path = require('path')
 const got = require('got')
 const Joi = require('joi')
 const loadReferentiels = require('../../../server/features/referentiels/load-referentiels')
-const applicationBaseUrl = 'http://localhost:3000/api/v0'
+let applicationBaseUrl
 let response
 let server
 
 BeforeAll(async () => {
   server = await app.start()
+  const { port, address } = server.address()
+  applicationBaseUrl = `http://${address}:${port}/api/v0`
 })
 
 AfterAll(() => {
