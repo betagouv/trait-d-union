@@ -20,6 +20,7 @@ const searchEntreprises = (poleEmploiApiService) => async (codeROME) => {
 function sanitizeEntreprise (entreprise) {
   return {
     url: entreprise.url,
-    id: entreprise.siret
+    id: entreprise.siret,
+    source: 'la-bonne-boite'
   }
 }

@@ -7,8 +7,8 @@ const { debug } = require('../../infrastructure/logger')
 module.exports = ({ Metier }, repositories, { executePromisesSequentially }) => async ({ around }) => {
   const metiers = await Metier.find()
   const filteredMetiers = keepMetiersWithSessions(metiers)
-  debug(`Will get Offres for ${filteredMetiers.length} metiers`)
-  debug(`${JSON.stringify(filteredMetiers.map(filteredMetiers => filteredMetiers.codeROME))}`)
+  debug(`Will get Offres for ${filteredMetiers.length} metiers:\n` +
+    `${JSON.stringify(filteredMetiers.map(filteredMetiers => filteredMetiers.codeROME))}`)
 
   const offresFromAllRepositories = await Promise.all(repositories.map(getOffresFromRepository))
   return flatten(offresFromAllRepositories)
@@ -42,6 +42,5 @@ const createGetOffresForMetier = (getOffres) => async (metier) => {
   const allOffres = await getOffres({ codeROME: metier.codeROME })
   const offres = removeDuplicates(allOffres)
   const sessions = extractSessionsFrom(metier)
-  const enrichedOffres = await assignSessionsToOffres(offres, sessions)
-  return enrichedOffres
+  return assignSessionsToOffres(offres, sessions)
 }

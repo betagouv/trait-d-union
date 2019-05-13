@@ -58,6 +58,7 @@ function createFullEntreprise () {
 function createExpectedEntreprise () {
   return {
     'id': '66204311602105',
+    'source': 'la-bonne-boite',
     // eslint-disable-next-line max-len
     'url': 'https://labonneboite.pole-emploi.fr/66204311602105/details?rome_code=A1101&utm_medium=web&utm_source=api__emploi_store_dev&utm_campaign=api__emploi_store_dev__test'
   }

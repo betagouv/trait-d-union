@@ -29,7 +29,7 @@ function sanitizeOffre (offre) {
   ]
 
   const result = keepDefinedProperties(offre, properties)
-
+  result.source = 'pole-emploi'
   result.url = offre.origineOffre && offre.origineOffre.urlOrigine
   const courriel = computeCourrielFromContact(offre.contact)
   if (courriel) {

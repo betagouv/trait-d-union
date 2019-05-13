@@ -161,6 +161,7 @@ function createFullOffre () {
 function createExpectedOffre () {
   return {
     'id': '086QKQK',
+    'source': 'pole-emploi',
     // eslint-disable-next-line max-len
     'description': 'Nous recherchons un serveur(se) (H/F) CDI à temps plein 39H hebdomadaire pour le service du soir.\nMissions\n- Accueillir les clients et les installer\n- Présenter la carte et prendre la commande\n- Servir les plats et boissons\n- S\'assurer du bon déroulement du service\n- Encaissement\nProfil \n- Créer une relation avec les clients\n- Travailler en équipe\n- Dynamique et motivé(e)\nRémunération en fonction de l\'expérience.\nPoste à pourvoir immédiatement.',
     'dureeTravailLibelle': '39H Horaires normaux',
