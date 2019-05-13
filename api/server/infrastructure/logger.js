@@ -2,7 +2,7 @@ const bunyan = require('bunyan')
 const bformat = require('bunyan-format')
 const formatOut = bformat({ outputMode: 'short' })
 
-const logger = bunyan.createLogger({ name: 'traitdunion-api', stream: formatOut, level: 'debug' })
+const logger = bunyan.createLogger({ name: 'traitdunion-api', stream: formatOut, level: process.env.LOG_LEVEL || 'info' })
 
 if (process.env.NODE_ENV === 'test') {
   logger.level(bunyan.FATAL + 1)
