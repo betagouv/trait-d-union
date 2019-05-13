@@ -1,11 +1,16 @@
+const { debug } = require('../../infrastructure/logger')
+
 module.exports = ({ Metier }, repositories, { executePromisesSequentially }) => async ({ around }) => {
+  const metiers = await Metier.find()
+  const filteredMetiers = keepMetiersWithSessions(metiers)
+  debug(`Will get Offres for ${filteredMetiers.length} metiers`)
+  debug(`${JSON.stringify(filteredMetiers.map(filteredMetiers => filteredMetiers.codeROME))}`)
+
   const offresFromAllRepositories = await Promise.all(repositories.map(getOffresFromRepository))
   return flatten(offresFromAllRepositories)
 
   async function getOffresFromRepository ({ getOffres }) {
     const getOffresForMetier = createGetOffresForMetier(getOffres)
-    const metiers = await Metier.find()
-    const filteredMetiers = keepMetiersWithSessions(metiers)
     const allOffres = await executePromisesSequentially(filteredMetiers, getOffresForMetier)
     const offres = flatten(allOffres)
     return removeDuplicates(offres)
