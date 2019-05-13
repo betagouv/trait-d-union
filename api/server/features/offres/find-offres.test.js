@@ -1,7 +1,5 @@
 const { sinon, expect } = require('../../../tests/test-utils')
 const createFindOffres = require('./find-offres')
-const wait = require('../../infrastructure/wait')(1)
-const executePromisesSequentially = require('../../infrastructure/execute-promise-sequentially')(wait)
 
 describe('Find Offres', () => {
   const givenArea = {
@@ -23,12 +21,12 @@ describe('Find Offres', () => {
       codeROME,
       diplomes: () => [diplomeWithActionsAndSession]
     }
-    const offreFromRepository = { some: 'offer' }
+    const offreFromRepository = { some: 'offer', codeROME }
     const offresRepository = {
       getOffres: sinon.spy(async () => [offreFromRepository])
     }
     const Metier = mockMetierModel([metierWithSession])
-    const findOffres = createFindOffres({ Metier }, [offresRepository], { executePromisesSequentially })
+    const findOffres = createFindOffres({ Metier }, [offresRepository])
 
     it('retrieves all Metiers related to Sessions Formations', async () => {
       await findOffres({ around: givenArea })
@@ -37,7 +35,7 @@ describe('Find Offres', () => {
 
     it('searches for offres', async () => {
       await findOffres({ around: givenArea })
-      expect(offresRepository.getOffres).to.have.been.calledWith({ codeROME })
+      expect(offresRepository.getOffres).to.have.been.calledWith([codeROME])
     })
 
     it('returns offres with related session', async () => {
@@ -72,12 +70,12 @@ describe('Find Offres', () => {
       diplomes: () => [secondDiplomeWithActionsAndSession]
     }
 
-    const offreFromRepository = { id: 'offre-id' }
+    const offreFromRepository = { id: 'offre-id', codeROME: firstCodeROME }
     const offresRepository = {
       getOffres: sinon.spy(async () => [offreFromRepository])
     }
     const Metier = mockMetierModel([firstMetierWithSession, secondMetierWithSession])
-    const findOffres = createFindOffres({ Metier }, [offresRepository], { executePromisesSequentially })
+    const findOffres = createFindOffres({ Metier }, [offresRepository])
 
     it('retrieves all Metiers related to Sessions Formations', async () => {
       await findOffres({ around: givenArea })
@@ -86,8 +84,7 @@ describe('Find Offres', () => {
 
     it('searches for offres', async () => {
       await findOffres({ around: givenArea })
-      expect(offresRepository.getOffres).to.have.been.calledWith({ codeROME: firstCodeROME })
-      expect(offresRepository.getOffres).to.have.been.calledWith({ codeROME: secondCodeROME })
+      expect(offresRepository.getOffres).to.have.been.calledWith([firstCodeROME, secondCodeROME])
     })
 
     it('returns offres with related session', async () => {
@@ -108,16 +105,16 @@ describe('Find Offres', () => {
       diplomes: () => [diplomeWithoutAction]
     }
 
-    const offreFromRepository = { some: 'offer' }
+    const offreFromRepository = { some: 'offer', codeROME }
     const offresRepository = {
       getOffres: sinon.spy(async () => [offreFromRepository])
     }
     const Metier = mockMetierModel([metierWithSession])
-    const findOffres = createFindOffres({ Metier }, [offresRepository], { executePromisesSequentially })
+    const findOffres = createFindOffres({ Metier }, [offresRepository])
 
     it('searches for offres', async () => {
       await findOffres({ around: givenArea })
-      expect(offresRepository.getOffres).to.not.have.been.calledWith({ codeROME })
+      expect(offresRepository.getOffres).to.not.have.been.calledWith([codeROME])
     })
 
     it('returns no offre', async () => {
@@ -136,16 +133,16 @@ describe('Find Offres', () => {
       diplomes: () => [diplomeWithActionsAndSession]
     }
 
-    const offreFromRepository = { some: 'offer' }
+    const offreFromRepository = { some: 'offer', codeROME }
     const offresRepository = {
       getOffres: sinon.spy(async () => [offreFromRepository])
     }
     const Metier = mockMetierModel([metierWithActionButWithoutSession])
-    const findOffres = createFindOffres({ Metier }, [offresRepository], { executePromisesSequentially })
+    const findOffres = createFindOffres({ Metier }, [offresRepository])
 
     it('searches for offres', async () => {
       await findOffres({ around: givenArea })
-      expect(offresRepository.getOffres).to.not.have.been.calledWith({ codeROME })
+      expect(offresRepository.getOffres).to.not.have.been.calledWith([codeROME])
     })
 
     it('returns no offres', async () => {
@@ -168,16 +165,16 @@ describe('Find Offres', () => {
       diplomes: () => [diplomeWithActionsAndSession]
     }
 
-    const offreFromRepository = { some: 'offer' }
+    const offreFromRepository = { some: 'offer', codeROME }
     const offresRepository = {
       getOffres: sinon.spy(async () => [offreFromRepository])
     }
     const Metier = mockMetierModel([metierWithActionButWithoutSession])
-    const findOffres = createFindOffres({ Metier }, [offresRepository], { executePromisesSequentially })
+    const findOffres = createFindOffres({ Metier }, [offresRepository])
 
     it('searches for offres', async () => {
       await findOffres({ around: givenArea })
-      expect(offresRepository.getOffres).to.have.been.calledWith({ codeROME })
+      expect(offresRepository.getOffres).to.have.been.calledWith([codeROME])
     })
 
     it('returns one offre', async () => {
@@ -203,7 +200,7 @@ describe('Find Offres', () => {
       codeROME,
       diplomes: () => [diplomeWithActionsAndSession]
     }
-    const offreFromRepository = { some: 'offer' }
+    const offreFromRepository = { some: 'offer', codeROME }
     const firstOffresRepository = {
       getOffres: sinon.spy(async () => [offreFromRepository])
     }
@@ -211,12 +208,12 @@ describe('Find Offres', () => {
       getOffres: sinon.spy(async () => [offreFromRepository])
     }
     const Metier = mockMetierModel([metierWithSession])
-    const findOffres = createFindOffres({ Metier }, [firstOffresRepository, secondOffresRepository], { executePromisesSequentially })
+    const findOffres = createFindOffres({ Metier }, [firstOffresRepository, secondOffresRepository])
 
     it('searches offres from both', async () => {
       await findOffres({ around: givenArea })
-      expect(firstOffresRepository.getOffres).to.have.been.calledWith({ codeROME })
-      expect(secondOffresRepository.getOffres).to.have.been.calledWith({ codeROME })
+      expect(firstOffresRepository.getOffres).to.have.been.calledWith([codeROME])
+      expect(secondOffresRepository.getOffres).to.have.been.calledWith([codeROME])
     })
 
     it('returns offres from both', async () => {

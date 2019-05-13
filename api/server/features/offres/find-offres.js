@@ -1,24 +1,33 @@
 const flatten = require('../../utils/flatten-array')
 const isFilled = require('../../utils/is-filled')
-const removeDuplicates = require('../../utils/remove-duplicates')
 
 const { debug } = require('../../infrastructure/logger')
 
-module.exports = ({ Metier }, repositories, { executePromisesSequentially }) => async ({ around }) => {
+module.exports = ({ Metier, SessionFormation }, repositories) => async ({ around }) => {
   const metiers = await Metier.find()
   const filteredMetiers = keepMetiersWithSessions(metiers)
-  debug(`Will get Offres for ${filteredMetiers.length} metiers:\n` +
-    `${JSON.stringify(filteredMetiers.map(filteredMetiers => filteredMetiers.codeROME))}`)
+  const codesROME = extractCodesROME(filteredMetiers)
+  debug(`Will get Offres for ${filteredMetiers.length} metiers:\n${codesROME}`)
 
-  const offresFromAllRepositories = await Promise.all(repositories.map(getOffresFromRepository))
-  return flatten(offresFromAllRepositories)
-
-  async function getOffresFromRepository ({ getOffres }) {
-    const getOffresForMetier = createGetOffresForMetier(getOffres)
-    const allOffres = await executePromisesSequentially(filteredMetiers, getOffresForMetier)
-    const offres = flatten(allOffres)
-    return removeDuplicates(offres)
+  if (codesROME.length === 0) {
+    return []
   }
+  const getOffresForRepository = createGetOffresForRepository(filteredMetiers, codesROME)
+  const offresFromAllRepositories = await Promise.all(repositories.map(getOffresForRepository))
+  return flatten(offresFromAllRepositories)
+}
+
+const createGetOffresForRepository = (metiers, codesROME) => async ({ getOffres }) => {
+  const offres = await getOffres(codesROME)
+  return offres.map(offre => {
+    const metier = metiers.find(metier => metier.codeROME === offre.codeROME)
+    const sessions = extractSessionsFrom(metier)
+    return assignSessionsToOffres([offre], sessions)
+  })
+}
+
+function extractCodesROME (metiers) {
+  return metiers.map(metiers => metiers.codeROME)
 }
 
 function keepMetiersWithSessions (metiers) {
@@ -36,11 +45,4 @@ function extractSessionsFrom (metier) {
 
 function assignSessionsToOffres (offres, sessions) {
   return offres.map(offre => Object.assign(offre, { sessions }))
-}
-
-const createGetOffresForMetier = (getOffres) => async (metier) => {
-  const allOffres = await getOffres({ codeROME: metier.codeROME })
-  const offres = removeDuplicates(allOffres)
-  const sessions = extractSessionsFrom(metier)
-  return assignSessionsToOffres(offres, sessions)
 }
