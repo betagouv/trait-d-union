@@ -110,7 +110,7 @@ exports.set = () => {
             }
           ],
           'qualificationCode': '6',
-          'romeCode': 'D1402',
+          'romeCode': 'metier-avec-une-seule-offre-from-PE',
           'romeLibelle': 'Relation commerciale grands comptes et entreprises',
           'salaire': {
             'commentaire': 'fixe + prime sur CA',
@@ -146,7 +146,8 @@ exports.set = () => {
     .query({
       commune_id: 57463,
       rome_codes: 'metier-avec-une-seule-offre-from-LBB',
-      distance: 10
+      distance: 10,
+      page_size: 100
     })
     .matchHeader('Authorization', 'Bearer api_key')
     .reply(200, {
@@ -161,7 +162,7 @@ exports.set = () => {
           'headcount_text': '200 à 249 salariés',
           'lat': 49.1207,
           'lon': 6.18389,
-          'matched_rome_code': 'A1101',
+          'matched_rome_code': 'metier-avec-une-seule-offre-from-LBB',
           'matched_rome_label': 'Conduite d\'engins agricoles et forestiers',
           'matched_rome_slug': 'conduite-d-engins-agricoles-et-forestiers',
           'naf': '0220Z',
@@ -186,7 +187,8 @@ exports.set = () => {
     .query({
       commune_id: 57463,
       rome_codes: 'metier-avec-une-seule-offre-from-PE',
-      distance: 10
+      distance: 10,
+      page_size: 100
     })
     .matchHeader('Authorization', 'Bearer api_key')
     .reply(200, {

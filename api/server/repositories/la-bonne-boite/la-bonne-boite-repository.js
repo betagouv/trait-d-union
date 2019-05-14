@@ -11,7 +11,8 @@ const searchEntreprises = (poleEmploiApiService) => async (codesROME) => {
   const searchParameters = {
     rome_codes: codesROME.join(','),
     commune_id: 57463,
-    distance: 10
+    distance: 10,
+    page_size: 100
   }
   const { companies } = await poleEmploiApiService.request('/labonneboite/v1/company', searchParameters)
   return companies

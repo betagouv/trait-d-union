@@ -2,21 +2,25 @@ const { expect, sinon } = require('../../../tests/test-utils')
 const createOffresPoleEmploiRepository = require('./offres-pole-emploi-repository')
 
 describe('Offres Pole Emploi Repository', () => {
-  describe('.getOffres({codeROME})', () => {
+  describe('.getOffres([codeROME])', () => {
     const codeROME = 'codeROME'
-    const offre = createFullOffre()
-    const poleEmploiApiService = {
-      request: sinon.spy(async () => {
-        return { resultats: [offre] }
-      })
-    }
-    const offresPoleEmploiRepository = createOffresPoleEmploiRepository({ poleEmploiApiService })
+    let offre, poleEmploiApiService, offresPoleEmploiRepository
+
+    beforeEach(() => {
+      offre = createFullOffre()
+      poleEmploiApiService = {
+        request: sinon.spy(async () => {
+          return { resultats: [offre] }
+        })
+      }
+      offresPoleEmploiRepository = createOffresPoleEmploiRepository({ poleEmploiApiService })
+    })
 
     it('requests poleEmploiApi', async () => {
-      await offresPoleEmploiRepository.getOffres({ codeROME })
+      await offresPoleEmploiRepository.getOffres([codeROME])
 
       expect(poleEmploiApiService.request).to.have.been.calledWith('/offresdemploi/v2/offres/search', {
-        codeROME,
+        codeROME: codeROME,
         range: '1-149',
         experience: 1,
         sort: 2,
@@ -36,7 +40,7 @@ describe('Offres Pole Emploi Repository', () => {
             return { resultats: [fullOffre] }
           })
           delete expectedOffre[undefinedProperty]
-          const offres = await offresPoleEmploiRepository.getOffres({ codeROME })
+          const offres = await offresPoleEmploiRepository.getOffres([codeROME])
 
           expect(offres).to.deep.equal([expectedOffre])
         })
@@ -44,14 +48,68 @@ describe('Offres Pole Emploi Repository', () => {
     })
 
     it('returns sanitized poleEmploiApi offres', async () => {
-      const offres = await offresPoleEmploiRepository.getOffres({ codeROME })
+      const offres = await offresPoleEmploiRepository.getOffres([codeROME])
 
       expect(offres).to.deep.equal([createExpectedOffre()])
+    })
+
+    context('when there are three codesROME', () => {
+      it('requests poleEmploiApi', async () => {
+        const codesROME = ['premier', 'deuxieme', 'troisieme']
+        await offresPoleEmploiRepository.getOffres(codesROME)
+
+        expect(poleEmploiApiService.request).to.have.been.calledWith('/offresdemploi/v2/offres/search', {
+          codeROME: 'premier,deuxieme,troisieme',
+          range: '1-149',
+          experience: 1,
+          sort: 2,
+          commune: 57463,
+          distance: 10
+        })
+      })
+    })
+
+    context('when there are more than three codesROME', () => {
+      const codesROME = ['premier', 'deuxieme', 'troisieme', 'quatrieme', 'cinquieme', 'sixieme']
+      beforeEach(() => {
+        poleEmploiApiService = { request: sinon.stub() }
+        poleEmploiApiService.request.onFirstCall().returns({ resultats: [createFullOffre('1')] })
+        poleEmploiApiService.request.onSecondCall().returns({ resultats: [createFullOffre('2')] })
+        offresPoleEmploiRepository = createOffresPoleEmploiRepository({ poleEmploiApiService })
+      })
+
+      it('requests poleEmploiApi twice, grouping codesROME by 3', async () => {
+        await offresPoleEmploiRepository.getOffres(codesROME)
+
+        expect(poleEmploiApiService.request).to.have.been.calledWith('/offresdemploi/v2/offres/search', {
+          codeROME: 'premier,deuxieme,troisieme',
+          range: '1-149',
+          experience: 1,
+          sort: 2,
+          commune: 57463,
+          distance: 10
+        })
+
+        expect(poleEmploiApiService.request).to.have.been.calledWith('/offresdemploi/v2/offres/search', {
+          codeROME: 'quatrieme,cinquieme,sixieme',
+          range: '1-149',
+          experience: 1,
+          sort: 2,
+          commune: 57463,
+          distance: 10
+        })
+      })
+
+      it('returns sanitized poleEmploiApi offres', async () => {
+        const offres = await offresPoleEmploiRepository.getOffres(codesROME)
+
+        expect(offres).to.deep.equal([createExpectedOffre('1'), createExpectedOffre('2')])
+      })
     })
   })
 })
 
-function createFullOffre () {
+function createFullOffre (id = '086QKQK') {
   return {
     'accessibleTH': false,
     'alternance': false,
@@ -111,7 +169,7 @@ function createFullOffre () {
     'experienceExige': 'D',
     'experienceLibelle': 'Débutant accepté',
     'formations': [],
-    'id': '086QKQK',
+    id,
     'intitule': 'Serveur/Serveuse (H/F)',
     'langues': [],
     'lieuTravail': {
@@ -145,7 +203,7 @@ function createFullOffre () {
         'libelle': 'Réactivité'
       }
     ],
-    'romeCode': 'G1801',
+    'romeCode': 'codeROME',
     'romeLibelle': 'Café, bar brasserie',
     'salaire': {
       'libelle': 'Horaire de 10.03 Euros à 12.00 Euros sur 12 mois'
@@ -158,9 +216,10 @@ function createFullOffre () {
   }
 }
 
-function createExpectedOffre () {
+function createExpectedOffre (id = '086QKQK') {
   return {
-    'id': '086QKQK',
+    id,
+    'codeROME': 'codeROME',
     'source': 'pole-emploi',
     // eslint-disable-next-line max-len
     'description': 'Nous recherchons un serveur(se) (H/F) CDI à temps plein 39H hebdomadaire pour le service du soir.\nMissions\n- Accueillir les clients et les installer\n- Présenter la carte et prendre la commande\n- Servir les plats et boissons\n- S\'assurer du bon déroulement du service\n- Encaissement\nProfil \n- Créer une relation avec les clients\n- Travailler en équipe\n- Dynamique et motivé(e)\nRémunération en fonction de l\'expérience.\nPoste à pourvoir immédiatement.',

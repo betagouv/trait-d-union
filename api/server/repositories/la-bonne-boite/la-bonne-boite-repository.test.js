@@ -18,7 +18,8 @@ describe('LaBonneBoite Repository', () => {
       expect(poleEmploiApiService.request).to.have.been.calledWith('/labonneboite/v1/company', {
         rome_codes: codeROME,
         commune_id: 57463,
-        distance: 10
+        distance: 10,
+        page_size: 100
       })
     })
 
