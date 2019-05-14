@@ -8,11 +8,16 @@ const offresRepository = require('../repositories/pole-emploi-offres/offres-pole
 
 module.exports = (Offre) => {
   Offre.sortedOffres = async () => {
+    let resultats = cache.get('offres')
+    if (resultats) {
+      return resultats
+    }
     const findOffres = createFindOffres(Offre.app.models, [offresRepository])
-    const resultats = await findOffres({ around: {} })
+    resultats = await findOffres({ around: {} })
     info(`Found ${resultats.length} offres`)
     const resultatsWithEmail = resultats.filter(({ contact }) => contact && contact.courriel)
     info(`Found ${resultatsWithEmail.length} offres with email`)
+    cache.set('offres', resultats)
     return resultats
   }
 
