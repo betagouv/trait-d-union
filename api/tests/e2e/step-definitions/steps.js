@@ -2,12 +2,14 @@ const app = require('../../../server/server')
 const { BeforeAll, AfterAll, Given, When, Then } = require('cucumber')
 const { expect } = require('chai')
 const path = require('path')
+const fs = require('fs')
 const got = require('got')
 const Joi = require('joi')
 const loadReferentiels = require('../../../server/features/referentiels/load-referentiels')
 let applicationBaseUrl
 let response
 let server
+const headers = {}
 
 BeforeAll(async () => {
   server = await app.start()
@@ -29,10 +31,15 @@ Given('No session formation is seed', async () => {
   await app.models.SessionFormation.destroyAll()
 })
 
+When(/^'(.*)' header is '(.*)'$/, (key, value) => {
+  headers[key] = value
+})
+
 When(/^GET '(\/[\S-.?=/]+)'$/, async (route) => {
   response = await got(`${applicationBaseUrl}${route}`, {
-    json: true,
-    throwHttpErrors: false
+    json: headers['Accept'] === 'application/json',
+    throwHttpErrors: false,
+    headers
   })
 })
 
@@ -56,4 +63,11 @@ Then(/^response payload is '(.*)'$/, (payloadFilename) => {
 
 Then('response payload is', (payload) => {
   expect(response.body).to.eql(JSON.parse(payload))
+})
+
+Then(/^response payload is text equals to '(.*)'$/, (payloadFilename) => {
+  const filePath = path.join(process.cwd(), 'tests/e2e', payloadFilename)
+  const expectedPayload = fs.readFileSync(filePath, { encoding: 'utf8' })
+
+  expect(response.body).to.equal(expectedPayload)
 })
