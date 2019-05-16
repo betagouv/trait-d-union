@@ -1,151 +1,95 @@
 [
   {
-    "numero": 2262,
-    "codeDiplome": 81321
+    "numero": 1820,
+    "codeDiplome": 94611
   },
   {
-    "numero": 1887,
-    "codeDiplome": 25050
+    "numero": 1829,
+    "codeDiplome": 84165
   },
   {
-    "numero": 2838,
-    "codeDiplome": 84564
+    "numero": 1834,
+    "codeDiplome": 46799
   },
   {
-    "numero": 1853,
-    "codeDiplome": 63446
-  },
-  {
-    "numero": 1893,
-    "codeDiplome": 103767
-  },
-  {
-    "numero": 1884,
-    "codeDiplome": 20326
-  },
-  {
-    "numero": 1852,
-    "codeDiplome": 83602
-  },
-  {
-    "numero": 2849,
-    "codeDiplome": 87185
-  },
-  {
-    "numero": 2760,
-    "codeDiplome": 100427
-  },
-  {
-    "numero": 2488,
-    "codeDiplome": 87185
-  },
-  {
-    "numero": 1890,
-    "codeDiplome": 83333
-  },
-  {
-    "numero": 2418,
-    "codeDiplome": 83076
-  },
-  {
-    "numero": 2344,
-    "codeDiplome": 19004
-  },
-  {
-    "numero": 2525,
-    "codeDiplome": 87187
-  },
-  {
-    "numero": 2261,
-    "codeDiplome": 88525
-  },
-  {
-    "numero": 2280,
-    "codeDiplome": 81194
-  },
-  {
-    "numero": 2433,
-    "codeDiplome": 82458
-  },
-  {
-    "numero": 2540,
-    "codeDiplome": 20182
-  },
-  {
-    "numero": 2417,
-    "codeDiplome": 82624
-  },
-  {
-    "numero": 2424,
-    "codeDiplome": 103803
-  },
-  {
-    "numero": 2426,
-    "codeDiplome": 94757
-  },
-  {
-    "numero": 13409,
-    "codeDiplome": 93753
-  },
-  {
-    "numero": 2431,
-    "codeDiplome": 84579
-  },
-  {
-    "numero": 2413,
-    "codeDiplome": 84239
-  },
-  {
-    "numero": 2581,
-    "codeDiplome": 94091
-  },
-  {
-    "numero": 2401,
-    "codeDiplome": 103805
-  },
-  {
-    "numero": 2584,
-    "codeDiplome": 93637
-  },
-  {
-    "numero": 2369,
-    "codeDiplome": 57473
-  },
-  {
-    "numero": 2379,
-    "codeDiplome": 63193
+    "numero": 1842,
+    "codeDiplome": 85117
   },
   {
     "numero": 1843,
     "codeDiplome": 63193
   },
   {
-    "numero": 1888,
-    "codeDiplome": 25039
+    "numero": 1848,
+    "codeDiplome": 88675
   },
   {
-    "numero": 2319,
-    "codeDiplome": 73434
+    "numero": 1852,
+    "codeDiplome": 83602
   },
   {
-    "numero": 2385,
-    "codeDiplome": 18866
+    "numero": 1853,
+    "codeDiplome": 63446
+  },
+  {
+    "numero": 1857,
+    "codeDiplome": 56918
+  },
+  {
+    "numero": 1858,
+    "codeDiplome": 74844
   },
   {
     "numero": 1862,
     "codeDiplome": 73433
   },
   {
-    "numero": 2832,
-    "codeDiplome": 63193
+    "numero": 1863,
+    "codeDiplome": 77069
+  },
+  {
+    "numero": 1867,
+    "codeDiplome": 88675
   },
   {
     "numero": 1878,
     "codeDiplome": 100431
   },
   {
-    "numero": 13826,
-    "codeDiplome": 82779
+    "numero": 1879,
+    "codeDiplome": 100427
+  },
+  {
+    "numero": 1884,
+    "codeDiplome": 20326
+  },
+  {
+    "numero": 1885,
+    "codeDiplome": 90683
+  },
+  {
+    "numero": 1887,
+    "codeDiplome": 25050
+  },
+  {
+    "numero": 1888,
+    "codeDiplome": 25039
+  },
+  {
+    "numero": 1890,
+    "codeDiplome": 83333
+  },
+  {
+    "numero": 1891,
+    "codeDiplome": 83332
+  },
+  {
+    "numero": 1893,
+    "codeDiplome": 103767
+  },
+  {
+    "numero": 1910,
+    "codeDiplome": 83152
   },
   {
     "numero": 1926,
@@ -156,60 +100,132 @@
     "codeDiplome": 82779
   },
   {
-    "numero": 1910,
-    "codeDiplome": 83152
+    "numero": 1943,
+    "codeDiplome": 86389
   },
   {
-    "numero": 2412,
-    "codeDiplome": 100431
+    "numero": 1944,
+    "codeDiplome": 93775
   },
   {
-    "numero": 2429,
-    "codeDiplome": 25382
+    "numero": 1968,
+    "codeDiplome": 31991
   },
   {
-    "numero": 2428,
-    "codeDiplome": 101365
+    "numero": 1990,
+    "codeDiplome": 84564
+  },
+  {
+    "numero": 2033,
+    "codeDiplome": 21365
+  },
+  {
+    "numero": 2063,
+    "codeDiplome": 56918
+  },
+  {
+    "numero": 2157,
+    "codeDiplome": 23160
+  },
+  {
+    "numero": 2168,
+    "codeDiplome": 84168
+  },
+  {
+    "numero": 2261,
+    "codeDiplome": 88525
+  },
+  {
+    "numero": 2262,
+    "codeDiplome": 81321
+  },
+  {
+    "numero": 2265,
+    "codeDiplome": 81317
+  },
+  {
+    "numero": 2266,
+    "codeDiplome": 25007
+  },
+  {
+    "numero": 2277,
+    "codeDiplome": 21451
+  },
+  {
+    "numero": 2279,
+    "codeDiplome": 87137
+  },
+  {
+    "numero": 2280,
+    "codeDiplome": 81194
+  },
+  {
+    "numero": 2281,
+    "codeDiplome": 101949
+  },
+  {
+    "numero": 2283,
+    "codeDiplome": 100029
+  },
+  {
+    "numero": 2319,
+    "codeDiplome": 73434
   },
   {
     "numero": 2322,
     "codeDiplome": 73288
   },
   {
-    "numero": 2506,
-    "codeDiplome": 25039
+    "numero": 2343,
+    "codeDiplome": 21306
   },
   {
-    "numero": 2515,
-    "codeDiplome": 25086
+    "numero": 2344,
+    "codeDiplome": 19004
   },
   {
-    "numero": 2477,
-    "codeDiplome": 83419
+    "numero": 2345,
+    "codeDiplome": 94559
   },
   {
-    "numero": 13161,
-    "codeDiplome": 88309
+    "numero": 2349,
+    "codeDiplome": 58475
   },
   {
-    "numero": 2410,
-    "codeDiplome": 88533
+    "numero": 2357,
+    "codeDiplome": 82182
   },
   {
-    "numero": 2416,
-    "codeDiplome": 87137
+    "numero": 2363,
+    "codeDiplome": 82685
   },
   {
-    "numero": 2841,
-    "codeDiplome": 84546
+    "numero": 2364,
+    "codeDiplome": 82182
   },
   {
-    "numero": 2767,
-    "codeDiplome": 100813
+    "numero": 2369,
+    "codeDiplome": 57473
   },
   {
-    "numero": 2418,
-    "codeDiplome": 83076
+    "numero": 2375,
+    "codeDiplome": 81506
+  },
+  {
+    "numero": 2379,
+    "codeDiplome": 63193
+  },
+  {
+    "numero": 2385,
+    "codeDiplome": 18866
+  },
+  {
+    "numero": 2387,
+    "codeDiplome": 82687
+  },
+  {
+    "numero": 2401,
+    "codeDiplome": 103805
   },
   {
     "numero": 2407,
@@ -220,132 +236,236 @@
     "codeDiplome": 82774
   },
   {
-    "numero": 1968,
-    "codeDiplome": 31991
+    "numero": 2409,
+    "codeDiplome": 58475
   },
   {
-    "numero": 13356,
-    "codeDiplome": 72134
+    "numero": 2410,
+    "codeDiplome": 88533
   },
   {
-    "numero": 13428,
-    "codeDiplome": 80737
+    "numero": 2411,
+    "codeDiplome": 88121
   },
   {
-    "numero": 1829,
-    "codeDiplome": 84165
+    "numero": 2412,
+    "codeDiplome": 100431
   },
   {
-    "numero": 2281,
-    "codeDiplome": 101949
+    "numero": 2413,
+    "codeDiplome": 84239
   },
   {
-    "numero": 2438,
-    "codeDiplome": 94141
+    "numero": 2414,
+    "codeDiplome": 84238
   },
   {
-    "numero": 13774,
-    "codeDiplome": 25413
+    "numero": 2416,
+    "codeDiplome": 87137
   },
   {
-    "numero": 2497,
-    "codeDiplome": 63670
+    "numero": 2417,
+    "codeDiplome": 82624
   },
   {
-    "numero": 1820,
-    "codeDiplome": 94611
+    "numero": 2418,
+    "codeDiplome": 83076
   },
   {
-    "numero": 1885,
-    "codeDiplome": 90683
+    "numero": 2424,
+    "codeDiplome": 103803
   },
   {
-    "numero": 13208,
-    "codeDiplome": 96173
+    "numero": 2426,
+    "codeDiplome": 94757
   },
   {
-    "numero": 2536,
-    "codeDiplome": 84165
+    "numero": 2428,
+    "codeDiplome": 101365
   },
   {
-    "numero": 1943,
-    "codeDiplome": 86389
+    "numero": 2429,
+    "codeDiplome": 25382
   },
   {
-    "numero": 2877,
-    "codeDiplome": 84546
+    "numero": 2430,
+    "codeDiplome": 23196
   },
   {
-    "numero": 13816,
-    "codeDiplome": 88547
+    "numero": 2431,
+    "codeDiplome": 84579
   },
   {
-    "numero": 2033,
-    "codeDiplome": 21365
+    "numero": 2433,
+    "codeDiplome": 82458
+  },
+  {
+    "numero": 2434,
+    "codeDiplome": 23160
   },
   {
     "numero": 2435,
     "codeDiplome": 57804
   },
   {
-    "numero": 1842,
-    "codeDiplome": 85117
-  },
-  {
-    "numero": 13780,
-    "codeDiplome": 21609
-  },
-  {
-    "numero": 13428,
-    "codeDiplome": 80737
-  },
-  {
-    "numero": 2449,
-    "codeDiplome": 57707
-  },
-  {
-    "numero": 1990,
-    "codeDiplome": 84564
-  },
-  {
-    "numero": 2878,
-    "codeDiplome": 84168
-  },
-  {
-    "numero": 13413,
-    "codeDiplome": 86389
-  },
-  {
-    "numero": 2742,
-    "codeDiplome": 88309
-  },
-  {
-    "numero": 2533,
-    "codeDiplome": 21365
-  },
-  {
-    "numero": 2277,
-    "codeDiplome": 21451
+    "numero": 2438,
+    "codeDiplome": 94141
   },
   {
     "numero": 2439,
     "codeDiplome": 23199
   },
   {
-    "numero": 2439,
-    "codeDiplome": 81153
+    "numero": 2449,
+    "codeDiplome": 57707
   },
   {
-    "numero": 13779,
-    "codeDiplome": 100809
+    "numero": 2477,
+    "codeDiplome": 83419
   },
   {
-    "numero": 1891,
-    "codeDiplome": 83332
+    "numero": 2488,
+    "codeDiplome": 87185
   },
   {
-    "numero": 2168,
+    "numero": 2497,
+    "codeDiplome": 63670
+  },
+  {
+    "numero": 2502,
+    "codeDiplome": 69623
+  },
+  {
+    "numero": 2506,
+    "codeDiplome": 25039
+  },
+  {
+    "numero": 2513,
+    "codeDiplome": 74851
+  },
+  {
+    "numero": 2515,
+    "codeDiplome": 25086
+  },
+  {
+    "numero": 2525,
+    "codeDiplome": 87187
+  },
+  {
+    "numero": 2533,
+    "codeDiplome": 21365
+  },
+  {
+    "numero": 2536,
+    "codeDiplome": 84165
+  },
+  {
+    "numero": 2540,
+    "codeDiplome": 20182
+  },
+  {
+    "numero": 2581,
+    "codeDiplome": 94091
+  },
+  {
+    "numero": 2582,
+    "codeDiplome": 83652
+  },
+  {
+    "numero": 2584,
+    "codeDiplome": 93637
+  },
+  {
+    "numero": 2742,
+    "codeDiplome": 88309
+  },
+  {
+    "numero": 2755,
+    "codeDiplome": 100431
+  },
+  {
+    "numero": 2760,
+    "codeDiplome": 100427
+  },
+  {
+    "numero": 2764,
+    "codeDiplome": 80272
+  },
+  {
+    "numero": 2767,
+    "codeDiplome": 100813
+  },
+  {
+    "numero": 2769,
+    "codeDiplome": 100805
+  },
+  {
+    "numero": 2832,
+    "codeDiplome": 63193
+  },
+  {
+    "numero": 2837,
+    "codeDiplome": 23160
+  },
+  {
+    "numero": 2838,
+    "codeDiplome": 84564
+  },
+  {
+    "numero": 2841,
+    "codeDiplome": 84546
+  },
+  {
+    "numero": 2843,
     "codeDiplome": 84168
+  },
+  {
+    "numero": 2849,
+    "codeDiplome": 87185
+  },
+  {
+    "numero": 2876,
+    "codeDiplome": 84168
+  },
+  {
+    "numero": 2877,
+    "codeDiplome": 84546
+  },
+  {
+    "numero": 2878,
+    "codeDiplome": 84168
+  },
+  {
+    "numero": 2924,
+    "codeDiplome": 85007
+  },
+  {
+    "numero": 2928,
+    "codeDiplome": 72134
+  },
+  {
+    "numero": 2929,
+    "codeDiplome": 86204
+  },
+  {
+    "numero": 13112,
+    "codeDiplome": 31999
+  },
+  {
+    "numero": 13115,
+    "codeDiplome": 31999
+  },
+  {
+    "numero": 13116,
+    "codeDiplome": 31999
+  },
+  {
+    "numero": 13117,
+    "codeDiplome": 31999
+  },
+  {
+    "numero": 13118,
+    "codeDiplome": 31999
   },
   {
     "numero": 13155,
@@ -356,356 +476,16 @@
     "codeDiplome": 85007
   },
   {
-    "numero": 2363,
-    "codeDiplome": 82685
-  },
-  {
-    "numero": 13118,
-    "codeDiplome": 31999
-  },
-  {
-    "numero": 13118,
-    "codeDiplome": 21211
-  },
-  {
-    "numero": 13118,
-    "codeDiplome": 82703
-  },
-  {
-    "numero": 13118,
-    "codeDiplome": 53384
-  },
-  {
-    "numero": 13118,
-    "codeDiplome": 77487
-  },
-  {
-    "numero": 2343,
-    "codeDiplome": 21306
-  },
-  {
-    "numero": 13116,
-    "codeDiplome": 31999
-  },
-  {
-    "numero": 13116,
-    "codeDiplome": 21211
-  },
-  {
-    "numero": 13116,
-    "codeDiplome": 82703
-  },
-  {
-    "numero": 13116,
-    "codeDiplome": 53384
-  },
-  {
-    "numero": 13116,
-    "codeDiplome": 77487
-  },
-  {
-    "numero": 13112,
-    "codeDiplome": 31999
-  },
-  {
-    "numero": 13112,
-    "codeDiplome": 82703
-  },
-  {
-    "numero": 13112,
-    "codeDiplome": 53384
-  },
-  {
-    "numero": 13112,
-    "codeDiplome": 54649
-  },
-  {
-    "numero": 13112,
-    "codeDiplome": 58778
-  },
-  {
-    "numero": 1863,
-    "codeDiplome": 77069
-  },
-  {
-    "numero": 2929,
-    "codeDiplome": 86204
-  },
-  {
-    "numero": 2343,
-    "codeDiplome": 21306
-  },
-  {
-    "numero": 2357,
-    "codeDiplome": 82182
-  },
-  {
-    "numero": 2876,
-    "codeDiplome": 84168
-  },
-  {
-    "numero": 2764,
-    "codeDiplome": 80272
-  },
-  {
-    "numero": 2283,
-    "codeDiplome": 100029
-  },
-  {
-    "numero": 2345,
-    "codeDiplome": 94559
-  },
-  {
-    "numero": 2411,
-    "codeDiplome": 88121
-  },
-  {
-    "numero": 1848,
-    "codeDiplome": 88675
-  },
-  {
-    "numero": 1879,
-    "codeDiplome": 100427
-  },
-  {
-    "numero": 2387,
-    "codeDiplome": 82687
-  },
-  {
-    "numero": 13117,
-    "codeDiplome": 31999
-  },
-  {
-    "numero": 13117,
-    "codeDiplome": 21211
-  },
-  {
-    "numero": 13117,
-    "codeDiplome": 82703
-  },
-  {
-    "numero": 13117,
-    "codeDiplome": 53384
-  },
-  {
-    "numero": 13117,
-    "codeDiplome": 77487
-  },
-  {
-    "numero": 1858,
-    "codeDiplome": 74844
-  },
-  {
-    "numero": 1867,
-    "codeDiplome": 88675
-  },
-  {
-    "numero": 2582,
-    "codeDiplome": 83652
-  },
-  {
-    "numero": 2843,
-    "codeDiplome": 84168
-  },
-  {
-    "numero": 13115,
-    "codeDiplome": 31999
-  },
-  {
-    "numero": 13115,
-    "codeDiplome": 21211
-  },
-  {
-    "numero": 13115,
-    "codeDiplome": 82703
-  },
-  {
-    "numero": 13115,
-    "codeDiplome": 53384
-  },
-  {
-    "numero": 13115,
-    "codeDiplome": 77487
-  },
-  {
-    "numero": 13775,
-    "codeDiplome": 100833
-  },
-  {
-    "numero": 2837,
-    "codeDiplome": 23160
-  },
-  {
-    "numero": 13168,
-    "codeDiplome": 72134
-  },
-  {
-    "numero": 2279,
-    "codeDiplome": 87137
-  },
-  {
-    "numero": 2513,
-    "codeDiplome": 74851
-  },
-  {
-    "numero": 1857,
-    "codeDiplome": 56918
-  },
-  {
-    "numero": 2769,
-    "codeDiplome": 100805
-  },
-  {
-    "numero": 2502,
-    "codeDiplome": 69623
-  },
-  {
-    "numero": 13162,
-    "codeDiplome": 88309
-  },
-  {
-    "numero": 2063,
-    "codeDiplome": 56918
-  },
-  {
-    "numero": 13984,
-    "codeDiplome": 100809
-  },
-  {
-    "numero": 2924,
-    "codeDiplome": 85007
-  },
-  {
-    "numero": 13406,
-    "codeDiplome": 80738
-  },
-  {
-    "numero": 2375,
-    "codeDiplome": 81506
-  },
-  {
-    "numero": 13793,
-    "codeDiplome": 100809
-  },
-  {
-    "numero": 2434,
-    "codeDiplome": 23160
-  },
-  {
-    "numero": 2157,
-    "codeDiplome": 23160
-  },
-  {
-    "numero": 13352,
-    "codeDiplome": 85007
-  },
-  {
-    "numero": 13206,
-    "codeDiplome": 88309
-  },
-  {
-    "numero": 1829,
-    "codeDiplome": 84165
-  },
-  {
-    "numero": 2536,
-    "codeDiplome": 84165
-  },
-  {
-    "numero": 13204,
-    "codeDiplome": 84564
-  },
-  {
-    "numero": 2265,
-    "codeDiplome": 81317
-  },
-  {
-    "numero": 2928,
-    "codeDiplome": 72134
-  },
-  {
-    "numero": 2430,
-    "codeDiplome": 23196
-  },
-  {
-    "numero": 2349,
-    "codeDiplome": 58475
-  },
-  {
     "numero": 13159,
     "codeDiplome": 50486
   },
   {
-    "numero": 13501,
-    "codeDiplome": 30958
+    "numero": 13161,
+    "codeDiplome": 88309
   },
   {
-    "numero": 2266,
-    "codeDiplome": 25007
-  },
-  {
-    "numero": 2409,
-    "codeDiplome": 58475
-  },
-  {
-    "numero": 2168,
-    "codeDiplome": 84168
-  },
-  {
-    "numero": 2755,
-    "codeDiplome": 100431
-  },
-  {
-    "numero": 2414,
-    "codeDiplome": 84238
-  },
-  {
-    "numero": 1944,
-    "codeDiplome": 93775
-  },
-  {
-    "numero": 2878,
-    "codeDiplome": 84168
-  },
-  {
-    "numero": 2876,
-    "codeDiplome": 84168
-  },
-  {
-    "numero": 13414,
-    "codeDiplome": 86389
-  },
-  {
-    "numero": 2364,
-    "codeDiplome": 82182
-  },
-  {
-    "numero": 13846,
-    "codeDiplome": 90683
-  },
-  {
-    "numero": 2843,
-    "codeDiplome": 84168
-  },
-  {
-    "numero": 13422,
-    "codeDiplome": 80738
-  },
-  {
-    "numero": 13423,
-    "codeDiplome": 80738
-  },
-  {
-    "numero": 13430,
-    "codeDiplome": 80737
-  },
-  {
-    "numero": 13430,
-    "codeDiplome": 80737
-  },
-  {
-    "numero": 13507,
-    "codeDiplome": 63670
+    "numero": 13162,
+    "codeDiplome": 88309
   },
   {
     "numero": 13163,
@@ -716,15 +496,107 @@
     "codeDiplome": 96173
   },
   {
+    "numero": 13168,
+    "codeDiplome": 72134
+  },
+  {
+    "numero": 13204,
+    "codeDiplome": 84564
+  },
+  {
+    "numero": 13206,
+    "codeDiplome": 88309
+  },
+  {
     "numero": 13207,
     "codeDiplome": 88309
   },
   {
-    "numero": 1834,
-    "codeDiplome": 46799
+    "numero": 13208,
+    "codeDiplome": 96173
+  },
+  {
+    "numero": 13352,
+    "codeDiplome": 85007
   },
   {
     "numero": 13356,
     "codeDiplome": 72134
+  },
+  {
+    "numero": 13406,
+    "codeDiplome": 80738
+  },
+  {
+    "numero": 13409,
+    "codeDiplome": 93753
+  },
+  {
+    "numero": 13413,
+    "codeDiplome": 86389
+  },
+  {
+    "numero": 13414,
+    "codeDiplome": 86389
+  },
+  {
+    "numero": 13422,
+    "codeDiplome": 80738
+  },
+  {
+    "numero": 13423,
+    "codeDiplome": 80738
+  },
+  {
+    "numero": 13428,
+    "codeDiplome": 80737
+  },
+  {
+    "numero": 13430,
+    "codeDiplome": 80737
+  },
+  {
+    "numero": 13501,
+    "codeDiplome": 30958
+  },
+  {
+    "numero": 13507,
+    "codeDiplome": 63670
+  },
+  {
+    "numero": 13774,
+    "codeDiplome": 25413
+  },
+  {
+    "numero": 13775,
+    "codeDiplome": 100833
+  },
+  {
+    "numero": 13779,
+    "codeDiplome": 100809
+  },
+  {
+    "numero": 13780,
+    "codeDiplome": 21609
+  },
+  {
+    "numero": 13793,
+    "codeDiplome": 100809
+  },
+  {
+    "numero": 13816,
+    "codeDiplome": 88547
+  },
+  {
+    "numero": 13826,
+    "codeDiplome": 82779
+  },
+  {
+    "numero": 13846,
+    "codeDiplome": 90683
+  },
+  {
+    "numero": 13984,
+    "codeDiplome": 100809
   }
 ]
