@@ -30,6 +30,7 @@
     "loopback-ds-calculated-mixin": "2.0.4",
     "lru-cache": "5.1.1",
     "luxon": "1.13.0",
+    "node-schedule": "1.3.2",
     "request-promise-native": "1.0.7",
     "serve-favicon": "2.5.0",
     "strong-error-handler": "3.2.0"
