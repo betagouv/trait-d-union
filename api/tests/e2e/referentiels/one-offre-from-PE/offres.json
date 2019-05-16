@@ -1,0 +1,49 @@
+[
+  {
+    "id": "079DBQT",
+    "codeROME": "metier-avec-une-seule-offre-from-PE",
+    "source": "pole-emploi",
+    "description": "le leader du déménagements souhaite renforcer sa force de vente . vous effectuerez de la prospection et le développement de la clientèle uniquement de professionnel. Fichier existant et à développer. \nvous interviendrez sur THIONVILLE /METZ/NANCY\nVéhicule fourni et frais pris en charge. salaire attractif\naccepte débutant qui souhaite s'épanouir dans ce métier. \n",
+    "dureeTravailLibelle": "35H Horaires normaux",
+    "lieuTravail": {
+      "codePostal": "57000",
+      "commune": "57463",
+      "latitude": 49.11972222,
+      "libelle": "57 - secteur de METZ",
+      "longitude": 6.176944443
+    },
+    "natureContrat": "Contrat travail",
+    "permis": [
+      {
+        "exigence": "E",
+        "libelle": "B - Véhicule léger Exigé"
+      }
+    ],
+    "salaire": {
+      "commentaire": "fixe + prime sur CA",
+      "complement1": "fixe + prime sur CA"
+    },
+    "contact": {
+      "nom": "Pôle Emploi HAGONDANGE",
+      "courriel": "laurence.montaigu@pole-emploi.fr",
+      "coordonnees1": "15 RUE des artisans\nBP 20138",
+      "coordonnees2": "57300 HAGONDANGE",
+      "coordonnees3": "Courriel : laurence.montaigu@pole-emploi.fr"
+    },
+    "secteurActiviteLibelle": "Services de déménagement",
+    "typeContrat": "CDI",
+    "appellationlibelle": "Attaché commercial / Attachée commerciale en clientèle d'entreprises",
+    "sessions": [
+      {
+        "id": 1,
+        "numero": 20191,
+        "communeCodeInsee": 42,
+        "actionNumero": 1928,
+        "dateDebut": "2018-09-01T00:00:00.000Z",
+        "dateFin": "2018-10-01T00:00:00.000Z",
+        "duration": 1
+      }
+    ],
+    "url": "https://candidat.pole-emploi.fr/offres/recherche/detail/079DBQT"
+  }
+]

@@ -44,5 +44,5 @@ function countOffresWithEmail (offres) {
 
 async function persistOffres (offres, Offre) {
   const createOffrePromises = offres.map(offre => Offre.create(offre))
-  await Promise.all(createOffrePromises)
+  return Promise.all(createOffrePromises)
 }

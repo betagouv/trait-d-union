@@ -4,10 +4,10 @@ Feature: Source offres around a given distance of a given location for which a f
     Given Referentiel is seed from 'one-offre-from-PE'
     When POST '/offres/source'
     Then http status is 200
-    And response payload is '/offres-from-PE/GET_offres_one_result.json'
+    And response payload is '/source-offres-from-PE/POST_offres_one_result.json'
 
   Scenario: One offre found (CSV)
     Given Referentiel is seed from 'one-offre-from-PE'
     When POST '/offres/source?format=csv'
     Then http status is 200
-    And response payload is text equals to '/offres-from-PE/GET_offres_one_result.csv'
+    And response payload is text equals to '/source-offres-from-PE/POST_offres_one_result.csv'
