@@ -8,6 +8,16 @@
   "http": {
     "path": "session-formations"
   },
+  "mixins": {
+    "Calculated": {
+      "properties": {
+        "duration": {
+          "recalculateOnUpdate": true,
+          "callback": "computeDuration"
+        }
+      }
+    }
+  },
   "properties": {
     "numero": {
       "type": "number",
@@ -39,15 +49,5 @@
     }
   },
   "acls": [],
-  "methods": {},
-  "mixins": {
-    "Calculated": {
-      "properties": {
-        "duration": {
-          "recalculateOnUpdate": true,
-          "callback": "computeDuration"
-        }
-      }
-    }
-  }
+  "methods": {}
 }

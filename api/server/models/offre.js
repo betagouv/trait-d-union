@@ -20,6 +20,12 @@ module.exports = (Offre) => {
     returns: { arg: 'offres', type: 'string', root: true }
   })
 
+  Offre.afterRemote('find', async (context) => {
+    if (context.result) {
+      context.result = context.result.map(({ data }) => data)
+    }
+  })
+
   Offre.afterRemote('**', async (context) => {
     if (context.result && context.req.query.format === 'csv') {
       const offres = context.result
@@ -43,6 +49,6 @@ function countOffresWithEmail (offres) {
 }
 
 async function persistOffres (offres, Offre) {
-  const createOffrePromises = offres.map(offre => Offre.create(offre))
+  const createOffrePromises = offres.map(offre => Offre.create({ id: offre.id, data: offre }))
   return Promise.all(createOffrePromises)
 }

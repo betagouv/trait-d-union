@@ -9,8 +9,6 @@
       "license": "MIT",
       "licenseUrl": "https://spdx.org/licenses/MIT.html"
     },
-    "uiDirs": {
-
-    }
+    "uiDirs": {}
   }
 }
