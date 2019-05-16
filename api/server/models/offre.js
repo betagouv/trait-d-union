@@ -11,6 +11,7 @@ const offresRepository = require('../repositories/pole-emploi-offres/offres-pole
 module.exports = (Offre) => {
   Offre.sourceOffres = async () => {
     const offres = await sourceOffres(Offre)
+    await destroyOffres(Offre)
     await persistOffres(offres, Offre)
     return offres
   }
@@ -51,4 +52,8 @@ function countOffresWithEmail (offres) {
 async function persistOffres (offres, Offre) {
   const createOffrePromises = offres.map(offre => Offre.create({ id: offre.id, data: offre }))
   return Promise.all(createOffrePromises)
+}
+
+async function destroyOffres (Offre) {
+  return Offre.destroyAll()
 }
