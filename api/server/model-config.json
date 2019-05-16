@@ -37,7 +37,7 @@
     "public": false
   },
   "Offre": {
-    "dataSource": null,
+    "dataSource": "db",
     "public": true
   },
   "Metier": {

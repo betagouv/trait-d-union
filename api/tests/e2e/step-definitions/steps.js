@@ -9,7 +9,6 @@ const loadReferentiels = require('../../../server/features/referentiels/load-ref
 let applicationBaseUrl
 let response
 let server
-const headers = {}
 
 BeforeAll(async () => {
   server = await app.start()
@@ -31,15 +30,15 @@ Given('No session formation is seed', async () => {
   await app.models.SessionFormation.destroyAll()
 })
 
-When(/^'(.*)' header is '(.*)'$/, (key, value) => {
-  headers[key] = value
-})
-
 When(/^GET '(\/[\S-.?=/]+)'$/, async (route) => {
   response = await got(`${applicationBaseUrl}${route}`, {
-    json: headers['Accept'] === 'application/json',
-    throwHttpErrors: false,
-    headers
+    throwHttpErrors: false
+  })
+})
+
+When(/^POST '(\/[\S-.?=/]+)'$/, async (route) => {
+  response = await got.post(`${applicationBaseUrl}${route}`, {
+    throwHttpErrors: false
   })
 })
 
@@ -58,11 +57,11 @@ Then(/^response payload conforms to '(.*)'$/, (schemaName) => {
 Then(/^response payload is '(.*)'$/, (payloadFilename) => {
   const filePath = path.join(process.cwd(), 'tests/e2e', payloadFilename)
   const expectedPayload = require(filePath)
-  expect(response.body).to.eql(expectedPayload)
+  expect(JSON.parse(response.body)).to.eql(expectedPayload)
 })
 
 Then('response payload is', (payload) => {
-  expect(response.body).to.eql(JSON.parse(payload))
+  expect(JSON.parse(response.body)).to.eql(JSON.parse(payload))
 })
 
 Then(/^response payload is text equals to '(.*)'$/, (payloadFilename) => {

@@ -1,14 +1,20 @@
 {
   "name": "Offre",
-  "base": "Model",
-  "idInjection": true,
+  "base": "PersistedModel",
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "http": {
     "path": "offres"
   },
-  "properties": {},
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": true
+    }
+  },
   "validations": [],
   "relations": {},
   "acls": [],
