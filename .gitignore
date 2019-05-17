@@ -1,5 +1,6 @@
 api/client/
 api/.dev.env
+api/.int.env
 
 # Created by https://www.gitignore.io/api/IntelliJ,node,macos
 # Edit at https://www.gitignore.io/?templates=IntelliJ,node,macos
