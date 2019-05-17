@@ -2,10 +2,11 @@ const loopback = require('loopback')
 const boot = require('loopback-boot')
 
 const app = module.exports = loopback()
+let server
 
-app.start = function () {
+app.start = async () => {
   // start the web server
-  return app.listen(function () {
+  server = await app.listen(function () {
     app.emit('started')
     const baseUrl = app.get('url').replace(/\/$/, '')
     console.log('Web server listening at: %s', baseUrl)
@@ -14,6 +15,12 @@ app.start = function () {
       console.log('Browse your REST API at %s%s', baseUrl, explorerPath)
     }
   })
+  return server
+}
+
+app.stop = function () {
+  app.scheduledTask.cancel()
+  server.close()
 }
 
 // Bootstrap the application, configure models, datasources and middleware.

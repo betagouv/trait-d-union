@@ -8,16 +8,15 @@ const Joi = require('joi')
 const loadReferentiels = require('../../../server/features/referentiels/load-referentiels')
 let applicationBaseUrl
 let response
-let server
 
 BeforeAll(async () => {
-  server = await app.start()
+  const server = await app.start()
   const { port, address } = server.address()
   applicationBaseUrl = `http://${address}:${port}/api/v0`
 })
 
 AfterAll(() => {
-  server.close()
+  app.stop()
 })
 
 Given(/^Referentiel is seed from '(.*)'$/, async (referentielsPath) => {
