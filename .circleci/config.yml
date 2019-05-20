@@ -18,11 +18,12 @@ workflows:
             - test
       - ready_for_production:
           type: approval # Manual approval is required to deploy to production
-          requires: deploy_to_staging
+          requires:
+            - deploy_to_staging
 
       - deploy_to_production:
           requires:
-            - go_to_production
+            - ready_for_production
 
 defaults: &defaults
   docker:
