@@ -1,6 +1,6 @@
 workflows:
   version: 2
-  build_test_and_deploy:
+  build_test_and_deploy_to_staging:
     jobs:
       - checkout_code
       - install_dependencies:
@@ -12,7 +12,24 @@ workflows:
       - test:
           requires:
             - install_dependencies
-      - deploy:
+      - deploy_to_staging:
+          requires:
+            - lint
+            - test
+
+  build_test_and_deploy_to_production:
+    jobs:
+      - checkout_code
+      - install_dependencies:
+          requires:
+            - checkout_code
+      - lint:
+          requires:
+            - install_dependencies
+      - test:
+          requires:
+            - install_dependencies
+      - deploy_to_production:
           requires:
             - lint
             - test
@@ -84,8 +101,26 @@ jobs:
           name: Run Tests
           command: npm run test
 
-  deploy:
+  deploy_to_production:
     <<: *defaults
+    branches:
+      only:
+        - master
+    steps:
+      - attach_workspace:
+          at: .
+      - add_ssh_keys:
+          fingerprints:
+            - "17:26:2d:c8:49:c4:19:cc:83:83:78:91:9c:75:e9:d3"
+      - run:
+          name: Deploy to scalingo production instance
+          command: GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:traitdunion.git master
+
+  deploy_to_staging:
+    <<: *defaults
+    branches:
+      only:
+        - staging
     steps:
       - attach_workspace:
           at: .
@@ -101,9 +136,9 @@ jobs:
             git config user.name "Circle CI"
             npm version patch -m "Deploy %s [skip ci]"
             git status
-            git push -q https://${GITHUB_TOKEN}@github.com/betagouv/trait-d-union.git master
+            git push -q https://${GITHUB_TOKEN}@github.com/betagouv/trait-d-union.git staging
             git status
             git push -q https://${GITHUB_TOKEN}@github.com/betagouv/trait-d-union.git --tags
       - run:
           name: Deploy to scalingo production instance
-          command: GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:traitdunion.git master
+          command: GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:traitdunion-staging.git master
