@@ -13,11 +13,11 @@ workflows:
           requires:
             - install_dependencies
       - deploy_to_staging:
-          type: approval # Manual approval is required to deploy to production
           requires:
             - lint
             - test
       - deploy_to_production:
+          type: approval # Manual approval is required to deploy to production
           requires:
             - deploy_to_staging
 
