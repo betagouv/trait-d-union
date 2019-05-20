@@ -110,7 +110,7 @@ jobs:
             git push -q https://${GITHUB_TOKEN}@github.com/betagouv/trait-d-union.git --tags
       - run:
           name: Deploy to scalingo production instance
-          command: GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:traitdunion-staging.git staging
+          command: GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:traitdunion-staging.git staging:master
 
   deploy_to_production:
     <<: *defaults
