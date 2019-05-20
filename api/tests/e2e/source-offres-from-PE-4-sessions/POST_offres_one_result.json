@@ -42,6 +42,24 @@
         "dateDebut": "2028-09-01T00:00:00.000Z",
         "dateFin": "2028-10-01T00:00:00.000Z",
         "duration": 1
+      },
+      {
+        "id": 2,
+        "numero": 20192,
+        "communeCodeInsee": 42,
+        "actionNumero": 1928,
+        "dateDebut": "2028-09-01T00:00:00.000Z",
+        "dateFin": "2028-11-01T00:00:00.000Z",
+        "duration": 2
+      },
+      {
+        "id": 3,
+        "numero": 20193,
+        "communeCodeInsee": 42,
+        "actionNumero": 1928,
+        "dateDebut": "2028-09-01T00:00:00.000Z",
+        "dateFin": "2028-12-01T00:00:00.000Z",
+        "duration": 3
       }
     ],
     "url": "https://candidat.pole-emploi.fr/offres/recherche/detail/079DBQT"

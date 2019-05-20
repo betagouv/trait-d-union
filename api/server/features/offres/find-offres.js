@@ -3,7 +3,7 @@ const isFilled = require('../../utils/is-filled')
 
 const { debug } = require('../../infrastructure/logger')
 
-module.exports = ({ Metier, SessionFormation }, repositories) => async ({ around }) => {
+module.exports = ({ Metier }, repositories) => async ({ around }) => {
   const metiers = await Metier.find()
   const filteredMetiers = keepMetiersWithSessions(metiers)
   const codesROME = extractCodesROME(filteredMetiers)
@@ -34,7 +34,8 @@ function keepMetiersWithSessions (metiers) {
   return metiers.filter(metier =>
     isFilled(metier.diplomes()) && metier.diplomes().some(diplome =>
       isFilled(diplome.actions()) && diplome.actions().some(action =>
-        isFilled(action.sessions()))))
+        isFilled(action.sessions()) && action.sessions().some(session =>
+          session.dateFin > new Date()))))
 }
 
 function extractSessionsFrom (metier) {
@@ -44,5 +45,8 @@ function extractSessionsFrom (metier) {
 }
 
 function assignSessionsToOffres (offres, sessions) {
-  return offres.map(offre => Object.assign(offre, { sessions }))
+  const incomingSessions = sessions.filter(session => session.dateFin > new Date())
+  const sortedSessions = incomingSessions.sort((a, b) => a.dateFin > b.dateFin)
+  const threeFirstSessions = sortedSessions.splice(0, 3)
+  return offres.map(offre => Object.assign(offre, { sessions: threeFirstSessions }))
 }
