@@ -2,7 +2,10 @@ workflows:
   version: 2
   build_test_and_deploy:
     jobs:
-      - checkout_code
+      - checkout_code:
+          filters:
+            branches:
+              only: staging
       - install_dependencies:
           requires:
             - checkout_code
