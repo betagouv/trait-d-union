@@ -1,6 +1,6 @@
 workflows:
   version: 2
-  build_test_and_deploy_to_staging:
+  build_test_and_deploy:
     jobs:
       - checkout_code
       - install_dependencies:
@@ -13,26 +13,13 @@ workflows:
           requires:
             - install_dependencies
       - deploy_to_staging:
+          type: approval # Manual approval is required to deploy to production
           requires:
             - lint
             - test
-
-  build_test_and_deploy_to_production:
-    jobs:
-      - checkout_code
-      - install_dependencies:
-          requires:
-            - checkout_code
-      - lint:
-          requires:
-            - install_dependencies
-      - test:
-          requires:
-            - install_dependencies
       - deploy_to_production:
           requires:
-            - lint
-            - test
+            - deploy_to_staging
 
 defaults: &defaults
   docker:
@@ -101,26 +88,8 @@ jobs:
           name: Run Tests
           command: npm run test
 
-  deploy_to_production:
-    <<: *defaults
-    branches:
-      only:
-        - master
-    steps:
-      - attach_workspace:
-          at: .
-      - add_ssh_keys:
-          fingerprints:
-            - "17:26:2d:c8:49:c4:19:cc:83:83:78:91:9c:75:e9:d3"
-      - run:
-          name: Deploy to scalingo production instance
-          command: GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:traitdunion.git master
-
   deploy_to_staging:
     <<: *defaults
-    branches:
-      only:
-        - staging
     steps:
       - attach_workspace:
           at: .
@@ -141,4 +110,27 @@ jobs:
             git push -q https://${GITHUB_TOKEN}@github.com/betagouv/trait-d-union.git --tags
       - run:
           name: Deploy to scalingo production instance
-          command: GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:traitdunion-staging.git master
+          command: GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:traitdunion-staging.git staging
+
+  deploy_to_production:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: .
+      - add_ssh_keys:
+          fingerprints:
+            - "17:26:2d:c8:49:c4:19:cc:83:83:78:91:9c:75:e9:d3"
+      - run:
+          name: Update version
+          command: |
+            git status
+            git config credential.helper 'cache --timeout=120'
+            git config user.email "circle-ci@traitdunion.fr"
+            git config user.name "Circle CI"
+            git checkout master
+            git merge --no-ff staging
+            git status
+            git push -q https://${GITHUB_TOKEN}@github.com/betagouv/trait-d-union.git master
+      - run:
+          name: Deploy to scalingo production instance
+          command: GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:traitdunion.git master
