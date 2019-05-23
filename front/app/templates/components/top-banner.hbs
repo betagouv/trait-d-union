@@ -9,7 +9,10 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
         <ul class="nav">
           <li class="nav-item">
-            <button type="button" class="btn btn-primary btn-sm text-uppercase">à propos</button>
+            <button href="https://beta.gouv.fr/startups/trait-d-union.html" target="_blank" rel="noopener"
+                    type="button" class="btn btn-primary btn-sm text-uppercase">
+              à propos
+            </button>
           </li>
           <li class="nav-item">
             <button type="button" class="btn btn-primary btn-sm text-uppercase ml-3">aide</button>
@@ -21,7 +24,11 @@
       <h1 class="display-4 text-center text-white mt-4 w-75">Trouvez un emploi à Metz grâce à une formation qualifiante</h1>
     </div>
     <div class="row justify-content-center">
-      <button type="button" class="btn btn-primary btn-lg text-uppercase top-banner-rounded mt-5">rencontrer une entreprise 🚀</button>
+      {{#scroll-to href="#steps"}}
+        <button type="button" class="btn btn-primary btn-lg text-uppercase top-banner-rounded mt-5">
+          rencontrer une entreprise 🚀
+        </button>
+      {{/scroll-to}}
     </div>
   </div>
 </div>

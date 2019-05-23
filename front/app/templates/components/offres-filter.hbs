@@ -1,7 +1,16 @@
-{{input
-  value=this.keyword
-  key-up=(action "filterByKeyword")
-  class="light"
-  placeholder="Filtrer par mot-clé"
-}}
-{{yield this.results}}
+<div class="offres-filter row justify-content-center mb-4">
+  <div class="row border justify-content-center offres-filter-rounded mb-5">
+    🔍
+    {{input
+      value=this.keyword
+      key-up=(action "filterByKeyword")
+      class="light no-border text-secondary"
+      placeholder="Filtrer par mot-clé"
+      size="30"
+    }}
+  </div>
+  <div>
+    {{yield this.results}}
+  </div>
+</div>
+

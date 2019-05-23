@@ -3,18 +3,19 @@
 $primary: #1b82ab;
 $secondary: #3a3a3a;
 $info: #eeeeee;
-$enable-shadows: true;
 
 @import "defaults/fonts";
 @import "defaults/margins";
 
 @import "ember-bootstrap/bootstrap";
 
+@import "components/offres-filter";
 @import "components/offre";
 @import "components/top-banner";
 @import "components/steps";
 
 
-.btn-link.focus, .btn-link:focus {
+.btn-link.focus, .btn-link:focus,
+.btn-link.hover, .btn-link:hover {
   text-decoration: none;
 }
