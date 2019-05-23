@@ -1,5 +1,9 @@
-{{#each this.offres as |offre|}}
-  <Offre @offre={{offre}}></Offre>
-{{else}}
-  Aucune offre disponible pour le moment. Revenez demain !
-{{/each}}
+<OffresFilter @offres={{this.offres}} @results={{this.results}} as |filteredOffres|>
+  <ul>
+    {{#animated-each filteredOffres use=transition as |offre|}}
+      <Offre @offre={{offre}}></Offre>
+    {{else}}
+      Aucune offre disponible pour le moment. Revenez demain !
+    {{/animated-each}}
+  </ul>
+</OffresFilter>

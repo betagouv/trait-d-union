@@ -1,11 +1,15 @@
 @charset "utf-8";
 
 $primary: #1b82ab;
+$secondary: #3a3a3a;
+
+@import "defaults/fonts";
+@import "defaults/margins";
 
 @import "ember-bootstrap/bootstrap";
 
-@import "defaults/fonts";
 @import "components/offre";
 @import "components/top-banner";
+@import "components/steps";
 
 

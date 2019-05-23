@@ -7,7 +7,7 @@ export default Component.extend({
   }),
 
   typeContrat: computed(function () {
-    return `contrat: ${this.offre.typeContrat}`
+    return `Contrat ${this.offre.typeContrat}`
   }),
 
   titre: computed(function () {
@@ -24,7 +24,7 @@ export default Component.extend({
       this.offre.salaire.commentaire ||
       this.offre.salaire.complement1
 
-    return `salaire: ${salaire}`
+    return `Rémunération : ${salaire}`
   }),
 
   sessionDuration: computed(function () {
