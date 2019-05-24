@@ -35,6 +35,10 @@ module.exports = function (environment) {
       'img-src': '\'self\'',
       'style-src': '\'self\' fonts.googleapis.com',
       'media-src': '\'self\''
+    },
+
+    crisp: {
+      WEBSITE_ID: '5ef81484-322d-41e4-a58a-dc141f7eda98'
     }
   }
 
