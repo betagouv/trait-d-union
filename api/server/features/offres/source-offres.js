@@ -9,18 +9,17 @@ const offresRepository = require('../../repositories/pole-emploi-offres/offres-p
 module.exports = async ({ Offre }) => {
   const findOffres = createFindOffres(Offre.app.models, [offresRepository])
   const result = await findOffres({ around: {} })
-  const offresWithEmailCount = countOffresWithEmail(result)
-  info(`Source ${result.length} offres, ${offresWithEmailCount} offres with email`)
+  const offresWithEmail = keepOffresWithEmail(result)
+  info(`Source ${result.length} offres, ${offresWithEmail.length} offres with email`)
   info('Destroy current offres')
   await destroyOffres(Offre)
   info('Store newly sourced offres')
-  await persistOffres(Offre, result)
-  return result
+  await persistOffres(Offre, offresWithEmail)
+  return offresWithEmail
 }
 
-function countOffresWithEmail (offres) {
-  const result = offres.filter(({ contact }) => contact && contact.courriel)
-  return result.length
+function keepOffresWithEmail (offres) {
+  return offres.filter(({ contact }) => contact && contact.courriel)
 }
 
 async function persistOffres (Offre, offres) {
