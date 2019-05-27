@@ -1,4 +1,4 @@
-.jumbotron {
+.header {
   background-image: url("https://i.ibb.co/34vv0R3/adult-3365364-19820.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -6,8 +6,33 @@
   padding-bottom: 0;
   padding-top: 0;
   height: 100vh;
+  margin: 0;
 }
 
 .btn.top-banner-rounded {
   border-radius: 160px;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+[data-overlay="1"]::before {
+  opacity: .1;
+}
+
+[data-overlay]::before, [data-overlay-light]::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #191919;
+  border-radius: inherit;
+}
+
+.mt-90 {
+  margin-top: -90px;
 }
