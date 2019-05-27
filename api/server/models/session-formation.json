@@ -35,6 +35,9 @@
       "type": "number"
     }
   },
+  "scope": {
+    "include": "action"
+  },
   "validations": [],
   "relations": {
     "action": {

@@ -81,7 +81,7 @@ exports.set = () => {
           'deplacementCode': '4',
           'deplacementLibelle': 'Quotidiens Départemental',
           // eslint-disable-next-line max-len
-          'description': 'le leader du déménagements souhaite renforcer sa force de vente . vous effectuerez de la prospection et le développement de la clientèle uniquement de professionnel. Fichier existant et à développer. \nvous interviendrez sur THIONVILLE /METZ/NANCY\nVéhicule fourni et frais pris en charge. salaire attractif\naccepte débutant qui souhaite s\'épanouir dans ce métier. \n',
+          'description': 'le leader du déménagements souhaite renforcer sa force de vente . vous effectuerez de la prospection et le développement de la clientèle uniquement de professionnel. Fichier existant et à développer.\nvous interviendrez sur THIONVILLE /METZ/NANCY\nVéhicule fourni et frais pris en charge. salaire attractif\naccepte débutant qui souhaite s\'épanouir dans ce métier.\n',
           'dureeTravailLibelle': '35H Horaires normaux',
           'experienceExige': 'D',
           'experienceLibelle': 'Débutant accepté',

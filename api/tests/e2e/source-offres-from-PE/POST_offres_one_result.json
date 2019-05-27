@@ -3,7 +3,7 @@
     "id": "079DBQT",
     "codeROME": "metier-avec-une-seule-offre-from-PE",
     "source": "pole-emploi",
-    "description": "le leader du déménagements souhaite renforcer sa force de vente . vous effectuerez de la prospection et le développement de la clientèle uniquement de professionnel. Fichier existant et à développer. \nvous interviendrez sur THIONVILLE /METZ/NANCY\nVéhicule fourni et frais pris en charge. salaire attractif\naccepte débutant qui souhaite s'épanouir dans ce métier. \n",
+    "description": "le leader du déménagements souhaite renforcer sa force de vente . vous effectuerez de la prospection et le développement de la clientèle uniquement de professionnel. Fichier existant et à développer.\nvous interviendrez sur THIONVILLE /METZ/NANCY\nVéhicule fourni et frais pris en charge. salaire attractif\naccepte débutant qui souhaite s'épanouir dans ce métier.\n",
     "dureeTravailLibelle": "35H Horaires normaux",
     "lieuTravail": {
       "codePostal": "57000",
@@ -41,7 +41,12 @@
         "actionNumero": 1928,
         "dateDebut": "2028-09-01T00:00:00.000Z",
         "dateFin": "2028-10-01T00:00:00.000Z",
-        "duration": 1
+        "duration": 1,
+        "action": {
+          "codeDiplome": 23160,
+          "numero": 1928,
+          "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
+        }
       }
     ],
     "url": "https://candidat.pole-emploi.fr/offres/recherche/detail/079DBQT"
