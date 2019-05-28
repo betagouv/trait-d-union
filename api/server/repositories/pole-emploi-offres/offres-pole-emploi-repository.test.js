@@ -219,6 +219,7 @@ function createFullOffre (id = '086QKQK') {
 function createExpectedOffre (id = '086QKQK') {
   return {
     id,
+    'intitule': 'Serveur/Serveuse (H/F)',
     'codeROME': 'codeROME',
     'source': 'pole-emploi',
     // eslint-disable-next-line max-len
