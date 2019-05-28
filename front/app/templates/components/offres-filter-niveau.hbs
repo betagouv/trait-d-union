@@ -1,0 +1,11 @@
+<div class="row justify-content-center mb-5">
+  {{#bs-button-group value=currentFilter type="radio" onChange=(action "filterByNiveau") as |bg|}}
+    {{#bg.button type="primary" class="text-uppercase" value=""}}Tous{{/bg.button}}
+    {{#bg.button type="primary" class="text-uppercase" value="sans-diplome"}}Sans diplôme{{/bg.button}}
+    {{#bg.button type="primary" class="text-uppercase" value="cap-bep"}}BEP-CAP{{/bg.button}}
+    {{#bg.button type="primary" class="text-uppercase" value="bac-bac+1"}}BAC ou BAC+1{{/bg.button}}
+    {{#bg.button type="primary" class="text-uppercase" value="bac+2"}}BAC+2{{/bg.button}}
+    {{#bg.button type="primary" class="text-uppercase" value="bac+3-bac+4"}}BAC+3 ou BAC+4{{/bg.button}}
+  {{/bs-button-group}}
+</div>
+{{yield this.results}}

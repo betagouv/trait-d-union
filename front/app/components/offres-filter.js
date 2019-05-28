@@ -10,8 +10,10 @@ export default Component.extend({
   },
 
   actions: {
-    async filterByKeyword () {
+    filterByKeyword () {
       const offres = this.get('offres')
+      console.log(`${offres.length} offres to filter`)
+      console.log(`Will filter with ${this.keyword}`)
       const filteredOffres = filterByValue(offres, this.keyword)
       console.log(filteredOffres.length)
       this.set('results', filteredOffres)
