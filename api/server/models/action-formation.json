@@ -8,6 +8,16 @@
   "http": {
     "path": "action-formations"
   },
+  "mixins": {
+    "Calculated": {
+      "properties": {
+        "niveauQualificationEntree": {
+          "recalculateOnUpdate": true,
+          "callback": "computeNiveauQualificationEntree"
+        }
+      }
+    }
+  },
   "properties": {
     "numero": {
       "type": "number",
@@ -15,6 +25,9 @@
       "required": true
     },
     "niveauQualificationSortie": {
+      "type": "string"
+    },
+    "niveauQualificationEntree": {
       "type": "string"
     }
   },

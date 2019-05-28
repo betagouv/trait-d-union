@@ -18,6 +18,9 @@
       }
     }
   },
+  "scope": {
+    "include": "action"
+  },
   "properties": {
     "numero": {
       "type": "number",
@@ -34,9 +37,6 @@
     "duration": {
       "type": "number"
     }
-  },
-  "scope": {
-    "include": "action"
   },
   "validations": [],
   "relations": {

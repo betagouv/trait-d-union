@@ -15,7 +15,8 @@
         "action": {
           "codeDiplome": 23160,
           "numero": 1928,
-          "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
+          "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2",
+          "niveauQualificationEntree": "bac-bac+1"
         }
       }
     ],
