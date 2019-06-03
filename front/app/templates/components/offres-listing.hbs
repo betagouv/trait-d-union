@@ -4,17 +4,14 @@
       {{#animated-each filteredOffres use=transition as |offre|}}
         {{#acc.item as |aitem|}}
           {{#aitem.title class="bg-light"}}
-            <span class="text-secondary">
+            <div class="text-secondary justify-content-center">
               <Offre @offre={{offre}}></Offre>
-            </span>
+            </div>
           {{/aitem.title}}
           {{#aitem.body}}
-            <div class="row">
-              <div class="row justify-content-center text-wrap mx-0 mt-4">
-                {{offre.description}}
-                <button {{action "postuler" offre}} class="btn mt-3 btn-primary text-uppercase">Ça m'intéresse 👍</button>
-              </div>
-              <hr>
+            <div class="row justify-content-center text-wrap mx-0 mt-sm-4">
+              {{offre.description}}
+              <button {{action "postuler" offre}} class="btn mt-3 btn-primary text-uppercase">Ça m'intéresse 👍</button>
             </div>
           {{/aitem.body}}
         {{/acc.item}}
