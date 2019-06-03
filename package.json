@@ -8,7 +8,7 @@
     "install:api": "cd api && npm install",
     "build": "run-s --print-label build:front cp:front",
     "build:front": "cd front && npm run build",
-    "cp:front": "cp -r front/dist/* api/client",
+    "cp:front": "mkdir -p api/client && cp -r front/dist/* api/client",
     "test": "run-p --print-label test:front test:api test:e2e:api",
     "test:front": "cd front && npm run test",
     "test:api": "cd api && npm run test",
