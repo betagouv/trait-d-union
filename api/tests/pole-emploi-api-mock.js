@@ -30,7 +30,8 @@ exports.set = () => {
       sort: 2,
       codeROME: 'metier-avec-une-seule-offre-from-PE',
       distance: 10,
-      commune: 57463
+      commune: 57463,
+      typeContrat: 'CDI,CDD'
     })
     .matchHeader('Authorization', 'Bearer api_key')
     .reply(200, {
@@ -133,7 +134,8 @@ exports.set = () => {
       sort: 2,
       codeROME: 'metier-avec-une-seule-offre-from-LBB',
       distance: 10,
-      commune: 57463
+      commune: 57463,
+      typeContrat: 'CDI,CDD'
     })
     .matchHeader('Authorization', 'Bearer api_key')
     .reply(200, {

@@ -39,7 +39,8 @@ const createSearchOffres = (poleEmploiApiService) => async (codesROME) => {
     distance: 10,
     experience: 1,
     range: '1-149',
-    sort: 2
+    sort: 2,
+    typeContrat: 'CDI,CDD'
   }
   const { resultats } = await poleEmploiApiService.request('/offresdemploi/v2/offres/search', searchParameters)
   return resultats

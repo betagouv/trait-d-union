@@ -25,7 +25,8 @@ describe('Offres Pole Emploi Repository', () => {
         experience: 1,
         sort: 2,
         commune: 57463,
-        distance: 10
+        distance: 10,
+        typeContrat: 'CDI,CDD'
       })
     })
 
@@ -64,7 +65,8 @@ describe('Offres Pole Emploi Repository', () => {
           experience: 1,
           sort: 2,
           commune: 57463,
-          distance: 10
+          distance: 10,
+          typeContrat: 'CDI,CDD'
         })
       })
     })
@@ -87,7 +89,8 @@ describe('Offres Pole Emploi Repository', () => {
           experience: 1,
           sort: 2,
           commune: 57463,
-          distance: 10
+          distance: 10,
+          typeContrat: 'CDI,CDD'
         })
 
         expect(poleEmploiApiService.request).to.have.been.calledWith('/offresdemploi/v2/offres/search', {
@@ -96,7 +99,8 @@ describe('Offres Pole Emploi Repository', () => {
           experience: 1,
           sort: 2,
           commune: 57463,
-          distance: 10
+          distance: 10,
+          typeContrat: 'CDI,CDD'
         })
       })
 
