@@ -1,23 +1,21 @@
-<OffresFilterNiveau @offres={{this.offres}} as |filteredByNiveauOffres|>
-  <OffresFilter @offres={{filteredByNiveauOffres}} as |filteredOffres|>
-    {{#bs-accordion class="shadow-sm" as |acc|}}
-      {{#animated-each filteredOffres use=transition as |offre|}}
-        {{#acc.item as |aitem|}}
-          {{#aitem.title class="bg-light"}}
-            <div class="text-secondary justify-content-center">
-              <Offre @offre={{offre}}></Offre>
-            </div>
-          {{/aitem.title}}
-          {{#aitem.body}}
-            <div class="row justify-content-center text-wrap mx-0 mt-sm-4">
-              {{offre.description}}
-              <button {{action "postuler" offre}} class="btn mt-3 btn-primary text-uppercase">Ça m'intéresse 👍</button>
-            </div>
-          {{/aitem.body}}
-        {{/acc.item}}
-      {{else}}
-        Aucune offre ne correspond au filtre sélectionné pour le moment. Revenez demain !
-      {{/animated-each}}
-    {{/bs-accordion}}
-  </OffresFilter>
-</OffresFilterNiveau>
+<OffresFilter @offres={{this.offres}} as |filteredOffres|>
+  {{#bs-accordion class="shadow-sm" as |acc|}}
+    {{#animated-each filteredOffres use=transition as |offre|}}
+      {{#acc.item as |aitem|}}
+        {{#aitem.title class="bg-light"}}
+          <div class="text-secondary justify-content-center">
+            <Offre @offre={{offre}}></Offre>
+          </div>
+        {{/aitem.title}}
+        {{#aitem.body}}
+          <div class="row justify-content-center text-wrap mx-0 mt-sm-4">
+            {{offre.description}}
+            <button {{action "postuler" offre}} class="btn mt-3 btn-primary text-uppercase">Ça m'intéresse 👍</button>
+          </div>
+        {{/aitem.body}}
+      {{/acc.item}}
+    {{else}}
+      Aucune offre ne correspond au filtre sélectionné pour le moment. Revenez demain !
+    {{/animated-each}}
+  {{/bs-accordion}}
+</OffresFilter>
