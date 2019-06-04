@@ -1,6 +1,6 @@
 {
   "name": "traitdunion",
-  "version": "0.0.81",
+  "version": "0.0.82",
   "description": "",
   "scripts": {
     "postinstall": "run-p --print-label install:front install:api",
