@@ -2,11 +2,12 @@ module.exports = (app) => {
   app.get('/', (req, res, next) => {
     const utmSource = req.query.utm_source
     const queryParams = utmSource ? `?utm_source=${utmSource}` : ''
-    if (isStaging(req) || isLocal(req)) {
+    if (isLocal(req)) {
       return next()
     }
+    const environment = isStaging(req) ? 'staging.' : ''
     res.writeHead(302, {
-      'Location': `http://candidat.traitdunion.beta.gouv.fr${queryParams}`
+      'Location': `https://${environment}candidat.traitdunion.beta.gouv.fr${queryParams}`
     })
     res.end()
   })
