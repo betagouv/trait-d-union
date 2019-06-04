@@ -16,6 +16,7 @@
     "lint:js": "eslint .",
     "lint": "npm run lint:js && npm run lint:hbs",
     "start": "ember serve",
+    "start:dev": "export $(cat .dev.env | xargs) && ember serve",
     "test": "ember test",
     "start:test": "ember test -s"
   },
