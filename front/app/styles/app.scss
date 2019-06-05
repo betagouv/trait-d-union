@@ -11,9 +11,8 @@ $info: #eeeeee;
 
 @import "components/offres-filter";
 @import "components/offre";
-@import "components/top-banner";
+@import "components/navbar";
 @import "components/steps";
-
 
 .btn-link.focus, .btn-link:focus,
 .btn-link.hover, .btn-link:hover {
@@ -23,4 +22,8 @@ $info: #eeeeee;
 .card-header {
   padding-left: 0;
   padding-right: 0;
+}
+
+main > .container {
+  padding: 76px 15px 0;
 }

@@ -1,4 +1,4 @@
-<OffresFilter @offres={{this.offres}} as |filteredOffres|>
+<OffresFilter @offres={{this.offres}} id="test" as |filteredOffres|>
   {{#bs-accordion class="shadow-sm" as |acc|}}
     {{#animated-each filteredOffres use=transition as |offre|}}
       {{#acc.item as |aitem|}}
@@ -8,8 +8,10 @@
           </div>
         {{/aitem.title}}
         {{#aitem.body}}
-          <div class="row justify-content-center text-wrap mx-0 mt-sm-4">
-            {{offre.description}}
+          <div class="row justify-content-center text-secondary text-wrap mx-0 mt-sm-4">
+            <div class="text-sm-left">
+              {{offre.description}}
+            </div>
             <button {{action "postuler" offre}} class="btn mt-3 btn-primary text-uppercase">Ça m'intéresse 👍</button>
           </div>
         {{/aitem.body}}
