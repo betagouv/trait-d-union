@@ -8,13 +8,6 @@ module.exports = function (defaults) {
       'bootstrapVersion': 4,
       'importBootstrapFont': false,
       'importBootstrapCSS': false
-    },
-    'ember-cli-uglify': {
-      enabled: true
-    },
-    sourcemaps: {
-      enabled: true,
-      extensions: ['js']
     }
   })
 

@@ -11,7 +11,7 @@
     "test": "tests"
   },
   "scripts": {
-    "build": "ember build -prod",
+    "build": "ember build",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "lint": "npm run lint:js && npm run lint:hbs",
@@ -35,7 +35,6 @@
     "ember-cli-babel": "7.7.3",
     "ember-cli-dependency-checker": "3.1.0",
     "ember-cli-eslint": "5.1.0",
-    "ember-cli-fastboot": "2.1.1",
     "ember-cli-google-fonts": "2.16.2",
     "ember-cli-htmlbars": "3.0.1",
     "ember-cli-htmlbars-inline-precompile": "2.1.0",
