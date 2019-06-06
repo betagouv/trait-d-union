@@ -8,7 +8,7 @@
     "install:api": "cd api && npm install",
     "build": "run-s --print-label build:front cp:front",
     "build:front": "cd front && npm run build",
-    "cp:front": "mkdir -p api/client && cp -r front/dist/* api/client",
+    "cp:front": "mkdir -p dist/front && cp -r front/dist/* dist/front",
     "test": "run-p --print-label test:front test:api test:e2e:api",
     "test:front": "cd front && npm run test",
     "test:api": "cd api && npm run test",
@@ -19,7 +19,8 @@
     "lint:front:fix": "cd front && npm run lint -- --fix",
     "lint:api": "cd api && npm run lint",
     "lint:api:fix": "cd api && npm run lint -- --fix",
-    "start": "run-p --print-label start:api",
+    "start": "run-p --print-label start:api start:front",
+    "start:front": "cd front && npm run start",
     "start:api": "cd api && npm run start",
     "start:dev": "cd api && export $(cat .dev.env | xargs) && nodemon .",
     "test:e2e:api": "cd api && npm run test:e2e"
