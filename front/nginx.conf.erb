@@ -1,4 +1,4 @@
-root /dist/;
+root /app/dist/;
 
 location = /index.html {
   # index.html should never be cached
@@ -19,6 +19,6 @@ location / {
 }
 
 location /api/ {
-  proxy_pass https://staging.traitdunion.beta.gouv.fr/api;
+  proxy_pass https://traitdunion-staging.scalingo.io;
   proxy_redirect default;
 }
