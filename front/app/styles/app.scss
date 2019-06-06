@@ -28,3 +28,7 @@ main > .container {
   padding-bottom: 20px;
   padding-top: 76px;
 }
+
+body > .ember-view {
+  height: 100%;
+}

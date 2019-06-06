@@ -1,4 +1,4 @@
-<OffresFilter @offres={{this.offres}} id="test" as |filteredOffres|>
+<OffresFilter @offres={{this.offres}} as |filteredOffres|>
   {{#bs-accordion class="shadow-sm" as |acc|}}
     {{#animated-each filteredOffres use=transition as |offre|}}
       {{#acc.item as |aitem|}}
