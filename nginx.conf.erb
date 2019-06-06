@@ -1,7 +1,3 @@
-location / {
-  root /dist/;
-
-  try_files $uri app/index.html =404;
-
-  expires -1;
+location /api {
+  proxy_pass https://api.traitdunion-staging.scalingo.io;
 }
