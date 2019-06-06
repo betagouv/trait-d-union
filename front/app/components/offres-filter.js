@@ -1,7 +1,7 @@
 import Component from '@ember/component'
 
 export default Component.extend({
-  classNames: ['list-filter'],
+  classNames: ['list-filter', 'py-4'],
   value: '',
 
   init () {

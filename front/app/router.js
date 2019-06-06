@@ -11,6 +11,7 @@ Router.map(function () {
   this.route('faq')
   this.route('steps')
   this.route('offres')
+  this.route('loading')
 })
 
 export default Router

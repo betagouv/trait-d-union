@@ -1,7 +1,7 @@
 <div class="row justify-content-center text-white text-center my-2">
   <h4 class="text">👇 Choisissez votre niveau d'étude actuel 👇</h4>
 </div>
-<div class="row justify-content-center mb-5">
+<div class="row justify-content-center mb-3 px-4">
   {{#bs-button-group class="d-flex d-sm-none" value=currentFilter type="radio" onChange=(action "filterByNiveau") as |bg|}}
     {{#bg.button type="primary" class="text-uppercase" value=""}}Tous{{/bg.button}}
     {{#bg.button type="primary" class="text-uppercase" value="sans-diplome"}}Sans diplôme{{/bg.button}}
@@ -24,7 +24,7 @@
     {{#bg.button type="primary" class="text-uppercase" value="bac+3-bac+4"}}BAC+3 ou BAC+4{{/bg.button}}
   {{/bs-button-group}}
 </div>
-<div class="offres-filter row justify-content-center mb-2">
+<div class="offres-filter row justify-content-center mb-2 py-2">
   <div class="row border bg-white justify-content-center offres-filter-rounded mb-5-md mb-2-sm">
     🔍
     {{input
