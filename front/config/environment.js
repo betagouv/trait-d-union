@@ -18,7 +18,7 @@ module.exports = function (environment) {
     },
 
     APP: {
-      apiUrl: process.env.API_URL || 'okok' // https://api.traitdunion.beta.gouv.fr'
+      apiUrl: process.env.API_URL || 'https://api.traitdunion.beta.gouv.fr'
     },
 
     googleFonts: [
