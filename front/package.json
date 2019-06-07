@@ -1,14 +1,17 @@
 {
   "name": "front",
-  "version": "0.0.0-see-root-version",
-  "private": true,
+  "version": "0.0.95",
+  "private": false,
   "description": "Front end application for Trait d'Union",
-  "repository": "",
   "license": "MIT",
   "author": "beta.gouv",
   "directories": {
     "doc": "doc",
     "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betagouv/trait-d-union.git"
   },
   "scripts": {
     "build": "ember build -prod",

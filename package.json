@@ -1,7 +1,7 @@
 {
   "name": "traitdunion",
   "version": "0.0.95",
-  "description": "",
+  "description": "Trait d'Union",
   "scripts": {
     "postinstall": "run-p --print-label install:front install:api",
     "install:front": "cd front && npm install",

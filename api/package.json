@@ -1,7 +1,9 @@
 {
   "name": "api",
-  "version": "0.0.0-see-root-version",
+  "version": "0.0.95",
+  "private": false,
   "main": "server/server.js",
+  "description": "Back end application for Trait d'Union",
   "engines": {
     "node": "10.15.3",
     "npm": "6.9.0"
@@ -36,11 +38,10 @@
     "strong-error-handler": "3.2.0"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "git+https://github.com/betagouv/trait-d-union.git"
   },
-  "license": "UNLICENSED",
-  "description": "api",
+  "license": "MIT",
   "devDependencies": {
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
