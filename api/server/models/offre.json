@@ -18,8 +18,17 @@
       "type": "object"
     }
   },
+  "scope": {
+    "order": "createdAt DESC"
+  },
   "validations": [],
   "relations": {},
   "acls": [],
-  "methods": {}
+  "methods": {},
+  "mixins": {
+    "TimeStamp": {
+      "required": false,
+      "validateUpsert": true
+    }
+  }
 }

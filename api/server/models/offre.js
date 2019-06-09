@@ -1,5 +1,6 @@
 const json2csv = require('../utils/json-2-csv')
 const sourceOffres = require('../features/offres/source-offres')
+const formatOffre = require('../features/offres/format-offre')
 
 module.exports = (Offre) => {
   Offre.sourceOffres = () => sourceOffres({ Offre })
@@ -11,7 +12,13 @@ module.exports = (Offre) => {
 
   Offre.afterRemote('find', async (context) => {
     if (context.result) {
-      context.result = context.result.map(({ data }) => data)
+      context.result = context.result.map(formatOffre)
+    }
+  })
+
+  Offre.afterRemote('findById', async (context) => {
+    if (context.result) {
+      context.result = formatOffre(context.result)
     }
   })
 

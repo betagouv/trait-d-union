@@ -11,10 +11,10 @@ module.exports = async ({ Offre }) => {
   const result = await findOffres({ around: {} })
   const offresWithEmail = keepOffresWithEmail(result)
   info(`Source ${result.length} offres, ${offresWithEmail.length} offres with email`)
-  info('Destroy current offres')
-  await destroyOffres(Offre)
   info('Store newly sourced offres')
   await persistOffres(Offre, offresWithEmail)
+  info('Delete non received offres')
+  await destroyOffres(Offre, offresWithEmail)
   return offresWithEmail
 }
 
@@ -23,10 +23,18 @@ function keepOffresWithEmail (offres) {
 }
 
 async function persistOffres (Offre, offres) {
-  const createOffrePromises = offres.map(offre => Offre.create({ id: offre.id, data: offre }))
+  const createOffrePromises = offres.map(async (offre) => {
+    const existingOffre = await Offre.findById(offre.id)
+    if (existingOffre) {
+      return existingOffre.updateAttributes({ data: offre })
+    } else {
+      return Offre.create({ id: offre.id, data: offre })
+    }
+  })
   return Promise.all(createOffrePromises)
 }
 
-async function destroyOffres (Offre) {
-  return Offre.destroyAll()
+async function destroyOffres (Offre, offres) {
+  const receivedOffresId = offres.map(({ id }) => id)
+  return Offre.destroyAll({ id: { nin: receivedOffresId } })
 }
