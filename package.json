@@ -22,7 +22,9 @@
     "start": "run-p --print-label start:api start:front",
     "start:front": "cd front && npm run start",
     "start:api": "cd api && npm run start",
-    "start:dev": "cd api && export $(cat .dev.env | xargs) && nodemon .",
+    "start:dev": "run-p --print-label start:dev:api start:dev:front",
+    "start:dev:api": "cd api && npm run start:dev",
+    "start:dev:front": "cd front && npm run start:dev",
     "test:e2e:api": "cd api && npm run test:e2e"
   },
   "husky": {

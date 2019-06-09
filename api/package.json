@@ -11,6 +11,7 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
+    "start:dev": "export $(cat .dev.env | xargs) && nodemon .",
     "test:e2e": "export $(cat .e2e.env | xargs) && cucumber-js tests/e2e/** --require tests/e2e/step-definitions/steps.js --format ../node_modules/cucumber-pretty",
     "test": "NODE_ENV=test mocha **/*.test.js --exclude **/node_modules/**",
     "test:watch": "npm run test -- --watch --reporter=min",
