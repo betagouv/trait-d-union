@@ -18,14 +18,18 @@
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "lint": "npm run lint:js && npm run lint:hbs",
-    "start": "ember serve --proxy",
+    "start": "node server.js",
     "start:dev": "export $(cat .dev.env | xargs) && ember serve",
     "test": "ember test",
     "start:test": "ember test -s"
   },
+  "dependencies": {
+    "express": "4.17.1"
+  },
   "devDependencies": {
     "@ember/jquery": "0.6.0",
     "@ember/optional-features": "0.7.0",
+    "acorn": "6.1.1",
     "bootstrap": "4.3.1",
     "broccoli-asset-rev": "3.0.0",
     "ember-ajax": "5.0.0",
