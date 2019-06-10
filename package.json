@@ -25,7 +25,10 @@
     "start:dev": "run-p --print-label start:dev:api start:dev:front",
     "start:dev:api": "cd api && npm run start:dev",
     "start:dev:front": "cd front && npm run start:dev",
-    "test:e2e:api": "cd api && npm run test:e2e"
+    "test:e2e:api": "cd api && npm run test:e2e",
+    "preversion": "run-p --print-label preversion:api preversion:front",
+    "preversion:api": "cd api && npm --no-git-tag-version version patch && git add .",
+    "preversion:front": "cd front && npm --no-git-tag-version version patch && git add ."
   },
   "husky": {
     "hooks": {
