@@ -142,4 +142,6 @@ jobs:
             git push -q https://${GITHUB_TOKEN}@github.com/betagouv/trait-d-union.git master
       - run:
           name: Deploy to scalingo production instance
-          command: GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:traitdunion.git master
+          command: |
+            GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:traitdunion.git master
+            GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push git@scalingo.com:api-traitdunion.git master
