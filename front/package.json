@@ -18,7 +18,7 @@
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "lint": "npm run lint:js && npm run lint:hbs",
-    "start": "node server.js",
+    "start": "node launch-server.js",
     "start:dev": "export $(cat .dev.env | xargs) && ember serve",
     "test": "ember test",
     "start:test": "ember test -s"
