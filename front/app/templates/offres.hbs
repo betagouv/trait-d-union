@@ -1,3 +1,7 @@
 <div class="flex-column col mb-2">
-  <OffresListing @offres={{model}}></OffresListing>
+  {{#if this.swipeMode}}
+    <OffresStack @offres={{model}}></OffresStack>
+  {{else}}
+    <OffresListing @offres={{model}}></OffresListing>
+  {{/if}}
 </div>
