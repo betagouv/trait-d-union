@@ -1,3 +1,14 @@
-<div>
-  <h2>Displaying stack of Offres</h2>
+<div class="row-fluid align-items-center font-weight-light w-75 w-100 mt-3" id="faq">
+  {{#each offres as |offre|}}
+    <OffreCard @offre={{offre}}></OffreCard>
+  {{else}}
+    <div class="row justify-content-center mt-4">
+      Aucune offre disponible pour le moment. Revenez demain !
+    </div>
+  {{/each}}
+</div>
+
+<div class="row-fluid mb-4 pb-5">
+  <button class="btn btn-danger text-uppercase" type="button">Non merci</button>
+  <button class="btn btn-primary text-uppercase" type="button">Ça m'intéresse!</button>
 </div>
