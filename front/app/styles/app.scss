@@ -34,3 +34,19 @@ main > .container {
 body > .ember-view {
   height: 100%;
 }
+
+@include media-breakpoint-between(xs,sm){
+  .btn {
+    @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
+  }
+}
+
+body {
+  //noinspection CssUnknownTarget
+  background-image: url("/assets/background.jp2");
+  background-position: top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
