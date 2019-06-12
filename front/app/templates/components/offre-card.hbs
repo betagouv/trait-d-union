@@ -1,16 +1,19 @@
-<div class="card col-12 shadow-sm mb-2 text-secondary">
-  <div class="card-body h-75">
-    <h2 class="card-title text-secondary">
-      {{titre}}
-    </h2>
-  </div>
-  <div class="card-text text-secondary">
-    <div class="text-left text-wrap">
-      <h6>{{lieuTravail}}</h6>
-      <small>{{dureeTravail}}</small>
-      <div class="badge badge-info">{{sessionDuration}}</div>
-      <div class="badge badge-info">{{typeContrat}}</div>
-      <div class="badge badge-info">{{salaire}}</div>
+<div class="offres-card col mb-3 position-fixed mx-auto px-0">
+  <div class="card mb-4 text-secondary">
+    <div class="card-body">
+      <h2 class="card-title">
+        {{titre}}
+      </h2>
+      <div class="card-text">
+        <div class="text-left text-wrap">
+          <h6>{{lieuTravail}}</h6>
+          <small>{{dureeTravail}}</small><br>
+          <div class="badge badge-info">{{sessionDuration}}</div>
+          <div class="badge badge-info">{{typeContrat}}</div>
+          <div class="badge badge-info">{{salaire}}</div>
+          <div class="badge badge-info">{{this.offre.id}}</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
