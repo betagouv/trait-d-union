@@ -1,0 +1,36 @@
+{
+  "name": "Candidat",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true,
+      "defaultFn": "uuidv4",
+      "id": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "nomPrenom": {
+      "type": "string",
+      "required": true
+    },
+    "telephone": {
+      "type": "string",
+      "required": true
+    },
+    "cvUrl": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

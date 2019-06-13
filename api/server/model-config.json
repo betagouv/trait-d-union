@@ -60,5 +60,9 @@
   "Commune": {
     "dataSource": "db",
     "public": true
+  },
+  "Candidat": {
+    "dataSource": "db",
+    "public": true
   }
 }

@@ -41,6 +41,25 @@ When(/^POST '(\/[\S-.?=/]+)'$/, async (route) => {
   })
 })
 
+When(/^POST '(\/[\S-.?=/]+)' with payload$/, async (route, payload) => {
+  response = await got.post(`${applicationBaseUrl}${route}`, {
+    throwHttpErrors: false,
+    json: true,
+    body: JSON.parse(payload)
+  })
+})
+
+When(/^POST '(\/[\S-.?=/]+)' with payload from '(.*)'$/, async (route, payloadFilename) => {
+  const filePath = path.join(process.cwd(), 'tests/e2e', payloadFilename)
+  const payload = require(filePath)
+
+  response = await got.post(`${applicationBaseUrl}${route}`, {
+    throwHttpErrors: false,
+    json: true,
+    body: payload
+  })
+})
+
 Then(/^http status is (.*)$/, async (status) => {
   expect(response.statusCode).to.eql(parseInt(status))
 })
@@ -56,11 +75,21 @@ Then(/^response payload conforms to '(.*)'$/, (schemaName) => {
 Then(/^response payload is '(.*)'$/, (payloadFilename) => {
   const filePath = path.join(process.cwd(), 'tests/e2e', payloadFilename)
   const expectedPayload = require(filePath)
-  expect(JSON.parse(response.body)).to.eql(expectedPayload)
+  let responseBody = response.body
+  try {
+    responseBody = JSON.parse(response.body)
+  } catch (error) {
+  }
+  expect(responseBody).to.eql(expectedPayload)
 })
 
 Then('response payload is', (payload) => {
-  expect(JSON.parse(response.body)).to.eql(JSON.parse(payload))
+  let responseBody = response.body
+  try {
+    responseBody = JSON.parse(response.body)
+  } catch (error) {
+  }
+  expect(responseBody).to.eql(JSON.parse(payload))
 })
 
 Then(/^response payload is text equals to '(.*)'$/, (payloadFilename) => {

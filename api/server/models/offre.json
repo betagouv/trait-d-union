@@ -8,6 +8,15 @@
   "http": {
     "path": "offres"
   },
+  "scope": {
+    "order": "createdAt DESC"
+  },
+  "mixins": {
+    "TimeStamp": {
+      "required": false,
+      "validateUpsert": true
+    }
+  },
   "properties": {
     "id": {
       "type": "string",
@@ -18,17 +27,8 @@
       "type": "object"
     }
   },
-  "scope": {
-    "order": "createdAt DESC"
-  },
   "validations": [],
   "relations": {},
   "acls": [],
-  "methods": {},
-  "mixins": {
-    "TimeStamp": {
-      "required": false,
-      "validateUpsert": true
-    }
-  }
+  "methods": {}
 }
