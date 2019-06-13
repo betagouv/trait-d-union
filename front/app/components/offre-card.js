@@ -2,6 +2,7 @@ import Component from '@ember/component'
 import { computed } from '@ember/object'
 import { htmlSafe } from '@ember/string'
 import { run } from '@ember/runloop'
+import anime from 'animejs'
 
 export default Component.extend({
   attributeBindings: [`style`],
@@ -10,6 +11,8 @@ export default Component.extend({
   index: 0,
   style: null,
   lastIndex: -1,
+  createFadeAnimation: null,
+  createShiftAnimation: null,
 
   init (...args) {
     this.shiftCard = this.shiftCard.bind(this)
@@ -32,19 +35,13 @@ export default Component.extend({
       const element = this.element.cloneNode(true)
       element.setAttribute(`id`, null)
       this.element.parentNode.append(element)
-      run(() => {
-        element.remove()
-      })
-      // const opts = this.createFadeAnimation()
-      // opts.targets = element
-      /*
+      const opts = this.createFadeAnimation(this.get('fadeToRight'))
+      opts.targets = element
       anime(opts).finished.then(() => {
         run(() => {
           element.remove()
-          this.sendAction(`onFadeEnd`)
         })
       })
-      */
     }
     this._super(...args)
   },
@@ -87,13 +84,13 @@ export default Component.extend({
 
   factor: computed(`index`, `visibleItemAmount`, function () {
     const index = this.get(`index`)
-    console.log(`Card index is ${index}`)
     const visibleItemAmount = this.get(`visibleItemAmount`)
     return visibleItemAmount - index
   }),
 
   shiftCard () {
-    console.log('Shift card')
-    this.set('style', `transform: translateY(${(this.factor - 5 + 1) * -1.5}vh) scale(${1 - (this.factor) * 0.03});`)
+    const opts = this.createShiftAnimation(this.get(`factor`) - 1)
+    opts.targets = this.element
+    this.set(`currentAnimation`, anime(opts))
   }
 })

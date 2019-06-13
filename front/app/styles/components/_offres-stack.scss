@@ -1,4 +1,6 @@
-.offres-stack .mx-auto {
+.offres-stack .stack-container {
   height: 32rem;
   width: 28rem;
+  perspective: 1000px;
+  perspective-origin: 50% -50%;
 }
