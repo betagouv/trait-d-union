@@ -29,6 +29,12 @@
       "required": true
     }
   },
+  "mixins": {
+    "TimeStamp": {
+      "required": false,
+      "validateUpsert": true
+    }
+  },
   "validations": [],
   "relations": {},
   "acls": [],
