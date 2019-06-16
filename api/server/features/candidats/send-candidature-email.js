@@ -1,10 +1,4 @@
-module.exports = async ({ smtpApiClient, Offre }, offreId, candidat) => {
-  const offreFromDB = await Offre.findById(offreId)
-  const offre = offreFromDB && offreFromDB.data
-  if (!offre) {
-    return
-  }
-
+module.exports = async ({ smtpApiClient }, { offre, candidat }) => {
   const templateId = destinataireIsPoleEmploi(offre) ? poleEmploiTemplateId : defaultTemplateId
   await smtpApiClient.sendTransacEmail({
     'templateId': templateId,
@@ -13,15 +7,13 @@ module.exports = async ({ smtpApiClient, Offre }, offreId, candidat) => {
     'replyTo': { 'name': candidat.nomPrenom, 'email': candidat.email },
     'params': {
       'Titre_offre': 'Titre offre',
-      'id_offre': offreId,
+      'id_offre': offre.id,
       'Nom_prenom': candidat.nomPrenom,
       'URL_CV': candidat.cvUrl,
       'Age': candidat.telephone
     },
     'attachment': [{ 'url': candidat.cvUrl }]
   })
-
-  return offre
 }
 
 function destinataireIsPoleEmploi ({ contact }) {
