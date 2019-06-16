@@ -8,7 +8,7 @@ module.exports = async ({ Candidat }, formResponse) => {
     telephone: answers[2].text,
     cvUrl: answers[3].file_url
   }
-  await Candidat.create(candidatToCreate)
+  await Candidat.create(candidatToCreate).catch(err => console.log(err))
 
   return candidatToCreate
 }

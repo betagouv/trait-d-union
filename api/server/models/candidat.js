@@ -1,11 +1,21 @@
-const { contactsApiClient } = require('../infrastructure/sendinblue-api-client')
+const { contactsApiClient, smtpApiClient } = require('../infrastructure/sendinblue-api-client')
+const { error } = require('../infrastructure/logger')
 const createCandidatFromFormResponse = require('../features/candidats/create-candidat-from-form-response')
 const subscribeCandidateToMailingContactLists = require('../features/candidats/subscribe-candidate-to-mailing-contact-lists')
+const sendCandidatureEmail = require('../features/candidats/send-candidature-email')
 
 module.exports = function (Candidat) {
   Candidat.formResponse = async (data) => {
     const candidat = await createCandidatFromFormResponse({ Candidat }, data)
     await subscribeCandidateToMailingContactLists({ contactsApiClient }, candidat)
+    const offreId = data.hidden.id_offre
+    if (offreId) {
+      await sendCandidatureEmail({ smtpApiClient, Offre: Candidat.app.models.Offre }, offreId, candidat)
+        .catch(err => {
+          error(err)
+          throw err
+        })
+    }
     return candidat
   }
 
