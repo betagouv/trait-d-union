@@ -55,6 +55,10 @@ function sanitizeOffre (offre) {
   result.source = 'pole-emploi'
   result.codeROME = offre.romeCode
   result.url = offre.origineOffre && offre.origineOffre.urlOrigine
+  result.permis = result.permis && [result.permis[0]]
+  if (!result.permis) {
+    delete result.permis
+  }
   const courriel = computeCourrielFromContact(offre.contact)
   if (courriel) {
     result.contact.courriel = courriel

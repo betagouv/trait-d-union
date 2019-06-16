@@ -160,6 +160,10 @@ function createFullOffre (id = '086QKQK') {
       {
         'exigence': 'E',
         'libelle': 'B - Véhicule léger Exigé'
+      },
+      {
+        'exigence': 'X',
+        'libelle': 'Autre - B - Véhicule léger Exigé'
       }
     ],
     'dateActualisation': '2019-04-15T16:45:13+02:00',
