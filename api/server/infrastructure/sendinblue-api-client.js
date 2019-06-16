@@ -6,4 +6,7 @@ const defaultClient = SibApiV3Sdk.ApiClient.instance
 const apiKey = defaultClient.authentications['api-key']
 apiKey.apiKey = sendinblueApiKey
 
-module.exports = new SibApiV3Sdk.ContactsApi()
+module.exports = {
+  contactsApiClient: new SibApiV3Sdk.ContactsApi(),
+  smtpApiClient: new SibApiV3Sdk.SMTPApi()
+}

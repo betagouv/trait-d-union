@@ -3,7 +3,7 @@ const subscribeCandidateToMailingContactLists = require('./subscribe-candidate-t
 
 describe('Subscribe Candidate to mailing contacts list', () => {
   it('create contact on SendInBlue API', async () => {
-    const sendinblueApiClient = {
+    const contactsApiClient = {
       createContact: sinon.spy(() => {
       })
     }
@@ -14,9 +14,9 @@ describe('Subscribe Candidate to mailing contacts list', () => {
       cvUrl: 'https://link.to/cv'
     }
 
-    await subscribeCandidateToMailingContactLists({ sendinblueApiClient }, candidate)
+    await subscribeCandidateToMailingContactLists({ contactsApiClient }, candidate)
 
-    expect(sendinblueApiClient.createContact).to.have.been.calledWith({
+    expect(contactsApiClient.createContact).to.have.been.calledWith({
       email: 'dummy@email.fr',
       attributes: {
         'SMS': '0612345678',

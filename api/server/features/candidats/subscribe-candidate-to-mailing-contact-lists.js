@@ -1,7 +1,7 @@
 const candidatListId = 23
 const entrepriseListId = 24
 
-module.exports = ({ sendinblueApiClient }, candidat) => {
+module.exports = ({ contactsApiClient }, candidat) => {
   const contact = {
     email: candidat.email,
     attributes: {
@@ -11,5 +11,5 @@ module.exports = ({ sendinblueApiClient }, candidat) => {
     },
     listIds: [candidatListId, entrepriseListId]
   }
-  sendinblueApiClient.createContact(contact)
+  contactsApiClient.createContact(contact)
 }
