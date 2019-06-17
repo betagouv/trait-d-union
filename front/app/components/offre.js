@@ -28,6 +28,9 @@ export default Component.extend({
   }),
 
   sessionDuration: computed(function () {
+    if (!this.offre.sessions || this.offre.sessions.length === 0) {
+      return 'Aucune session planifiée'
+    }
     return `📆 ${this.offre.sessions[0].duration} mois de formation`
   }),
 

@@ -24,7 +24,8 @@
     "start:test": "ember test -s"
   },
   "dependencies": {
-    "express": "4.17.1"
+    "express": "4.17.1",
+    "uuid": "3.3.2"
   },
   "devDependencies": {
     "@ember/jquery": "0.6.0",
