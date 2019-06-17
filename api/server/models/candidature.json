@@ -1,0 +1,24 @@
+{
+  "name": "Candidature",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "candidat": {
+      "type": "belongsTo",
+      "model": "Candidat",
+      "foreignKey": "candidatures"
+    },
+    "offre": {
+      "type": "belongsTo",
+      "model": "Offre",
+      "foreignKey": "candidatures"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -3,7 +3,7 @@ const sendinblueApi = nock('https://api.sendinblue.com/v3')
 
 exports.set = () => {
   sendinblueApi
-    .post('')
+    .post('/contacts')
     .matchHeader('content-type', 'application/json')
     .matchHeader('api-key', 'sendinblueApiKey')
     .query({
@@ -15,6 +15,13 @@ exports.set = () => {
       },
       listIds: [23, 24]
     })
+    .reply(200)
+    .persist()
+
+  sendinblueApi
+    .post('/smtp/email')
+    .matchHeader('content-type', 'application/json')
+    .matchHeader('api-key', 'sendinblueApiKey')
     .reply(200)
     .persist()
 }

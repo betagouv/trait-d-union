@@ -28,7 +28,17 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "candidatures": {
+      "type": "hasMany",
+      "model": "Candidat",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      },
+      "through": "Candidature"
+    }
+  },
   "acls": [],
   "methods": {}
 }

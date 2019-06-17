@@ -64,5 +64,9 @@
   "Candidat": {
     "dataSource": "db",
     "public": true
+  },
+  "Candidature": {
+    "dataSource": "db",
+    "public": true
   }
 }

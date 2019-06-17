@@ -5,12 +5,18 @@
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "TimeStamp": {
+      "required": false,
+      "validateUpsert": true
+    }
+  },
   "properties": {
     "id": {
       "type": "string",
+      "id": true,
       "required": true,
-      "defaultFn": "uuidv4",
-      "id": true
+      "defaultFn": "uuidv4"
     },
     "email": {
       "type": "string",
@@ -29,14 +35,18 @@
       "required": true
     }
   },
-  "mixins": {
-    "TimeStamp": {
-      "required": false,
-      "validateUpsert": true
+  "validations": [],
+  "relations": {
+    "candidatures": {
+      "type": "hasMany",
+      "model": "Offre",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      },
+      "through": "Candidature"
     }
   },
-  "validations": [],
-  "relations": {},
   "acls": [],
   "methods": {}
 }
