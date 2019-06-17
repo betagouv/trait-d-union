@@ -1,14 +1,32 @@
-import Component from '@ember/component'
-import fade from 'ember-animated/transitions/fade'
-import ENV from '../config/environment'
 import uuidv4 from 'uuid/v4'
+import ENV from '../config/environment'
+import Component from '@ember/component'
+import { storageFor } from 'ember-local-storage'
+import { inject as service } from '@ember/service'
 
 export default Component.extend({
-  transition: fade,
+  api: service(),
+  user: storageFor('user'),
+  isApplying: true,
 
   actions: {
-    postuler (offre) {
-      window.open(`${ENV.APP.typeformUrl}?id_offre=${offre.id}&id_user=${uuidv4()}`, '_blank')
+    async postuler (offre) {
+      const userId = this.get('user').get('id')
+      if (!userId) {
+        this.get('user').set('id', uuidv4())
+        openTypeform(offre.id, this.get('user').get('id'))
+      } else {
+        try {
+          await this.get('api').applyToOffre(offre.id, userId)
+          console.log('Candidature ok')
+        } catch (error) {
+          openTypeform(offre.id, userId)
+        }
+      }
     }
   }
 })
+
+function openTypeform (offreId, userId) {
+  window.open(`${ENV.APP.typeformUrl}?id_offre=${offreId}&id_user=${userId}`, '_blank')
+}

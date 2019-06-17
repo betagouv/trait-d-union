@@ -10,5 +10,9 @@ export default Service.extend({
 
   async deny ({ offreId }) {
     return this.http.post(`/offres/${offreId}`, { action: 'deny', userId: this.userId })
+  },
+
+  async applyToOffre (offreId, userId) {
+    return this.http.put(`/candidats/${userId}/candidatures/rel/${offreId}`)
   }
 })
