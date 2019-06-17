@@ -1,4 +1,7 @@
+const { info } = require('../../infrastructure/logger')
+
 module.exports = async ({ Offre }) => {
+  info('Creating fake offre for testing purpose')
   await Offre.create(fakeOffreParameters())
   return Offre.updateAll(
     { id: 'fake-offre-id' },
