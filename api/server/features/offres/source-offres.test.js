@@ -68,7 +68,7 @@ describe('Source offres', () => {
     })
 
     it('deletes not received offre', async () => {
-      process.env.TU_FF_ADD_FAKE_OFFRE = 'off'
+      process.env.TU_FF_ADD_FAKE_DATA = 'off'
       await sourceOffres({ Offre })
 
       expect(Offre.destroyAll).to.have.been.calledWith({
@@ -79,7 +79,7 @@ describe('Source offres', () => {
     })
 
     it('does not delete fake offres', async () => {
-      process.env.TU_FF_ADD_FAKE_OFFRE = 'on'
+      process.env.TU_FF_ADD_FAKE_DATA = 'on'
       await sourceOffres({ Offre })
 
       expect(Offre.destroyAll).to.have.been.calledWith({

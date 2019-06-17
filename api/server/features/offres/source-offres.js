@@ -36,7 +36,7 @@ async function persistOffres (Offre, offres) {
 
 async function destroyOffres (Offre, offres) {
   const receivedOffresId = offres.map(({ id }) => id)
-  if (process.env.TU_FF_ADD_FAKE_OFFRE === 'on') {
+  if (process.env.TU_FF_ADD_FAKE_DATA === 'on') {
     receivedOffresId.push('fake-offre-id')
   }
   return Offre.destroyAll({ id: { nin: receivedOffresId } })
