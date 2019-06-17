@@ -1,6 +1,6 @@
 {
   "name": "traitdunion",
-  "version": "0.0.108",
+  "version": "0.0.109",
   "description": "Trait d'Union",
   "scripts": {
     "postinstall": "run-p --print-label install:front install:api",
