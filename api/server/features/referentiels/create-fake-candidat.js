@@ -10,5 +10,5 @@ const fakeCandidat = {
   email: 'fake-candidat@yopmail.fr',
   nomPrenom: 'Je suis Fake',
   telephone: '0612345678',
-  cvUrl: 'https://www.mon-cv.fr/fichier.pdf'
+  cvUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'
 }

@@ -4,14 +4,16 @@ const { smtpApiClient } = require('../../infrastructure/sendinblue-api-client')
 
 const sendCandidatureEmail = require('./send-candidature-email')
 
-module.exports = async ({ Candidat, Offre }, offreId, candidat) => {
-  const offreFromDB = await Candidat.app.models.Offre.findById(offreId)
+module.exports = async ({ Candidat, Offre }, offreId, candidatId) => {
+  const offreFromDB = await Offre.findById(offreId)
+  const candidat = await Candidat.findById(candidatId)
+
   if (offreFromDB) {
-    offreFromDB.candidatures.add(candidat.id)
+    offreFromDB.candidatures.add(candidatId)
     const offre = offreFromDB.data
     await sendCandidatureEmail({ smtpApiClient }, { offre, candidat })
       .catch(async (err) => {
-        error(`Error while sending candidature email for candidat ${candidat.id} and offre ${offreId} - ${err}`)
+        error(`Error while sending candidature email for candidat ${candidatId} and offre ${offreId} - ${err}`)
         await notifyCandidatureFailure({ sendSlackNotification }, { candidat, offre, err })
         throw err
       })

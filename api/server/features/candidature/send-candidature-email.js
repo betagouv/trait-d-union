@@ -1,3 +1,5 @@
+const { error } = require('../../infrastructure/logger')
+
 module.exports = async ({ smtpApiClient }, { offre, candidat }) => {
   const templateId = destinataireIsPoleEmploi(offre) ? poleEmploiTemplateId : defaultTemplateId
   await smtpApiClient.sendTransacEmail({
@@ -13,6 +15,9 @@ module.exports = async ({ smtpApiClient }, { offre, candidat }) => {
       Age: candidat.telephone
     },
     attachment: [{ url: candidat.cvUrl }]
+  }).catch(err => {
+    error(`Error while sending candidature email with SendInBlue - ${err.response.text}`)
+    throw err
   })
 }
 

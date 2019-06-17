@@ -1,9 +1,9 @@
 const { sinon, expect } = require('../../../tests/test-utils')
 const sendCandidatureEmail = require('./send-candidature-email')
 
-describe('Send Candidature to email', () => {
+describe('Send Candidature email', () => {
   const smtpApiClient = {
-    sendTransacEmail: sinon.spy(() => {
+    sendTransacEmail: sinon.spy(async () => {
     })
   }
   const offre = {

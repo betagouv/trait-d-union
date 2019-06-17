@@ -16,7 +16,7 @@ module.exports = function (Candidat) {
       candidat = await createCandidat({ Candidat }, formCandidat)
       await subscribeCandidateToMailingContactLists({ contactsApiClient }, candidat)
     }
-    await sendCandidatureToOffre(Candidat.app.models, offreId, candidat)
+    await sendCandidatureToOffre(Candidat.app.models, offreId, candidat.id)
     return candidat
   }
 
@@ -28,5 +28,9 @@ module.exports = function (Candidat) {
 
   Candidat.afterRemote('formResponse', async (context) => {
     context.res.statusCode = 201
+  })
+
+  Candidat.afterRemote('prototype.__link__candidatures', async (context, candidature) => {
+    return sendCandidatureToOffre(Candidat.app.models, candidature.offreId, candidature.candidatId)
   })
 }
