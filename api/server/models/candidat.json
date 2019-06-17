@@ -11,6 +11,12 @@
       "validateUpsert": true
     }
   },
+  "hidden": [
+    "email",
+    "telephone",
+    "cvUrl",
+    "nomPrenom"
+  ],
   "properties": {
     "id": {
       "type": "string",
@@ -20,6 +26,7 @@
     },
     "email": {
       "type": "string",
+      "id": true,
       "required": true
     },
     "nomPrenom": {
@@ -28,6 +35,7 @@
     },
     "telephone": {
       "type": "string",
+      "id": true,
       "required": true
     },
     "cvUrl": {

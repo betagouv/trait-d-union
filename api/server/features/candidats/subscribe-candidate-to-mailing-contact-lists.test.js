@@ -4,7 +4,7 @@ const subscribeCandidateToMailingContactLists = require('./subscribe-candidate-t
 describe('Subscribe Candidate to mailing contacts list', () => {
   it('create contact on SendInBlue API', async () => {
     const contactsApiClient = {
-      createContact: sinon.spy(() => {
+      createContact: sinon.spy(async () => {
       })
     }
     const candidate = {

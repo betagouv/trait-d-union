@@ -1,29 +1,24 @@
-const { expect, sinon } = require('../../../tests/test-utils')
-const createCandidatFromFormResponse = require('./create-candidat-from-form-response')
+const { expect } = require('../../../tests/test-utils')
+const formatFormResponse = require('./format-form-response')
 
-describe('Create Candidat from form response (typeform webhook)', () => {
+describe('Format Candidat and OffreId from Form Response', () => {
   const formResponse = createFormResponse()
-  const Candidat = {
-    create: sinon.spy(async () => ({}))
+
+  const expectedFormattedFormResponse = {
+    candidat: {
+      id: '71854445-1512-47b1-bc6d-e0491e764a51',
+      email: 'an_account@example.com',
+      nomPrenom: 'Lorem ipsum dolor Nom Prenom',
+      telephone: 'Lorem ipsum dolor Phone',
+      cvUrl: 'https://admin.typeform.com/form/P6NFOZ/field/WlLbkyygWkkh/results/file.ext/download'
+    },
+    offreId: 'hidden_value'
   }
-  const expectedCandidatToCreate = {
-    id: '71854445-1512-47b1-bc6d-e0491e764a51',
-    email: 'an_account@example.com',
-    nomPrenom: 'Lorem ipsum dolor Nom Prenom',
-    telephone: 'Lorem ipsum dolor Phone',
-    cvUrl: 'https://admin.typeform.com/form/P6NFOZ/field/WlLbkyygWkkh/results/file.ext/download'
-  }
 
-  it('returns Candidat with values extracted from webhook', async () => {
-    const createdCandidat = await createCandidatFromFormResponse({ Candidat }, formResponse)
+  it('returns formatted form response with values extracted from webhook', async () => {
+    const formattedCandidat = await formatFormResponse(formResponse)
 
-    expect(createdCandidat).to.eql(expectedCandidatToCreate)
-  })
-
-  it('creates Candidat in DB', async () => {
-    await createCandidatFromFormResponse({ Candidat }, formResponse)
-
-    expect(Candidat.create).to.have.been.calledWith(expectedCandidatToCreate)
+    expect(formattedCandidat).to.eql(expectedFormattedFormResponse)
   })
 })
 

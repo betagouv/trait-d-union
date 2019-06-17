@@ -1,3 +1,5 @@
+const { error, debug } = require('../../infrastructure/logger')
+
 const candidatListId = 23
 const entrepriseListId = 24
 
@@ -11,5 +13,9 @@ module.exports = ({ contactsApiClient }, candidat) => {
     },
     listIds: [candidatListId, entrepriseListId]
   }
-  contactsApiClient.createContact(contact)
+  debug(`Candidat added to SendInBlue contacts: ${candidat.id}`)
+  return contactsApiClient.createContact(contact).catch(err => {
+    error(`Error while adding Candidat to SendInBlue contacts - ${err.response.text}`)
+    throw err
+  })
 }

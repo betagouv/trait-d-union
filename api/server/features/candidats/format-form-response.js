@@ -1,14 +1,15 @@
-module.exports = async ({ Candidat }, formResponse) => {
+module.exports = (formResponse) => {
   const answers = formResponse.answers
 
-  const candidatToCreate = {
+  const candidat = {
     id: formResponse.hidden.id_user,
     email: answers[0].email,
     nomPrenom: answers[1].text,
     telephone: answers[2].text,
     cvUrl: answers[3].file_url
   }
-  await Candidat.create(candidatToCreate).catch(err => console.log(err))
-
-  return candidatToCreate
+  return {
+    offreId: formResponse.hidden.id_offre,
+    candidat
+  }
 }
