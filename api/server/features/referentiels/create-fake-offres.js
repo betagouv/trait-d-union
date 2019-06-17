@@ -1,8 +1,8 @@
-const { info } = require('../../infrastructure/logger')
+const { info, error } = require('../../infrastructure/logger')
 
 module.exports = async ({ Offre }) => {
   info('Creating fake offre for testing purpose')
-  await Offre.create(fakeOffreParameters())
+  await Offre.create(fakeOffreParameters()).catch(err => error(`Error while creating fake offre: ${err}`))
   return Offre.updateAll(
     { id: 'fake-offre-id' },
     { createdAt: Date.now() + 24 * 3600 * 1000 }
