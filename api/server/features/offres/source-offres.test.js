@@ -50,7 +50,7 @@ describe('Source offres', () => {
     expect(offres).to.eql([offreWithEmail])
   })
 
-  context('when it sourced 1 new offer, 0 updated offer', () => {
+  context('when it sourced 1 new offre, 0 updated offre', () => {
     const Offre = {
       app: { models: {} },
       findById: sinon.spy(async () => null),
@@ -58,7 +58,7 @@ describe('Source offres', () => {
       destroyAll: sinon.spy(async () => ({}))
     }
 
-    it('creates received offer', async () => {
+    it('creates received offre', async () => {
       await sourceOffres({ Offre })
 
       expect(Offre.create).to.have.been.calledWith({
@@ -67,7 +67,8 @@ describe('Source offres', () => {
       })
     })
 
-    it('deletes not received offer', async () => {
+    it('deletes not received offre', async () => {
+      process.env.TU_FF_ADD_FAKE_OFFRE = 'off'
       await sourceOffres({ Offre })
 
       expect(Offre.destroyAll).to.have.been.calledWith({
@@ -76,9 +77,20 @@ describe('Source offres', () => {
         }
       })
     })
+
+    it('does not delete fake offres', async () => {
+      process.env.TU_FF_ADD_FAKE_OFFRE = 'on'
+      await sourceOffres({ Offre })
+
+      expect(Offre.destroyAll).to.have.been.calledWith({
+        id: {
+          nin: [offreWithEmail.id, 'fake-offre-id']
+        }
+      })
+    })
   })
 
-  context('when it sourced 0 new offer, 1 updated offer', () => {
+  context('when it sourced 0 new offre, 1 updated offre', () => {
     const updateAttributesSpy = sinon.spy(async () => ({}))
     const Offre = {
       app: { models: {} },
@@ -89,7 +101,7 @@ describe('Source offres', () => {
       destroyAll: sinon.spy(async () => ({}))
     }
 
-    it('does not create received offer', async () => {
+    it('does not create received offre', async () => {
       await sourceOffres({ Offre })
 
       expect(Offre.create).to.not.have.been.calledWith({
@@ -98,7 +110,7 @@ describe('Source offres', () => {
       })
     })
 
-    it('updates received offer', async () => {
+    it('updates received offre', async () => {
       await sourceOffres({ Offre })
 
       expect(updateAttributesSpy).to.have.been.calledWith({ data: offreWithEmail })
