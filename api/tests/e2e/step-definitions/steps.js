@@ -80,6 +80,9 @@ Then(/^response payload is '(.*)'$/, (payloadFilename) => {
     responseBody = JSON.parse(response.body)
   } catch (error) {
   }
+  delete responseBody.createdAt
+  delete responseBody.updatedAt
+
   expect(responseBody).to.eql(expectedPayload)
 })
 
