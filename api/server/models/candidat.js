@@ -13,11 +13,13 @@ module.exports = function (Candidat) {
     const offreId = data.hidden.id_offre
     const offreFromDB = await Candidat.app.models.Offre.findById(offreId)
     if (offreFromDB) {
+      offreFromDB.candidatures.add(candidat.id)
       const offre = offreFromDB.data
       await sendCandidatureEmail({ smtpApiClient }, { offre, candidat })
         .catch(err => {
           error(err)
-          notifyCandidatureFailure({ sendSlackNotification }, { candidat, offre, error })
+          notifyCandidatureFailure({ sendSlackNotification }, { candidat, offre, err })
+          throw err
         })
       notifyCandidatureSuccess({ sendSlackNotification }, { candidat, offre })
     } else {
@@ -41,10 +43,10 @@ module.exports = function (Candidat) {
   })
 }
 
-function notifyCandidatureFailure ({ sendSlackNotification }, { candidat, offre, error }) {
+function notifyCandidatureFailure ({ sendSlackNotification }, { candidat, offre, err }) {
   return sendSlackNotification({
     text: `:face_with_symbols_on_mouth: L'email de candidature de ${candidat.nomPrenom} ` +
-      `pour l'offre ${offre.intitule || offre.id} n'a pu être envoyé\nErreur: ${error}`
+      `pour l'offre ${offre.intitule || offre.id} n'a pu être envoyé\nErreur: ${err}`
   })
 }
 

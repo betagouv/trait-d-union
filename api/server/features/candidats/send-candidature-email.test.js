@@ -8,8 +8,11 @@ describe('Send Candidature to email', () => {
   }
   const offre = {
     id: 'offreId',
-    appellationlibelle: 'Titre offre',
-    contact: { courriel: 'contact@courriel.fr' }
+    intitule: 'Titre offre',
+    contact: {
+      nom: 'Employeur',
+      courriel: 'contact@courriel.fr'
+    }
   }
   const candidat = {
     id: '71854445-1512-47b1-bc6d-e0491e764a51',
@@ -30,7 +33,7 @@ describe('Send Candidature to email', () => {
       expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
         'templateId': 52,
         'bcc': [{ 'email': 'chaib.martinez@beta.gouv.fr' }, { 'email': 'edwina.morize@beta.gouv.fr' }],
-        'to': [{ 'email': 'contact@courriel.fr' }],
+        'to': [{ 'name': offre.contact.nom, 'email': 'contact@courriel.fr' }],
         'replyTo': { 'name': candidat.nomPrenom, 'email': candidat.email },
         'params': {
           'Titre_offre': 'Titre offre',
@@ -46,8 +49,11 @@ describe('Send Candidature to email', () => {
   context('when destinataire is a Pole Emploi', () => {
     it('sends email to Pole Emploi', async () => {
       const offrePoleEmploi = {
-        appellationlibelle: 'Titre offre',
-        contact: { courriel: 'contact@pole-emploi.fr' }
+        intitule: 'Titre offre',
+        contact: {
+          nom: 'Conseiller PE',
+          courriel: 'contact@pole-emploi.fr'
+        }
       }
 
       await sendCandidatureEmail({ smtpApiClient }, { offre: offrePoleEmploi, candidat })
@@ -55,7 +61,7 @@ describe('Send Candidature to email', () => {
       expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
         'templateId': 53,
         'bcc': [{ 'email': 'chaib.martinez@beta.gouv.fr' }, { 'email': 'edwina.morize@beta.gouv.fr' }],
-        'to': [{ 'email': 'contact@pole-emploi.fr' }],
+        'to': [{ 'name': offrePoleEmploi.contact.nom, 'email': 'contact@pole-emploi.fr' }],
         'replyTo': { 'name': candidat.nomPrenom, 'email': candidat.email },
         'params': {
           'Titre_offre': 'Titre offre',
