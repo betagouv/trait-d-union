@@ -1,5 +1,6 @@
 const { info } = require('../infrastructure/logger')
 const { contactsApiClient } = require('../infrastructure/sendinblue-api-client')
+const Boom = require('boom')
 
 const formatFormResponse = require('../features/candidats/format-form-response')
 const findCandidatFromFormResponse = require('../features/candidats/find-candidat-from-candidature-form')
@@ -32,5 +33,13 @@ module.exports = function (Candidat) {
 
   Candidat.afterRemote('prototype.__link__candidatures', async (context, candidature) => {
     return sendCandidatureToOffre(Candidat.app.models, candidature.offreId, candidature.candidatId)
+  })
+
+  Candidat.beforeRemote('find', async (context) => {
+    const { args } = context
+    if (!args || !args.filter || !args.filter.where || !args.filter.where.email) {
+      context.res.status(403)
+      throw Boom.forbidden()
+    }
   })
 }
