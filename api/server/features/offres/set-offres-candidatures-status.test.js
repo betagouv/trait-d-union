@@ -45,13 +45,33 @@ describe('Set offres candidatures status', () => {
     expect(filteredOffres).to.eql(expectedOffres)
   })
 
-  it('returns 0 offre when candidature sent by userId', async () => {
+  it('returns offres when 0 candidature sent by userId', async () => {
     const userId = 'current-user-id'
     const Candidat = {
       findOne: sinon.spy(async () => ({
         id: userId,
         candidatures: () => []
       }))
+    }
+    const offres = [
+      { id: 'offre-without-candidature' }
+    ]
+    const expectedOffres = [
+      {
+        id: 'offre-without-candidature',
+        candidatureStatus: 'non-responded-offre'
+      }
+    ]
+
+    const filteredOffres = await setOffresCandidaturesStatus({ Candidat }, { offres, userId })
+
+    expect(filteredOffres).to.eql(expectedOffres)
+  })
+
+  it('returns offres when userId is not found', async () => {
+    const userId = 'current-user-id'
+    const Candidat = {
+      findOne: sinon.spy(async () => null)
     }
     const offres = [
       { id: 'offre-without-candidature' }
