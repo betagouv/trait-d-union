@@ -18,10 +18,10 @@ export default Component.extend({
       } else {
         try {
           await this.get('api').applyToOffre(offre.id, userId)
-          console.log('Candidature ok')
         } catch (error) {
           openTypeform(offre.id, userId)
         }
+        offre.set('candidatureStatus', 'applied-offre')
       }
     }
   }

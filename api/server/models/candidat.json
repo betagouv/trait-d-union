@@ -15,6 +15,7 @@
     },
     "SetupRemoteMethods": {
       "disableAllExcept": [
+        "create",
         "findById",
         "formResponse",
         "prototype.__link__candidatures"

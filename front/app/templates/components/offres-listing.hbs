@@ -14,20 +14,28 @@
             </div>
           </div>
           <div class="row justify-content-center text-secondary text-wrap mx-0 mt-sm-4">
-            {{#bs-button
-              onClick=(action "postuler" offre)
-              type="primary"
-              class="mt-3 text-uppercase"
-              defaultText="Ça m'intéresse 👍"
-              pendingText="Envoi de la candidature..."
-              fulfilledText="Candidature envoyée 🚀"
-              disabled=button.isFullfilled
-            as |button|
-            }}
-              {{#if button.isPending}}
-                <span class="spinner-border spinner-border-sm"></span>
-              {{/if}}
-            {{/bs-button}}
+            {{#if offre.nonRespondedOffre}}
+              {{#bs-button
+                onClick=(action "postuler" offre)
+                type="primary"
+                class="mt-3 text-uppercase"
+                defaultText="Ça m'intéresse 👍"
+                pendingText="Envoi de la candidature..."
+                fulfilledText="Candidature envoyée 🚀"
+                disabled=button.isFullfilled
+              as |button|
+              }}
+                {{#if button.isPending}}
+                  <span class="spinner-border spinner-border-sm"></span>
+                {{/if}}
+              {{/bs-button}}
+            {{else}}
+              <div class="col-12 bg-info text-primary">
+                <small>
+                  Vous avez déjà envoyé votre candidature pour cette offre.
+                </small>
+              </div>
+            {{/if}}
           </div>
         {{/aitem.body}}
       {{/acc.item}}
