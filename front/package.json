@@ -24,6 +24,7 @@
     "start:test": "ember test -s"
   },
   "dependencies": {
+    "@typeform/embed": "0.9.3",
     "express": "4.17.1",
     "uuid": "3.3.2"
   },
