@@ -8,6 +8,11 @@
   "http": {
     "path": "diplomes"
   },
+  "mixins": {
+    "SetupRemoteMethods": {
+      "disableAllExcept": []
+    }
+  },
   "properties": {
     "codeDiplome": {
       "type": "number",

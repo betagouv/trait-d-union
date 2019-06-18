@@ -9,6 +9,9 @@
     "TimeStamp": {
       "required": false,
       "validateUpsert": true
+    },
+    "SetupRemoteMethods": {
+      "disableAllExcept": []
     }
   },
   "properties": {},

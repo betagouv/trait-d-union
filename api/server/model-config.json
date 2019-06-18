@@ -7,12 +7,14 @@
       "./models"
     ],
     "mixins": [
+      "../node_modules/loopback-mixin-exposition",
       "loopback/common/mixins",
       "loopback/server/mixins",
       "../common/mixins",
       "./mixins",
       "../node_modules/loopback-ds-calculated-mixin/lib",
-      "../node_modules/loopback-ds-timestamp-mixin"
+      "../node_modules/loopback-ds-timestamp-mixin",
+      "../node_modules/loopback-setup-remote-methods-mixin"
     ]
   },
   "User": {

@@ -17,7 +17,7 @@ module.exports = function (Candidat) {
       await subscribeCandidateToMailingContactLists({ contactsApiClient }, candidat)
     }
     await sendCandidatureToOffre(Candidat.app.models, offreId, candidat.id)
-    return candidat
+    return { id: candidat.id }
   }
 
   Candidat.remoteMethod('formResponse', {

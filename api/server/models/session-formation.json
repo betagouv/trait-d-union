@@ -16,6 +16,9 @@
           "callback": "computeDuration"
         }
       }
+    },
+    "SetupRemoteMethods": {
+      "disableAllExcept": []
     }
   },
   "scope": {
@@ -52,5 +55,6 @@
     }
   },
   "acls": [],
-  "methods": {}
+  "methods": {
+  }
 }

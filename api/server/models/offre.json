@@ -15,6 +15,13 @@
     "TimeStamp": {
       "required": false,
       "validateUpsert": true
+    },
+    "SetupRemoteMethods": {
+      "disableAllExcept": [
+        "find",
+        "findById",
+        "sourceOffres"
+      ]
     }
   },
   "properties": {
@@ -40,5 +47,6 @@
     }
   },
   "acls": [],
-  "methods": {}
+  "methods": {
+  }
 }

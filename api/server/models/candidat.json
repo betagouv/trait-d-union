@@ -5,18 +5,26 @@
   "options": {
     "validateUpsert": true
   },
+  "http": {
+    "path": "candidats"
+  },
   "mixins": {
     "TimeStamp": {
       "required": false,
       "validateUpsert": true
+    },
+    "SetupRemoteMethods": {
+      "disableAllExcept": [
+        "findById",
+        "formResponse"
+      ],
+      "relations": {
+        "candidatures": {
+          "disableAllExcept": ["prototype.__link__candidatures"]
+        }
+      }
     }
   },
-  "hidden": [
-    "email",
-    "telephone",
-    "cvUrl",
-    "nomPrenom"
-  ],
   "properties": {
     "id": {
       "type": "string",
@@ -56,5 +64,6 @@
     }
   },
   "acls": [],
-  "methods": {}
+  "methods": {
+  }
 }

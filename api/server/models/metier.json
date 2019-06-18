@@ -16,6 +16,11 @@
       }
     }
   },
+  "mixins": {
+    "SetupRemoteMethods": {
+      "disableAllExcept": []
+    }
+  },
   "properties": {
     "codeROME": {
       "type": "string",
