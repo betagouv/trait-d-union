@@ -16,13 +16,9 @@
     "SetupRemoteMethods": {
       "disableAllExcept": [
         "findById",
-        "formResponse"
-      ],
-      "relations": {
-        "candidatures": {
-          "disableAllExcept": ["prototype.__link__candidatures"]
-        }
-      }
+        "formResponse",
+        "prototype.__link__candidatures"
+      ]
     }
   },
   "properties": {
