@@ -31,7 +31,7 @@ function openTypeform (offre, userId) {
   typeformEmbed.makePopup(`${ENV.APP.typeformUrl}?id_offre=${offre.id}&id_user=${userId}`, {
     mode: 'popup',
     autoOpen: true,
-    autoClose: 3,
+    autoClose: 2,
     hideScrollbars: true,
     onSubmit: function () {
       offre.set('candidatureStatus', 'applied-offre')
