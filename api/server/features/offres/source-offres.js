@@ -38,6 +38,8 @@ async function destroyOffres (Offre, offres) {
   const receivedOffresId = offres.map(({ id }) => id)
   if (process.env.TU_FF_ADD_FAKE_DATA === 'on') {
     receivedOffresId.push('fake-offre-id')
+    receivedOffresId.push('fake-offre-id-1')
+    receivedOffresId.push('fake-offre-id-2')
   }
   return Offre.destroyAll({ id: { nin: receivedOffresId } })
 }

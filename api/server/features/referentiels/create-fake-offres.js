@@ -3,8 +3,18 @@ const { info, error } = require('../../infrastructure/logger')
 module.exports = async ({ Offre }) => {
   info('Creating fake offre for testing purpose')
   await Offre.create(fakeOffreParameters()).catch(err => error(`Error while creating fake offre: ${err}`))
-  return Offre.updateAll(
+  await Offre.create(fakeOffreParameters('fake-offre-id-1')).catch(err => error(`Error while creating fake offre: ${err}`))
+  await Offre.create(fakeOffreParameters('fake-offre-id-2')).catch(err => error(`Error while creating fake offre: ${err}`))
+  await Offre.updateAll(
     { id: 'fake-offre-id' },
+    { createdAt: Date.now() + 24 * 3600 * 1000 }
+  )
+  Offre.updateAll(
+    { id: 'fake-offre-id-1' },
+    { createdAt: Date.now() + 24 * 3600 * 1000 }
+  )
+  return Offre.updateAll(
+    { id: 'fake-offre-id-2' },
     { createdAt: Date.now() + 24 * 3600 * 1000 }
   )
 }
@@ -14,7 +24,7 @@ function fakeOffreParameters (id = 'fake-offre-id') {
     id,
     data: {
       id,
-      intitule: 'Emploi fictif de test',
+      intitule: `Emploi fictif de test (${id})`,
       codeROME: 'codeROME',
       source: 'pole-emploi',
       description: 'Ceci est une fausse offre à des fins de tests.',
@@ -41,7 +51,7 @@ function fakeOffreParameters (id = 'fake-offre-id') {
       },
       secteurActiviteLibelle: 'Restauration traditionnelle',
       typeContrat: 'CDI',
-      appellationlibelle: 'Emploi fictif de test',
+      appellationlibelle: `Emploi fictif de test (${id})`,
       url: 'https://candidat.pole-emploi.fr/offres/recherche/detail/086QKQK'
     }
   }

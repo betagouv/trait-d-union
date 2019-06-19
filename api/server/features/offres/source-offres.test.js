@@ -84,7 +84,7 @@ describe('Source offres', () => {
 
       expect(Offre.destroyAll).to.have.been.calledWith({
         id: {
-          nin: [offreWithEmail.id, 'fake-offre-id']
+          nin: [offreWithEmail.id, 'fake-offre-id', 'fake-offre-id-1', 'fake-offre-id-2']
         }
       })
     })
