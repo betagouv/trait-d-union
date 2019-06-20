@@ -1,6 +1,7 @@
 const { error } = require('../../infrastructure/logger')
 
 module.exports = async ({ smtpApiClient }, { offre, candidat }) => {
+  const cvUrl = normalizeRemoveDiacretics(candidat.cvUrl)
   const templateId = destinataireIsPoleEmploi(offre) ? poleEmploiTemplateId : defaultTemplateId
   await smtpApiClient.sendTransacEmail({
     templateId,
@@ -11,10 +12,10 @@ module.exports = async ({ smtpApiClient }, { offre, candidat }) => {
       Titre_offre: offre.intitule,
       id_offre: offre.id,
       Nom_prenom: candidat.nomPrenom,
-      URL_CV: candidat.cvUrl,
+      URL_CV: cvUrl,
       Age: candidat.telephone
     },
-    attachment: [{ url: candidat.cvUrl }]
+    attachment: [{ url: cvUrl }]
   }).catch(err => {
     error(`Error while sending candidature email with SendInBlue - ${err.response.text}`)
     throw err
@@ -23,6 +24,10 @@ module.exports = async ({ smtpApiClient }, { offre, candidat }) => {
 
 function destinataireIsPoleEmploi ({ contact }) {
   return contact.courriel.includes('@pole-emploi.')
+}
+
+function normalizeRemoveDiacretics (s) {
+  return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
 }
 
 const poleEmploiTemplateId = 53

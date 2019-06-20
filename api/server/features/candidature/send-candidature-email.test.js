@@ -28,6 +28,8 @@ describe('Send Candidature email', () => {
 
   context('when destinataire is a corporate', () => {
     it('sends email to corporate', async () => {
+      candidat.cvUrl = 'https://admin.typeform.com/form/P6NFOZ/field/WlLbkyygWkkh/results/file.ext/download'
+
       await sendCandidatureEmail({ smtpApiClient }, { offre, candidat })
 
       expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
@@ -45,9 +47,31 @@ describe('Send Candidature email', () => {
         'attachment': [{ 'url': candidat.cvUrl }]
       })
     })
+    it('normalizes the CV url', async () => {
+      candidat.cvUrl = 'https://fileAvéDesAccents.àzut.éù'
+
+      await sendCandidatureEmail({ smtpApiClient }, { offre, candidat })
+
+      expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
+        'templateId': 52,
+        'bcc': [{ 'email': 'chaib.martinez@beta.gouv.fr' }, { 'email': 'edwina.morize@beta.gouv.fr' }],
+        'to': [{ 'name': offre.contact.nom, 'email': 'contact@courriel.fr' }],
+        'replyTo': { 'name': candidat.nomPrenom, 'email': candidat.email },
+        'params': {
+          'Titre_offre': 'Titre offre',
+          'id_offre': offre.id,
+          'Nom_prenom': candidat.nomPrenom,
+          'URL_CV': 'https://fileAveDesAccents.azut.eu',
+          'Age': candidat.telephone
+        },
+        'attachment': [{ 'url': 'https://fileAveDesAccents.azut.eu' }]
+      })
+    })
   })
   context('when destinataire is a Pole Emploi', () => {
     it('sends email to Pole Emploi', async () => {
+      candidat.cvUrl = 'https://admin.typeform.com/form/P6NFOZ/field/WlLbkyygWkkh/results/file.ext/download'
+
       const offrePoleEmploi = {
         intitule: 'Titre offre',
         contact: {
