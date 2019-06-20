@@ -15,6 +15,20 @@ describe('Find candidat from candidature form', () => {
     expect(Candidat.findById).to.have.been.calledWith('candidatId')
   })
 
+  context('when given Candidat has no id', () => {
+    it('returns null', async () => {
+      const candidatureForm = {}
+      const Candidat = {
+        findById: sinon.spy(() => candidatureForm)
+      }
+
+      const candidat = await findCandidatFromCandidatureForm({ Candidat }, candidatureForm)
+
+      expect(Candidat.findById).to.not.have.been.called()
+      expect(candidat).to.be.null()
+    })
+  })
+
   context('when Candidat exists with given userId', () => {
     it('returns candidat', async () => {
       const candidatureForm = {
