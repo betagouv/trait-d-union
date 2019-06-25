@@ -11,7 +11,9 @@
       "validateUpsert": true
     },
     "SetupRemoteMethods": {
-      "disableAllExcept": []
+      "disableAllExcept": [
+        "find"
+      ]
     }
   },
   "properties": {},
