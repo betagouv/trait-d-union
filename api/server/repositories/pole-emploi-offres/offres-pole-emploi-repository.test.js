@@ -258,6 +258,7 @@ function createExpectedOffre (id = '086QKQK') {
     },
     'secteurActiviteLibelle': 'Restauration traditionnelle',
     'typeContrat': 'CDI',
+    'typeContratLibelle': 'Contrat à durée indéterminée',
     'appellationlibelle': 'Serveur / Serveuse de bar',
     'url': 'https://candidat.pole-emploi.fr/offres/recherche/detail/086QKQK'
   }

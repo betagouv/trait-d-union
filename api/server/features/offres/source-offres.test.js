@@ -16,10 +16,12 @@ const findOffresStub = sinon.spy(async () => sourcedOffres)
 const createFindOffresStub = sinon.spy(() => findOffresStub)
 const offresRepositoryStub = {}
 const createOffresRepositoryStub = sinon.spy(() => offresRepositoryStub)
+const filterShortTermCddStub = sinon.spy((offres) => offres)
 
 const sourceOffres = proxyquire('./source-offres', {
   './find-offres': createFindOffresStub,
-  '../../repositories/pole-emploi-offres/offres-pole-emploi-repository': createOffresRepositoryStub
+  '../../repositories/pole-emploi-offres/offres-pole-emploi-repository': createOffresRepositoryStub,
+  './filter-short-term-cdd': filterShortTermCddStub
 })
 
 const Offre = {
@@ -48,6 +50,12 @@ describe('Source offres', () => {
     const offres = await sourceOffres({ Offre })
 
     expect(offres).to.eql([offreWithEmail])
+  })
+
+  it('keeps only offres with long term CDD and CDI', async () => {
+    await sourceOffres({ Offre })
+
+    expect(filterShortTermCddStub).to.have.been.called()
   })
 
   context('when it sourced 1 new offre, 0 updated offre', () => {

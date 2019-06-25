@@ -5,17 +5,19 @@ const cache = require('../../infrastructure/cache')
 const apiConfiguration = require('../../infrastructure/api-configuration')
 const poleEmploiApiService = require('../../repositories/pole-emploi-api-service')({ apiConfiguration, cache })
 const offresRepository = require('../../repositories/pole-emploi-offres/offres-pole-emploi-repository')({ poleEmploiApiService })
+const filterShortTermCDD = require('./filter-short-term-cdd')
 
 module.exports = async ({ Offre }) => {
   const findOffres = createFindOffres(Offre.app.models, [offresRepository])
   const result = await findOffres({ around: {} })
   const offresWithEmail = keepOffresWithEmail(result)
-  info(`Source ${result.length} offres, ${offresWithEmail.length} offres with email`)
+  const longTermeOffres = filterShortTermCDD(offresWithEmail)
+  info(`Source ${result.length} offres, ${offresWithEmail.length} offres with email, ${longTermeOffres.length} are cdi or cdd >= 6 mois`)
   info('Store newly sourced offres')
-  await persistOffres(Offre, offresWithEmail)
+  await persistOffres(Offre, longTermeOffres)
   info('Delete non received offres')
-  await destroyOffres(Offre, offresWithEmail)
-  return offresWithEmail
+  await destroyOffres(Offre, longTermeOffres)
+  return longTermeOffres
 }
 
 function keepOffresWithEmail (offres) {
