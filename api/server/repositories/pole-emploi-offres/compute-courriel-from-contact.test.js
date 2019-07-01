@@ -52,7 +52,7 @@ describe('computeCourrielFromContact(contact)', () => {
     })
   })
   context('when courriel is not in any coordonnees property', () => {
-    it('returns nullt', () => {
+    it('returns null', () => {
       const contact = { coordonnees1: 'no courriel' }
 
       const courriel = computeCourrielFromContact(contact)
