@@ -4,7 +4,7 @@ module.exports = async ({ Candidat }, { offres, userId }) => {
   const user = await Candidat.findOne({ where: { id: userId }, include: 'candidatures' })
 
   const appliedOffresId = user ? user.candidatures().map(({ id }) => id) : []
-  debug(`Found user candidatures: ${appliedOffresId}`)
+  debug(`Found user candidatures: ${appliedOffresId.length ? appliedOffresId : 0}`)
 
   return offres.map(offre => {
     return Object.assign({},

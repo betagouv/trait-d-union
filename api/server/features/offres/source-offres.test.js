@@ -30,7 +30,7 @@ const Offre = {
     updateAttributes: sinon.spy()
   })),
   updateAttributes: sinon.spy(),
-  destroyAll: sinon.spy()
+  updateAll: sinon.spy()
 }
 
 describe('Source offres', () => {
@@ -63,7 +63,7 @@ describe('Source offres', () => {
       app: { models: {} },
       findById: sinon.spy(async () => null),
       create: sinon.spy(async () => ({})),
-      destroyAll: sinon.spy(async () => ({}))
+      updateAll: sinon.spy(async () => ({}))
     }
 
     it('creates received offre', async () => {
@@ -75,25 +75,27 @@ describe('Source offres', () => {
       })
     })
 
-    it('deletes not received offre', async () => {
+    it('updates status of non received offre to "unavailable" status', async () => {
       process.env.TU_FF_ADD_FAKE_DATA = 'off'
       await sourceOffres({ Offre })
 
-      expect(Offre.destroyAll).to.have.been.calledWith({
+      expect(Offre.updateAll).to.have.been.calledWith({
         id: {
           nin: [offreWithEmail.id]
         }
+      }, {
+        status: 'unavailable'
       })
     })
 
-    it('does not delete fake offres', async () => {
+    it('updates fake offres status to "available', async () => {
       process.env.TU_FF_ADD_FAKE_DATA = 'on'
       await sourceOffres({ Offre })
 
-      expect(Offre.destroyAll).to.have.been.calledWith({
-        id: {
-          nin: [offreWithEmail.id, 'fake-offre-id', 'fake-offre-id-1', 'fake-offre-id-2']
-        }
+      expect(Offre.updateAll).to.have.been.calledWith({
+        id: { ilike: 'fake-offre-%' }
+      }, {
+        status: 'available'
       })
     })
   })
@@ -106,7 +108,7 @@ describe('Source offres', () => {
         updateAttributes: updateAttributesSpy
       })),
       create: sinon.spy(async () => ({})),
-      destroyAll: sinon.spy(async () => ({}))
+      updateAll: sinon.spy(async () => ({}))
     }
 
     it('does not create received offre', async () => {

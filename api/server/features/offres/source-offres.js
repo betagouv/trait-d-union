@@ -15,8 +15,11 @@ module.exports = async ({ Offre }) => {
   info(`Source ${result.length} offres, ${offresWithEmail.length} offres with email, ${longTermeOffres.length} are cdi or cdd >= 6 mois`)
   info('Store newly sourced offres')
   await persistOffres(Offre, longTermeOffres)
-  info('Delete non received offres')
-  await destroyOffres(Offre, longTermeOffres)
+  info('Set non received offres as unavailable')
+  await updateOffresAvailabilities(Offre, longTermeOffres)
+  if (process.env.TU_FF_ADD_FAKE_DATA === 'on') {
+    await updateFakeOffresAvailablities(Offre)
+  }
   return longTermeOffres
 }
 
@@ -36,12 +39,11 @@ async function persistOffres (Offre, offres) {
   return Promise.all(createOffrePromises)
 }
 
-async function destroyOffres (Offre, offres) {
+async function updateOffresAvailabilities (Offre, offres) {
   const receivedOffresId = offres.map(({ id }) => id)
-  if (process.env.TU_FF_ADD_FAKE_DATA === 'on') {
-    receivedOffresId.push('fake-offre-id')
-    receivedOffresId.push('fake-offre-id-1')
-    receivedOffresId.push('fake-offre-id-2')
-  }
-  return Offre.destroyAll({ id: { nin: receivedOffresId } })
+  return Offre.updateAll({ id: { nin: receivedOffresId } }, { status: 'unavailable' })
+}
+
+async function updateFakeOffresAvailablities (Offre) {
+  return Offre.updateAll({ id: { ilike: 'fake-offre-%' } }, { status: 'available' })
 }

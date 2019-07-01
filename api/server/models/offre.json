@@ -32,6 +32,11 @@
     },
     "data": {
       "type": "object"
+    },
+    "status": {
+      "type": "string",
+      "required": true,
+      "default": "available"
     }
   },
   "validations": [],
@@ -47,6 +52,5 @@
     }
   },
   "acls": [],
-  "methods": {
-  }
+  "methods": {}
 }

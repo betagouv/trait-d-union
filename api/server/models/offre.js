@@ -12,7 +12,7 @@ module.exports = (Offre) => {
 
   Offre.afterRemote('find', async (context) => {
     if (context.result) {
-      context.result = context.result.map(formatOffre)
+      context.result = context.result.map(formatOffre).filter(offreIsAvailable)
 
       if (context.req.userId) {
         context.result = await setOffresCandidaturesStatus(Offre.app.models, { offres: context.result, userId: context.req.userId })
@@ -26,3 +26,5 @@ module.exports = (Offre) => {
     }
   })
 }
+
+const offreIsAvailable = ({ status }) => status && status !== 'unavailable'
