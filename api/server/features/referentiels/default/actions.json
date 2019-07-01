@@ -15,11 +15,6 @@
     "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
   },
   {
-    "numero": 2141,
-    "codeDiplome": 85117,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
     "numero": 2142,
     "codeDiplome": 63446,
     "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
@@ -55,24 +50,9 @@
     "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
   },
   {
-    "numero": 2247,
-    "codeDiplome": 90683,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
     "numero": 2248,
     "codeDiplome": 90691,
     "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
-    "numero": 2248,
-    "codeDiplome": 83333,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2248,
-    "codeDiplome": 83332,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
   },
   {
     "numero": 2249,
@@ -115,11 +95,6 @@
     "niveauQualificationSortie": "Pas de niveau"
   },
   {
-    "numero": 2268,
-    "codeDiplome": 84242,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
     "numero": 2269,
     "codeDiplome": 84242,
     "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
@@ -127,11 +102,6 @@
   {
     "numero": 2270,
     "codeDiplome": 25050,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2270,
-    "codeDiplome": 81023,
     "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
   },
   {
@@ -150,28 +120,8 @@
     "niveauQualificationSortie": "Pas de niveau"
   },
   {
-    "numero": 2274,
-    "codeDiplome": 55822,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 2274,
-    "codeDiplome": 23160,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
     "numero": 2276,
     "codeDiplome": 84557,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 2276,
-    "codeDiplome": 55675,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 2276,
-    "codeDiplome": 55822,
     "niveauQualificationSortie": "Pas de niveau"
   },
   {
@@ -195,18 +145,8 @@
     "niveauQualificationSortie": "Pas de niveau"
   },
   {
-    "numero": 2285,
-    "codeDiplome": 30958,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
     "numero": 2289,
     "codeDiplome": 23196,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 2289,
-    "codeDiplome": 84175,
     "niveauQualificationSortie": "Pas de niveau"
   },
   {
@@ -235,44 +175,9 @@
     "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
   },
   {
-    "numero": 2299,
-    "codeDiplome": 100427,
-    "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
-    "numero": 2299,
-    "codeDiplome": 84578,
-    "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
-    "numero": 2299,
-    "codeDiplome": 82686,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2299,
-    "codeDiplome": 80272,
-    "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
     "numero": 2301,
     "codeDiplome": 83147,
     "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
-    "numero": 2301,
-    "codeDiplome": 100813,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
-    "numero": 2301,
-    "codeDiplome": 100805,
-    "niveauQualificationSortie": "Niveau II - Formations équivalentes à Bac+3 ou Bac+4"
-  },
-  {
-    "numero": 2301,
-    "codeDiplome": 100809,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
   },
   {
     "numero": 2302,
@@ -290,23 +195,8 @@
     "niveauQualificationSortie": "Niveau II - Formations équivalentes à Bac+3 ou Bac+4"
   },
   {
-    "numero": 2304,
-    "codeDiplome": 100809,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
     "numero": 2334,
     "codeDiplome": 88309,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2334,
-    "codeDiplome": 88309,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2334,
-    "codeDiplome": 96173,
     "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
   },
   {
@@ -321,11 +211,6 @@
   },
   {
     "numero": 2370,
-    "codeDiplome": 84564,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 2371,
     "codeDiplome": 84564,
     "niveauQualificationSortie": "Pas de niveau"
   },
@@ -400,54 +285,9 @@
     "niveauQualificationSortie": "Pas de niveau"
   },
   {
-    "numero": 2394,
-    "codeDiplome": 100809,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
     "numero": 2423,
     "codeDiplome": 21451,
     "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2423,
-    "codeDiplome": 72134,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 2423,
-    "codeDiplome": 73434,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
-    "numero": 2423,
-    "codeDiplome": 82180,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2423,
-    "codeDiplome": 82774,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2423,
-    "codeDiplome": 72134,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 2423,
-    "codeDiplome": 85007,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 2423,
-    "codeDiplome": 85007,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 2423,
-    "codeDiplome": 72134,
-    "niveauQualificationSortie": "Pas de niveau"
   },
   {
     "numero": 2424,
@@ -460,18 +300,8 @@
     "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
   },
   {
-    "numero": 2425,
-    "codeDiplome": 72134,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
     "numero": 2426,
     "codeDiplome": 30958,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2426,
-    "codeDiplome": 88309,
     "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
   },
   {
@@ -540,11 +370,6 @@
     "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
   },
   {
-    "numero": 2550,
-    "codeDiplome": 72134,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
     "numero": 2551,
     "codeDiplome": 86204,
     "niveauQualificationSortie": "Pas de niveau"
@@ -575,38 +400,13 @@
     "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
   },
   {
-    "numero": 2566,
-    "codeDiplome": 83079,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
     "numero": 2567,
     "codeDiplome": 77069,
     "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
-    "numero": 2567,
-    "codeDiplome": 77069,
-    "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
-    "numero": 2567,
-    "codeDiplome": 88675,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
   },
   {
     "numero": 2570,
     "codeDiplome": 82180,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2570,
-    "codeDiplome": 21306,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2570,
-    "codeDiplome": 21306,
     "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
   },
   {
@@ -625,28 +425,13 @@
     "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
   },
   {
-    "numero": 2574,
-    "codeDiplome": 82182,
-    "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
     "numero": 2579,
     "codeDiplome": 103805,
     "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
   },
   {
-    "numero": 2579,
-    "codeDiplome": 88533,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
     "numero": 2580,
     "codeDiplome": 88121,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2580,
-    "codeDiplome": 100431,
     "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
   },
   {
@@ -690,11 +475,6 @@
     "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
   },
   {
-    "numero": 2589,
-    "codeDiplome": 94757,
-    "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
     "numero": 2590,
     "codeDiplome": 94757,
     "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
@@ -730,26 +510,6 @@
     "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
   },
   {
-    "numero": 2604,
-    "codeDiplome": 81023,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2604,
-    "codeDiplome": 84165,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 2604,
-    "codeDiplome": 84165,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 2604,
-    "codeDiplome": 84165,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
     "numero": 2605,
     "codeDiplome": 84165,
     "niveauQualificationSortie": "Pas de niveau"
@@ -773,11 +533,6 @@
     "numero": 2613,
     "codeDiplome": 94091,
     "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
-    "numero": 2613,
-    "codeDiplome": 83652,
-    "niveauQualificationSortie": "Pas de niveau"
   },
   {
     "numero": 2616,
@@ -870,11 +625,6 @@
     "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
   },
   {
-    "numero": 2656,
-    "codeDiplome": 84522,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
     "numero": 2659,
     "codeDiplome": 80738,
     "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
@@ -888,16 +638,6 @@
     "numero": 2661,
     "codeDiplome": 80737,
     "niveauQualificationSortie": "Niveau II - Formations équivalentes à Bac+3 ou Bac+4"
-  },
-  {
-    "numero": 2661,
-    "codeDiplome": 80737,
-    "niveauQualificationSortie": "Niveau II - Formations équivalentes à Bac+3 ou Bac+4"
-  },
-  {
-    "numero": 2661,
-    "codeDiplome": 63670,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
   },
   {
     "numero": 2675,
@@ -920,22 +660,7 @@
     "niveauQualificationSortie": "Pas de niveau"
   },
   {
-    "numero": 2841,
-    "codeDiplome": 84165,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
     "numero": 2842,
-    "codeDiplome": 84165,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 2843,
-    "codeDiplome": 84165,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 2843,
     "codeDiplome": 84165,
     "niveauQualificationSortie": "Pas de niveau"
   },
@@ -975,79 +700,14 @@
     "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
   },
   {
-    "numero": 2857,
-    "codeDiplome": 80728,
-    "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
-    "numero": 2857,
-    "codeDiplome": 53827,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
-    "numero": 2857,
-    "codeDiplome": 83079,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
     "numero": 2858,
     "codeDiplome": 73288,
     "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
   },
   {
-    "numero": 2858,
-    "codeDiplome": 81418,
-    "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
-    "numero": 2858,
-    "codeDiplome": 19004,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
-    "numero": 2858,
-    "codeDiplome": 81505,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
     "numero": 2859,
     "codeDiplome": 82685,
     "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
-    "numero": 2859,
-    "codeDiplome": 57473,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
-    "numero": 2859,
-    "codeDiplome": 81506,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
-    "numero": 2859,
-    "codeDiplome": 63193,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
-    "numero": 2859,
-    "codeDiplome": 18866,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
-    "numero": 2859,
-    "codeDiplome": 82687,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
-    "numero": 2859,
-    "codeDiplome": 56918,
-    "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
-    "numero": 2859,
-    "codeDiplome": 56315,
-    "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
   },
   {
     "numero": 2862,
@@ -1065,89 +725,14 @@
     "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
   },
   {
-    "numero": 2864,
-    "codeDiplome": 25039,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2864,
-    "codeDiplome": 25039,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2864,
-    "codeDiplome": 74851,
-    "niveauQualificationSortie": "Niveau II - Formations équivalentes à Bac+3 ou Bac+4"
-  },
-  {
-    "numero": 2864,
-    "codeDiplome": 25086,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
-    "numero": 2864,
-    "codeDiplome": 21365,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2864,
-    "codeDiplome": 20182,
-    "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
     "numero": 2867,
     "codeDiplome": 31999,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2867,
-    "codeDiplome": 21211,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2867,
-    "codeDiplome": 82703,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2867,
-    "codeDiplome": 53384,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2867,
-    "codeDiplome": 77487,
     "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
   },
   {
     "numero": 2868,
     "codeDiplome": 31999,
     "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2868,
-    "codeDiplome": 21211,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2868,
-    "codeDiplome": 82703,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2868,
-    "codeDiplome": 53384,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2868,
-    "codeDiplome": 77487,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2868,
-    "codeDiplome": 50486,
-    "niveauQualificationSortie": "Pas de niveau"
   },
   {
     "numero": 2869,
@@ -1165,16 +750,6 @@
     "niveauQualificationSortie": "Pas de niveau"
   },
   {
-    "numero": 2876,
-    "codeDiplome": 87137,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2876,
-    "codeDiplome": 100029,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
     "numero": 2877,
     "codeDiplome": 25413,
     "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
@@ -1185,59 +760,14 @@
     "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
   },
   {
-    "numero": 2886,
-    "codeDiplome": 63041,
-    "niveauQualificationSortie": "Niveau II - Formations équivalentes à Bac+3 ou Bac+4"
-  },
-  {
-    "numero": 2886,
-    "codeDiplome": 76234,
-    "niveauQualificationSortie": "Niveau II - Formations équivalentes à Bac+3 ou Bac+4"
-  },
-  {
-    "numero": 2886,
-    "codeDiplome": 66031,
-    "niveauQualificationSortie": "Niveau II - Formations équivalentes à Bac+3 ou Bac+4"
-  },
-  {
-    "numero": 2886,
-    "codeDiplome": 99153,
-    "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
     "numero": 2887,
     "codeDiplome": 77069,
     "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
   },
   {
-    "numero": 2887,
-    "codeDiplome": 104489,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
-    "numero": 2887,
-    "codeDiplome": 82509,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
-    "numero": 2887,
-    "codeDiplome": 96809,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 2887,
-    "codeDiplome": 88309,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
     "numero": 2919,
     "codeDiplome": 72134,
     "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 2919,
-    "codeDiplome": 100809,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
   },
   {
     "numero": 2920,
@@ -1310,61 +840,6 @@
     "niveauQualificationSortie": "Pas de niveau"
   },
   {
-    "numero": 14358,
-    "codeDiplome": 86389,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14358,
-    "codeDiplome": 93775,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14358,
-    "codeDiplome": 93775,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14358,
-    "codeDiplome": 84168,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14358,
-    "codeDiplome": 84168,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14358,
-    "codeDiplome": 84168,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14358,
-    "codeDiplome": 84546,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14358,
-    "codeDiplome": 84546,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14359,
-    "codeDiplome": 84168,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14359,
-    "codeDiplome": 84168,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14359,
-    "codeDiplome": 84168,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
     "numero": 14359,
     "codeDiplome": 84168,
     "niveauQualificationSortie": "Pas de niveau"
@@ -1373,111 +848,6 @@
     "numero": 14360,
     "codeDiplome": 20326,
     "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 31991,
-    "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 82779,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 84168,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 84168,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 84168,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 84168,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 84168,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 63193,
-    "niveauQualificationSortie": "Niveau III - Formations équivalentes à Bac+2"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 84546,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 84546,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 84168,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 84168,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 84168,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 31999,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 82703,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 53384,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 54649,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 58778,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 86389,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 86389,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14360,
-    "codeDiplome": 88547,
-    "niveauQualificationSortie": "Pas de niveau"
   },
   {
     "numero": 14368,
@@ -1572,96 +942,6 @@
   {
     "numero": 14569,
     "codeDiplome": 25050,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14569,
-    "codeDiplome": 25039,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14569,
-    "codeDiplome": 25039,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14569,
-    "codeDiplome": 81023,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14569,
-    "codeDiplome": 83150,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14569,
-    "codeDiplome": 83152,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14569,
-    "codeDiplome": 23160,
-    "niveauQualificationSortie": "Pas de niveau"
-  },
-  {
-    "numero": 14569,
-    "codeDiplome": 84522,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14569,
-    "codeDiplome": 84522,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14569,
-    "codeDiplome": 84522,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14569,
-    "codeDiplome": 93753,
-    "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
-    "numero": 14569,
-    "codeDiplome": 93753,
-    "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
-    "numero": 14569,
-    "codeDiplome": 77099,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14569,
-    "codeDiplome": 81440,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14569,
-    "codeDiplome": 81440,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14569,
-    "codeDiplome": 84244,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14569,
-    "codeDiplome": 30958,
-    "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
-  },
-  {
-    "numero": 14569,
-    "codeDiplome": 100833,
-    "niveauQualificationSortie": "Niveau IV - Formations équivalentes à Bac ou Bac+1"
-  },
-  {
-    "numero": 14569,
-    "codeDiplome": 91845,
     "niveauQualificationSortie": "Niveau V - Formations équivalentes aux CAP-BEP"
   },
   {
