@@ -32,7 +32,7 @@ export default Component.extend({
 
   _trackEvent: function ({ action, label }) {
     this.metrics.trackEvent({
-      category: 'Staging',
+      category: 'DemandeurDEmploi',
       action,
       label
     })
