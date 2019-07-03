@@ -20,7 +20,8 @@
       "disableAllExcept": [
         "find",
         "findById",
-        "sourceOffres"
+        "sourceOffres",
+        "count"
       ]
     }
   },

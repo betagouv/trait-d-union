@@ -27,4 +27,4 @@ module.exports = (Offre) => {
   })
 }
 
-const offreIsAvailable = ({ status }) => status && status !== 'unavailable'
+const offreIsAvailable = ({ status }) => !status || status !== 'unavailable'
