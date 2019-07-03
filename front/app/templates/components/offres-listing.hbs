@@ -44,3 +44,11 @@
     {{/each}}
   {{/bs-accordion}}
 </OffresFilter>
+{{#if isShowingModal}}
+  <ConnectionDialog
+    @offre={{selectedOffre}}
+    @onClose={{action (mut isShowingModal) false}}
+    @openForm={{action "openForm" offre}}
+    @retrieveAccount={{action "retrieveAccount"}}>
+  </ConnectionDialog>
+{{/if}}

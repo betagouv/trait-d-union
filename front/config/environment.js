@@ -29,13 +29,13 @@ module.exports = function (environment) {
 
     // Set or update content security policies
     contentSecurityPolicy: {
-      'default-src': '\'none\'',
-      'script-src': '\'self\' www.google-analytics.com',
-      'font-src': '\'self\' fonts.gstatic.com',
-      'connect-src': '\'self\' www.google-analytics.com',
-      'img-src': '\'self\'',
-      'style-src': '\'self\' fonts.googleapis.com',
-      'media-src': '\'self\''
+      'default-src': "'none'",
+      'script-src': "'self' www.google-analytics.com",
+      'font-src': "'self' fonts.gstatic.com",
+      'connect-src': "'self' www.google-analytics.com",
+      'img-src': "'self'",
+      'style-src': "'self' fonts.googleapis.com",
+      'media-src': "'self'"
     },
 
     crisp: {
@@ -49,9 +49,9 @@ module.exports = function (environment) {
         config: {
           id: process.env.GA_ID,
           // Use `analytics_debug.js` in development
-          debug: environment === 'development',
+          debug: false, // environment === 'development',
           // Use verbose tracing of GA events
-          trace: environment === 'development',
+          trace: false, // environment === 'development',
           // Ensure development env hits aren't sent to GA
           sendHitTask: environment !== 'development'
         }
