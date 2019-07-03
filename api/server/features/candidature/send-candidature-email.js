@@ -1,9 +1,11 @@
-const { error } = require('../../infrastructure/logger')
+const { debug, error } = require('../../infrastructure/logger')
 
 module.exports = async ({ smtpApiClient }, { offre, candidat }) => {
   const cvUrl = normalizeRemoveDiacretics(candidat.cvUrl)
   const templateId = destinataireIsPoleEmploi(offre) ? poleEmploiTemplateId : defaultTemplateId
-  await smtpApiClient.sendTransacEmail({
+  const attachment = destinataireIsPoleEmploi(offre) ? [PNSMPattachment, { url: cvUrl }] : [PNSMPattachment]
+
+  const messageResponse = await smtpApiClient.sendTransacEmail({
     templateId,
     bcc: [{ email: 'chaib.martinez@beta.gouv.fr' }, { email: 'edwina.morize@beta.gouv.fr' }],
     to: [{ name: offre.contact.nom, email: offre.contact.courriel }],
@@ -15,11 +17,12 @@ module.exports = async ({ smtpApiClient }, { offre, candidat }) => {
       URL_CV: cvUrl,
       Age: candidat.telephone
     },
-    attachment: [{ url: cvUrl }]
+    attachment
   }).catch(err => {
     error(`Error while sending candidature email with SendInBlue - ${err.response.text}`)
     throw err
   })
+  debug(`Candidature sent: response is ${JSON.stringify(messageResponse)}`)
 }
 
 function destinataireIsPoleEmploi ({ contact }) {
@@ -32,3 +35,4 @@ function normalizeRemoveDiacretics (s) {
 
 const poleEmploiTemplateId = 53
 const defaultTemplateId = 52
+const PNSMPattachment = { url: 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }

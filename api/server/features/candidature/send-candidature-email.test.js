@@ -3,8 +3,8 @@ const sendCandidatureEmail = require('./send-candidature-email')
 
 describe('Send Candidature email', () => {
   const smtpApiClient = {
-    sendTransacEmail: sinon.spy(async () => {
-    })
+    sendTransacEmail: sinon.spy(async () => ({ messageId: 'messageId' })),
+    getEmailEventReport: sinon.spy(async () => ({ id: 'uuid' }))
   }
   const offre = {
     id: 'offreId',
@@ -24,6 +24,7 @@ describe('Send Candidature email', () => {
 
   beforeEach(() => {
     smtpApiClient.sendTransacEmail.resetHistory()
+    smtpApiClient.getEmailEventReport.resetHistory()
   })
 
   context('when destinataire is a corporate', () => {
@@ -44,7 +45,7 @@ describe('Send Candidature email', () => {
           'URL_CV': candidat.cvUrl,
           'Age': candidat.telephone
         },
-        'attachment': [{ 'url': candidat.cvUrl }]
+        'attachment': [{ 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }]
       })
     })
     it('normalizes the CV url', async () => {
@@ -64,7 +65,7 @@ describe('Send Candidature email', () => {
           'URL_CV': 'https://fileAveDesAccents.azut.eu',
           'Age': candidat.telephone
         },
-        'attachment': [{ 'url': 'https://fileAveDesAccents.azut.eu' }]
+        'attachment': [{ 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }]
       })
     })
   })
@@ -94,7 +95,10 @@ describe('Send Candidature email', () => {
           'URL_CV': candidat.cvUrl,
           'Age': candidat.telephone
         },
-        'attachment': [{ 'url': candidat.cvUrl }]
+        'attachment': [
+          { 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' },
+          { 'url': candidat.cvUrl }
+        ]
       })
     })
   })
