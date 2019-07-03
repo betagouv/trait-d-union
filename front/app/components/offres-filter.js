@@ -25,7 +25,9 @@ export default Component.extend({
         return
       }
       const results = offres.filter(offre => {
-        return offre.sessions[0].action.niveauQualificationEntree === niveau
+        return offre.sessions.some(session => {
+          return session.action.niveauQualificationEntree === niveau
+        })
       })
       this.set('results', results)
     }
