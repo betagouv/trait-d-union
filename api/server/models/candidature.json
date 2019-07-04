@@ -16,7 +16,14 @@
       ]
     }
   },
-  "properties": {},
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "messageId": {
+      "type": "string"
+    }
+  },
   "validations": [],
   "relations": {
     "candidat": {

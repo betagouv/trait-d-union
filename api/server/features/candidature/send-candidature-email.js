@@ -1,11 +1,11 @@
-const { debug, error } = require('../../infrastructure/logger')
+const { error } = require('../../infrastructure/logger')
 
-module.exports = async ({ smtpApiClient }, { offre, candidat }) => {
+module.exports = ({ smtpApiClient }) => async ({ offre, candidat, retry = false }) => {
   const cvUrl = normalizeRemoveDiacretics(candidat.cvUrl)
-  const templateId = destinataireIsPoleEmploi(offre) ? poleEmploiTemplateId : defaultTemplateId
+  const templateId = computeTemplateId({ destinataire: destinataire(offre), retry })
   const attachment = destinataireIsPoleEmploi(offre) ? [PNSMPattachment, { url: cvUrl }] : [PNSMPattachment]
 
-  const messageResponse = await smtpApiClient.sendTransacEmail({
+  const { messageId } = await smtpApiClient.sendTransacEmail({
     templateId,
     bcc: [{ email: 'chaib.martinez@beta.gouv.fr' }, { email: 'edwina.morize@beta.gouv.fr' }],
     to: [{ name: offre.contact.nom, email: offre.contact.courriel }],
@@ -22,17 +22,42 @@ module.exports = async ({ smtpApiClient }, { offre, candidat }) => {
     error(`Error while sending candidature email with SendInBlue - ${err.response.text}`)
     throw err
   })
-  debug(`Candidature sent: response is ${JSON.stringify(messageResponse)}`)
+  return messageId /*
+  const { messageId } = messageResponse
+  await wait()
+  const { transactionalEmails } = await smtpApiClient.getTransacEmailsList({
+    email: offre.contact.courriel,
+    messageId
+  })
+  debug(`Candidature sent: response is ${JSON.stringify(transactionalEmails)}`)
+  return transactionalEmails && transactionalEmails.length > 0 && transactionalEmails[0].uuid
+  */
 }
 
 function destinataireIsPoleEmploi ({ contact }) {
   return contact.courriel.includes('@pole-emploi.')
 }
 
+function destinataire ({ contact }) {
+  return destinataireIsPoleEmploi({ contact }) ? 'pole-emploi' : 'corporate'
+}
+
 function normalizeRemoveDiacretics (s) {
   return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
 }
 
-const poleEmploiTemplateId = 53
-const defaultTemplateId = 52
+function computeTemplateId ({ destinataire, retry }) {
+  return templateIds[destinataire][retry ? 'retry' : 'first']
+}
+
+const templateIds = {
+  'pole-emploi': {
+    first: 53,
+    retry: 63
+  },
+  'corporate': {
+    first: 52,
+    retry: 62
+  }
+}
 const PNSMPattachment = { url: 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }
