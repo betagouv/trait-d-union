@@ -6,6 +6,7 @@ const apiConfiguration = require('../../infrastructure/api-configuration')
 const poleEmploiApiService = require('../../repositories/pole-emploi-api-service')({ apiConfiguration, cache })
 const offresRepository = require('../../repositories/pole-emploi-offres/offres-pole-emploi-repository')({ poleEmploiApiService })
 const filterShortTermCDD = require('./filter-short-term-cdd')
+const blacklistOffres = require('./blacklist-offres')
 
 module.exports = async ({ Offre }) => {
   const findOffres = createFindOffres(Offre.app.models, [offresRepository])
@@ -17,6 +18,7 @@ module.exports = async ({ Offre }) => {
   await persistOffres(Offre, longTermeOffres)
   info('Set non received offres as unavailable')
   await updateOffresAvailabilities(Offre, longTermeOffres)
+  await blacklistOffres(Offre.app.models, longTermeOffres)
   if (process.env.TU_FF_ADD_FAKE_DATA === 'on') {
     await updateFakeOffresAvailablities(Offre)
   }

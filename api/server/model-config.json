@@ -18,7 +18,8 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "db",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "db",
@@ -68,6 +69,14 @@
     "public": true
   },
   "Candidature": {
+    "dataSource": "db",
+    "public": true
+  },
+  "BlacklistedOffre": {
+    "dataSource": "db",
+    "public": true
+  },
+  "BlacklistedContact": {
     "dataSource": "db",
     "public": true
   }
