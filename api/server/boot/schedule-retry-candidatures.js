@@ -8,9 +8,9 @@ const sendCandidatureEmail = require('../features/candidature/send-candidature-e
 const retryCandidatures = require('../features/candidature/retry-candidatures')({ now, delays, isMessageOpened, sendCandidatureEmail })
 
 module.exports = (app) => {
-  app.scheduledTask = schedule.scheduleJob(everyWorkingDayAtNineAM, () => {
+  app.scheduleRetryCandidatureTask = schedule.scheduleJob(everyWorkingDayAtNineAM, () => {
     info('Time to retry candidatures email!')
-    retryCandidatures(app.models)
+    return retryCandidatures(app.models)
   })
 }
 

@@ -39,7 +39,6 @@ describe('Send Candidature email', () => {
 
       expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
         'templateId': 52,
-        'bcc': [{ 'email': 'chaib.martinez@beta.gouv.fr' }, { 'email': 'edwina.morize@beta.gouv.fr' }],
         'to': [{ 'name': offre.contact.nom, 'email': 'contact@courriel.fr' }],
         'replyTo': { 'name': candidat.nomPrenom, 'email': candidat.email },
         'params': {
@@ -59,7 +58,6 @@ describe('Send Candidature email', () => {
 
       expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
         'templateId': 52,
-        'bcc': [{ 'email': 'chaib.martinez@beta.gouv.fr' }, { 'email': 'edwina.morize@beta.gouv.fr' }],
         'to': [{ 'name': offre.contact.nom, 'email': 'contact@courriel.fr' }],
         'replyTo': { 'name': candidat.nomPrenom, 'email': candidat.email },
         'params': {
@@ -85,7 +83,6 @@ describe('Send Candidature email', () => {
 
         expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
           'templateId': 62,
-          'bcc': [{ 'email': 'chaib.martinez@beta.gouv.fr' }, { 'email': 'edwina.morize@beta.gouv.fr' }],
           'to': [{ 'name': offre.contact.nom, 'email': 'contact@courriel.fr' }],
           'replyTo': { 'name': candidat.nomPrenom, 'email': candidat.email },
           'params': {
@@ -117,7 +114,6 @@ describe('Send Candidature email', () => {
 
       expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
         'templateId': 53,
-        'bcc': [{ 'email': 'chaib.martinez@beta.gouv.fr' }, { 'email': 'edwina.morize@beta.gouv.fr' }],
         'to': [{ 'name': offrePoleEmploi.contact.nom, 'email': 'contact@pole-emploi.fr' }],
         'replyTo': { 'name': candidat.nomPrenom, 'email': candidat.email },
         'params': {
@@ -149,7 +145,6 @@ describe('Send Candidature email', () => {
 
         expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
           'templateId': 63,
-          'bcc': [{ 'email': 'chaib.martinez@beta.gouv.fr' }, { 'email': 'edwina.morize@beta.gouv.fr' }],
           'to': [{ 'name': offrePoleEmploi.contact.nom, 'email': 'contact@pole-emploi.fr' }],
           'replyTo': { 'name': candidat.nomPrenom, 'email': candidat.email },
           'params': {

@@ -7,7 +7,6 @@ module.exports = ({ smtpApiClient }) => async ({ offre, candidat, retry = false 
 
   const { messageId } = await smtpApiClient.sendTransacEmail({
     templateId,
-    bcc: [{ email: 'chaib.martinez@beta.gouv.fr' }, { email: 'edwina.morize@beta.gouv.fr' }],
     to: [{ name: offre.contact.nom, email: offre.contact.courriel }],
     replyTo: { name: candidat.nomPrenom, email: candidat.email },
     params: {
@@ -22,16 +21,7 @@ module.exports = ({ smtpApiClient }) => async ({ offre, candidat, retry = false 
     error(`Error while sending candidature email with SendInBlue - ${err.response.text}`)
     throw err
   })
-  return messageId /*
-  const { messageId } = messageResponse
-  await wait()
-  const { transactionalEmails } = await smtpApiClient.getTransacEmailsList({
-    email: offre.contact.courriel,
-    messageId
-  })
-  debug(`Candidature sent: response is ${JSON.stringify(transactionalEmails)}`)
-  return transactionalEmails && transactionalEmails.length > 0 && transactionalEmails[0].uuid
-  */
+  return messageId
 }
 
 function destinataireIsPoleEmploi ({ contact }) {

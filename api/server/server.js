@@ -27,7 +27,8 @@ app.start = async () => {
 }
 
 app.stop = function () {
-  app.scheduledTask.cancel()
+  app.scheduledSourceTask.cancel()
+  app.scheduleRetryCandidatureTask.cancel()
   server.close()
 }
 

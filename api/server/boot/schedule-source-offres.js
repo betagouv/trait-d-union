@@ -3,7 +3,7 @@ const { info } = require('../infrastructure/logger')
 const sourceOffres = require('../features/offres/source-offres')
 
 module.exports = (app) => {
-  app.scheduledTask = schedule.scheduleJob(everyDayAtMidnight, () => {
+  app.scheduledSourceTask = schedule.scheduleJob(everyDayAtMidnight, () => {
     info('Time to source offres for the day !')
     sourceOffres(app.models)
   })
