@@ -39,7 +39,7 @@
     "node-slack": "0.0.7",
     "request-promise-native": "1.0.7",
     "serve-favicon": "2.5.0",
-    "sib-api-v3-sdk": "git@github.com:HEYGUL/APIv3-nodejs-library.git",
+    "sendin_blue_api": "git+https://github.com/HEYGUL/APIv3-nodejs-library.git",
     "strong-error-handler": "3.2.0"
   },
   "repository": {

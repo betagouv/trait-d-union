@@ -1,4 +1,4 @@
-const SibApiV3Sdk = require('sib-api-v3-sdk')
+const SibApiV3Sdk = require('sendin_blue_api')
 
 const sendinblueApiKey = process.env.SENDINBLUE_API_KEY
 
