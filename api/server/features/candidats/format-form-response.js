@@ -6,7 +6,8 @@ module.exports = (formResponse) => {
     email: answers[0].email,
     nomPrenom: answers[1].text,
     telephone: answers[2].text,
-    cvUrl: answers[3].file_url
+    age: answers[3].number,
+    cvUrl: answers[4].file_url
   }
   return {
     offreId: formResponse.hidden.id_offre,

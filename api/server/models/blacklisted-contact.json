@@ -22,8 +22,8 @@
   },
   "properties": {
     "email": {
-      "id": true,
       "type": "string",
+      "id": true,
       "required": true
     }
   },

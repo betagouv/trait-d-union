@@ -36,6 +36,13 @@
           "properties": {}
         },
         {
+          "id": "MyVuQ83TCXE3",
+          "title": "Ages (ex : 32)",
+          "type": "number",
+          "ref": "18277539-de93-4310-975e-13f403b890fd",
+          "properties": {}
+        },
+        {
           "id": "WlLbkyygWkkh",
           "title": "Merci de déposer votre CV",
           "type": "file_upload",
@@ -74,6 +81,15 @@
           "id": "vd777D41TS8n",
           "type": "short_text",
           "ref": "c851647b-d611-4439-9c80-d2cd92b857e3"
+        }
+      },
+      {
+        "type": "number",
+        "number": 45,
+        "field": {
+          "id": "MyVuQ83TCXE3",
+          "type": "number",
+          "ref": "18277539-de93-4310-975e-13f403b890fd"
         }
       },
       {
