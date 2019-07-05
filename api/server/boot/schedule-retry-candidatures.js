@@ -1,6 +1,6 @@
 const schedule = require('node-schedule')
 const { info } = require('../infrastructure/logger')
-const now = require('../infrastructure/clock').now()
+const { now } = require('../infrastructure/clock')
 const delays = require('../infrastructure/retry-candidatures-configuration')
 const { smtpApiClient } = require('../infrastructure/sendinblue-api-client')
 const isMessageOpened = require('../features/candidature/is-message-opened')({ smtpApiClient })

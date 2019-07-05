@@ -9,7 +9,7 @@ const isMessageOpened = sinon.spy(async (messageId) => messageId === 'opened-mes
 const retryCandidatures = require('./retry-candidatures')({
   isMessageOpened,
   sendCandidatureEmail,
-  now: clock.now(),
+  now: clock.now,
   delays: configuration
 })
 const millisecondsPerDay = 24 * 3600 * 1000
