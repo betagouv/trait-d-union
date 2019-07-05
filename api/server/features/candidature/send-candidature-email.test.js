@@ -3,14 +3,10 @@ const createSendCandidatureEmail = require('./send-candidature-email')
 
 describe('Send Candidature email', () => {
   const smtpApiClient = {
-    sendTransacEmail: sinon.spy(async () => ({ messageId: 'messageId' })),
-    getTransacEmailsList: sinon.spy(async () => (
-      {
-        transactionalEmails: [{ uuid: 'uuid' }]
-      }
-    ))
+    sendTransacEmail: sinon.spy(async () => ({ messageId: 'messageId' }))
   }
   const sendCandidatureEmail = createSendCandidatureEmail({ smtpApiClient })
+  const candidatureId = 'candidature_id'
   const offre = {
     id: 'offreId',
     intitule: 'Titre offre',
@@ -24,6 +20,7 @@ describe('Send Candidature email', () => {
     email: 'an_account@example.com',
     nomPrenom: 'Lorem ipsum dolor Nom Prenom',
     telephone: 'Lorem ipsum dolor Phone',
+    age: 45,
     cvUrl: 'https://admin.typeform.com/form/P6NFOZ/field/WlLbkyygWkkh/results/file.ext/download'
   }
 
@@ -35,7 +32,7 @@ describe('Send Candidature email', () => {
     it('sends email to corporate', async () => {
       candidat.cvUrl = 'https://admin.typeform.com/form/P6NFOZ/field/WlLbkyygWkkh/results/file.ext/download'
 
-      await sendCandidatureEmail({ offre, candidat })
+      await sendCandidatureEmail({ offre, candidat, candidatureId })
 
       expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
         'templateId': 52,
@@ -46,7 +43,10 @@ describe('Send Candidature email', () => {
           'id_offre': offre.id,
           'Nom_prenom': candidat.nomPrenom,
           'URL_CV': candidat.cvUrl,
-          'Age': candidat.telephone
+          'Age': candidat.age,
+          'Telephone': candidat.telephone,
+          'id_candidature': candidatureId,
+          'email_candidat': candidat.email
         },
         'attachment': [{ 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }]
       })
@@ -54,7 +54,7 @@ describe('Send Candidature email', () => {
     it('normalizes the CV url', async () => {
       candidat.cvUrl = 'https://fileAvéDesAccents.àzut.éù'
 
-      await sendCandidatureEmail({ offre, candidat })
+      await sendCandidatureEmail({ offre, candidat, candidatureId })
 
       expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
         'templateId': 52,
@@ -65,13 +65,16 @@ describe('Send Candidature email', () => {
           'id_offre': offre.id,
           'Nom_prenom': candidat.nomPrenom,
           'URL_CV': 'https://fileAveDesAccents.azut.eu',
-          'Age': candidat.telephone
+          'Age': candidat.age,
+          'Telephone': candidat.telephone,
+          'id_candidature': candidatureId,
+          'email_candidat': candidat.email
         },
         'attachment': [{ 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }]
       })
     })
     it('returns messageId of message sent', async () => {
-      const messageId = await sendCandidatureEmail({ offre, candidat })
+      const messageId = await sendCandidatureEmail({ offre, candidat, candidatureId })
 
       expect(messageId).to.eql('messageId')
     })
@@ -79,7 +82,7 @@ describe('Send Candidature email', () => {
       it('sends email with retry template', async () => {
         candidat.cvUrl = 'https://admin.typeform.com/form/P6NFOZ/field/WlLbkyygWkkh/results/file.ext/download'
 
-        await sendCandidatureEmail({ offre, candidat, retry: true })
+        await sendCandidatureEmail({ offre, candidat, candidatureId, retry: true })
 
         expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
           'templateId': 62,
@@ -90,7 +93,10 @@ describe('Send Candidature email', () => {
             'id_offre': offre.id,
             'Nom_prenom': candidat.nomPrenom,
             'URL_CV': candidat.cvUrl,
-            'Age': candidat.telephone
+            'Age': candidat.age,
+            'Telephone': candidat.telephone,
+            'id_candidature': candidatureId,
+            'email_candidat': candidat.email
           },
           'attachment': [{ 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }]
         })
@@ -110,7 +116,7 @@ describe('Send Candidature email', () => {
         }
       }
 
-      await sendCandidatureEmail({ offre: offrePoleEmploi, candidat })
+      await sendCandidatureEmail({ offre: offrePoleEmploi, candidat, candidatureId })
 
       expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
         'templateId': 53,
@@ -121,7 +127,10 @@ describe('Send Candidature email', () => {
           'id_offre': offrePoleEmploi.id,
           'Nom_prenom': candidat.nomPrenom,
           'URL_CV': candidat.cvUrl,
-          'Age': candidat.telephone
+          'Age': candidat.age,
+          'Telephone': candidat.telephone,
+          'id_candidature': candidatureId,
+          'email_candidat': candidat.email
         },
         'attachment': [
           { 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' },
@@ -141,7 +150,7 @@ describe('Send Candidature email', () => {
           }
         }
 
-        await sendCandidatureEmail({ offre: offrePoleEmploi, candidat, retry: true })
+        await sendCandidatureEmail({ offre: offrePoleEmploi, candidat, candidatureId, retry: true })
 
         expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
           'templateId': 63,
@@ -152,7 +161,10 @@ describe('Send Candidature email', () => {
             'id_offre': offrePoleEmploi.id,
             'Nom_prenom': candidat.nomPrenom,
             'URL_CV': candidat.cvUrl,
-            'Age': candidat.telephone
+            'Age': candidat.age,
+            'Telephone': candidat.telephone,
+            'id_candidature': 'candidature_id',
+            'email_candidat': candidat.email
           },
           'attachment': [
             { 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' },

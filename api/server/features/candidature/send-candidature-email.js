@@ -1,6 +1,6 @@
 const { error } = require('../../infrastructure/logger')
 
-module.exports = ({ smtpApiClient }) => async ({ offre, candidat, retry = false }) => {
+module.exports = ({ smtpApiClient }) => async ({ offre, candidat, candidatureId, retry = false }) => {
   const cvUrl = normalizeRemoveDiacretics(candidat.cvUrl)
   const templateId = computeTemplateId({ destinataire: destinataire(offre), retry })
   const attachment = destinataireIsPoleEmploi(offre) ? [PNSMPattachment, { url: cvUrl }] : [PNSMPattachment]
@@ -14,7 +14,10 @@ module.exports = ({ smtpApiClient }) => async ({ offre, candidat, retry = false 
       id_offre: offre.id,
       Nom_prenom: candidat.nomPrenom,
       URL_CV: cvUrl,
-      Age: candidat.telephone
+      Age: candidat.age,
+      Telephone: candidat.telephone,
+      id_candidature: candidatureId,
+      email_candidat: candidat.email
     },
     attachment
   }).catch(err => {
