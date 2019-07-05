@@ -19,11 +19,13 @@ describe('Retry Candidatures', () => {
   const sevenDaysBeforeNow = -7 * millisecondsPerDay
 
   const openedCandidature = {
+    id: 'opened-candidature-id',
     messageId: 'opened-message',
     offre: () => ({ data: { id: 'offre-id-opened', contact: { courriel: 'mail@domain.fr' } } }),
     candidat: () => ({ id: 'candidat-id-opened' })
   }
   const nonOpenedCandidature = {
+    id: 'non-opened-candidature-id',
     messageId: 'non-opened-message',
     offre: () => ({ data: { id: 'offre-id-non-opened', contact: { courriel: 'mail@domain.fr' } } }),
     candidat: () => ({ id: 'candidat-id-non-opened' })
@@ -62,8 +64,9 @@ describe('Retry Candidatures', () => {
     await retryCandidatures({ Candidature })
 
     expect(sendCandidatureEmail).to.have.been.calledWith({
-      offre: { id: 'offre-id-opened', contact: { courriel: 'mail@domain.fr' } },
-      candidat: { id: 'candidat-id-opened' },
+      offre: { id: 'offre-id-non-opened', contact: { courriel: 'mail@domain.fr' } },
+      candidat: { id: 'candidat-id-non-opened' },
+      candidatureId: 'non-opened-candidature-id',
       retry: true
     })
   })

@@ -12,7 +12,7 @@ module.exports = async ({ Candidat, Offre }, offreId, candidatId) => {
   if (offreFromDB) {
     const candidature = await offreFromDB.candidatures.add(candidatId)
     const offre = offreFromDB.data
-    const messageId = await sendCandidatureEmail({ offre, candidat })
+    const messageId = await sendCandidatureEmail({ offre, candidat, candidatureId: candidature.id })
       .catch(async (err) => {
         error(`Error while sending candidature email for candidat ${candidatId} and offre ${offreId} - ${err}`)
         await notifyCandidatureFailure({ sendSlackNotification }, { candidat, offre, err })

@@ -18,7 +18,7 @@ module.exports = ({ now, delays, sendCandidatureEmail, isMessageOpened }) => asy
 
   debug(`${candidaturesToRetry.length} candidature found`)
   return Promise.all(candidaturesToRetry
-    .filter(candidature => {
+    .filter(async candidature => {
       const offre = candidature.offre().data
       return isMessageOpened({ messageId: candidature.messageId, email: offre.contact.courriel })
     })
@@ -26,7 +26,7 @@ module.exports = ({ now, delays, sendCandidatureEmail, isMessageOpened }) => asy
       const offre = candidature.offre().data
       const candidat = candidature.candidat()
       debug(`Will send a retry email for offre ${offre.id} from candidat ${candidat.id}`)
-      return sendCandidatureEmail({ offre: offre, candidat: candidat, retry: true })
+      return sendCandidatureEmail({ offre: offre, candidat: candidat, candidatureId: candidature.id, retry: true })
     }))
 }
 
