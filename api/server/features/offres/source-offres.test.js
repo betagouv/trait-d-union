@@ -101,7 +101,7 @@ describe('Source offres', () => {
       await sourceOffres({ Offre })
 
       expect(Offre.updateAll).to.have.been.calledWith({
-        id: { ilike: 'fake-offre-%' }
+        id: { regexp: 'fake-offre-id(.*)' }
       }, {
         status: 'available'
       })
