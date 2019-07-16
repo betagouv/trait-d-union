@@ -29,6 +29,7 @@
     "loopback": "3.26.0",
     "loopback-boot": "2.28.0",
     "loopback-component-explorer": "6.4.0",
+    "loopback-connector-mongodb": "5.0.0",
     "loopback-connector-postgresql": "3.6.1",
     "loopback-ds-calculated-mixin": "2.0.4",
     "loopback-ds-timestamp-mixin": "3.4.1",
@@ -38,8 +39,8 @@
     "node-schedule": "1.3.2",
     "node-slack": "0.0.7",
     "request-promise-native": "1.0.7",
-    "serve-favicon": "2.5.0",
     "sendin_blue_api": "git+https://github.com/HEYGUL/APIv3-nodejs-library.git",
+    "serve-favicon": "2.5.0",
     "strong-error-handler": "3.2.0"
   },
   "repository": {

@@ -8,6 +8,6 @@ module.exports = async ({ Offre, BlacklistedOffre, BlacklistedContact }) => {
 
   const blacklistedContacts = await BlacklistedContact.find()
   const emails = blacklistedContacts.map(({ email }) => email)
-  debug(`Blacklisting offres with contact: ${JSON.stringify(ids)}`)
+  debug(`Blacklisting offres with contact: ${JSON.stringify(emails)}`)
   await Offre.updateAll({ 'data.contact.courriel': { inq: emails } }, { status: 'blacklisted' })
 }

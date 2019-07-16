@@ -18,7 +18,7 @@ module.exports = async ({ Offre }) => {
   await persistOffres(Offre, longTermeOffres)
   info('Set non received offres as unavailable')
   await updateOffresAvailabilities(Offre, longTermeOffres)
-  await blacklistOffres(Offre.app.models, longTermeOffres)
+  await blacklistOffres(Offre.app.models)
   if (process.env.TU_FF_ADD_FAKE_DATA === 'on') {
     await updateFakeOffresAvailablities(Offre)
   }
@@ -47,5 +47,5 @@ async function updateOffresAvailabilities (Offre, offres) {
 }
 
 async function updateFakeOffresAvailablities (Offre) {
-  return Offre.updateAll({ id: { ilike: 'fake-offre-%' } }, { status: 'available' })
+  return Offre.updateAll({ id: { regexp: 'fake-offre-id(.*)' } }, { status: 'available' })
 }

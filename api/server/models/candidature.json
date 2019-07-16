@@ -22,6 +22,9 @@
     },
     "messageId": {
       "type": "string"
+    },
+    "oldId": {
+      "type": "string"
     }
   },
   "validations": [],
