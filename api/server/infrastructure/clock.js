@@ -1,3 +1,3 @@
 module.exports = {
-  now: () => Date.now()
+  now: () => new Date()
 }
