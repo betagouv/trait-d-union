@@ -3,6 +3,8 @@ version: '3'
 services:
   api:
     image: node:10.15.3
+    depends_on:
+      - mongo
     command: ['node', 'api']
     working_dir: /usr/src/api
     restart: always
@@ -23,6 +25,14 @@ services:
       - POSTGRES_DB=traitdunion-database
       - POSTGRES_USER=trait
       - POSTGRES_PASSWORD=dunion
+    networks:
+      - storage
+
+  mongo:
+    image: mongo:4.0.3
+    ports:
+      - 27017:27017
+    restart: always
     networks:
       - storage
 
