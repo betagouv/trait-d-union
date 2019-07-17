@@ -1,6 +1,6 @@
 {
   "name": "api",
-  "version": "0.0.147",
+  "version": "0.0.148",
   "private": false,
   "main": "server/server.js",
   "description": "Back end application for Trait d'Union",
