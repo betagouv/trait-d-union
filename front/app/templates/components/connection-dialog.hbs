@@ -11,13 +11,13 @@
   {{#modal.body}}
     <div class="row-fluid">
       <div class="col py-2">
-        C'est ma première candidature ➡️
+        C'est ma première candidature sur le site ➡️
         {{#bs-button
           type="primary"
           class="text-uppercase"
           onClick=(action "openForm")
         }}
-          Remplir le formulaire
+          Inscription
         {{/bs-button}}
       </div>
     </div>
@@ -25,7 +25,7 @@
       <div class="col">
         {{#bs-form
           formLayout="inline" as |form|}}
-          J'ai déjà postulé avec cet email ➡️
+          J'ai déjà postulé avec cet email sur le site ➡️
           {{form.element
             control-type="email"
             placeholder="email"
@@ -39,7 +39,7 @@
             disabled=retrieveAccountButtonDisabled
             onClick=(action "retrieveAccount")
           }}
-            Récupérer mon compte
+            Connexion
           {{/bs-button}}
         {{/bs-form}}
       </div>

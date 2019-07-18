@@ -29,8 +29,8 @@
               {{/bs-button}}
             {{else}}
               <div class="col-12 bg-info text-primary">
-                <small>
-                  Vous avez déjà envoyé votre candidature pour cette offre.
+                <small class="text-success">
+                  Votre candidature a bien été envoyée pour cette offre 👍.
                 </small>
               </div>
             {{/if}}
@@ -51,4 +51,20 @@
     @openForm={{action "openForm" offre}}
     @retrieveAccount={{action "retrieveAccount"}}>
   </ConnectionDialog>
+{{/if}}
+{{#if isShowingError}}
+  {{#bs-modal
+    open=true
+    position="center" as |modal|}}
+    {{#modal.header}}
+      <div class="modal-title">
+        ❌ Erreur
+      </div>
+    {{/modal.header}}
+    {{#modal.body}}
+      <div class="row-fluid">
+        Aucun compte n'existe avec cet email. Vérifiez votre saisie.
+      </div>
+    {{/modal.body}}
+  {{/bs-modal}}
 {{/if}}

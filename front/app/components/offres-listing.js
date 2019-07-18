@@ -11,6 +11,7 @@ export default Component.extend({
   user: storageFor('user'),
   isApplying: true,
   isShowingModal: false,
+  isShowingError: false,
   selectedOffre: null,
 
   actions: {
@@ -33,9 +34,16 @@ export default Component.extend({
 
     async retrieveAccount (email) {
       this._hideConnectionDialog()
-      const userId = await this.get('api').retrieveUserId(email)
+      const userId = await this.get('api')
+        .retrieveUserId(email)
+        .catch(() => this.set('isShowingError', true))
       this.get('user').set('id', userId)
-      await this._applyToOffre(this.get('selectedOffre'), userId)
+      const newOffres = this.get('offres').store.findAll('offre')
+      this.transitionToRoute('offres', newOffres)
+      const selectedOffre = this.get('selectedOffre')
+      if (selectedOffre.nonRespondedOffre) {
+        await this._applyToOffre(this.get('selectedOffre'), userId)
+      }
     },
 
     async openForm () {

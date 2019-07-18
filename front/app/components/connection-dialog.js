@@ -17,7 +17,6 @@ export default Component.extend({
     emailChanged (enteredEmail) {
       if (enteredEmail.includes('@')) {
         this.set('enteredEmail', enteredEmail)
-        console.log(this.get('enteredEmail'))
         this.set('retrieveAccountButtonDisabled', false)
       } else {
         this.set('retrieveAccountButtonDisabled', true)
@@ -25,8 +24,6 @@ export default Component.extend({
     },
 
     retrieveAccount () {
-      console.log(this.get('enteredEmail'))
-
       this.retrieveAccount(this.get('enteredEmail'))
     }
   }
