@@ -39,7 +39,7 @@ export default Component.extend({
         .catch(() => this.set('isShowingError', true))
       this.get('user').set('id', userId)
       const newOffres = this.get('offres').store.findAll('offre')
-      this.transitionToRoute('offres', newOffres)
+      this.get('router').transitionTo('offres', newOffres)
       const selectedOffre = this.get('selectedOffre')
       if (selectedOffre.nonRespondedOffre) {
         await this._applyToOffre(this.get('selectedOffre'), userId)
