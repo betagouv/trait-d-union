@@ -4,6 +4,7 @@ import { computed } from '@ember/object'
 import { run } from '@ember/runloop'
 import { inject as service } from '@ember/service'
 import { storageFor } from 'ember-local-storage'
+import uuidv4 from 'uuid/v4'
 
 const createCardFadeAnimation = (toRight) => ({
   translateX: {
@@ -36,7 +37,7 @@ const getInitialCardStyle = factor => `transform: translateY(${(factor - 4) * -1
 
 export default Component.extend({
   user: storageFor('user'),
-  answerOffre: service(),
+  api: service(),
   classNames: ['offres-stack'],
   tagName: 'div',
   items: null,
@@ -56,7 +57,7 @@ export default Component.extend({
   }),
 
   visibleItems: computed('currentItemIndex', 'visibleItemAmount', 'items.[]', function () {
-    const items = this.get('items')
+    const items = this.get('items').filter(offre => offre.nonRespondedOffre)
     const currentItemIndex = this.get('currentItemIndex')
     const visibleItemAmount = this.get('visibleItemAmount')
     const activeItems = EArray(items.slice(currentItemIndex, currentItemIndex + visibleItemAmount))
@@ -86,20 +87,24 @@ export default Component.extend({
   actions: {
     notInterested () {
       const offre = this.currentItem
-      this.answerOffre.deny({ offre }).then(() => {
+      this.api.denyOffre(offre.id, this._getUserId()).then(() => {
         this.removeLastCard({ fadeToRight: false })
       }).catch(error => console.log(`Error occured while denying offer: ${error}`))
     },
 
     interested () {
       const offre = this.currentItem
-      this.answerOffre.applyTo(offre.id, this._getUserId()).then(() => {
+      this.api.applyToOffre(offre.id, this._getUserId()).then(() => {
         this.removeLastCard({ fadeToRight: true })
       }).catch(error => console.log(`Error occured while accepting offer: ${error}`))
     }
   },
 
   _getUserId: function () {
+    const userId = this.get('user').get('id')
+    if (!userId) {
+      this.get('user').set('id', uuidv4())
+    }
     return this.get('user').get('id')
   }
 })

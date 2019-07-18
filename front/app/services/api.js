@@ -3,8 +3,8 @@ import Service, { inject as service } from '@ember/service'
 export default Service.extend({
   http: service('ajax'),
 
-  async deny ({ offreId }) {
-    // return this.http.post(`/offres/${offreId}`, { action: 'deny', userId: this.userId })
+  async denyOffre (offreId, userId) {
+    return this.http.put(`/candidats/${userId}/candidatures/rel/${offreId}`, { status: 'denied' })
   },
 
   async applyToOffre (offreId, userId) {
