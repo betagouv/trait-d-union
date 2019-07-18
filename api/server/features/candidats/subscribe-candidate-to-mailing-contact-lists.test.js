@@ -24,7 +24,7 @@ describe('Subscribe Candidate to mailing contacts list', () => {
         'NOM_COMPLET': 'Nom Prénom',
         'URL_CV': 'https://link.to/cv'
       },
-      listIds: [23, 24]
+      listIds: [23]
     })
   })
 
