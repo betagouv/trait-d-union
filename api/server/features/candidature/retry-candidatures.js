@@ -12,7 +12,7 @@ module.exports = ({ now, delays, sendCandidatureEmail, isMessageOpened }) => {
 
       return Candidature.find({
         where: {
-          updatedAt: {
+          createdAt: {
             between: [maximumDelaysBeforeNow, minimumDelayBeforeNow]
           },
           status: {

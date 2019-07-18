@@ -42,7 +42,7 @@ describe('Retry Candidatures', () => {
 
     expect(Candidature.find).to.be.calledWith({
       where: {
-        updatedAt: {
+        createdAt: {
           between: [tenDaysBeforeNow, sevenDaysBeforeNow]
         },
         status: {
