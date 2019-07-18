@@ -52,7 +52,39 @@ function fakeOffreParameters (id = 'fake-offre-id') {
       secteurActiviteLibelle: 'Restauration traditionnelle',
       typeContrat: 'CDI',
       appellationlibelle: `Emploi fictif de test (${id})`,
-      url: 'https://candidat.pole-emploi.fr/offres/recherche/detail/086QKQK'
+      url: 'https://candidat.pole-emploi.fr/offres/recherche/detail/086QKQK',
+      sessions: [
+        {
+          'numero': 20191,
+          'dateDebut': '2019-09-01T00:00:00.000Z',
+          'dateFin': '2019-12-17T00:00:00.000Z',
+          'duration': 4,
+          'id': 1713,
+          'actionNumero': 2477,
+          'communeCodeInsee': 54578,
+          'action': {
+            'numero': 2477,
+            'niveauQualificationSortie': 'Niveau V - Formations équivalentes aux CAP-BEP',
+            'niveauQualificationEntree': 'sans-diplome',
+            'codeDiplome': 83419
+          }
+        },
+        {
+          'numero': 20191,
+          'dateDebut': '2019-09-01T00:00:00.000Z',
+          'dateFin': '2019-12-17T00:00:00.000Z',
+          'duration': 4,
+          'id': 32,
+          'actionNumero': 2477,
+          'communeCodeInsee': 54578,
+          'action': {
+            'numero': 2477,
+            'niveauQualificationSortie': 'Niveau V - Formations équivalentes aux CAP-BEP',
+            'niveauQualificationEntree': 'sans-diplome',
+            'codeDiplome': 83419
+          }
+        }
+      ]
     }
   }
 }

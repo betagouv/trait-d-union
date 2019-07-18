@@ -3,6 +3,7 @@ import { A as EArray } from '@ember/array'
 import { computed } from '@ember/object'
 import { run } from '@ember/runloop'
 import { inject as service } from '@ember/service'
+import { storageFor } from 'ember-local-storage'
 
 const createCardFadeAnimation = (toRight) => ({
   translateX: {
@@ -10,7 +11,7 @@ const createCardFadeAnimation = (toRight) => ({
     duration: 250
   },
   translateY: {
-    value: `-30vw`,
+    value: '-30vw',
     duration: 250
   },
   rotate: {
@@ -21,22 +22,23 @@ const createCardFadeAnimation = (toRight) => ({
     value: 0.3,
     duration: 200
   },
-  easing: `easeInQuad`
+  easing: 'easeInQuad'
 })
 
 const createCardShiftAnimation = factor => ({
-  translateY: (factor - 3) * -1.5 + `vh`,
+  translateY: (factor - 3) * -1.5 + 'vh',
   scale: 1 - factor * 0.03,
   duration: 300,
-  easing: `easeOutSine`
+  easing: 'easeOutSine'
 })
 
 const getInitialCardStyle = factor => `transform: translateY(${(factor - 4) * -1.5}vh) scale(${1 - factor * 0.03});`
 
 export default Component.extend({
+  user: storageFor('user'),
   answerOffre: service(),
   classNames: ['offres-stack'],
-  tagName: `div`,
+  tagName: 'div',
   items: null,
   offres: null,
   visibleItemAmount: 5,
@@ -47,16 +49,16 @@ export default Component.extend({
   getInitialCardStyle,
   // state
   isInitialRender: true,
-  currentItem: computed(`currentItemIndex`, `items.[]`, function () {
-    const currentItemIndex = this.get(`currentItemIndex`)
-    const items = this.get(`items`)
+  currentItem: computed('currentItemIndex', 'items.[]', function () {
+    const currentItemIndex = this.get('currentItemIndex')
+    const items = this.get('items')
     return items.objectAt(currentItemIndex)
   }),
 
-  visibleItems: computed(`currentItemIndex`, `visibleItemAmount`, `items.[]`, function () {
-    const items = this.get(`items`)
-    const currentItemIndex = this.get(`currentItemIndex`)
-    const visibleItemAmount = this.get(`visibleItemAmount`)
+  visibleItems: computed('currentItemIndex', 'visibleItemAmount', 'items.[]', function () {
+    const items = this.get('items')
+    const currentItemIndex = this.get('currentItemIndex')
+    const visibleItemAmount = this.get('visibleItemAmount')
     const activeItems = EArray(items.slice(currentItemIndex, currentItemIndex + visibleItemAmount))
     activeItems.reverse()
     return activeItems
@@ -69,14 +71,14 @@ export default Component.extend({
   // lifecycle
   didInsertElement () {
     run.next(() => {
-      this.set(`isInitialRender`, false)
+      this.set('isInitialRender', false)
     })
   },
 
   removeLastCard ({ fadeToRight }) {
     this.set('fadeToRight', fadeToRight)
     run.next(() => {
-      this.incrementProperty(`currentItemIndex`)
+      this.incrementProperty('currentItemIndex')
       this.items.shiftObject()
     })
   },
@@ -91,9 +93,13 @@ export default Component.extend({
 
     interested () {
       const offre = this.currentItem
-      this.answerOffre.applyTo({ offre }).then(() => {
+      this.answerOffre.applyTo(offre.id, this._getUserId()).then(() => {
         this.removeLastCard({ fadeToRight: true })
       }).catch(error => console.log(`Error occured while accepting offer: ${error}`))
     }
+  },
+
+  _getUserId: function () {
+    return this.get('user').get('id')
   }
 })
