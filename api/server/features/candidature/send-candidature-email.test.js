@@ -48,7 +48,39 @@ describe('Send Candidature email', () => {
           'id_candidature': candidatureId,
           'email_candidat': candidat.email
         },
-        'attachment': [{ 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }]
+        'attachment': [{ 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }],
+        tags: ['Candidature_DE']
+      })
+    })
+    context('when the environment is Staging', () => {
+      beforeEach(() => {
+        process.env.APP_ENV = 'staging'
+      })
+      afterEach(() => {
+        process.env.APP_ENV = 'production'
+      })
+      it('sends email to corporate with correct tags', async () => {
+        candidat.cvUrl = 'https://admin.typeform.com/form/P6NFOZ/field/WlLbkyygWkkh/results/file.ext/download'
+
+        await sendCandidatureEmail({ offre, candidat, candidatureId })
+
+        expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
+          'templateId': 52,
+          'to': [{ 'name': offre.contact.nom, 'email': 'contact@courriel.fr' }],
+          'replyTo': { 'name': candidat.nomPrenom, 'email': candidat.email },
+          'params': {
+            'Titre_offre': 'Titre offre',
+            'id_offre': offre.id,
+            'Nom_prenom': candidat.nomPrenom,
+            'URL_CV': candidat.cvUrl,
+            'Age': candidat.age,
+            'Telephone': candidat.telephone,
+            'id_candidature': candidatureId,
+            'email_candidat': candidat.email
+          },
+          'attachment': [{ 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }],
+          tags: ['Candidature_DE_Staging']
+        })
       })
     })
     it('normalizes the CV url', async () => {
@@ -70,7 +102,8 @@ describe('Send Candidature email', () => {
           'id_candidature': candidatureId,
           'email_candidat': candidat.email
         },
-        'attachment': [{ 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }]
+        'attachment': [{ 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }],
+        tags: ['Candidature_DE']
       })
     })
     it('returns messageId of message sent', async () => {
@@ -98,7 +131,8 @@ describe('Send Candidature email', () => {
             'id_candidature': candidatureId,
             'email_candidat': candidat.email
           },
-          'attachment': [{ 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }]
+          'attachment': [{ 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }],
+          tags: ['Relance_Candidature_DE']
         })
       })
     })
@@ -135,7 +169,8 @@ describe('Send Candidature email', () => {
         'attachment': [
           { 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' },
           { 'url': candidat.cvUrl }
-        ]
+        ],
+        tags: ['Candidature_DE']
       })
     })
     context('when email is a retry', () => {
@@ -169,7 +204,8 @@ describe('Send Candidature email', () => {
           'attachment': [
             { 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' },
             { 'url': candidat.cvUrl }
-          ]
+          ],
+          tags: ['Relance_Candidature_DE']
         })
       })
     })

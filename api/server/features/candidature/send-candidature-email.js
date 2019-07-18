@@ -4,7 +4,8 @@ module.exports = ({ smtpApiClient }) => async ({ offre, candidat, candidatureId,
   const cvUrl = normalizeRemoveDiacretics(candidat.cvUrl)
   const templateId = computeTemplateId({ destinataire: destinataire(offre), retry })
   const attachment = destinataireIsPoleEmploi(offre) ? [PNSMPattachment, { url: cvUrl }] : [PNSMPattachment]
-
+  const tag = retry ? 'Relance_Candidature_DE' : 'Candidature_DE'
+  const tags = [`${tag}${process.env.APP_ENV === 'staging' ? '_Staging' : ''}`]
   const { messageId } = await smtpApiClient.sendTransacEmail({
     templateId,
     to: [{ name: offre.contact.nom, email: offre.contact.courriel }],
@@ -19,7 +20,8 @@ module.exports = ({ smtpApiClient }) => async ({ offre, candidat, candidatureId,
       id_candidature: candidatureId,
       email_candidat: candidat.email
     },
-    attachment
+    attachment,
+    tags
   }).catch(err => {
     error(`Error while sending candidature email with SendInBlue - ${err.response.text}`)
     throw err
