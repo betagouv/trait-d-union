@@ -38,6 +38,7 @@ const createSearchOffres = (poleEmploiApiService) => async (codesROME) => {
     commune: 57463,
     distance: 10,
     experience: 1,
+    experienceExigence: 'D',
     range: '1-149',
     sort: 2,
     typeContrat: 'CDI,CDD'
