@@ -5,6 +5,6 @@ module.exports = ({ smtpApiClient }) => async ({ offre, candidat }) => {
     params: {
       Titre_offre: offre.intitule
     },
-    tags: [`Notification_ouverture_cv${process.env.APP_ENV === 'staging' ? '_Staging' : ''}`]
+    tags: [`Notification_envoi_cv${process.env.APP_ENV === 'staging' ? '_Staging' : ''}`]
   })
 }

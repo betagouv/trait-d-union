@@ -12,7 +12,8 @@
     },
     "SetupRemoteMethods": {
       "disableAllExcept": [
-        "find"
+        "find",
+        "firstOpeningEvent"
       ]
     }
   },

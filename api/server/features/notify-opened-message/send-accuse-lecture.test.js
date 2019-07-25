@@ -1,7 +1,7 @@
 const { expect, sinon } = require('../../../tests/test-utils')
-const createSendAccuseCandidatureEmail = require('./send-accuse-candidature-email')
+const createSendAccuseLecture = require('./send-accuse-lecture')
 
-describe('Send accuse candidature email', () => {
+describe('Send accuse lecture email', () => {
   const smtpApiClient = {
     sendTransacEmail: sinon.spy(async () => {
     })
@@ -22,18 +22,22 @@ describe('Send accuse candidature email', () => {
     age: 45,
     cvUrl: 'https://admin.typeform.com/form/P6NFOZ/field/WlLbkyygWkkh/results/file.ext/download'
   }
-  const sendAccuseCandidatureEmail = createSendAccuseCandidatureEmail({ smtpApiClient })
+  const candidature = {
+    offre: () => offre,
+    candidat: () => candidat
+  }
+  const sendAccuseLecture = createSendAccuseLecture({ smtpApiClient })
 
   it('sends correct template email with info from offre and candidat', async () => {
-    await sendAccuseCandidatureEmail({ offre, candidat })
+    await sendAccuseLecture(candidature)
 
     expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
-      'templateId': 65,
+      'templateId': 64,
       'to': [{ 'name': 'Lorem ipsum dolor Nom Prenom', 'email': 'an_account@example.com' }],
       'params': {
         'Titre_offre': 'Titre offre'
       },
-      tags: ['Notification_envoi_cv']
+      tags: ['Notification_ouverture_cv']
     })
   })
 
@@ -45,15 +49,15 @@ describe('Send accuse candidature email', () => {
       process.env.APP_ENV = 'production'
     })
     it('sends email to corporate with correct tags', async () => {
-      await sendAccuseCandidatureEmail({ offre, candidat })
+      await sendAccuseLecture(candidature)
 
       expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
-        'templateId': 65,
+        'templateId': 64,
         'to': [{ 'name': 'Lorem ipsum dolor Nom Prenom', 'email': 'an_account@example.com' }],
         'params': {
           'Titre_offre': 'Titre offre'
         },
-        tags: ['Notification_envoi_cv_Staging']
+        tags: ['Notification_ouverture_cv_Staging']
       })
     })
   })
