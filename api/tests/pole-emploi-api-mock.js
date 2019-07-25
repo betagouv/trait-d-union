@@ -27,6 +27,7 @@ exports.set = () => {
     .query({
       range: '1-149',
       experience: 1,
+      experienceExigence: 'D',
       sort: 2,
       codeROME: 'metier-avec-une-seule-offre-from-PE',
       distance: 10,

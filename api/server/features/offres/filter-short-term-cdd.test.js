@@ -2,6 +2,24 @@ const { expect } = require('../../../tests/test-utils')
 const filterShortTermCDD = require('./filter-short-term-cdd')
 
 describe('filter short term CDD', function () {
+  context('when natureContrat is Contrat Professionnalisation', () => {
+    it('returns no offer', () => {
+      const offres = [{ natureContrat: 'Cont. professionnalisation' }]
+
+      const filteredOffres = filterShortTermCDD(offres)
+
+      expect(filteredOffres).to.eql([])
+    })
+  })
+  context('when natureContrat is Contrat apprentissage', () => {
+    it('returns no offer', () => {
+      const offres = [{ natureContrat: 'Contrat apprentissage' }]
+
+      const filteredOffres = filterShortTermCDD(offres)
+
+      expect(filteredOffres).to.eql([])
+    })
+  })
   context('when type is CDI', () => {
     it('returns all offres', () => {
       const offres = [{ typeContrat: 'CDI', typeContratLibelle: '' }]
