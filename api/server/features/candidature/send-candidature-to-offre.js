@@ -1,9 +1,9 @@
 const { info, error } = require('../../infrastructure/logger')
 const sendSlackNotification = require('../../infrastructure/send-slack-notification')
 const { smtpApiClient } = require('../../infrastructure/sendinblue-api-client')
-const wait = require('../../infrastructure/wait')(1000)
 
-const sendCandidatureEmail = require('./send-candidature-email')({ smtpApiClient, wait })
+const sendCandidatureEmail = require('./send-candidature-email')({ smtpApiClient })
+const sendAccuseCandidatureEmail = require('./send-accuse-candidature-email')({ smtpApiClient })
 
 module.exports = async ({ Candidat, Offre }, offreId, candidatId) => {
   const offreFromDB = await Offre.findById(offreId)
@@ -20,7 +20,8 @@ module.exports = async ({ Candidat, Offre }, offreId, candidatId) => {
       })
     info('Candidature successfully sent!')
     await notifyCandidatureSuccess({ sendSlackNotification }, { candidat, offre })
-    candidature.updateAttributes({ status: 'sent', messageId })
+    await sendAccuseCandidatureEmail({ offre, candidat })
+    await candidature.updateAttributes({ status: 'sent', messageId })
   } else {
     info('No offre found - notifying it to Slack and exiting')
     await notifyCandidatureFailure({ sendSlackNotification }, {
