@@ -90,6 +90,15 @@ function createFormResponse () {
       },
       {
         'type': 'text',
+        'text': 'id PE',
+        'field': {
+          'id': 'PUBOIqGPlWSI',
+          'type': 'short_text',
+          'ref': 'fc6d0ec8-0893-4115-9e55-98406deccea7'
+        }
+      },
+      {
+        'type': 'text',
         'text': 'Lorem ipsum dolor Nom Prenom',
         'field': {
           'id': 't1XX8lNuvgzf',
