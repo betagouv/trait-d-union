@@ -2,7 +2,7 @@ const { debug } = require('../../infrastructure/logger')
 
 module.exports = ({ now, delays, sendCandidatureEmail, isMessageOpened }) => {
   const sendRetryCandidatureEmail = createSendRetryCandidatureEmail(sendCandidatureEmail)
-  const keepMessagesNotOpened = createKeepMessagesNotOpened(isMessageOpened)
+  const updateMessageStatus = createUpdateMessageStatus(isMessageOpened)
 
   return async ({ Candidature }) => {
     async function getCandidaturesToRetry () {
@@ -26,26 +26,35 @@ module.exports = ({ now, delays, sendCandidatureEmail, isMessageOpened }) => {
     const candidaturesToRetry = await getCandidaturesToRetry()
 
     debug(`${candidaturesToRetry.length} candidature found`)
-    return Promise.all(candidaturesToRetry
-      .filter(keepMessagesNotOpened)
-      .map(sendRetryCandidatureEmail))
+    const candidatures = await Promise.all(candidaturesToRetry.map(updateMessageStatus))
+    const nonOpenedCandidatures = candidatures.filter(({ status }) => status === 'sent')
+    const retriedCandidatures = await Promise.all(nonOpenedCandidatures.map(sendRetryCandidatureEmail))
+    return Promise.all(retriedCandidatures.map(updateStatus))
   }
 }
 
 function createSendRetryCandidatureEmail (sendCandidatureEmail) {
-  return (candidature) => {
+  return async (candidature) => {
     const offre = candidature.offre().data
     const candidat = candidature.candidat()
     debug(`Will send a retry email for offre ${offre.id} from candidat ${candidat.id}`)
-    return sendCandidatureEmail({ offre: offre, candidat: candidat, candidatureId: candidature.id, retry: true })
+    await sendCandidatureEmail({ offre: offre, candidat: candidat, candidatureId: candidature.id, retry: true })
+    return candidature
   }
 }
 
-function createKeepMessagesNotOpened (isMessageOpened) {
+function createUpdateMessageStatus (isMessageOpened) {
   return async candidature => {
     const offre = candidature.offre().data
-    return isMessageOpened({ messageId: candidature.messageId, email: offre.contact.courriel })
+    const isOpened = await isMessageOpened({ messageId: candidature.messageId, email: offre.contact.courriel })
+    candidature.status = isOpened ? 'opened' : 'sent'
+    await candidature.updateAttribute('status', isOpened ? 'opened' : 'sent')
+    return candidature
   }
+}
+
+async function updateStatus (candidature) {
+  return candidature.updateAttribute('status', 'retried')
 }
 
 const millisecondsPerDay = 24 * 3600 * 1000

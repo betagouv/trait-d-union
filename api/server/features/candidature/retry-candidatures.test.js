@@ -5,7 +5,7 @@ const configuration = {
   maximumDays: 10
 }
 const sendCandidatureEmail = sinon.spy(async () => ({}))
-const isMessageOpened = sinon.spy(async (messageId) => messageId === 'opened-message')
+const isMessageOpened = sinon.spy(async ({ messageId }) => messageId === 'opened-message')
 const retryCandidatures = require('./retry-candidatures')({
   isMessageOpened,
   sendCandidatureEmail,
@@ -22,13 +22,15 @@ describe('Retry Candidatures', () => {
     id: 'opened-candidature-id',
     messageId: 'opened-message',
     offre: () => ({ data: { id: 'offre-id-opened', contact: { courriel: 'mail@domain.fr' } } }),
-    candidat: () => ({ id: 'candidat-id-opened' })
+    candidat: () => ({ id: 'candidat-id-opened' }),
+    updateAttribute: sinon.spy(async () => null)
   }
   const nonOpenedCandidature = {
     id: 'non-opened-candidature-id',
     messageId: 'non-opened-message',
     offre: () => ({ data: { id: 'offre-id-non-opened', contact: { courriel: 'mail@domain.fr' } } }),
-    candidat: () => ({ id: 'candidat-id-non-opened' })
+    candidat: () => ({ id: 'candidat-id-non-opened' }),
+    updateAttribute: sinon.spy(async () => null)
   }
   const Candidature = {
     find: sinon.spy(async () => [
@@ -69,5 +71,17 @@ describe('Retry Candidatures', () => {
       candidatureId: 'non-opened-candidature-id',
       retry: true
     })
+    expect(sendCandidatureEmail).to.not.have.been.calledWith({
+      offre: { id: 'offre-id-opened', contact: { courriel: 'mail@domain.fr' } },
+      candidat: { id: 'candidat-id-opened' },
+      candidatureId: 'opened-candidature-id',
+      retry: true
+    })
+  })
+
+  it('updates candidature status', async () => {
+    await retryCandidatures({ Candidature })
+
+    expect(nonOpenedCandidature.updateAttribute).to.have.been.calledWith('status', 'retried')
   })
 })

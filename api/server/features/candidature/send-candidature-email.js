@@ -23,7 +23,7 @@ module.exports = ({ smtpApiClient }) => async ({ offre, candidat, candidatureId,
     attachment,
     tags
   }).catch(err => {
-    error(`Error while sending candidature email with SendInBlue - ${err.response.text}`)
+    error(`Error while sending candidature email with SendInBlue - ${err.response ? err.response.text : err}`)
     throw err
   })
   return messageId
