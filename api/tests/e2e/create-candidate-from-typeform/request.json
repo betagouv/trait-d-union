@@ -76,6 +76,15 @@
       },
       {
         "type": "text",
+        "text": "Lorem ipsum dolor Nom Prenom",
+        "field": {
+          "id": "t1XX8lNuvgzf",
+          "type": "short_text",
+          "ref": "37afdfcc-545b-45b5-82ff-587bf89bee19"
+        }
+      },
+      {
+        "type": "text",
         "text": "Lorem ipsum dolor Phone",
         "field": {
           "id": "vd777D41TS8n",
