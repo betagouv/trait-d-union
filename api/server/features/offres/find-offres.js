@@ -39,8 +39,8 @@ function keepMetiersWithSessions (metiers) {
 }
 
 function extractSessionsFrom (metier) {
-  const actions = metier.diplomes().map(({ actions }) => actions())
-  const sessions = flatten(actions).map(({ sessions }) => sessions())
+  const actions = metier.diplomes().map(({ actions }) => actions().map(action => action.toJSON()))
+  const sessions = flatten(actions).map(({ sessions }) => sessions)
   return flatten(sessions)
 }
 
