@@ -1,7 +1,8 @@
 const { info } = require('../infrastructure/logger')
 const retrieveCandidatureFromMessageId = require('../features/notify-opened-message/retrieve-candidature-from-message-id')
 const setCandidatureOpened = require('../features/notify-opened-message/set-candidature-opened')
-const sendAccuseLecture = require('../features/notify-opened-message/send-accuse-lecture')
+const { smtpApiClient } = require('../infrastructure/sendinblue-api-client')
+const sendAccuseLecture = require('../features/notify-opened-message/send-accuse-lecture')({ smtpApiClient })
 
 module.exports = function (Candidature) {
   Candidature.firstOpeningEvent = async (messageId) => {
