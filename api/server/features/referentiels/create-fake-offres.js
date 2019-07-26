@@ -60,10 +60,10 @@ function fakeOffreParameters (id = 'fake-offre-id') {
           'dateFin': '2019-12-17T00:00:00.000Z',
           'duration': 4,
           'id': 1713,
-          'actionNumero': 2477,
+          'actionNumero': 2139,
           'communeCodeInsee': 54578,
           'action': {
-            'numero': 2477,
+            'numero': 2139,
             'niveauQualificationSortie': 'Niveau V - Formations équivalentes aux CAP-BEP',
             'niveauQualificationEntree': 'sans-diplome',
             'codeDiplome': 83419
@@ -75,10 +75,10 @@ function fakeOffreParameters (id = 'fake-offre-id') {
           'dateFin': '2019-12-17T00:00:00.000Z',
           'duration': 4,
           'id': 32,
-          'actionNumero': 2477,
+          'actionNumero': 2140,
           'communeCodeInsee': 54578,
           'action': {
-            'numero': 2477,
+            'numero': 2140,
             'niveauQualificationSortie': 'Niveau V - Formations équivalentes aux CAP-BEP',
             'niveauQualificationEntree': 'sans-diplome',
             'codeDiplome': 83419
