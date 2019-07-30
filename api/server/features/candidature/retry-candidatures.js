@@ -26,6 +26,8 @@ module.exports = ({ now, delays, sendCandidatureEmail, isMessageOpened }) => {
     const candidaturesToRetry = await getCandidaturesToRetry()
 
     debug(`${candidaturesToRetry.length} candidature found`)
+    candidaturesToRetry.map(candidature => debug(`candidature.id: ${candidature.id} - candidat: ${JSON.stringify(candidature.candidat())}`))
+
     const candidatures = await Promise.all(candidaturesToRetry.map(updateMessageStatus))
     const nonOpenedCandidatures = candidatures.filter(({ status }) => status === 'sent')
     const retriedCandidatures = await Promise.all(nonOpenedCandidatures.map(sendRetryCandidatureEmail))
