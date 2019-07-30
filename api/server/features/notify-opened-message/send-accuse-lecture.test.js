@@ -8,10 +8,12 @@ describe('Send accuse lecture email', () => {
   }
   const offre = {
     id: 'offreId',
-    intitule: 'Titre offre',
-    contact: {
-      nom: 'Employeur',
-      courriel: 'contact@courriel.fr'
+    data: {
+      intitule: 'Titre offre',
+      contact: {
+        nom: 'Employeur',
+        courriel: 'contact@courriel.fr'
+      }
     }
   }
   const candidat = {
