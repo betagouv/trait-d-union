@@ -9,8 +9,8 @@ module.exports = function (Candidature) {
     info(`New "First opening" event received from sendinblue webhook (messageId: ${messageId})`)
     const candidature = await retrieveCandidatureFromMessageId({ Candidature }, messageId)
     if (candidature) {
-      await setCandidatureOpened(candidature)
       await sendAccuseLecture(candidature)
+      await setCandidatureOpened(candidature)
     }
   }
 

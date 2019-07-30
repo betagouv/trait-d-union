@@ -1,7 +1,10 @@
+const { debug } = require('../../infrastructure/logger')
+
 module.exports = ({ smtpApiClient }) => async (candidature) => {
   const candidat = candidature.candidat()
   const offre = candidature.offre()
 
+  debug(`Sending email to notify candidat (${candidat.nomPrenom} - ${candidat.email}) about CV opening (Offre ${offre.intitule}`)
   return smtpApiClient.sendTransacEmail({
     templateId: 64,
     to: [{ name: candidat.nomPrenom, email: candidat.email }],
