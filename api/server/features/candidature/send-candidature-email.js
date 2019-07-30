@@ -1,4 +1,5 @@
 const { error } = require('../../infrastructure/logger')
+const { DateTime } = require('luxon')
 
 module.exports = ({ smtpApiClient }) => async ({ offre, candidat, candidatureId, retry = false }) => {
   const cvUrl = normalizeRemoveDiacretics(candidat.cvUrl)
@@ -18,7 +19,10 @@ module.exports = ({ smtpApiClient }) => async ({ offre, candidat, candidatureId,
       Age: candidat.age,
       Telephone: candidat.telephone,
       id_candidature: candidatureId,
-      email_candidat: candidat.email
+      email_candidat: candidat.email,
+      sessionDateDebut: formatDate(offre.sessions[0].dateDebut),
+      sessionDateFin: formatDate(offre.sessions[0].dateFin),
+      sessionDuree: offre.sessions[0].duration
     },
     attachment,
     tags
@@ -56,3 +60,8 @@ const templateIds = {
   }
 }
 const PNSMPattachment = { url: 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }
+
+function formatDate (date) {
+  const dateTime = DateTime.fromISO(date)
+  return dateTime.setLocale('fr').toLocaleString(DateTime.DATE_FULL)
+}

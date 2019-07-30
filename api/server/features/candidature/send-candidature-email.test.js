@@ -13,7 +13,14 @@ describe('Send Candidature email', () => {
     contact: {
       nom: 'Employeur',
       courriel: 'contact@courriel.fr'
-    }
+    },
+    sessions: [
+      {
+        duration: 6,
+        dateDebut: '2019-09-01',
+        dateFin: '2019-12-02'
+      }
+    ]
   }
   const candidat = {
     id: '71854445-1512-47b1-bc6d-e0491e764a51',
@@ -46,7 +53,10 @@ describe('Send Candidature email', () => {
           'Age': candidat.age,
           'Telephone': candidat.telephone,
           'id_candidature': candidatureId,
-          'email_candidat': candidat.email
+          'email_candidat': candidat.email,
+          sessionDateDebut: '1 septembre 2019',
+          sessionDateFin: '2 décembre 2019',
+          sessionDuree: 6
         },
         'attachment': [{ 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }],
         tags: ['Candidature_DE']
@@ -76,7 +86,10 @@ describe('Send Candidature email', () => {
             'Age': candidat.age,
             'Telephone': candidat.telephone,
             'id_candidature': candidatureId,
-            'email_candidat': candidat.email
+            'email_candidat': candidat.email,
+            sessionDateDebut: '1 septembre 2019',
+            sessionDateFin: '2 décembre 2019',
+            sessionDuree: 6
           },
           'attachment': [{ 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }],
           tags: ['Candidature_DE_Staging']
@@ -100,7 +113,10 @@ describe('Send Candidature email', () => {
           'Age': candidat.age,
           'Telephone': candidat.telephone,
           'id_candidature': candidatureId,
-          'email_candidat': candidat.email
+          'email_candidat': candidat.email,
+          sessionDateDebut: '1 septembre 2019',
+          sessionDateFin: '2 décembre 2019',
+          sessionDuree: 6
         },
         'attachment': [{ 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }],
         tags: ['Candidature_DE']
@@ -129,7 +145,10 @@ describe('Send Candidature email', () => {
             'Age': candidat.age,
             'Telephone': candidat.telephone,
             'id_candidature': candidatureId,
-            'email_candidat': candidat.email
+            'email_candidat': candidat.email,
+            sessionDateDebut: '1 septembre 2019',
+            sessionDateFin: '2 décembre 2019',
+            sessionDuree: 6
           },
           'attachment': [{ 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }],
           tags: ['Relance_Candidature_DE']
@@ -147,7 +166,14 @@ describe('Send Candidature email', () => {
         contact: {
           nom: 'Conseiller PE',
           courriel: 'contact@pole-emploi.fr'
-        }
+        },
+        sessions: [
+          {
+            duration: 6,
+            dateDebut: '2019-09-01',
+            dateFin: '2019-12-02'
+          }
+        ]
       }
 
       await sendCandidatureEmail({ offre: offrePoleEmploi, candidat, candidatureId })
@@ -164,7 +190,10 @@ describe('Send Candidature email', () => {
           'Age': candidat.age,
           'Telephone': candidat.telephone,
           'id_candidature': candidatureId,
-          'email_candidat': candidat.email
+          'email_candidat': candidat.email,
+          sessionDateDebut: '1 septembre 2019',
+          sessionDateFin: '2 décembre 2019',
+          sessionDuree: 6
         },
         'attachment': [
           { 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' },
@@ -182,7 +211,14 @@ describe('Send Candidature email', () => {
           contact: {
             nom: 'Conseiller PE',
             courriel: 'contact@pole-emploi.fr'
-          }
+          },
+          sessions: [
+            {
+              duration: 6,
+              dateDebut: '2019-09-01',
+              dateFin: '2019-12-02'
+            }
+          ]
         }
 
         await sendCandidatureEmail({ offre: offrePoleEmploi, candidat, candidatureId, retry: true })
@@ -199,7 +235,10 @@ describe('Send Candidature email', () => {
             'Age': candidat.age,
             'Telephone': candidat.telephone,
             'id_candidature': 'candidature_id',
-            'email_candidat': candidat.email
+            'email_candidat': candidat.email,
+            sessionDateDebut: '1 septembre 2019',
+            sessionDateFin: '2 décembre 2019',
+            sessionDuree: 6
           },
           'attachment': [
             { 'url': 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' },

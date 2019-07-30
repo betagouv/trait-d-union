@@ -10,10 +10,10 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "node .",
+    "start": "NODE_ICU_DATA=\"$(pwd)/node_modules/full-icu\" node .",
     "start:dev": "export $(cat .dev.env | xargs) && nodemon .",
     "test:e2e": "export $(cat .e2e.env | xargs) && cucumber-js tests/e2e/** --require tests/e2e/step-definitions/steps.js --format ../node_modules/cucumber-pretty",
-    "test": "NODE_ENV=test mocha **/*.test.js --exclude **/node_modules/**",
+    "test": "NODE_ICU_DATA=\"$(pwd)/node_modules/full-icu\" NODE_ENV=test mocha **/*.test.js --exclude **/node_modules/**",
     "test:watch": "npm run test -- --watch --reporter=min",
     "posttest": "npm run lint"
   },
@@ -23,6 +23,7 @@
     "bunyan-format": "0.2.1",
     "compression": "1.7.4",
     "cors": "2.8.5",
+    "full-icu": "1.3.0",
     "got": "9.6.0",
     "helmet": "3.18.0",
     "joi": "14.3.1",
