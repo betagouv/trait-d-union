@@ -6,6 +6,7 @@ describe('Format Candidat and OffreId from Form Response', () => {
 
   const expectedFormattedFormResponse = {
     candidat: {
+      poleEmploiId: 'id PE',
       id: '71854445-1512-47b1-bc6d-e0491e764a51',
       email: 'an_account@example.com',
       nomPrenom: 'Lorem ipsum dolor Nom Prenom',

@@ -24,6 +24,7 @@ describe('Send Candidature email', () => {
   }
   const candidat = {
     id: '71854445-1512-47b1-bc6d-e0491e764a51',
+    poleEmploiId: 'id PE',
     email: 'an_account@example.com',
     nomPrenom: 'Lorem ipsum dolor Nom Prenom',
     telephone: 'Lorem ipsum dolor Phone',
@@ -54,6 +55,7 @@ describe('Send Candidature email', () => {
           'Telephone': candidat.telephone,
           'id_candidature': candidatureId,
           'email_candidat': candidat.email,
+          poleEmploiId: 'id PE',
           sessionDateDebut: '1 septembre 2019',
           sessionDateFin: '2 décembre 2019',
           sessionDuree: 6
@@ -87,6 +89,7 @@ describe('Send Candidature email', () => {
             'Telephone': candidat.telephone,
             'id_candidature': candidatureId,
             'email_candidat': candidat.email,
+            poleEmploiId: 'id PE',
             sessionDateDebut: '1 septembre 2019',
             sessionDateFin: '2 décembre 2019',
             sessionDuree: 6
@@ -114,6 +117,7 @@ describe('Send Candidature email', () => {
           'Telephone': candidat.telephone,
           'id_candidature': candidatureId,
           'email_candidat': candidat.email,
+          poleEmploiId: 'id PE',
           sessionDateDebut: '1 septembre 2019',
           sessionDateFin: '2 décembre 2019',
           sessionDuree: 6
@@ -146,6 +150,7 @@ describe('Send Candidature email', () => {
             'Telephone': candidat.telephone,
             'id_candidature': candidatureId,
             'email_candidat': candidat.email,
+            poleEmploiId: 'id PE',
             sessionDateDebut: '1 septembre 2019',
             sessionDateFin: '2 décembre 2019',
             sessionDuree: 6
@@ -191,6 +196,7 @@ describe('Send Candidature email', () => {
           'Telephone': candidat.telephone,
           'id_candidature': candidatureId,
           'email_candidat': candidat.email,
+          poleEmploiId: 'id PE',
           sessionDateDebut: '1 septembre 2019',
           sessionDateFin: '2 décembre 2019',
           sessionDuree: 6
@@ -236,6 +242,7 @@ describe('Send Candidature email', () => {
             'Telephone': candidat.telephone,
             'id_candidature': 'candidature_id',
             'email_candidat': candidat.email,
+            poleEmploiId: 'id PE',
             sessionDateDebut: '1 septembre 2019',
             sessionDateFin: '2 décembre 2019',
             sessionDuree: 6

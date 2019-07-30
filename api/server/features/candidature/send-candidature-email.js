@@ -20,6 +20,7 @@ module.exports = ({ smtpApiClient }) => async ({ offre, candidat, candidatureId,
       Telephone: candidat.telephone,
       id_candidature: candidatureId,
       email_candidat: candidat.email,
+      poleEmploiId: candidat.poleEmploiId,
       sessionDateDebut: formatDate(offre.sessions[0].dateDebut),
       sessionDateFin: formatDate(offre.sessions[0].dateFin),
       sessionDuree: offre.sessions[0].duration

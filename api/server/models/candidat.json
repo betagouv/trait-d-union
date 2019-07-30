@@ -50,6 +50,9 @@
     },
     "age": {
       "type": "number"
+    },
+    "poleEmploiId": {
+      "type": "string"
     }
   },
   "validations": [],
