@@ -56,8 +56,8 @@ function fakeOffreParameters (id = 'fake-offre-id') {
       sessions: [
         {
           'numero': 20191,
-          'dateDebut': '2019-09-01T00:00:00.000Z',
-          'dateFin': '2019-12-17T00:00:00.000Z',
+          'dateDebut': new Date('2019-09-01T00:00:00.000Z'),
+          'dateFin': new Date('2019-12-17T00:00:00.000Z'),
           'duration': 4,
           'id': 1713,
           'actionNumero': 2139,
@@ -71,8 +71,8 @@ function fakeOffreParameters (id = 'fake-offre-id') {
         },
         {
           'numero': 20191,
-          'dateDebut': '2019-09-01T00:00:00.000Z',
-          'dateFin': '2019-12-17T00:00:00.000Z',
+          'dateDebut': new Date('2019-09-01T00:00:00.000Z'),
+          'dateFin': new Date('2019-12-17T00:00:00.000Z'),
           'duration': 4,
           'id': 32,
           'actionNumero': 2140,

@@ -1,6 +1,14 @@
 const { sinon, expect } = require('../../../tests/test-utils')
 const createSendCandidatureEmail = require('./send-candidature-email')
 
+const sessions = [
+  {
+    duration: 6,
+    dateDebut: new Date('2019-09-01'),
+    dateFin: new Date('2019-12-02')
+  }
+]
+
 describe('Send Candidature email', () => {
   const smtpApiClient = {
     sendTransacEmail: sinon.spy(async () => ({ messageId: 'messageId' }))
@@ -14,13 +22,7 @@ describe('Send Candidature email', () => {
       nom: 'Employeur',
       courriel: 'contact@courriel.fr'
     },
-    sessions: [
-      {
-        duration: 6,
-        dateDebut: '2019-09-01',
-        dateFin: '2019-12-02'
-      }
-    ]
+    sessions
   }
   const candidat = {
     id: '71854445-1512-47b1-bc6d-e0491e764a51',
@@ -172,13 +174,7 @@ describe('Send Candidature email', () => {
           nom: 'Conseiller PE',
           courriel: 'contact@pole-emploi.fr'
         },
-        sessions: [
-          {
-            duration: 6,
-            dateDebut: '2019-09-01',
-            dateFin: '2019-12-02'
-          }
-        ]
+        sessions
       }
 
       await sendCandidatureEmail({ offre: offrePoleEmploi, candidat, candidatureId })
@@ -218,13 +214,7 @@ describe('Send Candidature email', () => {
             nom: 'Conseiller PE',
             courriel: 'contact@pole-emploi.fr'
           },
-          sessions: [
-            {
-              duration: 6,
-              dateDebut: '2019-09-01',
-              dateFin: '2019-12-02'
-            }
-          ]
+          sessions
         }
 
         await sendCandidatureEmail({ offre: offrePoleEmploi, candidat, candidatureId, retry: true })

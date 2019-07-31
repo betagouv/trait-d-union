@@ -51,8 +51,8 @@ const PNSMPattachment = { url: 'https://labonneformation.pole-emploi.fr/pdf/cerf
 
 function formatDate (date) {
   debug(`Formatting date ${date}`)
-  const dateTime = DateTime.fromISO(date)
-  return dateTime.setLocale('fr').toLocaleString(DateTime.DATE_FULL)
+  const dt = DateTime.fromJSDate(date)
+  return dt.setLocale('fr').toLocaleString(DateTime.DATE_FULL)
 }
 
 function getEmailParameters (templateId, offre, candidat, cvUrl, candidatureId, attachment, tags) {
