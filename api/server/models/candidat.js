@@ -32,7 +32,9 @@ module.exports = function (Candidat) {
   })
 
   Candidat.afterRemote('prototype.__link__candidatures', async (context, candidature) => {
-    return sendCandidatureToOffre(Candidat.app.models, candidature.offreId, candidature.candidatId)
+    if (candidature.status !== 'denied') {
+      return sendCandidatureToOffre(Candidat.app.models, candidature.offreId, candidature.candidatId)
+    }
   })
 
   Candidat.beforeRemote('find', async (context) => {

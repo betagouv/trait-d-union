@@ -4,7 +4,9 @@ export default Service.extend({
   http: service('ajax'),
 
   async denyOffre (offreId, userId) {
-    return this.http.put(`/candidats/${userId}/candidatures/rel/${offreId}`, { status: 'denied' })
+    return this.http.put(`/candidats/${userId}/candidatures/rel/${offreId}`, {
+      data: { status: 'denied' }
+    })
   },
 
   async applyToOffre (offreId, userId) {
