@@ -20,9 +20,9 @@ describe('Subscribe Candidate to mailing contacts list', () => {
     expect(contactsApiClient.createContact).to.have.been.calledWith({
       email: 'dummy@email.fr',
       attributes: {
-        'SMS': '0612345678',
-        'NOM_COMPLET': 'Nom Prénom',
-        'URL_CV': 'https://link.to/cv'
+        SMS: '0612345678',
+        NOM_COMPLET: 'Nom Prénom',
+        URL_CV: 'https://link.to/cv'
       },
       listIds: [23]
     })

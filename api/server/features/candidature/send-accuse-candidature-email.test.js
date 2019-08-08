@@ -28,10 +28,10 @@ describe('Send accuse candidature email', () => {
     await sendAccuseCandidatureEmail({ offre, candidat })
 
     expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
-      'templateId': 65,
-      'to': [{ 'name': 'Lorem ipsum dolor Nom Prenom', 'email': 'an_account@example.com' }],
-      'params': {
-        'Titre_offre': 'Titre offre'
+      templateId: 65,
+      to: [{ name: 'Lorem ipsum dolor Nom Prenom', email: 'an_account@example.com' }],
+      params: {
+        Titre_offre: 'Titre offre'
       },
       tags: ['Notification_envoi_cv']
     })
@@ -48,10 +48,10 @@ describe('Send accuse candidature email', () => {
       await sendAccuseCandidatureEmail({ offre, candidat })
 
       expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
-        'templateId': 65,
-        'to': [{ 'name': 'Lorem ipsum dolor Nom Prenom', 'email': 'an_account@example.com' }],
-        'params': {
-          'Titre_offre': 'Titre offre'
+        templateId: 65,
+        to: [{ name: 'Lorem ipsum dolor Nom Prenom', email: 'an_account@example.com' }],
+        params: {
+          Titre_offre: 'Titre offre'
         },
         tags: ['Notification_envoi_cv_Staging']
       })

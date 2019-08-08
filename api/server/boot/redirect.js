@@ -11,7 +11,7 @@ module.exports = (app) => {
     }
     const environment = isStaging(req) ? 'staging.' : ''
     res.writeHead(302, {
-      'Location': `https://${environment}candidat.traitdunion.beta.gouv.fr${queryParams}`
+      Location: `https://${environment}candidat.traitdunion.beta.gouv.fr${queryParams}`
     })
     res.end()
   })

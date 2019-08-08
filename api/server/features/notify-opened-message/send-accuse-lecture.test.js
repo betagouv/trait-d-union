@@ -34,10 +34,10 @@ describe('Send accuse lecture email', () => {
     await sendAccuseLecture(candidature)
 
     expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
-      'templateId': 64,
-      'to': [{ 'name': 'Lorem ipsum dolor Nom Prenom', 'email': 'an_account@example.com' }],
-      'params': {
-        'Titre_offre': 'Titre offre'
+      templateId: 64,
+      to: [{ name: 'Lorem ipsum dolor Nom Prenom', email: 'an_account@example.com' }],
+      params: {
+        Titre_offre: 'Titre offre'
       },
       tags: ['Notification_ouverture_cv']
     })
@@ -54,10 +54,10 @@ describe('Send accuse lecture email', () => {
       await sendAccuseLecture(candidature)
 
       expect(smtpApiClient.sendTransacEmail).to.have.been.calledWith({
-        'templateId': 64,
-        'to': [{ 'name': 'Lorem ipsum dolor Nom Prenom', 'email': 'an_account@example.com' }],
-        'params': {
-          'Titre_offre': 'Titre offre'
+        templateId: 64,
+        to: [{ name: 'Lorem ipsum dolor Nom Prenom', email: 'an_account@example.com' }],
+        params: {
+          Titre_offre: 'Titre offre'
         },
         tags: ['Notification_ouverture_cv_Staging']
       })

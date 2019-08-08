@@ -14,12 +14,12 @@ describe('is Message delivered', () => {
       getTransacEmailContent: sinon.spy(async () => ({
         events: [
           {
-            'name': 'opened',
-            'time': '2019-07-03T12:23:24.932+02:00'
+            name: 'opened',
+            time: '2019-07-03T12:23:24.932+02:00'
           },
           {
-            'name': 'sent',
-            'time': '2019-07-03T12:23:22.877+02:00'
+            name: 'sent',
+            time: '2019-07-03T12:23:22.877+02:00'
           }
         ]
       }))

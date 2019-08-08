@@ -76,7 +76,7 @@ export default Component.extend({
   },
 
   async willRender () {
-    let userId = this._getUserId()
+    const userId = this._getUserId()
     if (userId) {
       const userExists = await this.api.userExists(userId)
       if (!userExists) {

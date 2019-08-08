@@ -55,33 +55,33 @@ function fakeOffreParameters (id = 'fake-offre-id') {
       url: 'https://candidat.pole-emploi.fr/offres/recherche/detail/086QKQK',
       sessions: [
         {
-          'numero': 20191,
-          'dateDebut': new Date('2019-09-01T00:00:00.000Z'),
-          'dateFin': new Date('2019-12-17T00:00:00.000Z'),
-          'duration': 4,
-          'id': 1713,
-          'actionNumero': 2139,
-          'communeCodeInsee': 54578,
-          'action': {
-            'numero': 2139,
-            'niveauQualificationSortie': 'Niveau V - Formations équivalentes aux CAP-BEP',
-            'niveauQualificationEntree': 'sans-diplome',
-            'codeDiplome': 83419
+          numero: 20191,
+          dateDebut: new Date('2019-09-01T00:00:00.000Z'),
+          dateFin: new Date('2019-12-17T00:00:00.000Z'),
+          duration: 4,
+          id: 1713,
+          actionNumero: 2139,
+          communeCodeInsee: 54578,
+          action: {
+            numero: 2139,
+            niveauQualificationSortie: 'Niveau V - Formations équivalentes aux CAP-BEP',
+            niveauQualificationEntree: 'sans-diplome',
+            codeDiplome: 83419
           }
         },
         {
-          'numero': 20191,
-          'dateDebut': new Date('2019-09-01T00:00:00.000Z'),
-          'dateFin': new Date('2019-12-17T00:00:00.000Z'),
-          'duration': 4,
-          'id': 32,
-          'actionNumero': 2140,
-          'communeCodeInsee': 54578,
-          'action': {
-            'numero': 2140,
-            'niveauQualificationSortie': 'Niveau V - Formations équivalentes aux CAP-BEP',
-            'niveauQualificationEntree': 'sans-diplome',
-            'codeDiplome': 83419
+          numero: 20191,
+          dateDebut: new Date('2019-09-01T00:00:00.000Z'),
+          dateFin: new Date('2019-12-17T00:00:00.000Z'),
+          duration: 4,
+          id: 32,
+          actionNumero: 2140,
+          communeCodeInsee: 54578,
+          action: {
+            numero: 2140,
+            niveauQualificationSortie: 'Niveau V - Formations équivalentes aux CAP-BEP',
+            niveauQualificationEntree: 'sans-diplome',
+            codeDiplome: 83419
           }
         }
       ]

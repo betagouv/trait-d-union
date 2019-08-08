@@ -8,7 +8,7 @@ export default DS.RESTAdapter.extend({
   host: ENV.APP.apiUrl,
   namespace: 'api/v0',
   headers: computed('user.id', function () {
-    let headers = { 'accept': 'application/json' }
+    const headers = { accept: 'application/json' }
     const userId = this.get('user.id')
     if (userId) {
       headers['user-id'] = userId

@@ -42,7 +42,7 @@ const templateIds = {
     first: 53,
     retry: 63
   },
-  'corporate': {
+  corporate: {
     first: 52,
     retry: 62
   }

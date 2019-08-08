@@ -6,9 +6,9 @@ exports.set = () => {
     .post('/contacts', {
       email: 'an_account@example.com',
       attributes: {
-        'SMS': 'Lorem ipsum dolor Phone',
-        'NOM_COMPLET': 'Lorem ipsum dolor Nom Prenom',
-        'URL_CV': 'https://admin.typeform.com/form/P6NFOZ/field/WlLbkyygWkkh/results/file.ext/download'
+        SMS: 'Lorem ipsum dolor Phone',
+        NOM_COMPLET: 'Lorem ipsum dolor Nom Prenom',
+        URL_CV: 'https://admin.typeform.com/form/P6NFOZ/field/WlLbkyygWkkh/results/file.ext/download'
       },
       listIds: [23, 24]
     })
