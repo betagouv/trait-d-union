@@ -21,5 +21,14 @@ export default Service.extend({
     } else {
       throw new Error('Cannot find user with this email')
     }
+  },
+
+  async userExists (userId) {
+    try {
+      const user = await this.http.request(`/candidats/${userId}`)
+      return !!user
+    } catch (error) {
+      return false
+    }
   }
 })

@@ -7,6 +7,7 @@ import typeformEmbed from '@typeform/embed'
 
 export default Component.extend({
   api: service(),
+  router: service(),
   metrics: service(),
   user: storageFor('user'),
   isApplying: true,
@@ -38,7 +39,7 @@ export default Component.extend({
         .retrieveUserId(email)
         .catch(() => this.set('isShowingError', true))
       this.get('user').set('id', userId)
-      const newOffres = this.get('offres').store.findAll('offre')
+      const newOffres = await this.get('offres').store.findAll('offre')
       this.get('router').transitionTo('offres', newOffres)
       const selectedOffre = this.get('selectedOffre')
       if (selectedOffre.nonRespondedOffre) {

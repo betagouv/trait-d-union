@@ -30,6 +30,7 @@ Router.map(function () {
   this.route('steps')
   this.route('offres')
   this.route('loading')
+  this.route('connexion')
 })
 
 export default Router
