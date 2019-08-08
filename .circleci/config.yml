@@ -68,7 +68,7 @@ jobs:
           command: |
             GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" npm install
       - save_cache:
-          key: traitdunion-node10-v1-{{ checksum "package-lock.json" }}
+          key: traitdunion-node10-v1-{{ checksum "package-lock.json" }}-{{ checksum "api/package-lock.json" }}-{{ checksum "front/package-lock.json" }}
           paths:
             - ~/project/node_modules
             - ~/project/api/node_modules
