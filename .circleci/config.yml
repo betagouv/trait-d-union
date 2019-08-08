@@ -53,7 +53,7 @@ jobs:
           at: .
       - restore_cache:
           keys:
-            - traitdunion-node10-v1-{{ checksum "package-lock.json" }}
+            - traitdunion-node10-v1-{{ checksum "package-lock.json" }}-{{ checksum "api/package-lock.json" }}-{{ checksum "front/package-lock.json" }}
       - run: npm config set spin false
       - run:
           name: Update NPM to latest version
@@ -66,7 +66,7 @@ jobs:
       - run:
           name: NPM Install
           command: |
-            GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" npm ci
+            GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" npm install
       - save_cache:
           key: traitdunion-node10-v1-{{ checksum "package-lock.json" }}
           paths:
