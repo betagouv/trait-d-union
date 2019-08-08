@@ -77,6 +77,11 @@ jobs:
           root: .
           paths:
             - .
+      - run:
+          name: Ensure git status is empty
+          command: |
+            git status
+            git diff
 
   lint:
     <<: *defaults
