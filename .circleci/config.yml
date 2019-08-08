@@ -81,6 +81,7 @@ jobs:
           name: Ensure git status is empty
           command: |
             git status --porcelain
+            git diff
 
   lint:
     <<: *defaults
