@@ -52,7 +52,7 @@ export default Component.extend({
   isInitialRender: true,
   currentItem: computed('currentItemIndex', 'items.[]', function () {
     const currentItemIndex = this.get('currentItemIndex')
-    const items = this.get('items')
+    const items = this.get('items').filter(offre => offre.nonRespondedOffre)
     return items.objectAt(currentItemIndex)
   }),
 
@@ -88,7 +88,7 @@ export default Component.extend({
   removeLastCard ({ fadeToRight }) {
     this.set('fadeToRight', fadeToRight)
     run.next(() => {
-      this.items.shiftObject()
+      this.incrementProperty('currentItemIndex')
     })
   },
 
