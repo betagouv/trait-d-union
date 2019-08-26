@@ -39,7 +39,7 @@ export default Component.extend({
   api: service(),
   router: service(),
   metrics: service(),
-  classNames: ['offres-stack'],
+  classNames: ['offres-stack', 'pb-5'],
   tagName: 'div',
   items: null,
   offres: null,

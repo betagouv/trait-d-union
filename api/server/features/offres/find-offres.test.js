@@ -10,7 +10,7 @@ describe('Find Offres', () => {
 
   context('when one Metier have Session Formation', () => {
     const codeROME = 'H2903'
-    const session = { numero: 'some-session-numero', dateFin: new Date('2030-01-01') }
+    const session = { numero: 'some-session-numero', dateDebut: new Date('2030-01-01') }
     const actionWithSessions = {
       sessions: () => [session],
       toJSON: () => ({ sessions: [session] })
@@ -52,10 +52,10 @@ describe('Find Offres', () => {
   context('when one Metier have more than 3 Session Formation', () => {
     const codeROME = 'H2903'
     const sessions = [
-      { numero: 'some-session-numero', dateFin: new Date('2030-01-02') },
-      { numero: 'some-session-numero', dateFin: new Date('2030-01-03') },
-      { numero: 'some-session-numero', dateFin: new Date('2030-01-04') },
-      { numero: 'some-session-numero', dateFin: new Date('2030-01-01') }
+      { numero: 'some-session-numero', dateDebut: new Date('2030-01-02') },
+      { numero: 'some-session-numero', dateDebut: new Date('2030-01-03') },
+      { numero: 'some-session-numero', dateDebut: new Date('2030-01-04') },
+      { numero: 'some-session-numero', dateDebut: new Date('2030-01-01') }
     ]
     const actionWithSessions = {
       sessions: () => sessions,
@@ -88,7 +88,7 @@ describe('Find Offres', () => {
   context('when all Metier have Session Formation', () => {
     const firstCodeROME = 'H2903'
     const secondCodeROME = 'M1234'
-    const session = { numero: 'some-session-numero', dateFin: new Date('2030-01-02') }
+    const session = { numero: 'some-session-numero', dateDebut: new Date('2030-01-02') }
     const actionWithSessions = {
       sessions: () => [session],
       toJSON: () => ({ sessions: [session] })
@@ -196,7 +196,7 @@ describe('Find Offres', () => {
 
   context('when Metier has two Actions, one with Session and one without Session Formation', () => {
     const codeROME = 'H2903'
-    const session = { numero: 'some-session-numero', dateFin: new Date('2030-01-02') }
+    const session = { numero: 'some-session-numero', dateDebut: new Date('2030-01-02') }
     const actionWithoutSessions = {
       sessions: () => [],
       toJSON: () => ({ sessions: [] })
@@ -237,7 +237,7 @@ describe('Find Offres', () => {
 
   context('when using two repositories', () => {
     const codeROME = 'H2903'
-    const session = { numero: 'some-session-numero', dateFin: new Date('2030-01-02') }
+    const session = { numero: 'some-session-numero', dateDebut: new Date('2030-01-02') }
     const actionWithSessions = {
       sessions: () => [session],
       toJSON: () => ({ sessions: [session] })
