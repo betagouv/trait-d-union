@@ -4,11 +4,12 @@ import { storageFor } from 'ember-local-storage'
 
 export default Route.extend({
   swipeMode: ENV.APP.TU_FF_SWIPE_MODE,
+  noConnectionMode: ENV.APP.TU_FF_NO_CONNECTION_MODE,
   user: storageFor('user'),
 
   beforeModel () {
     const isConnected = !!this.get('user').get('id')
-    if (!isConnected && this.swipeMode) {
+    if (!isConnected && this.swipeMode && !this.noConnectionMode) {
       this.transitionTo('connexion')
     }
   },

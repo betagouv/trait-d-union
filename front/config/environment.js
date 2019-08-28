@@ -19,6 +19,7 @@ module.exports = function (environment) {
 
     APP: {
       TU_FF_SWIPE_MODE: process.env.TU_FF_SWIPE_MODE === 'on' || false,
+      TU_FF_NO_CONNECTION_MODE: process.env.TU_FF_NO_CONNECTION_MODE === 'on' || false,
       apiUrl: process.env.API_URL || 'https://api.traitdunion.beta.gouv.fr',
       typeformUrl: process.env.TYPEFORM_URL
     },
