@@ -96,7 +96,7 @@ export default Component.extend({
     async notInterested () {
       const offre = this.currentItem
       this.removeLastCard({ fadeToRight: false })
-      this._trackEvent({ action: 'Envoi_CV', label: 'Offre refusée' })
+      this._trackEvent({ action: 'Refus', label: 'Offre refusée' })
       return this.api.denyOffre(offre.id, this._getUserId())
     },
 
