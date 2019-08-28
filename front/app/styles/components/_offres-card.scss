@@ -1,5 +1,15 @@
 .offres-card .card {
-  width: 28rem;
-  height: 28rem;
   will-change: transform;
+}
+
+@include media-breakpoint-up(sm) {
+  .offres-card .card {
+    height: 28rem;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .offres-card .card {
+    height: 24rem;
+  }
 }
