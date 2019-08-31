@@ -6,12 +6,17 @@
 
 @include media-breakpoint-up(sm) {
   .offres-stack .stack-container {
-    height: 32rem;
+    height: 30rem;
   }
 }
 
 @include media-breakpoint-down(sm) {
   .offres-stack .stack-container {
-    height: 28rem;
+    height: 26rem;
   }
+}
+
+.btn-green {
+  background-color: #6eb700;
+  color: white;
 }

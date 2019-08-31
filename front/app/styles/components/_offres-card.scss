@@ -2,6 +2,11 @@
   will-change: transform;
 }
 
+.badge-offre {
+  white-space: pre-line;
+  text-align: left;
+}
+
 @include media-breakpoint-up(sm) {
   .offres-card .card {
     height: 28rem;
