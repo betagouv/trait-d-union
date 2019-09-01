@@ -14,7 +14,7 @@ export default Service.extend({
   },
 
   async retrieveUserId (email) {
-    const filter = JSON.stringify({ where: { email: email } })
+    const filter = JSON.stringify({ where: { email: { ilike: email } } })
     const user = await this.http.request(`/candidats?filter=${escape(filter)}`)
     if (user && user.length > 0) {
       return user[0].id

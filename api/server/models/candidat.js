@@ -7,6 +7,7 @@ const findCandidatFromFormResponse = require('../features/candidats/find-candida
 const createCandidat = require('../features/candidats/create-candidat')
 const subscribeCandidateToMailingContactLists = require('../features/candidats/subscribe-candidate-to-mailing-contact-lists')
 const sendCandidatureToOffre = require('../features/candidature/send-candidature-to-offre')
+const forbidFindCandidat = require('../features/candidats/forbid-find-candidat')
 
 module.exports = function (Candidat) {
   Candidat.formResponse = async (data) => {
@@ -39,7 +40,7 @@ module.exports = function (Candidat) {
 
   Candidat.beforeRemote('find', async (context) => {
     const { args } = context
-    if (!args || !args.filter || !args.filter.where || !args.filter.where.email) {
+    if (forbidFindCandidat(args)) {
       context.res.status(403)
       throw Boom.forbidden()
     }
