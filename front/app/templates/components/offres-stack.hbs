@@ -26,3 +26,27 @@
     </div>
   {{/if}}
 </div>
+{{#if isShowingModal}}
+  <ConnectionDialog
+    @offre={{selectedOffre}}
+    @onClose={{action (mut isShowingModal) false}}
+    @openForm={{action "openForm" offre}}
+    @retrieveAccount={{action "retrieveAccount"}}>
+  </ConnectionDialog>
+{{/if}}
+{{#if isShowingError}}
+  {{#bs-modal
+    open=true
+    position="center" as |modal|}}
+    {{#modal.header}}
+      <div class="modal-title">
+        ❌ Erreur
+      </div>
+    {{/modal.header}}
+    {{#modal.body}}
+      <div class="row-fluid">
+        Aucun compte n'existe avec cet email. Vérifiez votre saisie.
+      </div>
+    {{/modal.body}}
+  {{/bs-modal}}
+{{/if}}
