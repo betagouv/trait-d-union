@@ -62,7 +62,6 @@ describe('Send Candidature email', () => {
           sessionDateFin: '2 décembre 2019',
           sessionDuree: 6
         },
-        attachment: [{ url: 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }],
         tags: ['Candidature_DE']
       })
     })
@@ -96,7 +95,6 @@ describe('Send Candidature email', () => {
             sessionDateFin: '2 décembre 2019',
             sessionDuree: 6
           },
-          attachment: [{ url: 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }],
           tags: ['Candidature_DE_Staging']
         })
       })
@@ -124,7 +122,6 @@ describe('Send Candidature email', () => {
           sessionDateFin: '2 décembre 2019',
           sessionDuree: 6
         },
-        attachment: [{ url: 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }],
         tags: ['Candidature_DE']
       })
     })
@@ -157,7 +154,6 @@ describe('Send Candidature email', () => {
             sessionDateFin: '2 décembre 2019',
             sessionDuree: 6
           },
-          attachment: [{ url: 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }],
           tags: ['Relance_Candidature_DE']
         })
       })
@@ -197,10 +193,7 @@ describe('Send Candidature email', () => {
           sessionDateFin: '2 décembre 2019',
           sessionDuree: 6
         },
-        attachment: [
-          { url: 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' },
-          { url: candidat.cvUrl }
-        ],
+        attachment: [{ url: candidat.cvUrl }],
         tags: ['Candidature_DE']
       })
     })
@@ -237,10 +230,7 @@ describe('Send Candidature email', () => {
             sessionDateFin: '2 décembre 2019',
             sessionDuree: 6
           },
-          attachment: [
-            { url: 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' },
-            { url: candidat.cvUrl }
-          ],
+          attachment: [{ url: candidat.cvUrl }],
           tags: ['Relance_Candidature_DE']
         })
       })

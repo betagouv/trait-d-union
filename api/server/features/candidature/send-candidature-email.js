@@ -4,7 +4,7 @@ const { DateTime } = require('luxon')
 module.exports = ({ smtpApiClient }) => async ({ offre, candidat, candidatureId, retry = false }) => {
   const cvUrl = normalizeRemoveDiacretics(candidat.cvUrl)
   const templateId = computeTemplateId({ destinataire: destinataire(offre), retry })
-  const attachment = destinataireIsPoleEmploi(offre) ? [PNSMPattachment, { url: cvUrl }] : [PNSMPattachment]
+  const attachment = destinataireIsPoleEmploi(offre) ? [{ url: cvUrl }] : null
   const tag = retry ? 'Relance_Candidature_DE' : 'Candidature_DE'
   const tags = [`${tag}${process.env.APP_ENV === 'staging' ? '_Staging' : ''}`]
 
@@ -47,7 +47,6 @@ const templateIds = {
     retry: 62
   }
 }
-const PNSMPattachment = { url: 'https://labonneformation.pole-emploi.fr/pdf/cerfa_13912-04.pdf' }
 
 function formatDate (date) {
   debug(`Formatting date ${date}`)
@@ -56,7 +55,7 @@ function formatDate (date) {
 }
 
 function getEmailParameters (templateId, offre, candidat, cvUrl, candidatureId, attachment, tags) {
-  return {
+  const params = {
     templateId,
     to: [{ name: offre.contact.nom, email: offre.contact.courriel }],
     replyTo: { name: candidat.nomPrenom, email: candidat.email },
@@ -74,7 +73,10 @@ function getEmailParameters (templateId, offre, candidat, cvUrl, candidatureId, 
       sessionDateFin: formatDate(offre.sessions[0].dateFin),
       sessionDuree: offre.sessions[0].duration
     },
-    attachment,
     tags
   }
+  if (attachment) {
+    params.attachment = attachment
+  }
+  return params
 }
