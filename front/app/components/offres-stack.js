@@ -138,7 +138,13 @@ export default Component.extend({
       this._hideConnectionDialog()
       const userId = await this.get('api')
         .retrieveUserId(email)
-        .catch(() => this.set('isShowingError', true))
+        .catch(() => {
+          this.set('isShowingError', true)
+          return null
+        })
+      if (!userId) {
+        return
+      }
       this.get('user').set('id', userId)
       const newOffres = await this.get('offres').store.findAll('offre')
 
