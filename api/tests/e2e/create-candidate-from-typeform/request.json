@@ -43,6 +43,13 @@
           "properties": {}
         },
         {
+          "id": "MyVuQ83TCXE3",
+          "title": "Niveau d'étude actuel",
+          "type": "short_text",
+          "ref": "18277539-de93-4310-975e-13f403b890fd",
+          "properties": {}
+        },
+        {
           "id": "WlLbkyygWkkh",
           "title": "Merci de déposer votre CV",
           "type": "file_upload",
@@ -98,6 +105,15 @@
         "field": {
           "id": "MyVuQ83TCXE3",
           "type": "number",
+          "ref": "18277539-de93-4310-975e-13f403b890fd"
+        }
+      },
+      {
+        "type": "text",
+        "number": "Some qualification",
+        "field": {
+          "id": "MyVuQ83TCXE3",
+          "type": "short_text",
           "ref": "18277539-de93-4310-975e-13f403b890fd"
         }
       },

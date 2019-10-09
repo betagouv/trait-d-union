@@ -8,7 +8,8 @@ module.exports = (formResponse) => {
     nomPrenom: answers[2].text,
     telephone: answers[3].text,
     age: answers[4].number,
-    cvUrl: answers[5].file_url
+    niveauQualification: answers[5].text,
+    cvUrl: answers[6].file_url
   }
   return {
     offreId: formResponse.hidden.id_offre,

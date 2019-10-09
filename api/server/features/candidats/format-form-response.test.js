@@ -12,6 +12,7 @@ describe('Format Candidat and OffreId from Form Response', () => {
       nomPrenom: 'Lorem ipsum dolor Nom Prenom',
       telephone: 'Lorem ipsum dolor Phone',
       age: 32,
+      niveauQualification: 'Lorem ipsum dolor Qualification',
       cvUrl: 'https://admin.typeform.com/form/P6NFOZ/field/WlLbkyygWkkh/results/file.ext/download'
     },
     offreId: 'hidden_value'
@@ -123,6 +124,15 @@ function createFormResponse () {
           id: 'MyVuQ83TCXE3',
           type: 'number',
           ref: '18277539-de93-4310-975e-13f403b890fd'
+        }
+      },
+      {
+        type: 'text',
+        text: 'Lorem ipsum dolor Qualification',
+        field: {
+          id: 'vd777D41TS8n',
+          type: 'short_text',
+          ref: 'c851647b-d611-4439-9c80-d2cd92b857e3'
         }
       },
       {
