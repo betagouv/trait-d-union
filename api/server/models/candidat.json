@@ -53,6 +53,9 @@
     },
     "poleEmploiId": {
       "type": "string"
+    },
+    "NiveauQualification": {
+      "type": "string"
     }
   },
   "validations": [],
