@@ -31,6 +31,7 @@ Router.map(function () {
   this.route('offres')
   this.route('loading')
   this.route('connexion')
+  this.route('typeform1')
 })
 
 export default Router
