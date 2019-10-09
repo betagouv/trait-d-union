@@ -25,24 +25,24 @@
     "cors": "2.8.5",
     "full-icu": "1.3.0",
     "got": "9.6.0",
-    "helmet": "3.20.0",
+    "helmet": "3.21.1",
     "joi": "14.3.1",
     "loopback": "3.26.0",
     "loopback-boot": "3.3.1",
     "loopback-component-explorer": "6.4.0",
-    "loopback-connector-mongodb": "5.0.0",
-    "loopback-connector-postgresql": "3.7.0",
+    "loopback-connector-mongodb": "5.0.1",
+    "loopback-connector-postgresql": "3.8.0",
     "loopback-ds-calculated-mixin": "2.0.4",
     "loopback-ds-timestamp-mixin": "3.4.1",
     "loopback-setup-remote-methods-mixin": "1.2.1",
     "lru-cache": "5.1.1",
-    "luxon": "1.17.2",
+    "luxon": "1.19.3",
     "node-schedule": "1.3.2",
     "node-slack": "0.0.7",
     "request-promise-native": "1.0.7",
     "sendin_blue_api": "git+https://github.com/HEYGUL/APIv3-nodejs-library.git",
     "serve-favicon": "2.5.0",
-    "strong-error-handler": "3.2.0"
+    "strong-error-handler": "3.3.0"
   },
   "repository": {
     "type": "git",
@@ -52,7 +52,7 @@
   "devDependencies": {
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
-    "nock": "10.0.6",
-    "proxyquire": "2.1.1"
+    "nock": "11.4.0",
+    "proxyquire": "2.1.3"
   }
 }
