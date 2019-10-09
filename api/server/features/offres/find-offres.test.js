@@ -10,7 +10,7 @@ describe('Find Offres', () => {
 
   context('when one Metier have Session Formation', () => {
     const codeROME = 'H2903'
-    const session = { numero: 'some-session-numero', dateDebut: new Date('2030-01-01') }
+    const session = { numero: 'some-session-numero', dateDebut: new Date(Date.UTC(2030, 1, 1)) }
     const actionWithSessions = {
       sessions: () => [session],
       toJSON: () => ({ sessions: [session] })
