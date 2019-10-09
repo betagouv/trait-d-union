@@ -47,6 +47,5 @@ function extractSessionsFrom (metier) {
 function assignSessionsToOffres (offres, sessions) {
   const incomingSessions = sessions.filter(session => session.dateDebut > new Date())
   const sortedSessions = incomingSessions.sort((a, b) => a.dateDebut > b.dateDebut)
-  const threeFirstSessions = sortedSessions.splice(0, 3)
-  return offres.map(offre => Object.assign(offre, { sessions: threeFirstSessions }))
+  return offres.map(offre => Object.assign(offre, { sessions: sortedSessions }))
 }

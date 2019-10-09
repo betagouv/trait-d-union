@@ -49,42 +49,6 @@ describe('Find Offres', () => {
     })
   })
 
-  context('when one Metier have more than 3 Session Formation', () => {
-    const codeROME = 'H2903'
-    const sessions = [
-      { numero: 'some-session-numero', dateDebut: new Date('2030-01-02') },
-      { numero: 'some-session-numero', dateDebut: new Date('2030-01-03') },
-      { numero: 'some-session-numero', dateDebut: new Date('2030-01-04') },
-      { numero: 'some-session-numero', dateDebut: new Date('2030-01-01') }
-    ]
-    const actionWithSessions = {
-      sessions: () => sessions,
-      toJSON: () => ({ sessions })
-    }
-    const diplomeWithActionsAndSession = {
-      actions: () => [actionWithSessions]
-    }
-    const metierWithSession = {
-      codeROME,
-      diplomes: () => [diplomeWithActionsAndSession]
-    }
-    const offreFromRepository = { some: 'offer', codeROME }
-    const offresRepository = {
-      getOffres: sinon.spy(async () => [offreFromRepository])
-    }
-    const Metier = mockMetierModel([metierWithSession])
-    const findOffres = createFindOffres({ Metier }, [offresRepository])
-
-    it('returns offres with three first related session', async () => {
-      const expected = Object.assign({}, offreFromRepository)
-      Object.assign(expected, { sessions: [sessions[3], sessions[0], sessions[1]] })
-
-      const actual = await findOffres({ around: givenArea })
-
-      expect(actual).to.deep.equal([expected])
-    })
-  })
-
   context('when all Metier have Session Formation', () => {
     const firstCodeROME = 'H2903'
     const secondCodeROME = 'M1234'
