@@ -11,7 +11,7 @@ const forbidFindCandidat = require('../features/candidats/forbid-find-candidat')
 
 module.exports = function (Candidat) {
   Candidat.formResponse = async (data) => {
-    info(`New candidature received from Typeform`)
+    info('New candidature received from Typeform')
     const { candidat: formCandidat, offreId } = formatFormResponse(data)
     let candidat = await findCandidatFromFormResponse({ Candidat }, formCandidat)
     if (!candidat) {

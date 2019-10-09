@@ -30,7 +30,7 @@ describe('Pole Emploi API Service', () => {
   describe('.getOffres({codeROME})', () => {
     describe('when API key is not in cache', () => {
       beforeEach(() => {
-        delete cacheMemory['PE_API_KEY']
+        delete cacheMemory.PE_API_KEY
       })
       describe('when Authenticate on PE API fails', () => {
         it('throws corresponding Boom error', () => {
@@ -103,7 +103,7 @@ describe('Pole Emploi API Service', () => {
       })
       describe('when Pole Emploi API key is in cache', () => {
         beforeEach(() => {
-          cacheMemory['PE_API_KEY'] = 'fake_apikey'
+          cacheMemory.PE_API_KEY = 'fake_apikey'
         })
 
         describe('and is valid', () => {

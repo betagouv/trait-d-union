@@ -5,7 +5,7 @@ import { run } from '@ember/runloop'
 import anime from 'animejs'
 
 export default Component.extend({
-  attributeBindings: [`style`],
+  attributeBindings: ['style'],
   isInitialRender: true,
   visibleItemAmount: 0,
   index: 0,
@@ -16,24 +16,24 @@ export default Component.extend({
 
   init (...args) {
     this.shiftCard = this.shiftCard.bind(this)
-    const factor = this.get(`factor`)
+    const factor = this.get('factor')
     const style = this.getInitialCardStyle(factor)
-    this.set(`style`, htmlSafe(style))
+    this.set('style', htmlSafe(style))
     this._super(...args)
   },
   didReceiveAttrs () {
-    const index = this.get(`index`)
-    const lastIndex = this.get(`lastIndex`)
-    const isInitialRender = this.get(`isInitialRender`)
+    const index = this.get('index')
+    const lastIndex = this.get('lastIndex')
+    const isInitialRender = this.get('isInitialRender')
     if (!isInitialRender && (lastIndex === -1 || lastIndex !== index)) {
       run.scheduleOnce('afterRender', this.shiftCard)
     }
-    this.set(`lastIndex`, index)
+    this.set('lastIndex', index)
   },
   willDestroyElement (...args) {
-    if (this.get(`isLast`)) {
+    if (this.get('isLast')) {
       const element = this.element.cloneNode(true)
-      element.setAttribute(`id`, null)
+      element.setAttribute('id', null)
       this.element.parentNode.append(element)
       const opts = this.createFadeAnimation(this.get('fadeToRight'))
       opts.targets = element
@@ -82,15 +82,15 @@ export default Component.extend({
       : `📍${this.offre.lieuTravail.libelle}`
   }),
 
-  factor: computed(`index`, `visibleItemAmount`, function () {
-    const index = this.get(`index`)
-    const visibleItemAmount = this.get(`visibleItemAmount`)
+  factor: computed('index', 'visibleItemAmount', function () {
+    const index = this.get('index')
+    const visibleItemAmount = this.get('visibleItemAmount')
     return visibleItemAmount - index
   }),
 
   shiftCard () {
-    const opts = this.createShiftAnimation(this.get(`factor`) - 1)
+    const opts = this.createShiftAnimation(this.get('factor') - 1)
     opts.targets = this.element
-    this.set(`currentAnimation`, anime(opts))
+    this.set('currentAnimation', anime(opts))
   }
 })
