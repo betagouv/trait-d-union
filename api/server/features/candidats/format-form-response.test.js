@@ -127,12 +127,14 @@ function createFormResponse () {
         }
       },
       {
-        type: 'text',
-        text: 'Lorem ipsum dolor Qualification',
+        type: 'choice',
+        choice: {
+          label: 'Lorem ipsum dolor Qualification'
+        },
         field: {
-          id: 'vd777D41TS8n',
-          type: 'short_text',
-          ref: 'c851647b-d611-4439-9c80-d2cd92b857e3'
+          id: 'xP6EPtWorhX6',
+          type: 'dropdown',
+          ref: '34215c78-9008-44b3-bd82-ddaade26ab71'
         }
       },
       {

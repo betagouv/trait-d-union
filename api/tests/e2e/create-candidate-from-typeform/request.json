@@ -43,10 +43,10 @@
           "properties": {}
         },
         {
-          "id": "MyVuQ83TCXE3",
+          "id": "xP6EPtWorhX6",
           "title": "Niveau d'étude actuel",
-          "type": "short_text",
-          "ref": "18277539-de93-4310-975e-13f403b890fd",
+          "type": "dropdown",
+          "ref": "34215c78-9008-44b3-bd82-ddaade26ab71",
           "properties": {}
         },
         {
@@ -109,12 +109,14 @@
         }
       },
       {
-        "type": "text",
-        "number": "Some qualification",
+        "type": "choice",
+        "choice": {
+          "label": "Some qualification"
+        },
         "field": {
-          "id": "MyVuQ83TCXE3",
-          "type": "short_text",
-          "ref": "18277539-de93-4310-975e-13f403b890fd"
+          "id": "xP6EPtWorhX6",
+          "type": "dropdown",
+          "ref": "34215c78-9008-44b3-bd82-ddaade26ab71"
         }
       },
       {

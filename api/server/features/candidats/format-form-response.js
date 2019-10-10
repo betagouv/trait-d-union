@@ -8,7 +8,7 @@ module.exports = (formResponse) => {
     nomPrenom: answers[2].text,
     telephone: answers[3].text,
     age: answers[4].number,
-    niveauQualification: answers[5].text,
+    niveauQualification: answers[5].choice.label,
     cvUrl: answers[6].file_url
   }
   return {
