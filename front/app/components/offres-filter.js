@@ -10,6 +10,8 @@ export default Component.extend({
     this.set('currentFilter', '')
   },
 
+  showFilterByKeyword: false,
+
   actions: {
     filterByKeyword () {
       const offres = this.get('offres')

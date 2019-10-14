@@ -82,6 +82,18 @@ export default Component.extend({
       : `📍${this.offre.lieuTravail.libelle}`
   }),
 
+  niveauQualification: computed(function () {
+    const niveaux = {
+      'sans-diplome': 'Sans diplôme',
+      'cap-bep': 'BEP-CAP',
+      'bac-bac+1': 'BAC ou BAC+1',
+      'bac+2': 'BAC+2',
+      'bac+3-bac+4': 'BAC+3 ou BAC+4'
+    }
+    const niveauQualificationEntree = this.offre.sessions[0].action.niveauQualificationEntree
+    return niveaux[niveauQualificationEntree]
+  }),
+
   factor: computed('index', 'visibleItemAmount', function () {
     const index = this.get('index')
     const visibleItemAmount = this.get('visibleItemAmount')
