@@ -2,28 +2,28 @@
   {
     "numero": 20191,
     "actionNumero": 1928,
-    "communeCodeInsee": 42,
+    "communeCodeInsee": "42",
     "dateDebut": "2028-09-01",
     "dateFin": "2028-10-01"
   },
   {
     "numero": 20192,
     "actionNumero": 1928,
-    "communeCodeInsee": 42,
+    "communeCodeInsee": "42",
     "dateDebut": "2028-09-01",
     "dateFin": "2028-11-01"
   },
   {
     "numero": 20193,
     "actionNumero": 1928,
-    "communeCodeInsee": 42,
+    "communeCodeInsee": "42",
     "dateDebut": "2028-09-01",
     "dateFin": "2028-12-01"
   },
   {
     "numero": 20190,
     "actionNumero": 1928,
-    "communeCodeInsee": 42,
+    "communeCodeInsee": "42",
     "dateDebut": "2028-09-01",
     "dateFin": "2029-01-01"
   }
