@@ -150,6 +150,7 @@ export default Component.extend({
 
       if (this.afterConnectionOperation) {
         await this.afterConnectionOperation()
+        this.afterConnectionOperation = null
       }
       this.get('router').transitionTo('offres', newOffres)
     },

@@ -5,6 +5,7 @@
   "options": {
     "validateUpsert": true
   },
+  "replaceOnPUT": true,
   "mixins": {
     "TimeStamp": {
       "required": false,
