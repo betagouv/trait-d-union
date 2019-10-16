@@ -6,7 +6,8 @@ describe('Subscribe Candidate to mailing contacts list', () => {
     email: 'dummy@email.fr',
     telephone: '0612345678',
     nomPrenom: 'Nom Prénom',
-    cvUrl: 'https://link.to/cv'
+    cvUrl: 'https://link.to/cv',
+    niveauQualification: 'CAP-BEP'
   }
 
   it('create contact on SendInBlue API', async () => {
@@ -22,7 +23,8 @@ describe('Subscribe Candidate to mailing contacts list', () => {
       attributes: {
         SMS: '0612345678',
         NOM_COMPLET: 'Nom Prénom',
-        URL_CV: 'https://link.to/cv'
+        URL_CV: 'https://link.to/cv',
+        NIVEAU_QUALIFICATION: 'CAP-BEP'
       },
       listIds: [23]
     })

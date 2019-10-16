@@ -8,7 +8,8 @@ module.exports = async ({ contactsApiClient }, candidat) => {
     attributes: {
       SMS: candidat.telephone,
       NOM_COMPLET: candidat.nomPrenom,
-      URL_CV: candidat.cvUrl
+      URL_CV: candidat.cvUrl,
+      NIVEAU_QUALIFICATION: candidat.niveauQualification
     },
     listIds: [candidatListId]
   }
