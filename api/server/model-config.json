@@ -7,15 +7,19 @@
       "./models"
     ],
     "mixins": [
+      "../node_modules/loopback-mixin-exposition",
       "loopback/common/mixins",
       "loopback/server/mixins",
       "../common/mixins",
       "./mixins",
-      "../node_modules/loopback-ds-calculated-mixin/lib"
+      "../node_modules/loopback-ds-calculated-mixin/lib",
+      "../node_modules/loopback-ds-timestamp-mixin",
+      "../node_modules/loopback-setup-remote-methods-mixin"
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "db",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "db",
@@ -57,6 +61,22 @@
     "public": true
   },
   "Commune": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Candidat": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Candidature": {
+    "dataSource": "db",
+    "public": true
+  },
+  "BlacklistedOffre": {
+    "dataSource": "db",
+    "public": true
+  },
+  "BlacklistedContact": {
     "dataSource": "db",
     "public": true
   }

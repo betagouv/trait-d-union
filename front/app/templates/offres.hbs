@@ -1,0 +1,9 @@
+<div class="flex-column col mb-2">
+  {{#if this.swipeMode}}
+    <OffresFilter @offres={{model}} as |filteredOffres|>
+      <OffresStack @offres={{filteredOffres}}></OffresStack>
+    </OffresFilter>
+  {{else}}
+    <OffresListing @offres={{model}}></OffresListing>
+  {{/if}}
+</div>

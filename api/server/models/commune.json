@@ -6,9 +6,16 @@
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "SetupRemoteMethods": {
+      "disableAllExcept": [
+        "find"
+      ]
+    }
+  },
   "properties": {
     "codeInsee": {
-      "type": "number",
+      "type": "string",
       "id": true,
       "required": true
     },
@@ -16,11 +23,15 @@
       "type": "string"
     },
     "coordonnees": {
-      "type": "geopoint"
+      "type": "geopoint",
+      "index": true,
+      "unique": false
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+  },
   "acls": [],
-  "methods": {}
+  "methods": {
+  }
 }

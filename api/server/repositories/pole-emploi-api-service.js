@@ -48,7 +48,7 @@ const createGetEndpointResponse = ({ apiConfiguration }) =>
 const createGetApiKey = ({ apiConfiguration, cache }) => async () => {
   let apiKey = cache.get(PE_API_KEY_CACHE_NAME)
   if (!apiKey) {
-    debug(`Pole Emploi API: Will get token`)
+    debug('Pole Emploi API: Will get token')
     const response = await request
       .post({
         uri: apiConfiguration.authentBaseUrl,
@@ -65,10 +65,10 @@ const createGetApiKey = ({ apiConfiguration, cache }) => async () => {
       })
       .catch(_throwApiError)
     apiKey = response.body.access_token
-    debug(`Pole Emploi API: Did get token and stored in cache`)
+    debug('Pole Emploi API: Did get token and stored in cache')
     cache.set(PE_API_KEY_CACHE_NAME, apiKey)
   } else {
-    debug(`Pole Emploi API: token retrieved from cache`)
+    debug('Pole Emploi API: token retrieved from cache')
   }
   return apiKey
 }

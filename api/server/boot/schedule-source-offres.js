@@ -1,11 +1,16 @@
 const schedule = require('node-schedule')
-const { info } = require('../infrastructure/logger')
+const { error, info } = require('../infrastructure/logger')
 const sourceOffres = require('../features/offres/source-offres')
 
 module.exports = (app) => {
-  app.scheduledTask = schedule.scheduleJob(everyDayAtMidnight, () => {
+  app.scheduledSourceTask = schedule.scheduleJob(everyDayAtMidnight, async () => {
     info('Time to source offres for the day !')
-    sourceOffres(app.models)
+    try {
+      sourceOffres(app.models)
+    } catch (err) {
+      error(`Sourcing offres failed with error: ${err}`)
+      sourceOffres(app.models)
+    }
   })
 }
 

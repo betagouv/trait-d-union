@@ -38,6 +38,7 @@ const createSearchOffres = (poleEmploiApiService) => async (codesROME) => {
     commune: 57463,
     distance: 10,
     experience: 1,
+    experienceExigence: 'D',
     range: '1-149',
     sort: 2,
     typeContrat: 'CDI,CDD'
@@ -49,12 +50,16 @@ const createSearchOffres = (poleEmploiApiService) => async (codesROME) => {
 function sanitizeOffre (offre) {
   const properties = [
     'id', 'description', 'dureeTravailLibelle', 'secteurActiviteLibelle', 'lieuTravail', 'intitule',
-    'appellationlibelle', 'salaire', 'permis', 'natureContrat', 'typeContrat', 'contact'
+    'appellationlibelle', 'salaire', 'permis', 'natureContrat', 'typeContrat', 'contact', 'typeContratLibelle'
   ]
   const result = keepDefinedProperties(offre, properties)
   result.source = 'pole-emploi'
   result.codeROME = offre.romeCode
   result.url = offre.origineOffre && offre.origineOffre.urlOrigine
+  result.permis = result.permis && [result.permis[0]]
+  if (!result.permis) {
+    delete result.permis
+  }
   const courriel = computeCourrielFromContact(offre.contact)
   if (courriel) {
     result.contact.courriel = courriel

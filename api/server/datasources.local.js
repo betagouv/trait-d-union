@@ -1,7 +1,7 @@
 module.exports = {
   db: {
     name: 'db',
-    connector: 'postgresql',
-    url: process.env.DATABASE_URL
+    connector: 'mongodb',
+    url: process.env.MONGO_URL
   }
 }

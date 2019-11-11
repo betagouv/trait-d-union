@@ -35,18 +35,17 @@ function keepMetiersWithSessions (metiers) {
     isFilled(metier.diplomes()) && metier.diplomes().some(diplome =>
       isFilled(diplome.actions()) && diplome.actions().some(action =>
         isFilled(action.sessions()) && action.sessions().some(session =>
-          session.dateFin > new Date()))))
+          session.dateDebut > new Date()))))
 }
 
 function extractSessionsFrom (metier) {
-  const actions = metier.diplomes().map(({ actions }) => actions())
-  const sessions = flatten(actions).map(({ sessions }) => sessions())
+  const actions = metier.diplomes().map(({ actions }) => actions().map(action => action.toJSON()))
+  const sessions = flatten(actions).map(({ sessions }) => sessions)
   return flatten(sessions)
 }
 
 function assignSessionsToOffres (offres, sessions) {
-  const incomingSessions = sessions.filter(session => session.dateFin > new Date())
-  const sortedSessions = incomingSessions.sort((a, b) => a.dateFin > b.dateFin)
-  const threeFirstSessions = sortedSessions.splice(0, 3)
-  return offres.map(offre => Object.assign(offre, { sessions: threeFirstSessions }))
+  const incomingSessions = sessions.filter(session => session.dateDebut > new Date())
+  const sortedSessions = incomingSessions.sort((a, b) => a.dateDebut > b.dateDebut)
+  return offres.map(offre => Object.assign(offre, { sessions: sortedSessions }))
 }

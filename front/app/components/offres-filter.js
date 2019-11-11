@@ -1,7 +1,7 @@
 import Component from '@ember/component'
 
 export default Component.extend({
-  classNames: ['list-filter'],
+  classNames: ['list-filter', 'py-4'],
   value: '',
 
   init () {
@@ -9,6 +9,8 @@ export default Component.extend({
     this.set('results', this.offres)
     this.set('currentFilter', '')
   },
+
+  showFilterByKeyword: false,
 
   actions: {
     filterByKeyword () {
@@ -25,7 +27,9 @@ export default Component.extend({
         return
       }
       const results = offres.filter(offre => {
-        return offre.sessions[0].action.niveauQualificationEntree === niveau
+        return offre.sessions.some(session => {
+          return session.action && session.action.niveauQualificationEntree === niveau
+        })
       })
       this.set('results', results)
     }

@@ -1,0 +1,53 @@
+<div class="col align-self-center">
+  <div class="row-fluid justify-content-center text-center mx-auto stack-container mb-3">
+    {{#each visibleItems as |offre index|}}
+      <OffreCard @offre={{offre}}
+                 @isInitialRender={{isInitialRender}}
+                 @index={{index}}
+                 @visibleItemAmount={{visibleItems.length}}
+                 @isLast={{eq offre visibleItems.lastObject}}
+                 @createFadeAnimation={{createCardFadeAnimation}}
+                 @createShiftAnimation={{createCardShiftAnimation}}
+                 @isActive={{eq offre currentItem}}
+                 @getInitialCardStyle={{getInitialCardStyle}}
+                 @fadeToRight={{fadeToRight}}>
+      </OffreCard>
+    {{else}}
+      <div class="row justify-content-center mt-4">
+        Aucune offre disponible pour le moment. Revenez demain !
+      </div>
+    {{/each}}
+  </div>
+
+  {{#if visibleItems}}
+    <div class="row-fluid mb-4 position-relative">
+      <button class="btn btn-danger text-uppercase" type="button" {{action "notInterested"}}>Non merci</button>
+      <button class="btn btn-success text-uppercase" type="button" {{action "interested"}}>Ça m'intéresse !</button>
+    </div>
+  {{/if}}
+</div>
+
+{{#if isShowingModal}}
+  <ConnectionDialog
+    @offre={{selectedOffre}}
+    @onClose={{action (mut isShowingModal) false}}
+    @openForm={{action "openForm" offre}}
+    @retrieveAccount={{action "retrieveAccount"}}>
+  </ConnectionDialog>
+{{/if}}
+{{#if isShowingError}}
+  {{#bs-modal
+    open=true
+    position="center" as |modal|}}
+    {{#modal.header}}
+      <div class="modal-title">
+        ❌ Erreur
+      </div>
+    {{/modal.header}}
+    {{#modal.body}}
+      <div class="row-fluid">
+        Aucun compte n'existe avec cet email. Vérifiez votre saisie.
+      </div>
+    {{/modal.body}}
+  {{/bs-modal}}
+{{/if}}

@@ -16,6 +16,9 @@
           "callback": "computeNiveauQualificationEntree"
         }
       }
+    },
+    "SetupRemoteMethods": {
+      "disableAllExcept": []
     }
   },
   "properties": {

@@ -11,9 +11,10 @@ $info: #eeeeee;
 
 @import "components/offres-filter";
 @import "components/offre";
-@import "components/top-banner";
+@import "components/navbar";
 @import "components/steps";
-
+@import "components/offres-stack";
+@import "components/offres-card";
 
 .btn-link.focus, .btn-link:focus,
 .btn-link.hover, .btn-link:hover {
@@ -23,4 +24,29 @@ $info: #eeeeee;
 .card-header {
   padding-left: 0;
   padding-right: 0;
+}
+
+main > .container {
+  padding-bottom: 20px;
+  padding-top: 76px;
+}
+
+body > .ember-view {
+  height: 100%;
+}
+
+@include media-breakpoint-between(xs, sm) {
+  .btn {
+    @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
+  }
+}
+
+body {
+  //noinspection CssUnknownTarget
+  background-image: url("/assets/background.jpg");
+  background-position: top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }

@@ -1,4 +1,4 @@
-const packageInfo = require('../../../package')
+const packageInfo = require('../../package')
 const createApiStatus = require('../features/status/api-status')
 
 module.exports = (app) => {

@@ -16,6 +16,9 @@
           "callback": "computeDuration"
         }
       }
+    },
+    "SetupRemoteMethods": {
+      "disableAllExcept": []
     }
   },
   "scope": {

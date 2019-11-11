@@ -1,0 +1,48 @@
+{{#bs-modal
+  open=true
+  size="lg"
+  position="center"
+  onHidden=(action "onHidden") as |modal|}}
+  {{#modal.header}}
+    <div class="modal-title">
+      Candidature
+    </div>
+  {{/modal.header}}
+  {{#modal.body}}
+    <div class="row-fluid">
+      <div class="col py-2">
+        C'est ma première candidature sur le site ➡️
+        {{#bs-button
+          type="primary"
+          class="text-uppercase"
+          onClick=(action "openForm")
+        }}
+          Inscription
+        {{/bs-button}}
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col">
+        {{#bs-form
+          formLayout="inline" as |form|}}
+          J'ai déjà postulé avec cet email sur le site ➡️
+          {{form.element
+            control-type="email"
+            placeholder="email"
+            property="email"
+            required=true
+            onChange=(action "emailChanged")
+          }}
+          {{#bs-button
+            type="primary"
+            class="text-uppercase"
+            disabled=retrieveAccountButtonDisabled
+            onClick=(action "retrieveAccount")
+          }}
+            Connexion
+          {{/bs-button}}
+        {{/bs-form}}
+      </div>
+    </div>
+  {{/modal.body}}
+{{/bs-modal}}

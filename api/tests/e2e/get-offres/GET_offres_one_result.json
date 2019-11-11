@@ -33,12 +33,13 @@
     },
     "secteurActiviteLibelle": "Services de déménagement",
     "typeContrat": "CDI",
+    "typeContratLibelle": "Contrat à durée indéterminée",
     "appellationlibelle": "Attaché commercial / Attachée commerciale en clientèle d'entreprises",
     "sessions": [
       {
         "id": 1,
         "numero": 20191,
-        "communeCodeInsee": 42,
+        "communeCodeInsee": "42",
         "actionNumero": 1928,
         "dateDebut": "2028-09-01T00:00:00.000Z",
         "dateFin": "2028-10-01T00:00:00.000Z",

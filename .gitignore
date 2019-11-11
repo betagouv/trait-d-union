@@ -1,3 +1,4 @@
+dist/
 api/client/
 api/.dev.env
 api/.int.env

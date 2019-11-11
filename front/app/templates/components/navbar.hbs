@@ -1,0 +1,47 @@
+<header>
+  {{#bs-navbar type=type collapsed=collapsed onCollapse=(action (mut collapsed) true)
+               onExpand=(action (mut collapsed) false)
+               class="fixed-top"
+  as |navbar|}}
+    {{navbar.toggle}}
+    {{#link-to "index"}}
+      <img class="img navbar-brand d-none d-sm-block" height="80" src="https://i.ibb.co/7bgfdFK/logo2-1.png" alt="logo">
+    {{/link-to}}
+    {{#navbar.content class="justify-content-end"}}
+      {{#navbar.nav as |nav|}}
+        <ul class="nav mt-2">
+          <li class="nav-item">
+            {{#nav.item}}
+              {{#link-to "steps"}}
+                <button {{action navbar.collapse}} type="button" class="btn btn-primary btn-sm text-uppercase mx-1">étapes</button>
+              {{/link-to}}
+            {{/nav.item}}
+          </li>
+          <li class="nav-item">
+            {{#nav.item}}
+              {{#link-to "offres"}}
+                <button {{action navbar.collapse}} type="button" class="btn btn-primary btn-sm text-uppercase mx-1">offres</button>
+              {{/link-to}}
+            {{/nav.item}}
+          </li>
+          <li class="nav-item">
+            {{#nav.item}}
+              {{#link-to "faq"}}
+                <button {{action navbar.collapse}} type="button" class="btn btn-primary btn-sm text-uppercase mx-1">aide</button>
+              {{/link-to}}
+            {{/nav.item}}
+          </li>
+          <li class="nav-item">
+            {{#nav.item}}
+              <a {{action navbar.collapse preventDefault=false}} href="https://beta.gouv.fr/startups/trait-d-union.html" target="_blank"
+                                                                 rel="noopener"
+                                                                 class="btn btn-primary btn-sm text-uppercase">
+                à propos
+              </a>
+            {{/nav.item}}
+          </li>
+        </ul>
+      {{/navbar.nav}}
+    {{/navbar.content}}
+  {{/bs-navbar}}
+</header>

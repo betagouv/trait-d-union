@@ -4,6 +4,14 @@ const boot = require('loopback-boot')
 const app = module.exports = loopback()
 let server
 
+app.use((req, res, next) => {
+  const userId = req.headers['user-id']
+  if (userId) {
+    req.userId = userId
+  }
+  next()
+})
+
 app.start = async () => {
   // start the web server
   server = await app.listen(function () {
@@ -19,7 +27,8 @@ app.start = async () => {
 }
 
 app.stop = function () {
-  app.scheduledTask.cancel()
+  app.scheduledSourceTask.cancel()
+  app.scheduleRetryCandidatureTask.cancel()
   server.close()
 }
 

@@ -8,6 +8,24 @@
   "http": {
     "path": "offres"
   },
+  "scope": {
+    "order": "createdAt DESC"
+  },
+  "mixins": {
+    "TimeStamp": {
+      "required": false,
+      "validateUpsert": true
+    },
+    "SetupRemoteMethods": {
+      "disableAllExcept": [
+        "find",
+        "findById",
+        "sourceOffres",
+        "getContacts",
+        "count"
+      ]
+    }
+  },
   "properties": {
     "id": {
       "type": "string",
@@ -16,10 +34,25 @@
     },
     "data": {
       "type": "object"
+    },
+    "status": {
+      "type": "string",
+      "required": false,
+      "default": "available"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "candidatures": {
+      "type": "hasMany",
+      "model": "Candidat",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      },
+      "through": "Candidature"
+    }
+  },
   "acls": [],
   "methods": {}
 }
