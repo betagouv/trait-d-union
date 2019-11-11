@@ -7,6 +7,8 @@ const poleEmploiApiService = require('../../repositories/pole-emploi-api-service
 const offresRepository = require('../../repositories/pole-emploi-offres/offres-pole-emploi-repository')({ poleEmploiApiService })
 const filterShortTermCDD = require('./filter-short-term-cdd')
 const blacklistOffres = require('./blacklist-offres')
+const { contactsApiClient } = require('../../infrastructure/sendinblue-api-client')
+const subscribeEnterpriseToMailingContactList = require('./subscribe-enterprise-to-mailing-contact-list')({ contactsApiClient })
 
 module.exports = async ({ Offre }) => {
   const findOffres = createFindOffres(Offre.app.models, [offresRepository])
@@ -22,6 +24,9 @@ module.exports = async ({ Offre }) => {
   if (process.env.TU_FF_ADD_FAKE_DATA === 'on') {
     await updateFakeOffresAvailablities(Offre)
   }
+  longTermeOffres.forEach(async ({ contact }) => {
+    await subscribeEnterpriseToMailingContactList(contact)
+  })
   return longTermeOffres
 }
 
