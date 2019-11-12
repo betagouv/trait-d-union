@@ -1,58 +1,52 @@
 {
-  "name": "api",
-  "version": "0.0.191",
+  "name": "traitdunion-api",
+  "version": "1.0.0",
+  "description": "API de Trait d'Union - Version 2 - PMSMP",
+  "main": "bin/start.js",
+  "repository": "git@github.com:betagouv/trait-d-union.git",
+  "author": "Trait d'Union",
+  "license": "MIT",
   "private": false,
-  "main": "server/server.js",
-  "description": "Back end application for Trait d'Union",
-  "engines": {
-    "node": "10.15.3",
-    "npm": "6.9.0"
+  "dependencies": {
+    "@hapi/hapi": "18.4.0",
+    "@hapi/inert": "5.2.2",
+    "@hapi/joi": "16.1.7",
+    "@hapi/vision": "5.5.4",
+    "camelcase": "5.3.1",
+    "envie": "2.1.0",
+    "hapi-swagger": "11.0.0",
+    "node-dev": "4.0.0",
+    "uppercamelcase": "3.0.0"
   },
   "scripts": {
+    "start": "node bin/start.js",
+    "start:dev": "node-dev bin/start.js",
     "lint": "eslint .",
-    "start": "NODE_ICU_DATA=\"$(pwd)/node_modules/full-icu\" node .",
-    "start:dev": "export $(cat .dev.env | xargs) && nodemon .",
-    "test:e2e": "export $(cat .e2e.env | xargs) && cucumber-js tests/e2e/** --require tests/e2e/step-definitions/steps.js --format ../node_modules/cucumber-pretty",
-    "test": "NODE_ICU_DATA=\"$(pwd)/node_modules/full-icu\" NODE_ENV=test mocha **/*.test.js --exclude **/node_modules/**",
-    "test:watch": "npm run test -- --watch --reporter=min",
-    "posttest": "npm run lint"
+    "lint:fix": "eslint --fix",
+    "test": "mocha src/**/**/**/**/*test.js"
   },
-  "dependencies": {
-    "boom": "7.3.0",
-    "bunyan": "1.8.12",
-    "bunyan-format": "0.2.1",
-    "compression": "1.7.4",
-    "cors": "2.8.5",
-    "full-icu": "1.3.0",
-    "got": "9.6.0",
-    "helmet": "3.21.1",
-    "joi": "14.3.1",
-    "loopback": "3.26.0",
-    "loopback-boot": "3.3.1",
-    "loopback-component-explorer": "6.4.0",
-    "loopback-connector-mongodb": "5.0.1",
-    "loopback-connector-postgresql": "3.8.0",
-    "loopback-ds-calculated-mixin": "2.0.4",
-    "loopback-ds-timestamp-mixin": "3.4.1",
-    "loopback-setup-remote-methods-mixin": "1.2.1",
-    "lru-cache": "5.1.1",
-    "luxon": "1.19.3",
-    "node-schedule": "1.3.2",
-    "node-slack": "0.0.7",
-    "request-promise-native": "1.0.7",
-    "sendin_blue_api": "git+https://github.com/HEYGUL/APIv3-nodejs-library.git",
-    "serve-favicon": "2.5.0",
-    "strong-error-handler": "3.3.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/betagouv/trait-d-union.git"
-  },
-  "license": "MIT",
+  "pre-commit": [
+    "lint"
+  ],
+  "pre-push": [
+    "lint",
+    "test"
+  ],
   "devDependencies": {
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
-    "nock": "11.4.0",
-    "proxyquire": "2.1.3"
+    "dirty-chai": "2.0.1",
+    "eslint": "6.6.0",
+    "eslint-config-standard": "14.1.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-mocha": "6.2.1",
+    "eslint-plugin-node": "10.0.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "mocha": "6.2.2",
+    "pre-commit": "1.2.2",
+    "pre-push": "0.1.1",
+    "sinon": "7.5.0",
+    "sinon-chai": "3.3.0"
   }
 }
