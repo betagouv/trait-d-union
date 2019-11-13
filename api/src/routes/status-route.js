@@ -11,8 +11,7 @@ module.exports.createRoute = (pathPrefix) => ({
     description: 'API status to get current version and sha1 commit',
     tags: ['api', 'status'],
     plugins: {
-      'hapi-swagger': {
-        'x-description': 'Test',
+      'hapi-swaggered': {
         security: [{ OAuth: ['openid', 'profile'] }],
         responses: {
           200: {

@@ -22,6 +22,11 @@ const environmentVariables = Envie({
     .default('localhost:8080')
     .description('Hostname used in Swagger documentation - shall contain port also'),
 
+  DATABASE_URL: Joi
+    .string()
+    .uri({ scheme: 'postgres' })
+    .description('Connection string to the main Postgres database'),
+
   AUTH0_BASE_URL: Joi
     .string()
     .uri({ scheme: ['https', 'http'] })
@@ -29,7 +34,18 @@ const environmentVariables = Envie({
 
   OAUTH_CLIENT_ID: Joi
     .string()
-    .description('Client ID of Auth0 application used for swagger')
+    .description('Client ID of Auth0 application used for swagger'),
+
+  E2E_TEST: Joi
+    .boolean()
+    .default(false)
+    .description('Set to true if E2E testing is in progress'),
+
+  E2E_TEST_DATABASE_URL: Joi
+    .string()
+    .uri({ scheme: 'postgres' })
+    .default('postgres://ypam:ypam@db/ypam-e2e?ssl=false')
+    .description('Connection string to the main Postgres database')
 })
 
 module.exports = environmentVariables

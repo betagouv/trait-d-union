@@ -1,10 +1,13 @@
 const Hapi = require('@hapi/hapi')
+const databaseService = require('./src/services/database-service')
 const Inert = require('@hapi/inert')
 const Vision = require('@hapi/vision')
+const Pino = require('hapi-pino')
 const HapiSwagger = require('hapi-swaggered')
 const HapiSwaggerUI = require('hapi-swaggered-ui')
 const AuthJwt = require('hapi-auth-jwt2')
 const jwksRsa = require('jwks-rsa')
+const pinoBaseOptions = require('./src/utils/pino-options')
 const Pack = require('./package')
 const configurationService = require('./src/services/configuration-service')
 const routes = require('./src/routes')
@@ -15,6 +18,7 @@ exports.createServer = async () => {
     host: configurationService.get('HOST')
   })
   serverInstance.event('onPreStart', () => {
+    databaseService.sync()
   })
   return serverInstance
 }
@@ -22,6 +26,7 @@ exports.createServer = async () => {
 exports.registerPlugins = async (server) => {
   const swaggerOptions = _getSwaggerOptions()
   const swaggerUIOptions = _getSwaggerUIOptions(server.info.protocol)
+  const pinoOptions = _getPinoOptions()
   const auth0BaseUrl = configurationService.get('AUTH0_BASE_URL')
 
   await server.register([
@@ -35,6 +40,10 @@ exports.registerPlugins = async (server) => {
     {
       plugin: HapiSwaggerUI,
       options: swaggerUIOptions
+    },
+    {
+      plugin: Pino,
+      options: pinoOptions
     }
   ])
 
@@ -130,5 +139,18 @@ exports.registerPlugins = async (server) => {
         }
       }
     }
+  }
+
+  function _getPinoOptions () {
+    return Object.assign({}, pinoBaseOptions, {
+      logEvents: [
+        'onPostStart',
+        'onPostStop',
+        'response',
+        'request-error',
+        'onRequest',
+        'log'
+      ]
+    })
   }
 }

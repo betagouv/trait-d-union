@@ -15,9 +15,15 @@
     "camelcase": "5.3.1",
     "envie": "3.0.0-alpha",
     "hapi-auth-jwt2": "8.8.0",
+    "hapi-pino": "6.3.0",
     "hapi-swaggered": "3.0.3",
     "hapi-swaggered-ui": "https://github.com/HEYGUL/hapi-swaggered-ui#master",
     "jwks-rsa": "1.6.0",
+    "pg": "7.12.1",
+    "pino": "5.13.6",
+    "pino-pretty": "3.3.0",
+    "sequelize": "5.21.2",
+    "sequelize-cli": "5.5.1",
     "uppercamelcase": "3.0.0"
   },
   "scripts": {
@@ -26,7 +32,8 @@
     "start:dev": "OAUTH_CLIENT_ID=6FSemac44n6J9AbNYt6XPJAUynN3IIrK AUTH0_BASE_URL=https://traitdunion.eu.auth0.com node-dev bin/start.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "test": "nyc -r text -r html -r lcov mocha src/**/**/**/**/*test.js"
+    "test": "nyc -r text -r html -r lcov mocha src/**/**/**/**/*test.js",
+    "migrate:up": "sequelize db:migrate"
   },
   "pre-commit": [
     "lint"

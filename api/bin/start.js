@@ -4,8 +4,6 @@ const configurationService = require('../src/services/configuration-service')
 const start = async () => {
   const server = await registerPlugins(await createServer())
   await server.start()
-  // eslint-disable-next-line no-console
-  console.log('Server running on %s', server.info.uri)
 }
 
 if (process.argv.includes('-h')) {
