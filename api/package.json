@@ -15,7 +15,6 @@
     "camelcase": "5.3.1",
     "envie": "3.0.0-alpha",
     "hapi-swagger": "11.0.0",
-    "node-dev": "4.0.0",
     "uppercamelcase": "3.0.0"
   },
   "scripts": {
@@ -24,7 +23,7 @@
     "start:dev": "node-dev bin/start.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "test": "mocha src/**/**/**/**/*test.js"
+    "test": "nyc -r text -r html -r lcov mocha src/**/**/**/**/*test.js"
   },
   "pre-commit": [
     "lint"
@@ -45,6 +44,8 @@
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-standard": "4.0.1",
     "mocha": "6.2.2",
+    "node-dev": "4.0.0",
+    "nyc": "14.1.1",
     "pre-commit": "1.2.2",
     "pre-push": "0.1.1",
     "sinon": "7.5.0",
