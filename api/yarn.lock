@@ -736,10 +736,10 @@ emoji-regex@^8.0.0:
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-8.0.0.tgz#e818fd69ce5ccfcb404594f842963bf53164cc37"
   integrity sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==
 
-envie@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/envie/-/envie-2.1.0.tgz#8dc54af17b7a94f494ba129798f9fad8a9589cb0"
-  integrity sha512-zr8ynP5FVQ7zyjTYvPkQVJFfIbnhtJREjbIl44yWNDcv2U2l2dQOJV9V0tEuO5w8X9f0ms7RhF1GaSE3xokgFw==
+envie@3.0.0-alpha:
+  version "3.0.0-alpha"
+  resolved "https://registry.yarnpkg.com/envie/-/envie-3.0.0-alpha.tgz#157b182bd4f81cf99053e42a58891cb3ed9f1e5d"
+  integrity sha512-+DJ+7yEAWEMn0rCK47IBoFeIFmJaAWxllkNWe5zTXn1DlKaTM5PjVb7EEyHN9VqaNykvduat/Fow9owBnAGn1A==
   dependencies:
     colors "^1.3.3"
 
