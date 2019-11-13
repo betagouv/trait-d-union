@@ -20,7 +20,16 @@ const environmentVariables = Envie({
   HOST_NAME: Joi
     .string()
     .default('localhost:8080')
-    .description('Hostname used in Swagger documentation - shall contain port also')
-}, process.env, { noDefaults: false })
+    .description('Hostname used in Swagger documentation - shall contain port also'),
+
+  AUTH0_BASE_URL: Joi
+    .string()
+    .uri({ scheme: ['https', 'http'] })
+    .description('Auth0 base url'),
+
+  OAUTH_CLIENT_ID: Joi
+    .string()
+    .description('Client ID of Auth0 application used for swagger')
+})
 
 module.exports = environmentVariables

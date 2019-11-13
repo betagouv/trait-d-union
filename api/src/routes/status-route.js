@@ -8,6 +8,7 @@ module.exports.createRoute = (pathPrefix) => ({
   config: {
     auth: false,
     handler,
+    description: 'API status to get current version and sha1 commit',
     tags: ['api', 'status'],
     plugins: {
       'hapi-swagger': {
