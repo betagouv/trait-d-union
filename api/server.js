@@ -1,7 +1,8 @@
 const Hapi = require('@hapi/hapi')
 const Inert = require('@hapi/inert')
 const Vision = require('@hapi/vision')
-const HapiSwagger = require('hapi-swagger')
+const HapiSwagger = require('hapi-swaggered')
+const HapiSwaggerUI = require('hapi-swaggered-ui')
 const AuthJwt = require('hapi-auth-jwt2')
 const jwksRsa = require('jwks-rsa')
 const Pack = require('./package')
@@ -19,7 +20,8 @@ exports.createServer = async () => {
 }
 
 exports.registerPlugins = async (server) => {
-  const swaggerOptions = _getSwaggerOptions(server.info.protocol)
+  const swaggerOptions = _getSwaggerOptions()
+  const swaggerUIOptions = _getSwaggerUIOptions(server.info.protocol)
   const auth0BaseUrl = configurationService.get('AUTH0_BASE_URL')
 
   await server.register([
@@ -29,6 +31,10 @@ exports.registerPlugins = async (server) => {
     {
       plugin: HapiSwagger,
       options: swaggerOptions
+    },
+    {
+      plugin: HapiSwaggerUI,
+      options: swaggerUIOptions
     }
   ])
 
@@ -78,15 +84,39 @@ exports.registerPlugins = async (server) => {
     return callback(null, false)
   }
 
-  function _getSwaggerOptions (protocol) {
+  function _getSwaggerUIOptions (protocol) {
+    return {
+      path: '/documentation',
+      swaggerOptions: {
+        defaultModelsExpandDepth: 0,
+        defaultModelExpandDepth: 5,
+        defaultModelRendering: 'model',
+        displayRequestDuration: true,
+        operationsSorter: 'method',
+        docExpansion: 'list',
+        oauth2RedirectUrl: `${protocol}://${configurationService.get(
+          'HOST_NAME'
+        )}/documentation/oauth2-redirect.html`
+      },
+      oauthOptions: { clientId: `${configurationService.get('OAUTH_CLIENT_ID')}` },
+      auth: false,
+      authorization: {
+        field: 'Authorization',
+        scope: 'header',
+        valuePrefix: 'Bearer '
+      }
+    }
+  }
+
+  function _getSwaggerOptions () {
     return {
       info: {
         title: 'Trait d\'Union API - Documentation',
         version: Pack.version
       },
-      grouping: 'tags',
+      tagging: { mode: 'tags' },
+      responseValidation: false,
       schemes: [],
-      basePath: '/api/v1/',
       host: `${configurationService.get('HOST_NAME')}`,
       securityDefinitions: {
         OAuth: {

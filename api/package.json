@@ -15,14 +15,15 @@
     "camelcase": "5.3.1",
     "envie": "3.0.0-alpha",
     "hapi-auth-jwt2": "8.8.0",
-    "hapi-swagger": "11.0.0",
+    "hapi-swaggered": "3.0.3",
+    "hapi-swaggered-ui": "https://github.com/HEYGUL/hapi-swaggered-ui#master",
     "jwks-rsa": "1.6.0",
     "uppercamelcase": "3.0.0"
   },
   "scripts": {
     "display:help": "PORT=42 node bin/start.js -h",
     "start": "node bin/start.js",
-    "start:dev": "AUTH0_BASE_URL=https://traitdunion.eu.auth0.com node-dev bin/start.js",
+    "start:dev": "OAUTH_CLIENT_ID=6FSemac44n6J9AbNYt6XPJAUynN3IIrK AUTH0_BASE_URL=https://traitdunion.eu.auth0.com node-dev bin/start.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "test": "nyc -r text -r html -r lcov mocha src/**/**/**/**/*test.js"
