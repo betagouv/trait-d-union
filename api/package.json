@@ -28,6 +28,7 @@
   },
   "scripts": {
     "display:help": "PORT=42 node bin/start.js -h",
+    "postdeploy": "migrate:up --env production",
     "start": "node bin/start.js",
     "start:dev": "OAUTH_CLIENT_ID=6FSemac44n6J9AbNYt6XPJAUynN3IIrK AUTH0_BASE_URL=https://traitdunion.eu.auth0.com node-dev bin/start.js",
     "lint": "eslint .",

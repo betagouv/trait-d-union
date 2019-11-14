@@ -1,1 +1,1 @@
-postdeploy: yarn migrate:up --env production
+postdeploy: yarn postdeploy
