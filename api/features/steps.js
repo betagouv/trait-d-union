@@ -10,7 +10,6 @@ setDefaultTimeout(30 * 1000)
 
 let response
 const applicationBaseUrl = `http://${configurationService.get('HOST_NAME')}`
-
 let userToken
 
 Given('User is not authenticated', () => {

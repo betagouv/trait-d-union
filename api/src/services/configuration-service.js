@@ -19,7 +19,7 @@ const environmentVariables = Envie({
 
   HOST_NAME: Joi
     .string()
-    .default('localhost:8080')
+    .default('0.0.0.0:8080')
     .description('Hostname used in Swagger documentation - shall contain port also'),
 
   DATABASE_URL: Joi
@@ -44,8 +44,8 @@ const environmentVariables = Envie({
   E2E_TEST_DATABASE_URL: Joi
     .string()
     .uri({ scheme: 'postgres' })
-    .default('postgres://ypam:ypam@db/ypam-e2e?ssl=false')
-    .description('Connection string to the main Postgres database')
+    .default('postgres://trait:dunion@db/traitdunion-e2e')
+    .description('Connection string to the end-to-end tests Postgres database')
 })
 
 module.exports = environmentVariables

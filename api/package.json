@@ -24,6 +24,7 @@
     "hapi-swaggered": "3.0.3",
     "hapi-swaggered-ui": "https://github.com/HEYGUL/hapi-swaggered-ui#master",
     "jwks-rsa": "1.6.0",
+    "nock": "11.7.0",
     "pg": "7.12.1",
     "pino": "5.13.6",
     "pino-pretty": "3.3.0",
@@ -56,12 +57,14 @@
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint",
-      "pre-push": "yarn lint && yarn test && yarn start:e2e:pre-push && yarn test:e2e && yarn stop"
+      "pre-push": "yarn test && yarn start:e2e:pre-push && yarn test:e2e && yarn stop"
     }
   },
   "devDependencies": {
+    "body-parser": "1.19.0",
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
+    "cors": "2.8.5",
     "cucumber": "6.0.5",
     "cucumber-pretty": "6.0.0",
     "dirty-chai": "2.0.1",
@@ -72,8 +75,11 @@
     "eslint-plugin-node": "10.0.0",
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-standard": "4.0.1",
+    "express": "4.17.1",
+    "get-json": "1.0.1",
     "husky": "3.0.9",
     "mocha": "6.2.2",
+    "mock-jwks": "0.2.0",
     "node-dev": "4.0.0",
     "nyc": "14.1.1",
     "sinon": "7.5.0",
