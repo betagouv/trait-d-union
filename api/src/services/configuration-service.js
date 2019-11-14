@@ -19,7 +19,7 @@ const environmentVariables = Envie({
 
   HOST_NAME: Joi
     .string()
-    .default('0.0.0.0:8080')
+    .default('localhost:8080')
     .description('Hostname used in Swagger documentation - shall contain port also'),
 
   DATABASE_URL: Joi
