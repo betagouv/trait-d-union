@@ -7,6 +7,10 @@
   "author": "Trait d'Union",
   "license": "MIT",
   "private": false,
+  "engines": {
+    "node": "12.13.x",
+    "npm": "6.12.x"
+  },
   "dependencies": {
     "@hapi/hapi": "18.4.0",
     "@hapi/inert": "5.2.2",
@@ -14,6 +18,7 @@
     "@hapi/vision": "5.5.4",
     "camelcase": "5.3.1",
     "envie": "3.0.0-alpha",
+    "got": "9.6.0",
     "hapi-auth-jwt2": "8.8.0",
     "hapi-pino": "6.3.0",
     "hapi-swaggered": "3.0.3",
@@ -30,22 +35,39 @@
     "display:help": "PORT=42 node bin/start.js -h",
     "postdeploy": "migrate:up --env production",
     "start": "node bin/start.js",
-    "start:dev": "OAUTH_CLIENT_ID=6FSemac44n6J9AbNYt6XPJAUynN3IIrK AUTH0_BASE_URL=https://traitdunion.eu.auth0.com node-dev bin/start.js",
+    "start:dev": "docker-compose up",
+    "start:e2e": "AUTH0_BASE_URL=http://localhost:3333 E2E_TEST=true docker-compose up",
+    "start:e2e:pre-push": "AUTH0_BASE_URL=http://localhost:3333 E2E_TEST=true docker-compose up &",
+    "stop": "docker-compose stop",
+    "seed:all": "sequelize db:seed:all",
+    "seed:undo:all": "sequelize db:seed:undo:all",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "test": "nyc -r text -r html -r lcov mocha src/**/**/**/**/*test.js",
-    "migrate:up": "sequelize db:migrate"
+    "test:e2e": "yarn e2e:db:drop ; yarn e2e:db:create && yarn e2e:db:migrate && yarn e2e:seed && yarn e2e:test:run",
+    "e2e:test:run": "cucumber-js features/**/*.feature --require features/steps.js --format node_modules/cucumber-pretty",
+    "e2e:db:create": "yarn sequelize db:create --env local-e2e",
+    "e2e:db:migrate": "yarn sequelize db:migrate --env local-e2e",
+    "e2e:seed": "yarn seed:all --env local-e2e && E2E_SEEDS=true yarn seed:all --env local-e2e",
+    "e2e:db:drop": "yarn sequelize db:drop --env local-e2e",
+    "migrate:up": "sequelize db:migrate",
+    "migrate:down": "sequelize db:migrate:undo"
   },
   "pre-commit": [
     "lint"
   ],
   "pre-push": [
     "lint",
-    "test"
+    "test",
+    "start:e2e:pre-push",
+    "test:e2e",
+    "stop"
   ],
   "devDependencies": {
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
+    "cucumber": "6.0.5",
+    "cucumber-pretty": "6.0.0",
     "dirty-chai": "2.0.1",
     "eslint": "6.6.0",
     "eslint-config-standard": "14.1.0",
