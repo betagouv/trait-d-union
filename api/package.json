@@ -53,16 +53,12 @@
     "migrate:up": "sequelize db:migrate",
     "migrate:down": "sequelize db:migrate:undo"
   },
-  "pre-commit": [
-    "lint"
-  ],
-  "pre-push": [
-    "lint",
-    "test",
-    "start:e2e:pre-push",
-    "test:e2e",
-    "stop"
-  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "pre-push": "yarn lint && yarn test && yarn start:e2e:pre-push && yarn test:e2e && yarn stop"
+    }
+  },
   "devDependencies": {
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
@@ -80,8 +76,6 @@
     "mocha": "6.2.2",
     "node-dev": "4.0.0",
     "nyc": "14.1.1",
-    "pre-commit": "1.2.2",
-    "pre-push": "0.1.1",
     "sinon": "7.5.0",
     "sinon-chai": "3.3.0"
   }

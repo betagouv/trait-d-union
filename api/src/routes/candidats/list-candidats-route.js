@@ -1,4 +1,3 @@
-const Joi = require('joi')
 const Models = require('../../models')
 const collectionResponse = require('../../utils/collection-response')
 const listCandidats = require('../../services/candidats/list-candidats-service')(Models)

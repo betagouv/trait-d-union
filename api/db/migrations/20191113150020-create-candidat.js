@@ -16,9 +16,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: true
       },
-      niveauEtude: {
-        type: Sequelize.ENUM(['bac'])
-      },
+      niveauEtude: { type: Sequelize.ENUM(['bac']) },
       createdAt: {
         type: Sequelize.DATE,
         allowNull: false,
