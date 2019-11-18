@@ -1,5 +1,4 @@
 const Models = require('../../models')
-const Joi = require('@hapi/joi')
 const createOffre = require('../../services/offres/create-offre-service')(Models)
 
 module.exports.createRoute = (pathPrefix) => ({
