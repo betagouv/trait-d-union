@@ -15,22 +15,14 @@ const NavBar = () => {
               <div className="header-top-toggler">
                 <div className="header-top-toggler-button" />
               </div>
-
-
               <div className="top-nav" style={{ display: 'flex' }}>
-
                 <Link to="/poster-offre">
-                  <button type="button" class="btn btn-primary btn-lg">
-                    <i className="fas fa-plus"></i> Poster une offre d'immersion
+                  <button type="button" className="btn btn-primary btn-lg">
+                    <i className="fas fa-plus"/> Poster une offre d'immersion
                       </button>
                 </Link>
-
-
               </div>
-
-
             </div>
-
           </div>
         </div>
       </div>
