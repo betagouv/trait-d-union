@@ -6,7 +6,7 @@ module.exports.createRoute = (pathPrefix) => ({
   method: 'GET',
   path: `${pathPrefix}/offres/{offreId}`,
   config: {
-    description: 'Création d\'une offre de PMSMP',
+    description: 'Récupération d\'une offre de PMSMP',
     tags: ['api', 'offres'],
     validate: {
       params: Joi.object({
