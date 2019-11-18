@@ -170,29 +170,29 @@ header {
 				}
 				/* Set Scrollbar Buttons */
 				&::-webkit-scrollbar-button {
-				 
-				} 
+
+				}
 				/* Set Scrollbar Track */
 				&::-webkit-scrollbar-track {
 				  border-radius: 5px;
-				}   
+				}
 				&::-webkit-scrollbar-track-piece {
-				  
+
 				}
 				/* Set Scrollbar Handle */
 				&::-webkit-scrollbar-thumb {
 				  -webkit-border-radius: 10px;
 				  border-radius: 10px;
-				  background: #dbe0e9; 
-				} 
+				  background: #dbe0e9;
+				}
 				&::-webkit-scrollbar-corner {
-				  
-				}    
+
+				}
 				&::-webkit-resizer {
-				  
+
 				}
 				&::-webkit-scrollbar-thumb:window-inactive {
-					// background: #dbe0e9; 
+					// background: #dbe0e9;
 				}
 				.notification-list {
 					padding: 10px 0;
@@ -777,7 +777,7 @@ header {
 									}
 								}
 							}
-							.search-by:first-child() {
+							.search-by:first-child {
 								position: relative;
 								margin-right: 30px;
 								&:before {
@@ -871,29 +871,29 @@ header {
 						}
 						/* Set Scrollbar Buttons */
 						&::-webkit-scrollbar-button {
-						 
-						} 
+
+						}
 						/* Set Scrollbar Track */
 						&::-webkit-scrollbar-track {
 						  border-radius: 5px;
-						}   
+						}
 						&::-webkit-scrollbar-track-piece {
-						  
+
 						}
 						/* Set Scrollbar Handle */
 						&::-webkit-scrollbar-thumb {
 						  -webkit-border-radius: 10px;
 						  border-radius: 10px;
-						  background: #dbe0e9; 
-						} 
+						  background: #dbe0e9;
+						}
 						&::-webkit-scrollbar-corner {
-						  
-						}    
+
+						}
 						&::-webkit-resizer {
-						  
+
 						}
 						&::-webkit-scrollbar-thumb:window-inactive {
-							// background: #dbe0e9; 
+							// background: #dbe0e9;
 						}
 						.notification-list {
 							padding: 10px 0;
@@ -1125,7 +1125,7 @@ header {
 				background: $fontColor;
 				top: 0;
 			}
-		} 
+		}
 	}
 
 
@@ -1139,7 +1139,6 @@ header {
 			background: $white;
 			.navbar-toggler-icon {
 				color: $primaryColor;
-				background-image: url();
 				height: auto;
 				width: auto;
 				&:before {
@@ -1322,29 +1321,29 @@ header {
 					}
 					/* Set Scrollbar Buttons */
 					&::-webkit-scrollbar-button {
-					 
-					} 
+
+					}
 					/* Set Scrollbar Track */
 					&::-webkit-scrollbar-track {
 					  border-radius: 5px;
-					}   
+					}
 					&::-webkit-scrollbar-track-piece {
-					  
+
 					}
 					/* Set Scrollbar Handle */
 					&::-webkit-scrollbar-thumb {
 					  -webkit-border-radius: 10px;
 					  border-radius: 10px;
-					  background: #dbe0e9; 
-					} 
+					  background: #dbe0e9;
+					}
 					&::-webkit-scrollbar-corner {
-					  
-					}    
+
+					}
 					&::-webkit-resizer {
-					  
+
 					}
 					&::-webkit-scrollbar-thumb:window-inactive {
-						// background: #dbe0e9; 
+						// background: #dbe0e9;
 					}
 					.notification-list {
 						padding: 10px 0;
@@ -1430,7 +1429,6 @@ header {
 			right: 30px;
 			.navbar-toggler-icon {
 				color: $primaryColor;
-				background-image: url();
 				height: auto;
 				width: auto;
 				&:before {

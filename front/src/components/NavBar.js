@@ -1,9 +1,7 @@
 import React from 'react'
-import { useAuth0 } from '../react-auth0-spa'
 import { Link } from 'react-router-dom'
 
 const NavBar = () => {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0()
 
   return (
     <header className="header-2">
@@ -17,7 +15,7 @@ const NavBar = () => {
               <div className="header-top-toggler">
                 <div className="header-top-toggler-button"/>
               </div>
-              <div className="top-nav" style={{display: 'flex'}}>
+              <div className="top-nav" style={{ display: 'flex' }}>
                 <div className="dropdown header-top-notification">
                   <a href="#" className="notification-button">Notification</a>
                   <div className="notification-card">
@@ -131,7 +129,8 @@ const NavBar = () => {
                     </ul>
                   </li>
                   <li className="menu-item dropdown">
-                    <a href="#" data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Dashboard</a>
+                    <a href="#" data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true"
+                       aria-expanded="false">Dashboard</a>
                     <ul className="dropdown-menu">
                       <li className="menu-item dropdown">
                         <a href="#" data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Candidate
@@ -194,7 +193,7 @@ const NavBar = () => {
                   <li className="menu-item post-job">
                     <Link to="/poster-offre">
                       <i className="fas fa-plus"></i>
-                      Poster une offre d'immersion (PMSMP)
+                      Poster une offre
                     </Link>
                   </li>
                 </ul>

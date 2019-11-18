@@ -41,7 +41,7 @@
 	26.0 Contact Style
 	27.0 Payment Style
 	28.0 Account Style
-	
+
 -------------------------------------------*/
 
 @import 'partial/_variables.scss';
@@ -74,4 +74,4 @@
 @import '_contact.scss';
 @import '_payment.scss';
 @import '_account.scss';
- 
+@import './dashboard/scss/dashboard.scss';
