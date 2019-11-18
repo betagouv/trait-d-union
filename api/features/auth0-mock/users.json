@@ -1,0 +1,197 @@
+{
+  "auth0|client-1@e2e.fr": {
+    "email": "client-1@e2e.fr",
+    "email_verified": true,
+    "username": "client-1@e2e.fr",
+    "user_id": "auth0|client-1@e2e.fr",
+    "identities": [
+      {
+        "connection": "randstad-users",
+        "user_id": "auth0|client-1@e2e.fr",
+        "provider": "auth0",
+        "isSocial": false
+      }
+    ],
+    "app_metadata": {
+      "profile": {
+        "name": "CLI",
+        "id": "c6U5m8atIPAEVsKJzGhPo8t3mEuZNFxhldjZZ0Y1qMA1"
+      },
+      "tempPassword": false
+    },
+    "user_metadata": {},
+    "picture": "",
+    "name": "",
+    "nickname": "",
+    "blocked": false,
+    "given_name": "",
+    "family_name": ""
+  },
+  "auth0|client-2@e2e.fr": {
+    "email": "client-2@e2e.fr",
+    "email_verified": true,
+    "username": "client-2@e2e.fr",
+    "user_id": "auth0|client-2@e2e.fr",
+    "identities": [
+      {
+        "connection": "randstad-users",
+        "user_id": "auth0|client-2@e2e.fr",
+        "provider": "auth0",
+        "isSocial": false
+      }
+    ],
+    "app_metadata": {
+      "profile": {
+        "id": "matricule-randstad-client-2",
+        "name": "CLI"
+      },
+      "tempPassword": false
+    },
+    "user_metadata": {},
+    "picture": "",
+    "name": "",
+    "nickname": "",
+    "blocked": false,
+    "given_name": "",
+    "family_name": ""
+  },
+  "auth0|tt-1@e2e.fr": {
+    "email": "tt-1@e2e.fr",
+    "email_verified": true,
+    "username": "tt-1@e2e.fr",
+    "user_id": "auth0|tt-1@e2e.fr",
+    "identities": [
+      {
+        "connection": "randstad-users",
+        "user_id": "auth0|tt-1@e2e.fr",
+        "provider": "auth0",
+        "isSocial": false
+      }
+    ],
+    "app_metadata": {
+      "profile": {
+        "name": "TT",
+        "id": "osmoseWorkerId"
+      },
+      "tempPassword": false
+    },
+    "user_metadata": {},
+    "picture": "",
+    "name": "",
+    "nickname": "",
+    "blocked": false,
+    "given_name": "",
+    "family_name": ""
+  },
+  "auth0|tt-2@e2e.fr": {
+    "email": "tt-2@e2e.fr",
+    "email_verified": true,
+    "username": "tt-2@e2e.fr",
+    "user_id": "auth0|tt-2@e2e.fr",
+    "identities": [
+      {
+        "connection": "randstad-users",
+        "user_id": "auth0|tt-2@e2e.fr",
+        "provider": "auth0",
+        "isSocial": false
+      }
+    ],
+    "app_metadata": {
+      "profile": {
+        "id": "matricule-randstad-tt-2",
+        "name": "TT"
+      },
+      "tempPassword": false
+    },
+    "user_metadata": {},
+    "picture": "",
+    "name": "",
+    "nickname": "",
+    "blocked": false,
+    "given_name": "",
+    "family_name": ""
+  },
+  "auth0|perm-1@e2e.fr": {
+    "email": "perm-1@e2e.fr",
+    "email_verified": true,
+    "username": "perm-1@e2e.fr",
+    "user_id": "auth0|perm-1@e2e.fr",
+    "identities": [
+      {
+        "connection": "randstad-users",
+        "user_id": "auth0|perm-1@e2e.fr",
+        "provider": "auth0",
+        "isSocial": false
+      }
+    ],
+    "app_metadata": {
+      "profile": {
+        "name": "INTERN",
+        "id": "5af2a61c7a46584ef167355e"
+      },
+      "tempPassword": false
+    },
+    "user_metadata": {},
+    "picture": "",
+    "name": "",
+    "nickname": "",
+    "blocked": false,
+    "given_name": "",
+    "family_name": ""
+  },
+  "auth0|perm-2@e2e.fr": {
+    "email": "perm-2@e2e.fr",
+    "email_verified": true,
+    "username": "perm-2@e2e.fr",
+    "user_id": "auth0|perm-2@e2e.fr",
+    "identities": [
+      {
+        "connection": "randstad-users",
+        "user_id": "auth0|perm-2@e2e.fr",
+        "provider": "auth0",
+        "isSocial": false
+      }
+    ],
+    "app_metadata": {
+      "profile": {
+        "name": "INTERN",
+        "key": "SECOND_INTERN",
+        "id": "5af2a61c7a46584ef167355seconde2e"
+      },
+      "tempPassword": false
+    },
+    "user_metadata": {},
+    "picture": "",
+    "name": "",
+    "nickname": "",
+    "blocked": false,
+    "given_name": "",
+    "family_name": ""
+  },
+  "auth0|none@e2e.fr": {
+    "email": "none@e2e.fr",
+    "email_verified": true,
+    "username": "none@e2e.fr",
+    "user_id": "auth0|none@e2e.fr",
+    "identities": [
+      {
+        "connection": "randstad-users",
+        "user_id": "auth0|none@e2e.fr",
+        "provider": "auth0",
+        "isSocial": false
+      }
+    ],
+    "app_metadata": {
+      "profile": {
+        "name": "NONE"
+      }
+    },
+    "user_metadata": {},
+    "picture": "",
+    "name": "",
+    "nickname": "",
+    "blocked": false,
+    "given_name": "",
+    "family_name": ""
+  }
+}

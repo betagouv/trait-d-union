@@ -1,2 +1,2 @@
-/client/
-/server/utils/json-2-csv.js
+.nyc_output
+coverage
