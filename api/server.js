@@ -11,6 +11,7 @@ const pinoBaseOptions = require('./src/utils/pino-options')
 const Pack = require('./package')
 const configurationService = require('./src/services/configuration-service')
 const routes = require('./src/routes')
+const HapiCors = require('hapi-cors')
 
 exports.createServer = async () => {
   const serverInstance = new Hapi.Server({
@@ -33,6 +34,7 @@ exports.registerPlugins = async (server) => {
     Inert,
     Vision,
     AuthJwt,
+    HapiCors,
     {
       plugin: HapiSwagger,
       options: swaggerOptions

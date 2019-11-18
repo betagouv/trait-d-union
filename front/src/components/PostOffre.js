@@ -1,17 +1,17 @@
 import React from 'react'
 import Breadcrumb from './common/Breadcrumb'
 import useForm from 'react-hook-form'
-import axios from 'axios'
+import client from '../utils/rest-module'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
 const Alert = withReactContent(Swal)
 
 const PostOffre = () => {
-  const { register, handleSubmit, errors, reset } = useForm()
+  const { register, handleSubmit, reset } = useForm()
   const onSubmit = async formData => {
     try {
-      await axios.post('/api/v1/offres', formData)
+      await client.post('/offres', formData)
       await Alert.fire({
         icon: 'success',
         title: 'Félicitations ! Votre offre a bien été créée et va être diffusée largement !',
@@ -19,6 +19,7 @@ const PostOffre = () => {
       })
       reset()
     } catch (e) {
+      console.error(e)
       await Alert.fire({
         icon: 'error',
         title: 'Oh non ! Une erreur s\'est produite. Merci de réessayer ultérieurement.',
@@ -27,7 +28,6 @@ const PostOffre = () => {
       })
     }
   }
-  console.log(errors)
 
   return (
     <React.Fragment>
