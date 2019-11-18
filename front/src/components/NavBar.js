@@ -12,7 +12,7 @@ const NavBar = () => {
           <div className="col">
             <div className="header-top">
               <div className="logo-area">
-                <a href="index.html"><img src="https://www.dropbox.com/s/mfodynuilq858ec/logo-tu.png?raw=1" alt="logo région grand est " /></a>
+                <a href="index.html"><img src="/logo.png" alt="logo région grand est " /></a>
               </div>
               <div className="header-top-toggler">
                 <div className="header-top-toggler-button" />
