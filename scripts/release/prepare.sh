@@ -44,5 +44,5 @@ ensure_new_version_is_either_minor_or_patch_or_major
 update_version
 create_a_release_commit
 
-echo -e "From now check the ${CYAN}CHANGELOG.md${RESET_COLOR} file, amend the commit if necessary and then execute ${CYAN}npm run release:publish${RESET_COLOR}.\n"
+echo -e "From now execute ${CYAN}npm run release:publish${RESET_COLOR}.\n"
 echo -e "Release preparation ${GREEN}succeeded${RESET_COLOR}."
