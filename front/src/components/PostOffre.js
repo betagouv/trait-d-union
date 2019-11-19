@@ -31,7 +31,7 @@ const PostOffre = () => {
 
   return (
     <React.Fragment>
-      <Breadcrumb title="Poster une offre" pageDescription="Poster une offre d'immersion (PMSMP)"/>
+      <Breadcrumb title="Poster une offre" pageDescription="Poster une offre d'immersion"/>
       <div className="alice-bg section-padding-bottom">
         <div className="container no-gliters">
           <div className="row no-gliters">
@@ -41,7 +41,7 @@ const PostOffre = () => {
                   <form onSubmit={handleSubmit(onSubmit)} className="dashboard-form job-post-form">
                     <div className="dashboard-section basic-info-input">
                       <h4>
-                        Faire découvrir un métier grâce à une offre d'immersion (PMSMP)
+                        Faire découvrir vos métiers grâce à une offre d'immersion (PMSMP)
                       </h4>
                       <div className="form-group row">
                         <label className="col-md-3 col-form-label">Quel métier souhaitez-vous faire découvrir ?</label>
@@ -50,31 +50,31 @@ const PostOffre = () => {
                                  type="text"
                                  name="jobTitle"
                                  className="form-control"
-                                 placeholder="Intitulé du métier que vous souhaitez faire découvrir"
+                                 placeholder="Exemple : coiffeur, serveur, astronaute"
                                  required="required"
                                  ref={register({ required: 'Ce champ est obligatoire' })}
                           />
                         </div>
                       </div>
                       <div className="form-group row">
-                        <label className="col-md-3 col-form-label">Où se trouve l'immersion ?</label>
+                        <label className="col-md-3 col-form-label">Code postal du lieu de l'immersion ?</label>
                         <div className="col-md-9">
                           <input type="text"
                                  name="address"
                                  className="form-control"
-                                 placeholder="Lieu de l'immersion (Code Postal a minima)"
+                                 placeholder="Exemple : 57100"
                                  required="required"
                                  ref={register({ required: true })}
                           />
                         </div>
                       </div>
                       <div className="form-group row">
-                        <label className="col-md-3 col-form-label">À quelle adresse email pouvons-nous vous joindre ?</label>
+                        <label className="col-md-3 col-form-label">Sur quel email pouvons-nous vous envoyer les candidatures ?</label>
                         <div className="col-md-9">
                           <input type="text"
                                  className="form-control"
                                  name="email"
-                                 placeholder="Votre adresse email"
+                                 placeholder="Votre adresse email professionnel"
                                  required="required"
                                  ref={register({ required: true, pattern: /^\S+@\S+$/i })}
                           />

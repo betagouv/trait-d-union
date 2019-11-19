@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 class Breadcrumb extends React.Component {
   render () {
     return (
-      <div className="alice-bg padding-top-70 padding-bottom-70">
+      <div className="alice-bg padding-top-40 padding-bottom-40">
         <div className="container">
           <div className="row">
             <div className="col-md-6">
