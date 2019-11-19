@@ -19,7 +19,7 @@
     "sweetalert2-react-content": "2.0.2"
   },
   "scripts": {
-    "dev": "react-scripts start",
+    "dev": "REACT_APP_API_BASE_URL=http://localhost:8080/api/v1 react-scripts start",
     "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
