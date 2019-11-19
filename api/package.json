@@ -1,6 +1,6 @@
 {
   "name": "traitdunion-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API de Trait d'Union - Version 2 - PMSMP",
   "main": "bin/start.js",
   "repository": "git@github.com:betagouv/trait-d-union.git",
@@ -55,12 +55,6 @@
     "migrate:up": "sequelize db:migrate",
     "migrate:down": "sequelize db:migrate:undo"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint",
-      "pre-push": "yarn test && yarn start:e2e:pre-push && yarn test:e2e && yarn stop"
-    }
-  },
   "devDependencies": {
     "body-parser": "1.19.0",
     "chai": "4.2.0",
@@ -78,7 +72,6 @@
     "eslint-plugin-standard": "4.0.1",
     "express": "4.17.1",
     "get-json": "1.0.1",
-    "husky": "3.0.9",
     "mocha": "6.2.2",
     "mock-jwks": "0.2.0",
     "node-dev": "4.0.0",
