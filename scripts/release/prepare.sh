@@ -27,7 +27,7 @@ function ensure_new_version_is_either_minor_or_patch_or_major {
 function update_version {
     (cd api/ && npm version $NEW_VERSION_TYPE --git-tag-version=false >> /dev/null)
     (cd front/ && npm version $NEW_VERSION_TYPE --git-tag-version=false >> /dev/null)
-    npm version $NEW_VERSION_TYPE --git-tag-version=false >> /dev/null
+    yarn version --$NEW_VERSION_TYPE --git-tag-version=false >> /dev/null
     NEW_PACKAGE_VERSION=$(get_package_version)
 }
 
@@ -44,5 +44,5 @@ ensure_new_version_is_either_minor_or_patch_or_major
 update_version
 create_a_release_commit
 
-echo -e "From now execute ${CYAN}npm run release:publish${RESET_COLOR}.\n"
+echo -e "From now execute ${CYAN}yarn release:publish${RESET_COLOR}.\n"
 echo -e "Release preparation ${GREEN}succeeded${RESET_COLOR}."
