@@ -58,7 +58,7 @@ const Offre = databaseService.define('offre', {
   },
   email: {
     type: Sequelize.STRING,
-    allowNull: true
+    allowNull: false
   },
   name: {
     type: Sequelize.STRING,

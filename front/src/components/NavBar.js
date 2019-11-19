@@ -1,9 +1,7 @@
 import React from 'react'
-import { useAuth0 } from '../react-auth0-spa'
 import { Link } from 'react-router-dom'
 
 const NavBar = () => {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0()
 
   return (
     <header className="header-2">
@@ -14,26 +12,19 @@ const NavBar = () => {
               <div className="logo-area">
                 <a href="index.html"><img src="/logo.png" alt="logo région grand est " /></a>
               </div>
-              <div className="header-top-toggler">
-                <div className="header-top-toggler-button" />
-              </div>
-
-
-              <div className="top-nav" style={{ display: 'flex' }}>
-
-                <Link to="/poster-offre">
-                  <button type="button" class="btn btn-primary btn-lg">
-                    <i className="fas fa-plus"></i> Poster une offre d'immersion
-                      </button>
-                </Link>
-
-
-              </div>
-
-
             </div>
-
+            <nav className="navbar navbar-expand-lg cp-nav-2">
+              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
+              <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav">
+                  <li className="menu-item post-job"><Link to="/poster-offre"><i className="fas fa-plus"></i>Poster une offre d'immersion</Link></li>
+                </ul>
+              </div>
+            </nav>
           </div>
+          
         </div>
       </div>
     </header>

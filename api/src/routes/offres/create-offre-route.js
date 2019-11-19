@@ -1,5 +1,4 @@
 const Models = require('../../models')
-const Joi = require('@hapi/joi')
 const createOffre = require('../../services/offres/create-offre-service')(Models)
 
 module.exports.createRoute = (pathPrefix) => ({
@@ -8,11 +7,7 @@ module.exports.createRoute = (pathPrefix) => ({
   config: {
     description: 'Création d\'une offre de PMSMP',
     tags: ['api', 'offres'],
-    validate: {
-      payload: Joi.object({
-        email: Joi.string().required()
-      })
-    },
+    // validate: false, // { payload: Joi.object({ email: Joi.string().required() }) },
     plugins: {
       'hapi-swaggered': {
         responses: {
