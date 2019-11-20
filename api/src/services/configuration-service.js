@@ -45,7 +45,13 @@ const environmentVariables = Envie({
     .string()
     .uri({ scheme: 'postgres' })
     .default('postgres://trait:dunion@db/traitdunion-e2e')
-    .description('Connection string to the end-to-end tests Postgres database')
+    .description('Connection string to the end-to-end tests Postgres database'),
+
+  ALLOWED_ORIGIN: Joi
+    .string()
+    .uri({ scheme: ['http', 'https'] })
+    .default('http://localhost:3000')
+    .description('Front application URL allowed to call API')
 })
 
 module.exports = environmentVariables
