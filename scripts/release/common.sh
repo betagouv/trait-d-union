@@ -18,7 +18,7 @@ function get_package_version {
 }
 
 function checkout_dev {
-    git checkout v2-staging >> /dev/null 2>&1
+    git checkout staging >> /dev/null 2>&1
 }
 
 function fetch_and_rebase {

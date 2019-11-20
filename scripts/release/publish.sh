@@ -7,7 +7,7 @@ source $(dirname $0)/common.sh
 PACKAGE_VERSION=$(get_package_version)
 
 function push_commit_to_remote_dev {
-    git push origin v2-staging
+    git push origin staging
 }
 
 function checkout_master {
@@ -15,7 +15,7 @@ function checkout_master {
 }
 
 function create_a_merge_commit_of_dev_into_master_and_tag_it {
-    git merge v2-staging --no-edit
+    git merge staging --no-edit
     git tag --annotate "v${PACKAGE_VERSION}" --message "v${PACKAGE_VERSION}"
 }
 

@@ -25,27 +25,27 @@ exports.createServer = async () => {
 }
 
 exports.registerPlugins = async (server) => {
-  const swaggerOptions = _getSwaggerOptions()
-  const swaggerUIOptions = _getSwaggerUIOptions(server.info.protocol)
-  const pinoOptions = _getPinoOptions()
   const auth0BaseUrl = configurationService.get('AUTH0_BASE_URL')
 
   await server.register([
     Inert,
     Vision,
     AuthJwt,
-    HapiCors,
+    {
+      plugin: HapiCors,
+      options: _getCorsOptions()
+    },
     {
       plugin: HapiSwagger,
-      options: swaggerOptions
+      options: _getSwaggerOptions()
     },
     {
       plugin: HapiSwaggerUI,
-      options: swaggerUIOptions
+      options: _getSwaggerUIOptions(server.info.protocol)
     },
     {
       plugin: Pino,
-      options: pinoOptions
+      options: _getPinoOptions()
     }
   ])
 
@@ -77,6 +77,7 @@ exports.registerPlugins = async (server) => {
 
     return h.continue
   })
+
   server.route(routes)
   return server
 
@@ -93,6 +94,10 @@ exports.registerPlugins = async (server) => {
     }
 
     return callback(null, false)
+  }
+
+  function _getCorsOptions () {
+    return { origins: [configurationService.get('ALLOWED_ORIGIN')] }
   }
 
   function _getSwaggerUIOptions (protocol) {

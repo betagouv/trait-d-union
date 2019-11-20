@@ -4,7 +4,7 @@
 ---------------------------------------------*/
 
 .footer-bg {
-	background: $white;
+	background: $black;
 }
 
 .footer-social {
@@ -59,6 +59,10 @@
 		font-family: $headerFont;
 		font-weight: 600;
 		margin-bottom: 35px;
+		color: $white;
+	}
+	p {
+		color: $white;
 	}
 	&.widget-about {
 		.description {
@@ -87,7 +91,7 @@
 				margin-top: 10px;
 			}
 			li {
-				color: $fontColor;
+				color: $white;
 				&:hover {
 					color: $primaryColor;
 				}

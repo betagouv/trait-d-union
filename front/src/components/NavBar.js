@@ -10,21 +10,39 @@ const NavBar = () => {
           <div className="col">
             <div className="header-top">
               <div className="logo-area">
-                <a href="index.html"><img src="/logo.png" alt="logo région grand est " /></a>
+                <Link to="/">
+                  <img src="/logo.png" alt="logo région grand est "/>
+                </Link>
               </div>
             </div>
             <nav className="navbar navbar-expand-lg cp-nav-2">
-              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
+              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"/>
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav">
-                  <li className="menu-item post-job"><Link to="/poster-offre"><i className="fas fa-plus"></i>Poster une offre d'immersion</Link></li>
+                  <li className="menu-item">
+                    <Link to="/">
+                      Accueil
+                    </Link>
+                  </li>
+                  <li className="menu-item">
+                    <Link to="/offres">
+                      Liste des offres
+                    </Link>
+                  </li>
+                  <li className="menu-item post-job">
+                    <Link to="/poster-offre">
+                      <i className="fas fa-plus"/>
+                      Poster une offre d'immersion
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </nav>
           </div>
-          
+
         </div>
       </div>
     </header>

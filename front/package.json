@@ -1,6 +1,6 @@
 {
   "name": "traitdunion-pmsmp-front",
-  "version": "0.2.0",
+  "version": "0.1.4",
   "private": true,
   "dependencies": {
     "@auth0/auth0-spa-js": "1.5.0",
