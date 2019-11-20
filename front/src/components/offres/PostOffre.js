@@ -1,7 +1,7 @@
 import React from 'react'
-import Breadcrumb from './common/Breadcrumb'
+import Breadcrumb from '../common/Breadcrumb'
 import useForm from 'react-hook-form'
-import client from '../utils/rest-module'
+import client from '../../utils/rest-module'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 

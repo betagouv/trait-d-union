@@ -34,7 +34,7 @@ const Offre = databaseService.define('offre', {
     type: Sequelize.ENUM(contractTypes),
     validate: { isIn: contractTypes },
     alllowNull: false,
-    default: contractTypeDefault
+    defaultValue: contractTypeDefault
   },
   salary: {
     type: Sequelize.STRING,
@@ -67,6 +67,11 @@ const Offre = databaseService.define('offre', {
   phoneNumber: {
     type: Sequelize.STRING,
     allowNull: true
+  },
+  imageURL: {
+    type: Sequelize.STRING,
+    allowNull: true,
+    defaultValue: 'http://l.traitdunion.beta.gouv.fr/candidats/images/waitress.svg'
   }
 })
 module.exports = Offre

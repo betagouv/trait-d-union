@@ -4,9 +4,8 @@ import React from 'react'
 import NavBar from './components/NavBar'
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Profile from './components/Profile'
-import PrivateRoute from './components/PrivateRoute'
-import PostOffre from './components/PostOffre'
+import PostOffre from './components/offres/PostOffre'
+import ListOffre from './components/offres/ListOffre'
 
 function App () {
   return (
@@ -20,7 +19,9 @@ function App () {
           <Route path="/poster-offre" exact>
             <PostOffre />
           </Route>
-          <PrivateRoute path="/profile" component={Profile}/>
+          <Route path="/offres" exact>
+            <ListOffre />
+          </Route>
         </Switch>
       </BrowserRouter>
     </div>

@@ -36,7 +36,7 @@
 		min-width: 240px;
 	}
 	.filtered-job-listing-wrapper {
-		width: calc(100% - 240px);
+		width: 100%;
 	}
 	.job-search-wrapper {
 		width: 100%;
@@ -101,7 +101,7 @@
 			outline: none;
 			border-bottom: 2px solid rgba($primaryColor, .2);
 			transition: all .3s ease;
-			border-radius: 0;	
+			border-radius: 0;
 			&:focus {
 				border-color: $primaryColor;
 			}
@@ -217,11 +217,12 @@
 		width: 80px;
 		height: 80px;
 		border-radius: 3px;
-		background: #f9f9f9;
+		background: $primaryColor;
 		border: 1px solid rgba($black, .05);
 		position: relative;
 		img {
-			max-width: 35px;
+			object-fit: cover;
+			max-width: 90%;
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -392,29 +393,29 @@
 			}
 			/* Set Scrollbar Buttons */
 			&::-webkit-scrollbar-button {
-			 
-			} 
+
+			}
 			/* Set Scrollbar Track */
 			&::-webkit-scrollbar-track {
 			  border-radius: 5px;
-			}   
+			}
 			&::-webkit-scrollbar-track-piece {
-			  
+
 			}
 			/* Set Scrollbar Handle */
 			&::-webkit-scrollbar-thumb {
 			  -webkit-border-radius: 10px;
 			  border-radius: 10px;
-			  background: #dbe0e9; 
-			} 
+			  background: #dbe0e9;
+			}
 			&::-webkit-scrollbar-corner {
-			  
-			}    
+
+			}
 			&::-webkit-resizer {
-			  
+
 			}
 			&::-webkit-scrollbar-thumb:window-inactive {
-				background: #dbe0e9; 
+				background: #dbe0e9;
 			}
 			li {
 				a {
@@ -675,7 +676,7 @@
 }
 
 
-.responsibilities, 
+.responsibilities,
 .edication-and-experience,
 .other-benifit {
 	ul {
@@ -1198,7 +1199,7 @@
 				position: absolute;
 				content: '';
 				bottom: 0;
-				left: 0; 
+				left: 0;
 				height: 1px;
 				width: 0;
 				background: rgba($black, .08);
@@ -1303,7 +1304,7 @@
 			// margin-bottom: 10px;
 		}
 		.info {
-			color: $fontColor;	
+			color: $fontColor;
 			span {
 				svg {
 					height: 14px;
@@ -1513,4 +1514,3 @@
 	}
 }
 
- 

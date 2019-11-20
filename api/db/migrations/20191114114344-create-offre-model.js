@@ -33,7 +33,7 @@ module.exports = {
         type: Sequelize.ENUM(contractTypes),
         validate: { isIn: contractTypes },
         alllowNull: false,
-        default: contractTypeDefault
+        defaultValue: contractTypeDefault
       },
       salary: {
         type: Sequelize.STRING,
