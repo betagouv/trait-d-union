@@ -1,5 +1,6 @@
 const { createServer, registerPlugins } = require('../server')
 const configurationService = require('../src/services/configuration-service')
+const scheduleSourcingJobs = require('../src/services/sourcing/schedule-sourcing-jobs')
 
 const start = async () => {
   const server = await registerPlugins(await createServer())
@@ -9,6 +10,7 @@ const start = async () => {
     auth0Mock.start()
   }
   await server.start()
+  scheduleSourcingJobs()
 }
 
 if (process.argv.includes('-h')) {

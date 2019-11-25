@@ -1,7 +1,7 @@
 const logger = require('../../utils/logger')
 const configurationService = require('../../services/configuration-service')
 
-const enterpriseListId = 35
+const enterpriseListId = 34
 
 module.exports = ({ contactsApiClient }) => async (offre) => {
   if (configurationService.get('TU_FF_USE_REAL_SENDINBLUE') === 'off') {
