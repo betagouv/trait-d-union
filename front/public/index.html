@@ -40,7 +40,7 @@
   <title>Trait d'Union</title>
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
 
   <!-- External Css -->
   <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
@@ -52,6 +52,9 @@
   <link rel="stylesheet" href="assets/css/slick.css" />
   <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
   <link rel="stylesheet" href="assets/css/jquery.nstSlider.min.css" />
+  <link rel="stylesheet" href="assets/css/traitdunion.css" />
+  <link rel="stylesheet" href="assets/css/hero.css" />
+  <link rel="stylesheet" href="assets/css/section.css" />
 
   <!-- Custom Css -->
 
@@ -68,6 +71,50 @@
     <script src="assets/js/html5shiv.min.js"></script>
     <script src="assets/js/respond.min.js"></script>
     <![endif]-->
+
+   <script type="text/javascript">
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+      document.write('<script src="https://unpkg.com/@babel/polyfill@7.0.0/dist/polyfill.js"><\/script>');
+      document.write('<script src="https://unpkg.com/url-polyfill@1.0.14/url-polyfill.js"><\/script>');
+    }
+
+    function slider() {
+      var config = {
+
+        // Set first image of slider
+        img: function () {
+          element = document.querySelector(".slider a:first-child");
+          element.classList.add("active");
+          this.legend(element);
+        },
+
+        // Add legend in the figcaption
+        legend: function (obj) {
+          var legend = obj.querySelector("img").getAttribute("alt");
+        },
+
+        // Add class in the next slider
+        slide: function () {
+          element = document.querySelector(".active");
+          if (element.nextElementSibling) {
+            element.nextElementSibling.classList.add("active");
+            config.legend(element.nextElementSibling);
+            element.classList.remove("active");
+          } else {
+            element.classList.remove("active");
+            config.img();
+          }
+        }
+      }
+      config.img();
+      config.legend(element);
+
+      // Interval of slides
+      var auto = setInterval(config.slide, 3000);
+    }
+    // Run when loading window
+    window.addEventListener("load", slider, false);
+  </script>
 </head>
 
 <body>
