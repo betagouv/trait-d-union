@@ -70,7 +70,8 @@ const HomeEntreprises = () => {
             <div className="container">
               <div className="row ">
                 <div className="col-md-6 col-sm-6  col-xs-12 ">
-                  <h2>Quels sont les avantages pour moi ?          </h2>
+                  <h2>Quels sont les avantages ? </h2>
+                  <p>&nbsp; </p>
                   <ul>
                     <li><b>Donnez l'envie du métier &nbsp;</b> :  Il est important de donner au futur candidat une bonne image de son futur métier, sans bla-bla et de façon concrète. C'est l'occasion aussi de mettre en valeur votre entreprise.
                     </li>
@@ -90,6 +91,7 @@ const HomeEntreprises = () => {
                 </div>
                 <div className="col-md-6 col-sm-6  col-xs-12 ">
                   <h2>Questions/réponses </h2>
+                  <p>&nbsp; </p>
                   <ul>
                     <li><b>À qui s'adresse ce site ?&nbsp;</b> : aux entreprises de la Région Grand Est ayant du mal à recruter des profils motivés. Ou à recruter tout court. </li>
                     <br />
