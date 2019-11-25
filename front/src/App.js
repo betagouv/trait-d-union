@@ -40,6 +40,12 @@ function App () {
             </header>
             <HomeEntreprises/>
           </Route>
+          <Route path="/entreprises" exact>
+            <header>
+            <NavBar />
+            </header>
+            <HomeEntreprises />
+          </Route>
           <Route path="/offres" exact>
             <header>
               <NavBar/>
