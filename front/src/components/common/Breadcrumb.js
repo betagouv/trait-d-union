@@ -14,7 +14,7 @@ class Breadcrumb extends React.Component {
                   <ol className="breadcrumb">
                     <li className="breadcrumb-item">
                       <Link to="/">
-                        Accueil
+                        Accueil 
                       </Link>
                     </li>
                     <li className="breadcrumb-item active" aria-current="page">{this.props.pageDescription}</li>
