@@ -1,0 +1,1037 @@
+[
+  {
+    "categorie": "Conduite d'engins agricoles et forestiers",
+    "codeROME": "A1101",
+    "id": "49ebfdff-d6c5-437d-b4f2-21950d0663f3"
+  },
+  {
+    "categorie": "Bûcheronnage et élagage",
+    "codeROME": "A1201",
+    "id": "af6ce9c3-8d89-4dbc-8641-b585752f804a"
+  },
+  {
+    "categorie": "Entretien des espaces naturels",
+    "codeROME": "A1202",
+    "id": "111f6c8d-a042-4cfa-aab3-dbe4b665bcae"
+  },
+  {
+    "categorie": "Aménagement et entretien des espaces verts",
+    "codeROME": "A1203",
+    "id": "d3263e74-9ab3-4419-b1de-eb13bee12d79"
+  },
+  {
+    "categorie": "Sylviculture",
+    "codeROME": "A1205",
+    "id": "5b67d936-dcfd-4bac-8e12-fb1977b2c2bb"
+  },
+  {
+    "categorie": "Aide agricole de production fruitière ou viticole",
+    "codeROME": "A1401",
+    "id": "85b7c2c6-bfcc-4f00-8f40-46955c509192"
+  },
+  {
+    "categorie": "Arboriculture et viticulture",
+    "codeROME": "A1405",
+    "id": "d09d8e91-a791-42d9-b3ad-a9bd904bc446"
+  },
+  {
+    "categorie": "Élevage bovin ou équin",
+    "codeROME": "A1407",
+    "id": "e777c520-4e96-4b6d-9866-44bfa11458e8"
+  },
+  {
+    "categorie": "Élevage de lapins et volailles",
+    "codeROME": "A1409",
+    "id": "06ced4d5-6714-482d-9cac-ed46fae3db90"
+  },
+  {
+    "categorie": "Élevage ovin ou caprin",
+    "codeROME": "A1410",
+    "id": "582a2464-1924-4c41-89c5-346c1671a03b"
+  },
+  {
+    "categorie": "Élevage porcin",
+    "codeROME": "A1411",
+    "id": "4847addc-1784-4c72-9674-d47f5a411437"
+  },
+  {
+    "categorie": "Fabrication et affinage de fromages",
+    "codeROME": "A1412",
+    "id": "32162009-6905-42cc-8e4e-575e4a9fa803"
+  },
+  {
+    "categorie": "Fermentation de boissons alcoolisées",
+    "codeROME": "A1413",
+    "id": "29a5e345-4e13-4c05-9a61-db87f60e8ff6"
+  },
+  {
+    "categorie": "Horticulture et maraîchage",
+    "codeROME": "A1414",
+    "id": "44eeadcc-6625-4d67-8537-9a2603e83e43"
+  },
+  {
+    "categorie": "Polyculture, élevage",
+    "codeROME": "A1416",
+    "id": "2b8fc62c-b9c8-4ce0-baa8-ef60faa082f4"
+  },
+  {
+    "categorie": "Création en arts plastiques",
+    "codeROME": "B1101",
+    "id": "bbfe7f9d-c446-404c-a497-7a14aa4e900d"
+  },
+  {
+    "categorie": "Réalisation d'objets décoratifs et utilitaires en céramique et matériaux de synthèse",
+    "codeROME": "B1201",
+    "id": "2acd0007-555b-42d6-ae35-c4ed8f1e532a"
+  },
+  {
+    "categorie": "Décoration d'espaces de vente et d'exposition",
+    "codeROME": "B1301",
+    "id": "f816bed7-3801-464b-b177-612df9601e01"
+  },
+  {
+    "categorie": "Décoration d'objets d'art et artisanaux",
+    "codeROME": "B1302",
+    "id": "98fea0cc-5bd7-466b-a47b-2062b92d3bb3"
+  },
+  {
+    "categorie": "Réalisation d'objets en lianes, fibres et brins végétaux",
+    "codeROME": "B1401",
+    "id": "942d0e07-f5a2-407f-9fdd-1723a260b353"
+  },
+  {
+    "categorie": "Métallerie d'art",
+    "codeROME": "B1601",
+    "id": "75ad914d-d18a-445d-a757-5e6ab0764c8e"
+  },
+  {
+    "categorie": "Réalisation d'objets artistiques et fonctionnels en verre",
+    "codeROME": "B1602",
+    "id": "92860c72-d8ed-40f2-b190-ce565cb29159"
+  },
+  {
+    "categorie": "Réalisation de vêtements sur mesure ou en petite série",
+    "codeROME": "B1803",
+    "id": "cba48fa4-0d79-42a1-a864-4a89cb7518ae"
+  },
+  {
+    "categorie": "Réalisation d'ouvrages d'art en fils",
+    "codeROME": "B1804",
+    "id": "4348de54-7585-4c73-a8cb-a56f01813054"
+  },
+  {
+    "categorie": "Tapisserie - décoration en ameublement",
+    "codeROME": "B1806",
+    "id": "f6cc1fc6-b2dc-4eb7-97a6-24e20d6026e9"
+  },
+  {
+    "categorie": "Conseil clientèle en assurances",
+    "codeROME": "C1102",
+    "id": "d71c59f8-5625-4933-876c-436c064e11b9"
+  },
+  {
+    "categorie": "Accueil et services bancaires",
+    "codeROME": "C1201",
+    "id": "e5d24457-9ca7-4897-b433-e85c866819f4"
+  },
+  {
+    "categorie": "Analyse de crédits et risques bancaires",
+    "codeROME": "C1202",
+    "id": "55dbf4da-916d-488b-b1ad-253e8e643b3a"
+  },
+  {
+    "categorie": "Gestion de clientèle bancaire",
+    "codeROME": "C1206",
+    "id": "3ed3ce1e-404d-4037-b167-39a2f95830cd"
+  },
+  {
+    "categorie": "Gestion en banque et assurance",
+    "codeROME": "C1401",
+    "id": "935ff855-8ad1-41c1-a46b-c070d74f3ea3"
+  },
+  {
+    "categorie": "Boucherie",
+    "codeROME": "D1101",
+    "id": "8940e159-894c-483a-809b-8d92a5b1df52"
+  },
+  {
+    "categorie": "Boulangerie - viennoiserie",
+    "codeROME": "D1102",
+    "id": "44643ad2-7ae4-4c55-94b1-d33f0aa94c22"
+  },
+  {
+    "categorie": "Charcuterie - traiteur",
+    "codeROME": "D1103",
+    "id": "81219455-f991-4e48-b59c-86919d13c0b6"
+  },
+  {
+    "categorie": "Pâtisserie, confiserie, chocolaterie et glacerie",
+    "codeROME": "D1104",
+    "id": "07cb27cf-c8f3-434a-9acf-92ab517fe4f3"
+  },
+  {
+    "categorie": "Vente en alimentation",
+    "codeROME": "D1106",
+    "id": "54ade9a4-46db-4fe1-a35a-182e0420318d"
+  },
+  {
+    "categorie": "Vente en gros de produits frais",
+    "codeROME": "D1107",
+    "id": "b8282e49-6d64-4a18-9f30-f5e536c4a27f"
+  },
+  {
+    "categorie": "Coiffure",
+    "codeROME": "D1202",
+    "id": "08b54210-23f3-49e8-a62e-0ad302bc930e"
+  },
+  {
+    "categorie": "Soins esthétiques et corporels",
+    "codeROME": "D1208",
+    "id": "c304d683-94f2-47e4-abaa-8af1555fdf7a"
+  },
+  {
+    "categorie": "Vente de végétaux",
+    "codeROME": "D1209",
+    "id": "694dc731-ffec-4718-a567-4c59bf18460a"
+  },
+  {
+    "categorie": "Vente en animalerie",
+    "codeROME": "D1210",
+    "id": "80e38655-5ca9-45f6-81b2-bb5eb9d871d2"
+  },
+  {
+    "categorie": "Vente en articles de sport et loisirs",
+    "codeROME": "D1211",
+    "id": "90402e52-5d01-42ec-b697-e184e691956b"
+  },
+  {
+    "categorie": "Vente en décoration et équipement du foyer",
+    "codeROME": "D1212",
+    "id": "f298c632-1014-4a97-a05f-ea858d1edf0b"
+  },
+  {
+    "categorie": "Vente en habillement et accessoires de la personne",
+    "codeROME": "D1214",
+    "id": "2884fef9-30f5-4dbc-a165-06b750049c1b"
+  },
+  {
+    "categorie": "Assistanat commercial",
+    "codeROME": "D1401",
+    "id": "dc1894c9-7240-49d4-999b-7315f4cb6d87"
+  },
+  {
+    "categorie": "Relation commerciale grands comptes et entreprises",
+    "codeROME": "D1402",
+    "id": "f44a149f-f4d1-4d60-a30b-9009096c746c"
+  },
+  {
+    "categorie": "Relation commerciale auprès de particuliers",
+    "codeROME": "D1403",
+    "id": "ef6be4ed-1ead-42a5-95d5-bd2e8d443aa9"
+  },
+  {
+    "categorie": "Relation commerciale en vente de véhicules",
+    "codeROME": "D1404",
+    "id": "045d16e2-916a-4287-b5f3-992ec587b0ae"
+  },
+  {
+    "categorie": "Management en force de vente",
+    "codeROME": "D1406",
+    "id": "ff6e84bb-12ac-4b0e-b7fc-a5827b0f1a9b"
+  },
+  {
+    "categorie": "Relation technico-commerciale",
+    "codeROME": "D1407",
+    "id": "9c10584b-a379-4838-9c9e-a3494dd0b08f"
+  },
+  {
+    "categorie": "Téléconseil et télévente",
+    "codeROME": "D1408",
+    "id": "c31d484a-db37-4cd2-8689-d32347354d44"
+  },
+  {
+    "categorie": "Animation de vente",
+    "codeROME": "D1501",
+    "id": "019412f4-99bc-4b6d-b558-e30ae96279a8"
+  },
+  {
+    "categorie": "Management/gestion de rayon produits alimentaires",
+    "codeROME": "D1502",
+    "id": "a4763b40-6950-4ce8-9090-ca9bab75a70a"
+  },
+  {
+    "categorie": "Management/gestion de rayon produits non alimentaires",
+    "codeROME": "D1503",
+    "id": "9a033519-26d4-4787-8355-b13fcca5f8e5"
+  },
+  {
+    "categorie": "Personnel de caisse",
+    "codeROME": "D1505",
+    "id": "165490e8-a010-47a2-ba9c-ce5223ce2525"
+  },
+  {
+    "categorie": "Mise en rayon libre-service",
+    "codeROME": "D1507",
+    "id": "de6986a3-b08f-4dd0-848e-400a86106d03"
+  },
+  {
+    "categorie": "Animation de site multimédia",
+    "codeROME": "E1101",
+    "id": "dea51c64-7699-41ef-8543-aa382da1077d"
+  },
+  {
+    "categorie": "Communication",
+    "codeROME": "E1103",
+    "id": "9326299d-1249-45a9-900f-c076df04f4f1"
+  },
+  {
+    "categorie": "Conception - aménagement d'espaces intérieurs",
+    "codeROME": "F1102",
+    "id": "12f28781-959c-494f-a7fa-9fa7a603eeea"
+  },
+  {
+    "categorie": "Dessin BTP et paysage",
+    "codeROME": "F1104",
+    "id": "0d53a1fa-cd55-490c-b3bb-dc7ee39de5f8"
+  },
+  {
+    "categorie": "Ingénierie et études du BTP",
+    "codeROME": "F1106",
+    "id": "e5fd12b9-5264-4b8e-95f9-91edd99f58fd"
+  },
+  {
+    "categorie": "Mesures topographiques",
+    "codeROME": "F1107",
+    "id": "2896126b-ed4a-4ec3-bcca-07305d8973fa"
+  },
+  {
+    "categorie": "Métré de la construction",
+    "codeROME": "F1108",
+    "id": "6e6995bb-ed8a-477f-b650-dc83433d6189"
+  },
+  {
+    "categorie": "Conduite de travaux du BTP et de travaux paysagers",
+    "codeROME": "F1201",
+    "id": "f643064d-a469-4621-aead-26f0777cfd1e"
+  },
+  {
+    "categorie": "Direction de chantier du BTP",
+    "codeROME": "F1202",
+    "id": "2b02f0ad-2d34-4f0f-8c24-8869dd1f8ff3"
+  },
+  {
+    "categorie": "Qualité Sécurité Environnement et protection santé du BTP",
+    "codeROME": "F1204",
+    "id": "1e45b1a1-20c4-4e57-b813-245e78273872"
+  },
+  {
+    "categorie": "Conduite de grue",
+    "codeROME": "F1301",
+    "id": "c53d97c7-b0c6-4660-a286-9ce0e1c1d48f"
+  },
+  {
+    "categorie": "Conduite d'engins de terrassement et de carrière",
+    "codeROME": "F1302",
+    "id": "6c1dc814-8f7d-49a2-a7be-29a3d8bdb83d"
+  },
+  {
+    "categorie": "Montage de structures et de charpentes bois",
+    "codeROME": "F1501",
+    "id": "4f339d62-f9c2-4da9-9444-3d78e8b0f491"
+  },
+  {
+    "categorie": "Réalisation - installation d'ossatures bois",
+    "codeROME": "F1503",
+    "id": "0b61557a-22ca-41ac-819a-3fbcc6e0cf64"
+  },
+  {
+    "categorie": "Électricité bâtiment",
+    "codeROME": "F1602",
+    "id": "b5120894-cb7b-4a12-b00b-c9413d595168"
+  },
+  {
+    "categorie": "Installation d'équipements sanitaires et thermiques",
+    "codeROME": "F1603",
+    "id": "8d75a479-93b4-41bb-8415-6343c845a2e9"
+  },
+  {
+    "categorie": "Montage d'agencements",
+    "codeROME": "F1604",
+    "id": "21ae19cb-9664-43c6-ad36-2dc16621e206"
+  },
+  {
+    "categorie": "Montage de réseaux électriques et télécoms",
+    "codeROME": "F1605",
+    "id": "e017e207-d8b1-41b4-9573-88f1dda26625"
+  },
+  {
+    "categorie": "Peinture en bâtiment",
+    "codeROME": "F1606",
+    "id": "5d48dc02-855d-4af1-87a3-719e4f700355"
+  },
+  {
+    "categorie": "Pose de fermetures menuisées",
+    "codeROME": "F1607",
+    "id": "f0ad830e-bcb6-4d17-b936-b6be05fd2c91"
+  },
+  {
+    "categorie": "Pose de revêtements rigides",
+    "codeROME": "F1608",
+    "id": "fbcb893a-ecd3-44d1-8e97-6d374478c3f2"
+  },
+  {
+    "categorie": "Pose de revêtements souples",
+    "codeROME": "F1609",
+    "id": "2c58c70f-954a-43be-b7f0-18b5898065d3"
+  },
+  {
+    "categorie": "Pose et restauration de couvertures",
+    "codeROME": "F1610",
+    "id": "ebbae8e1-b86a-4020-b07e-d09b61ccbfcb"
+  },
+  {
+    "categorie": "Réalisation et restauration de façades",
+    "codeROME": "F1611",
+    "id": "527f9d8f-a613-465a-94bd-0923ecb461e5"
+  },
+  {
+    "categorie": "Taille et décoration de pierres",
+    "codeROME": "F1612",
+    "id": "84d91461-8d59-448b-8628-59123b046c1b"
+  },
+  {
+    "categorie": "Travaux d'étanchéité et d'isolation",
+    "codeROME": "F1613",
+    "id": "54821730-e322-400a-ba6c-dc3d793f1527"
+  },
+  {
+    "categorie": "Construction en béton",
+    "codeROME": "F1701",
+    "id": "6d8eb801-f057-4ae6-b61c-81a0abca4fcf"
+  },
+  {
+    "categorie": "Construction de routes et voies",
+    "codeROME": "F1702",
+    "id": "a1659291-9664-48e7-9918-6dca012fbb3d"
+  },
+  {
+    "categorie": "Maçonnerie",
+    "codeROME": "F1703",
+    "id": "f08e8163-d4c8-4830-af40-20a231c6b9cd"
+  },
+  {
+    "categorie": "Pose de canalisations",
+    "codeROME": "F1705",
+    "id": "fab47756-cae2-4bee-9eff-8da3c36fd100"
+  },
+  {
+    "categorie": "Accueil touristique",
+    "codeROME": "G1101",
+    "id": "fa529c38-19d4-42cb-ae4a-b201869af23c"
+  },
+  {
+    "categorie": "Accompagnement de voyages, d'activités culturelles ou sportives",
+    "codeROME": "G1201",
+    "id": "4b4dec03-074a-4ac0-b3d2-1b541204554c"
+  },
+  {
+    "categorie": "Animation d'activités culturelles ou ludiques",
+    "codeROME": "G1202",
+    "id": "7b8c0275-0d48-490e-b6b6-5bb23af41403"
+  },
+  {
+    "categorie": "Animation de loisirs auprès d'enfants ou d'adolescents",
+    "codeROME": "G1203",
+    "id": "478e4ca2-1d6b-462c-a17c-5c128d4457bf"
+  },
+  {
+    "categorie": "Éducation en activités sportives",
+    "codeROME": "G1204",
+    "id": "46d7df54-a2ca-43dd-91e1-cc2ed7ea5925"
+  },
+  {
+    "categorie": "Gestion de structure de loisirs ou d'hébergement touristique",
+    "codeROME": "G1403",
+    "id": "8dfea497-5962-482c-b2c9-153a7ba3a325"
+  },
+  {
+    "categorie": "Personnel d'étage",
+    "codeROME": "G1501",
+    "id": "c5a9e971-5332-49b6-8281-3ae5804283be"
+  },
+  {
+    "categorie": "Personnel de cuisine",
+    "codeROME": "G1602",
+    "id": "8fa61f4a-9aa2-4e0c-beaa-9c41970eb6ba"
+  },
+  {
+    "categorie": "Personnel polyvalent en restauration",
+    "codeROME": "G1603",
+    "id": "a1cc717d-9e5e-4a0e-84d9-7ffa5d86392e"
+  },
+  {
+    "categorie": "Réception en hôtellerie",
+    "codeROME": "G1703",
+    "id": "4b37faef-5c43-4193-a266-e3f0d48a6044"
+  },
+  {
+    "categorie": "Café, bar brasserie",
+    "codeROME": "G1801",
+    "id": "1efea297-a39d-44f0-8451-e62ea7c569e5"
+  },
+  {
+    "categorie": "Service en restauration",
+    "codeROME": "G1803",
+    "id": "c9132cce-c596-465d-96dd-bab39db823b7"
+  },
+  {
+    "categorie": "Management et ingénierie d'affaires",
+    "codeROME": "H1102",
+    "id": "995b2d7e-2d8f-4443-a441-6e4f4010951b"
+  },
+  {
+    "categorie": "Intervention technique en études et développement électronique",
+    "codeROME": "H1209",
+    "id": "761b8352-fcd7-449d-a37a-2e9a9affc5ee"
+  },
+  {
+    "categorie": "Intervention technique en études, recherche et développement",
+    "codeROME": "H1210",
+    "id": "eca59fb9-46c4-4a4a-9aca-1a9d0e607a6d"
+  },
+  {
+    "categorie": "Management et ingénierie qualité industrielle",
+    "codeROME": "H1502",
+    "id": "bd41fa58-353d-4ef7-88ed-6cb6f9a94a34"
+  },
+  {
+    "categorie": "Intervention technique en laboratoire d'analyse industrielle",
+    "codeROME": "H1503",
+    "id": "bca79589-9412-4803-870e-6d67abe5211d"
+  },
+  {
+    "categorie": "Intervention technique en contrôle essai qualité en électricité et électronique",
+    "codeROME": "H1504",
+    "id": "60e72a37-eea8-4eb0-91b1-758f7878916c"
+  },
+  {
+    "categorie": "Abattage et découpe des viandes",
+    "codeROME": "H2101",
+    "id": "bd89ed4b-3305-411f-bea6-4c3ff7b3d529"
+  },
+  {
+    "categorie": "Conduite d'équipement de production alimentaire",
+    "codeROME": "H2102",
+    "id": "1c4c3bac-77b4-499e-9bfb-286a76c084c9"
+  },
+  {
+    "categorie": "Conduite d'équipement de fabrication de l'ameublement et du bois",
+    "codeROME": "H2202",
+    "id": "f90d8e8f-4445-42d1-ab5f-3bf2f92afb25"
+  },
+  {
+    "categorie": "Encadrement des industries de l'ameublement et du bois",
+    "codeROME": "H2204",
+    "id": "e2a64385-1263-4782-85cd-e7d5c1b0faf0"
+  },
+  {
+    "categorie": "Première transformation de bois d'oeuvre",
+    "codeROME": "H2205",
+    "id": "ee2d625c-9607-4aae-98bf-68d7b71b2c9d"
+  },
+  {
+    "categorie": "Réalisation de menuiserie bois et tonnellerie",
+    "codeROME": "H2206",
+    "id": "1b22c5c6-52d2-4a26-84c8-a65cf6a90c75"
+  },
+  {
+    "categorie": "Réalisation de meubles en bois",
+    "codeROME": "H2207",
+    "id": "3435c036-a743-4543-8f95-55876ce701ee"
+  },
+  {
+    "categorie": "Réalisation d'ouvrages décoratifs en bois",
+    "codeROME": "H2208",
+    "id": "9f6c9a7b-8914-4de6-9d2e-b97160f07166"
+  },
+  {
+    "categorie": "Conduite d'équipement de production chimique ou pharmaceutique",
+    "codeROME": "H2301",
+    "id": "f6792443-3880-4ade-ba11-c33969606d1f"
+  },
+  {
+    "categorie": "Assemblage - montage de vêtements et produits textiles",
+    "codeROME": "H2402",
+    "id": "09f304bc-6302-4fe8-b5bc-be6575f071dc"
+  },
+  {
+    "categorie": "Encadrement de production de matériel électrique et électronique",
+    "codeROME": "H2501",
+    "id": "3a3854c7-d5e6-4ba0-861d-ce7d10d332de"
+  },
+  {
+    "categorie": "Management et ingénierie de production",
+    "codeROME": "H2502",
+    "id": "135eed5e-b6f5-4153-8b7b-22ac00ba360b"
+  },
+  {
+    "categorie": "Pilotage d'unité élémentaire de production mécanique ou de travail des métaux",
+    "codeROME": "H2503",
+    "id": "19b954cb-54c1-4b09-b90b-785e2cdf68c4"
+  },
+  {
+    "categorie": "Encadrement d'équipe en industrie de transformation",
+    "codeROME": "H2504",
+    "id": "c3509a54-1abf-44b4-9edc-c0b825bdc327"
+  },
+  {
+    "categorie": "Câblage électrique et électromécanique",
+    "codeROME": "H2602",
+    "id": "6f80ba8c-70ee-44f9-9f1b-72270a4533c2"
+  },
+  {
+    "categorie": "Ajustement et montage de fabrication",
+    "codeROME": "H2901",
+    "id": "9233676d-e0bc-4711-b6ab-506945957072"
+  },
+  {
+    "categorie": "Chaudronnerie - tôlerie",
+    "codeROME": "H2902",
+    "id": "95f7b0a5-0910-4e4c-8c45-11d957c921e7"
+  },
+  {
+    "categorie": "Conduite d'équipement d'usinage",
+    "codeROME": "H2903",
+    "id": "5c3dacc9-9689-4210-98f3-d3f8351f1c53"
+  },
+  {
+    "categorie": "Conduite d'équipement de déformation des métaux",
+    "codeROME": "H2904",
+    "id": "f50f5f72-4299-4429-85a9-3b031818f680"
+  },
+  {
+    "categorie": "Conduite d'équipement de formage et découpage des matériaux",
+    "codeROME": "H2905",
+    "id": "f7bb3dc8-ed9b-4068-8e3a-3e54c90d4a8d"
+  },
+  {
+    "categorie": "Conduite d'installation automatisée ou robotisée de fabrication mécanique",
+    "codeROME": "H2906",
+    "id": "36b772d4-7885-461b-8e22-e014ec6c7351"
+  },
+  {
+    "categorie": "Conduite d'installation de production des métaux",
+    "codeROME": "H2907",
+    "id": "b0b33851-d3d5-48bb-a832-0e660fcd1bf6"
+  },
+  {
+    "categorie": "Montage-assemblage mécanique",
+    "codeROME": "H2909",
+    "id": "aca8dfed-3a3e-480e-9f14-0667e1ff2de9"
+  },
+  {
+    "categorie": "Réalisation de structures métalliques",
+    "codeROME": "H2911",
+    "id": "5a8d7b3a-d766-4f3e-bc91-ac74e12226ee"
+  },
+  {
+    "categorie": "Réglage d'équipement de production industrielle",
+    "codeROME": "H2912",
+    "id": "b8efc6e9-6b0d-4a35-a162-6cf0ba3c29f5"
+  },
+  {
+    "categorie": "Soudage manuel",
+    "codeROME": "H2913",
+    "id": "acfddc0a-b71f-46d7-845c-057ee3bab7aa"
+  },
+  {
+    "categorie": "Réalisation et montage en tuyauterie",
+    "codeROME": "H2914",
+    "id": "f51a1c3b-0f5e-4652-a08e-563a380cbfc7"
+  },
+  {
+    "categorie": "Conduite d'équipement de fabrication de papier ou de carton",
+    "codeROME": "H3101",
+    "id": "9bb4ef2f-b529-4e4a-9948-4491cab476ee"
+  },
+  {
+    "categorie": "Conduite d'équipement de conditionnement",
+    "codeROME": "H3301",
+    "id": "8964c727-2a68-46d3-b6d9-b3e87d96936d"
+  },
+  {
+    "categorie": "Opérations manuelles d'assemblage, tri ou emballage",
+    "codeROME": "H3302",
+    "id": "8b719d39-10d5-4fa0-8dfd-659816ba5f54"
+  },
+  {
+    "categorie": "Conduite de traitement d'abrasion de surface",
+    "codeROME": "H3401",
+    "id": "cb8fbd26-ec27-446f-93d1-fd08dd77fd28"
+  },
+  {
+    "categorie": "Conduite de traitement par dépôt de surface",
+    "codeROME": "H3402",
+    "id": "c6620e26-8106-4908-bdb1-1f4772b099cf"
+  },
+  {
+    "categorie": "Maintenance des bâtiments et des locaux",
+    "codeROME": "I1203",
+    "id": "9240132d-7dba-460a-8b2e-b6ec7fed81b3"
+  },
+  {
+    "categorie": "Installation et maintenance d'ascenseurs",
+    "codeROME": "I1301",
+    "id": "59690a7e-ed58-4c6c-a75e-b40fbdf281b0"
+  },
+  {
+    "categorie": "Installation et maintenance d'automatismes",
+    "codeROME": "I1302",
+    "id": "7e549c0d-e0ce-42fa-8b05-c3cdc2a312b3"
+  },
+  {
+    "categorie": "Installation et maintenance d'équipements industriels et d'exploitation",
+    "codeROME": "I1304",
+    "id": "ea78ee22-a4f4-44e0-a918-652e1cbad37b"
+  },
+  {
+    "categorie": "Installation et maintenance électronique",
+    "codeROME": "I1305",
+    "id": "2184d538-89e7-4452-a65d-8511824af6c0"
+  },
+  {
+    "categorie": "Installation et maintenance en froid, conditionnement d'air",
+    "codeROME": "I1306",
+    "id": "f8a38b84-b9fd-42f2-84c8-e1feff5ef531"
+  },
+  {
+    "categorie": "Installation et maintenance télécoms et courants faibles",
+    "codeROME": "I1307",
+    "id": "3a2ba763-8ea9-45cd-a8e0-d91857a99855"
+  },
+  {
+    "categorie": "Maintenance d'installation de chauffage",
+    "codeROME": "I1308",
+    "id": "13b47550-af97-4adb-b5e6-f416715abf47"
+  },
+  {
+    "categorie": "Maintenance électrique",
+    "codeROME": "I1309",
+    "id": "e73ea56f-847e-4fbd-885a-def4e70239b8"
+  },
+  {
+    "categorie": "Maintenance mécanique industrielle",
+    "codeROME": "I1310",
+    "id": "f31c3aa0-55b5-4d54-ad75-ca7e3fb73d60"
+  },
+  {
+    "categorie": "Maintenance informatique et bureautique",
+    "codeROME": "I1401",
+    "id": "a6415f24-7508-4a4a-8b89-4feb05fc85ed"
+  },
+  {
+    "categorie": "Maintenance d'engins de chantier, levage, manutention et de machines agricoles",
+    "codeROME": "I1603",
+    "id": "31065b70-f418-4d66-8f6a-b1d349c3f4fd"
+  },
+  {
+    "categorie": "Mécanique automobile et entretien de véhicules",
+    "codeROME": "I1604",
+    "id": "c12707bb-aa15-4e43-8f73-279a12ffb846"
+  },
+  {
+    "categorie": "Réparation de carrosserie",
+    "codeROME": "I1606",
+    "id": "4247a9ed-070d-480a-801e-c448eebd51b1"
+  },
+  {
+    "categorie": "Réparation de cycles, motocycles et motoculteurs de loisirs",
+    "codeROME": "I1607",
+    "id": "d291b8ae-c1e1-4a6e-b5da-8ee155f20093"
+  },
+  {
+    "categorie": "Personnel polyvalent des services hospitaliers",
+    "codeROME": "J1301",
+    "id": "b2ceaa52-ecf9-437b-8a33-eecd015aa5b1"
+  },
+  {
+    "categorie": "Assistance médico-technique",
+    "codeROME": "J1303",
+    "id": "250734b1-0aa1-41d3-baab-709cfbfaab64"
+  },
+  {
+    "categorie": "Soins d'hygiène, de confort du patient",
+    "codeROME": "J1501",
+    "id": "e7368a7b-04f8-4595-8b48-56a2f818f7ba"
+  },
+  {
+    "categorie": "Médiation sociale et facilitation de la vie en société",
+    "codeROME": "K1204",
+    "id": "4f15015c-967e-4c20-8c01-c3bc92ec2db4"
+  },
+  {
+    "categorie": "Intervention socioculturelle",
+    "codeROME": "K1206",
+    "id": "7c3eaffe-df84-4bc6-bbde-6340192a92af"
+  },
+  {
+    "categorie": "Accompagnement médicosocial",
+    "codeROME": "K1301",
+    "id": "1fd0134a-f9ac-4122-9643-8eb2c926731a"
+  },
+  {
+    "categorie": "Assistance auprès d'adultes",
+    "codeROME": "K1302",
+    "id": "32a4ed50-9825-494c-9997-9e7387d9bef5"
+  },
+  {
+    "categorie": "Assistance auprès d'enfants",
+    "codeROME": "K1303",
+    "id": "9069d313-cabf-4019-8f28-d80485722d28"
+  },
+  {
+    "categorie": "Services domestiques",
+    "codeROME": "K1304",
+    "id": "b17249aa-f6db-4402-b796-c4c813a9c8a2"
+  },
+  {
+    "categorie": "Intervention sociale et familiale",
+    "codeROME": "K1305",
+    "id": "1c36f2d4-5cfa-490d-ad32-71b1239a3456"
+  },
+  {
+    "categorie": "Sécurité publique",
+    "codeROME": "K1706",
+    "id": "9c5f3953-ee54-4553-900f-de97f58d912d"
+  },
+  {
+    "categorie": "Conseil en emploi et insertion socioprofessionnelle",
+    "codeROME": "K1801",
+    "id": "c9d0cf64-e39e-4b86-b046-c5615bf0864a"
+  },
+  {
+    "categorie": "Conseil en formation",
+    "codeROME": "K2101",
+    "id": "aa07386a-6922-45af-a575-4e4686d5e8e1"
+  },
+  {
+    "categorie": "Coordination pédagogique",
+    "codeROME": "K2102",
+    "id": "c0dd2c3f-0d66-4b11-8ef1-6ccc63f220eb"
+  },
+  {
+    "categorie": "Éducation et surveillance au sein d'établissements d'enseignement",
+    "codeROME": "K2104",
+    "id": "ebc071b6-2959-4b8d-a9c8-26e1a16b9f28"
+  },
+  {
+    "categorie": "Formation en conduite de véhicules",
+    "codeROME": "K2110",
+    "id": "89c3796f-b913-4334-9e7d-f9781f6f0b1f"
+  },
+  {
+    "categorie": "Formation professionnelle",
+    "codeROME": "K2111",
+    "id": "60e284d2-dc26-434a-ae5c-f821964a0b7b"
+  },
+  {
+    "categorie": "Orientation scolaire et professionnelle",
+    "codeROME": "K2112",
+    "id": "e1105c4b-acd6-422f-9eca-7e7c43acac11"
+  },
+  {
+    "categorie": "Nettoyage de locaux",
+    "codeROME": "K2204",
+    "id": "d84c3412-3354-417d-9fd3-48eff61a8dc8"
+  },
+  {
+    "categorie": "Management de sécurité privée",
+    "codeROME": "K2502",
+    "id": "b340a47d-80b0-4459-b1bb-57e8ca16a59d"
+  },
+  {
+    "categorie": "Sécurité et surveillance privées",
+    "codeROME": "K2503",
+    "id": "7153aa44-8123-4e39-9da0-e343424f4b4c"
+  },
+  {
+    "categorie": "Décor et accessoires spectacle",
+    "codeROME": "L1503",
+    "id": "ce8747b8-cfe1-4dab-b4f4-3d6ffed98ad3"
+  },
+  {
+    "categorie": "Audit et contrôle comptables et financiers",
+    "codeROME": "M1202",
+    "id": "096cf645-36e6-4f53-86be-f3fa749748ee"
+  },
+  {
+    "categorie": "Comptabilité",
+    "codeROME": "M1203",
+    "id": "c63a6fe5-7ccc-4af0-8736-d5f8a7e56701"
+  },
+  {
+    "categorie": "Contrôle de gestion",
+    "codeROME": "M1204",
+    "id": "8a35b50c-f74d-4c8e-9b87-d9bdf9c7543e"
+  },
+  {
+    "categorie": "Direction administrative et financière",
+    "codeROME": "M1205",
+    "id": "90861149-165e-4cd6-8fad-758bcdc9c75c"
+  },
+  {
+    "categorie": "Management de groupe ou de service comptable",
+    "codeROME": "M1206",
+    "id": "5a7dbec4-ea86-46d4-b2d0-2de174ab46ff"
+  },
+  {
+    "categorie": "Trésorerie et financement",
+    "codeROME": "M1207",
+    "id": "2521c4dd-d84d-401d-a3c0-db9c33344ba1"
+  },
+  {
+    "categorie": "Conseil en organisation et management d'entreprise",
+    "codeROME": "M1402",
+    "id": "3d17e2f8-8835-433a-bb49-6af0dda5c545"
+  },
+  {
+    "categorie": "Études et prospectives socio-économiques",
+    "codeROME": "M1403",
+    "id": "c3d96b38-3ff4-4272-b551-5fe0e224e04a"
+  },
+  {
+    "categorie": "Assistanat en ressources humaines",
+    "codeROME": "M1501",
+    "id": "15240639-bd9b-4f71-8bdd-9844acbcbd5c"
+  },
+  {
+    "categorie": "Développement des ressources humaines",
+    "codeROME": "M1502",
+    "id": "b90baf80-4de0-4cef-a594-f23a2b4d3b8b"
+  },
+  {
+    "categorie": "Management des ressources humaines",
+    "codeROME": "M1503",
+    "id": "9c9b3e9d-7b5c-4038-b21f-071a334d0024"
+  },
+  {
+    "categorie": "Accueil et renseignements",
+    "codeROME": "M1601",
+    "id": "4cc9fb49-22c1-458a-b2da-7d88bdfeb055"
+  },
+  {
+    "categorie": "Opérations administratives",
+    "codeROME": "M1602",
+    "id": "a60b7063-bf0e-412a-9c80-3baa3576ead4"
+  },
+  {
+    "categorie": "Assistanat de direction",
+    "codeROME": "M1604",
+    "id": "1b7a1862-609a-41ea-b2e0-a230c366f307"
+  },
+  {
+    "categorie": "Secrétariat",
+    "codeROME": "M1607",
+    "id": "47737be1-a391-48f2-9743-9718b5bc77d8"
+  },
+  {
+    "categorie": "Secrétariat comptable",
+    "codeROME": "M1608",
+    "id": "6863dc4a-dfe2-4e8c-9c09-582721ef1c62"
+  },
+  {
+    "categorie": "Secrétariat et assistanat médical ou médico-social",
+    "codeROME": "M1609",
+    "id": "76108f6c-e310-4b10-bbb9-cf339eb70900"
+  },
+  {
+    "categorie": "Management relation clientèle",
+    "codeROME": "M1704",
+    "id": "20dca7b0-7b46-45a2-99d2-66271f6cd6dd"
+  },
+  {
+    "categorie": "Marketing",
+    "codeROME": "M1705",
+    "id": "4a65fb23-5573-451c-959d-7fbfe56fc3cf"
+  },
+  {
+    "categorie": "Stratégie commerciale",
+    "codeROME": "M1707",
+    "id": "b3936c5b-f124-4cf8-974d-14dcf8410810"
+  },
+  {
+    "categorie": "Administration de systèmes d'information",
+    "codeROME": "M1801",
+    "id": "a5063714-a1e2-4ea0-9a99-1b7af54b4927"
+  },
+  {
+    "categorie": "Expertise et support en systèmes d'information",
+    "codeROME": "M1802",
+    "id": "7c35db2d-49b3-44d6-b1ff-3ba7205c4ddd"
+  },
+  {
+    "categorie": "Études et développement informatique",
+    "codeROME": "M1805",
+    "id": "3258e94c-bbc9-45ad-81df-e24ba859f584"
+  },
+  {
+    "categorie": "Conseil et maîtrise d'ouvrage en systèmes d'information",
+    "codeROME": "M1806",
+    "id": "61afe888-e676-4670-ad26-db702c80d2e9"
+  },
+  {
+    "categorie": "Information géographique",
+    "codeROME": "M1808",
+    "id": "584e40b6-af30-4407-b00f-952fcc06c942"
+  },
+  {
+    "categorie": "Production et exploitation de systèmes d'information",
+    "codeROME": "M1810",
+    "id": "a0264752-e55d-48a4-90eb-19efde80f0c5"
+  },
+  {
+    "categorie": "Conduite d'engins de déplacement des charges",
+    "codeROME": "N1101",
+    "id": "810eaba0-fc72-4cd0-9690-32c1120c09db"
+  },
+  {
+    "categorie": "Magasinage et préparation de commandes",
+    "codeROME": "N1103",
+    "id": "5b1b44b6-1d3c-4db5-ab30-7f7ed1ad0fad"
+  },
+  {
+    "categorie": "Conception et organisation de la chaîne logistique",
+    "codeROME": "N1301",
+    "id": "38b274e7-50f3-4933-a2cc-4884b0b689ae"
+  },
+  {
+    "categorie": "Direction de site logistique",
+    "codeROME": "N1302",
+    "id": "0b464bea-d0a3-4929-aa6a-a5fd5ee12ef7"
+  },
+  {
+    "categorie": "Intervention technique d'exploitation logistique",
+    "codeROME": "N1303",
+    "id": "ac996dcd-c961-4436-9c54-100e0222eafa"
+  },
+  {
+    "categorie": "Personnel d'escale aéroportuaire",
+    "codeROME": "N2201",
+    "id": "78697167-4c3e-48d9-a954-afe99619c9fa"
+  },
+  {
+    "categorie": "Conduite de transport de marchandises sur longue distance",
+    "codeROME": "N4101",
+    "id": "ed6c4ff5-fded-47f2-8145-473237d9c730"
+  },
+  {
+    "categorie": "Conduite de transport en commun sur route",
+    "codeROME": "N4103",
+    "id": "25766b8b-3a54-49ed-991e-c9baac74d4d1"
+  },
+  {
+    "categorie": "Conduite et livraison par tournées sur courte distance",
+    "codeROME": "N4105",
+    "id": "99fdc0e7-581a-4a9c-a571-dbc28a21e828"
+  }
+]
