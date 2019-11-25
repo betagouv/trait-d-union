@@ -25,10 +25,13 @@
     "hapi-swaggered": "3.0.3",
     "hapi-swaggered-ui": "https://github.com/HEYGUL/hapi-swaggered-ui#master",
     "jwks-rsa": "1.6.0",
+    "lru-cache": "5.1.1",
     "nock": "11.7.0",
     "pg": "7.12.1",
     "pino": "5.13.6",
     "pino-pretty": "3.3.0",
+    "request-promise-native": "1.0.8",
+    "sendin_blue_api": "git+https://github.com/HEYGUL/APIv3-nodejs-library.git",
     "sequelize": "5.21.2",
     "sequelize-cli": "5.5.1",
     "uppercamelcase": "3.0.0"
