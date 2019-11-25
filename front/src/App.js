@@ -6,25 +6,36 @@ import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 import PostOffre from './components/offres/PostOffre'
 import ListOffre from './components/offres/ListOffre'
+import Home from './components/Home'
+import Header from './components/Header'
 
-function App () {
+
+function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <header>
-          <NavBar/>
-        </header>
         <Switch>
-          <Route path="/" exact/>
+          <Route path="/" exact>
+            <header>
+              <Header />
+            </header>
+            <Home />
+          </Route>
           <Route path="/poster-offre" exact>
-            <PostOffre/>
+            <header>
+              <NavBar />
+            </header>
+            <PostOffre />
           </Route>
           <Route path="/offres" exact>
-            <ListOffre/>
+            <header>
+              <NavBar />
+            </header>
+            <ListOffre />
           </Route>
         </Switch>
         <footer>
-          <Footer/>
+          <Footer />
         </footer>
       </BrowserRouter>
     </div>
