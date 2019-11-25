@@ -5,27 +5,29 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
  :root {
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #f8f9fa;
-    --dark: #343a40;
+     /* Colors */
+  --blue: #0053b3;
+  --light-blue: #006be6;
+  --dark-blue: #003b80;
+  --darker-blue: #00234d;
+  --lighter-blue: #b4e1fa;
+  --white: #fff;
+  --lightest-grey: #fafbfc;
+  --lighter-grey: #ebeff3;
+  --light-grey: #c9d3df;
+  --grey: #adb9c9;
+  --dark-grey: #8393a7;
+  --darker-grey: #53657d;
+  --darkest-grey: #26353f;
+  --black: #1c1c1c;
+  --green: #03bd5b;
+  --light-green: #daf5e7;
+  --orange: #ff9947;
+  --dark-orange: #cc5c00;
+  --light-orange: #fff0e4;
+  --red: #d63626;
+  --dark-red: #ab2b1e;
+  --light-red: rgba(239,172,166,0.45882);
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -33,7 +35,36 @@
     --breakpoint-xl: 1200px;
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  }
+
+    --theme-primary: var(--blue);
+  --theme-primary-light: var(--light-blue);
+  --theme-primary-dark: var(--dark-blue);
+  --theme-secondary: var(--blue);
+  --theme-secondary-darken: var(--dark-blue);
+  --theme-border: var(--grey);
+  --theme-border-lighter: var(--light-grey);
+  --theme-border-active: var(--light-blue);
+  --theme-border-radius: 3px;
+  --theme-background-white: var(--white);
+  --theme-background-grey: var(--lighter-grey);
+  --theme-background-color: var(--blue);
+  --theme-background-color-dark: var(--darker-blue);
+  --theme-background-gradient: linear-gradient(to left, var(--blue), var(--dark-blue));
+  --theme-background-dark: var(--black);
+  --theme-box-shadow: 0 1px 2px rgba(201, 211, 223, 0.2);
+  --theme-label-text: var(--darker-grey);
+  --theme-light-text: var(--white);
+  --theme-dark-text: var(--darkest-grey);
+  --theme-success-border: var(--green);
+  --theme-success-bg: var(--light-green);
+  --theme-warning-border: var(--orange);
+  --theme-warning-bg: var(--light-orange);
+  --theme-error-border: var(--red);
+  --theme-error-bg: var(--light-red);
+  --theme-info-border: var(--light-blue);
+  --theme-info-bg: var(--lighter-blue);
+
+}
   
   *,
   *::before,
@@ -366,28 +397,31 @@
     line-height: 1.2;
   }
   
-  h1, .h1 {
-    font-size: 2.5rem;
+  h1 {
+    font-size: 2em;
+    line-height: 1.125em;
   }
   
-  h2, .h2 {
-    font-size: 2rem;
+  h2 {
+    font-size: 1.75em;
+    line-height: 1.25em;
   }
   
-  h3, .h3 {
-    font-size: 1.75rem;
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.5em;
   }
   
-  h4, .h4 {
-    font-size: 1.5rem;
+  h4 {
+    font-size: 1.25em;
   }
   
-  h5, .h5 {
-    font-size: 1.25rem;
+  h5 {
+    font-size: 1.125em;
   }
   
-  h6, .h6 {
-    font-size: 1rem;
+  h6 {
+    font-size: 1em;
   }
   
   .lead {
