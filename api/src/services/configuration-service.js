@@ -51,7 +51,29 @@ const environmentVariables = Envie({
     .string()
     .uri({ scheme: ['http', 'https'] })
     .default('http://localhost:3000')
-    .description('Front application URL allowed to call API')
+    .description('Front application URL allowed to call API'),
+
+  TU_FF_NOTIFY_ON_SLACK: Joi
+    .string()
+    .allow('on', 'off')
+    .default('on')
+    .description('Activate notification on Slack dedicated channel'),
+
+  TU_FF_USE_REAL_SENDINBLUE: Joi
+    .string()
+    .allow('on', 'off')
+    .default('on')
+    .description('Activate notification on Slack dedicated channel'),
+
+  SLACK_NOTIFICATION_CHANNEL: Joi
+    .string()
+    .default('#startup-tu-notif')
+    .description('Slack channel on which notifications are sent to - shall start with a #'),
+
+  SLACK_HOOK_URL: Joi
+    .string()
+    .uri({ scheme: 'https' })
+    .description('Slack hook url')
 })
 
 module.exports = environmentVariables
