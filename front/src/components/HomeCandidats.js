@@ -6,7 +6,7 @@ const HomeCandidats = () => {
     return (
         <div>
         <div className="hero" role="banner">
-          <div className="container">
+          <div className="hero__container">
             <div className="row ">
               <div className="col-md-6 col-sm-6  col-xs-12 ">
                 <h1 style={{paddingTop: '1em'}}>Essayez des métiers qui recrutent et forment à côté de chez vous</h1>
@@ -79,7 +79,7 @@ const HomeCandidats = () => {
         <main role="main">
           <section className="section section-grey">
             <h2 className="section__title">Comment ça marche ?</h2>
-            <div className="container">
+            <div className="hero__container container">
               <div className="col-lg-12 col-md -12 col-sm-12 col-xs-12">
                 <div className="row">
                   <div className="col-md-3 col-sm-6 col-xs-12" style={{padding: '0px', margin: '1em 0 1em 0'}}>
@@ -113,10 +113,11 @@ const HomeCandidats = () => {
             </div>
           </section>
           <section className="section section-white" id="typography">
-            <div className="container">
+            <div className="hero__container container">
               <div className="row ">
                 <div className="col-md-6 col-sm-6  col-xs-12 ">
                   <h2>Pourquoi essayer un métier ?</h2>
+                  <p>&nbsp; </p>
                   <ul>
                     <li><b>Pour réussir votre reconversion professionnelle </b> : vous voulez changer de métier mais ne savez
                       pas dans quoi vous lancer ? Essayez avant des jobs pendant quelques jours, sans aucun risque.
@@ -135,6 +136,7 @@ const HomeCandidats = () => {
                 </div>
                 <div className="col-md-6 col-sm-6  col-xs-12 ">
                   <h2>Questions/réponses </h2>
+                  <p>&nbsp; </p>
                   <ul>
                     <li><b>À qui s'adresse ce site ? </b> : aux demandeurs d'emploi de la Région Grand Est, habitant près de
                       Metz et Nancy (ouverture prochaine dans d'autres villes)</li>
