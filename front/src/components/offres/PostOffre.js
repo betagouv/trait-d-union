@@ -19,7 +19,6 @@ const PostOffre = () => {
       })
       reset()
     } catch (e) {
-      console.error(e)
       await Alert.fire({
         icon: 'error',
         title: 'Oh non ! Une erreur s\'est produite. Merci de réessayer ultérieurement.',

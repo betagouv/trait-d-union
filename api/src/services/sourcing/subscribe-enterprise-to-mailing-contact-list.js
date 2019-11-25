@@ -1,8 +1,12 @@
 const logger = require('../../utils/logger')
+const configurationService = require('../../services/configuration-service')
 
 const enterpriseListId = 35
 
 module.exports = ({ contactsApiClient }) => async (offre) => {
+  if (configurationService.get('TU_FF_USE_REAL_SENDINBLUE') === 'off') {
+    return
+  }
   const { contact: enterprise, lieuTravail } = offre
   const contact = {
     email: enterprise.courriel,
