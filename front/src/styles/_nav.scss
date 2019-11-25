@@ -1240,6 +1240,9 @@ header {
 }
 
 @media all and (max-width: 991px) {
+	.logoge {
+		display: none;
+	  }
 	.header-top {
 		padding: 10px 0;
 		height: 60px;
