@@ -1,0 +1,41 @@
+
+
+  
+  .slider {
+    width: 571px;
+    height: 450px;
+    position: relative;
+    margin: auto;
+    top: 5px;
+    overflow: hidden;
+
+  }
+  
+  .effect { transition: all ease-out 0.5s; }
+  
+  figure a {
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  figcaption {
+    width: 390px;
+    height: 125px;
+    float: right;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+  
+  .active { opacity: 1; }
+
+
+  .number {
+    font-size: 7rem;
+    font-weight: 700;
+    color: #53657d;
+    font-family: Evolventa;
+}
