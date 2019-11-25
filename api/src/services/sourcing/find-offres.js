@@ -3,8 +3,7 @@ const flatten = require('../../utils/flatten-array')
 const logger = require('../../utils/logger')
 
 module.exports = ({ Metier }, repositories) => async (departement) => {
-  let metiers = await Metier.findAll()
-  metiers = metiers.slice(0, 5)
+  const metiers = await Metier.findAll()
   const codesROME = extractCodesROME(metiers)
   logger().debug(`Will get Offres in departement ${departement} for ${metiers.length} metiers:\n${codesROME}`)
 
