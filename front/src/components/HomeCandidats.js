@@ -9,7 +9,7 @@ const HomeCandidats = () => {
           <div className="container">
             <div className="row ">
               <div className="col-md-6 col-sm-6  col-xs-12 ">
-                <h3 style={{paddingTop: '1em'}}>Essayez des métiers qui recrutent et forment à côté de chez vous</h3>
+                <h1 style={{paddingTop: '1em'}}>Essayez des métiers qui recrutent et forment à côté de chez vous</h1>
                 <p style={{paddingTop: '1em', paddingBottom: '1em'}}>Testez pendant quelques jours des jobs qui recrutent dans le coin. Puis entrez en formation et si vous êtes demandeur d'emploi, la Région finance votre formation.
                 </p>
                 <div style={{paddingTop: '1em', paddingBottom: '1em'}}>
