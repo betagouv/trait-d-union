@@ -6,10 +6,10 @@ const HomeCandidats = () => {
     return (
         <div>
         <div className="hero" role="banner">
-          <div className="hero__container">
+          <div className="container">
             <div className="row ">
               <div className="col-md-6 col-sm-6  col-xs-12 ">
-                <h1 style={{paddingTop: '1em'}}>Essayez des métiers qui recrutent et forment à côté de chez vous</h1>
+                <h2 style={{paddingTop: '1em'}}>Essayez des métiers qui recrutent et forment à côté de chez vous</h2>
                 <p style={{paddingTop: '1em', paddingBottom: '1em'}}>Testez pendant quelques jours des jobs qui recrutent dans le coin. Puis entrez en formation et si vous êtes demandeur d'emploi, la Région finance votre formation.
                 </p>
                 <div style={{paddingTop: '1em', paddingBottom: '1em'}}>
@@ -79,7 +79,7 @@ const HomeCandidats = () => {
         <main role="main">
           <section className="section section-grey">
             <h2 className="section__title">Comment ça marche ?</h2>
-            <div className="hero__container container">
+            <div className="container">
               <div className="col-lg-12 col-md -12 col-sm-12 col-xs-12">
                 <div className="row">
                   <div className="col-md-3 col-sm-6 col-xs-12" style={{padding: '0px', margin: '1em 0 1em 0'}}>
@@ -94,7 +94,7 @@ const HomeCandidats = () => {
                     <span className="number">2</span>
                     <h3>Je choisis un métier</h3>
                     <p style={{margin: '5px'}}>Recevez par email chaque semaine <a href="./liste-pmsmp.html" target="_blank">une liste de métiers</a> à tester en rapport avec votre niveau
-                      de qualification et à moins de 30 km de chez vous. 
+                      de qualification et à moins de 30 km de chez vous.
                     </p>
                   </div>
                   <div className="col-md-3 col-sm-6 col-xs-12" style={{padding: '0px', margin: '1em 0 1em 0'}}>
@@ -113,11 +113,10 @@ const HomeCandidats = () => {
             </div>
           </section>
           <section className="section section-white" id="typography">
-            <div className="hero__container container">
+            <div className="container">
               <div className="row ">
                 <div className="col-md-6 col-sm-6  col-xs-12 ">
                   <h2>Pourquoi essayer un métier ?</h2>
-                  <p>&nbsp; </p>
                   <ul>
                     <li><b>Pour réussir votre reconversion professionnelle </b> : vous voulez changer de métier mais ne savez
                       pas dans quoi vous lancer ? Essayez avant des jobs pendant quelques jours, sans aucun risque.
@@ -136,7 +135,6 @@ const HomeCandidats = () => {
                 </div>
                 <div className="col-md-6 col-sm-6  col-xs-12 ">
                   <h2>Questions/réponses </h2>
-                  <p>&nbsp; </p>
                   <ul>
                     <li><b>À qui s'adresse ce site ? </b> : aux demandeurs d'emploi de la Région Grand Est, habitant près de
                       Metz et Nancy (ouverture prochaine dans d'autres villes)</li>
