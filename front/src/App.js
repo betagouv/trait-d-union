@@ -9,6 +9,7 @@ import ListOffre from './components/offres/ListOffre'
 import Home from './components/Home'
 import Header from './components/Header'
 import HomeCandidats from './components/HomeCandidats'
+import HomeEntreprises from './components/HomeEntreprises'
 
 
 function App() {
@@ -33,6 +34,12 @@ function App() {
             <Header />
             </header>
             <HomeCandidats />
+          </Route>
+          <Route path="/entreprises" exact>
+            <header>
+            <NavBar />
+            </header>
+            <HomeEntreprises />
           </Route>
           <Route path="/offres" exact>
             <header>
