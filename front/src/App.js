@@ -8,6 +8,7 @@ import PostOffre from './components/offres/PostOffre'
 import ListOffre from './components/offres/ListOffre'
 import Home from './components/Home'
 import Header from './components/Header'
+import HomeCandidats from './components/HomeCandidats'
 
 
 function App() {
@@ -26,6 +27,12 @@ function App() {
               <NavBar />
             </header>
             <PostOffre />
+          </Route>
+          <Route path="/candidats" exact>
+            <header>
+            <Header />
+            </header>
+            <HomeCandidats />
           </Route>
           <Route path="/offres" exact>
             <header>
