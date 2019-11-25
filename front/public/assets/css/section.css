@@ -7,7 +7,7 @@
   }
 
   .section-grey {
-    background-color: var(--grey);
+    background-color: var(--theme-background-grey);
   }
 
   .section-dark {
