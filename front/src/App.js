@@ -11,45 +11,44 @@ import Header from './components/Header'
 import HomeCandidats from './components/HomeCandidats'
 import HomeEntreprises from './components/HomeEntreprises'
 
-
-function App() {
+function App () {
   return (
     <div className="App">
       <BrowserRouter>
         <Switch>
           <Route path="/" exact>
             <header>
-              <Header />
+              <Header/>
             </header>
-            <Home />
+            <Home/>
           </Route>
           <Route path="/poster-offre" exact>
             <header>
-              <NavBar />
+              <NavBar/>
             </header>
-            <PostOffre />
+            <PostOffre/>
           </Route>
           <Route path="/candidats" exact>
             <header>
-            <Header />
+              <Header/>
             </header>
-            <HomeCandidats />
+            <HomeCandidats/>
           </Route>
           <Route path="/entreprises" exact>
             <header>
-            <NavBar />
+              <NavBar/>
             </header>
-            <HomeEntreprises />
+            <HomeEntreprises/>
           </Route>
           <Route path="/offres" exact>
             <header>
-              <NavBar />
+              <NavBar/>
             </header>
-            <ListOffre />
+            <ListOffre/>
           </Route>
         </Switch>
         <footer>
-          <Footer />
+          <Footer/>
         </footer>
       </BrowserRouter>
     </div>
