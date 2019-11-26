@@ -2,6 +2,7 @@ const Sequelize = require('sequelize')
 const databaseService = require('../services/database-service')
 const contractTypeDefault = 'cdi'
 const contractTypes = ['cdi', 'cdd-court', 'cdd-long', 'autre']
+const offreStatuses = require('./enums/offre-statuses')
 
 const Offre = databaseService.define('offre', {
   id: {
@@ -72,6 +73,11 @@ const Offre = databaseService.define('offre', {
     type: Sequelize.STRING,
     allowNull: true,
     defaultValue: 'http://l.traitdunion.beta.gouv.fr/candidats/images/waitress.svg'
+  },
+  status: {
+    type: Sequelize.ENUM(offreStatuses),
+    allowNull: true,
+    defaultValue: offreStatuses[0]
   }
 })
 module.exports = Offre
