@@ -11,7 +11,7 @@ const NavBar = () => {
             <div className="header-top">
               <div className="logo-area">
                 <Link to="/">
-                  <img src="/logo-ge.png" class="logoge" alt="logo région grand est "/> <img src="/logo-tu.png" alt="lgo trait d'union"></img>
+                  <img src="/logo-ge.png" className="logoge" alt="logo région grand est "/> <img src="/logo-tu.png" alt="lgo trait d'union"></img>
                 </Link>
               </div>
             </div>

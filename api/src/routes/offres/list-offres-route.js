@@ -10,8 +10,8 @@ module.exports.createRoute = (pathPrefix) => ({
     tags: ['api', 'offres'],
     plugins: { 'hapi-swaggered': { responses: { 200: { description: 'Success' } } } },
     handler: async (request, h) => {
-      const { rows: offres, count } = await listOffres()
-      const { offset, limit } = request.query
+      const { offset, limit, status } = request.query
+      const { rows: offres, count } = await listOffres({ status })
 
       return collectionResponse({
         h,

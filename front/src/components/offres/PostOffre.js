@@ -1,14 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Breadcrumb from '../common/Breadcrumb'
 import useForm from 'react-hook-form'
 import client from '../../utils/rest-module'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import { StringParam, useQueryParam } from 'use-query-params'
 
 const Alert = withReactContent(Swal)
 
 const PostOffre = () => {
-  const { register, handleSubmit, reset } = useForm()
+  const { register, handleSubmit, reset, setValue } = useForm()
+
+  const prefilledValues = useQueryValues(useQueryParam)
+
+  useEffect(() => {
+    setValue('jobTitle', prefilledValues.jobTitle)
+    setValue('email', prefilledValues.email)
+    setValue('address', prefilledValues.address)
+  }, [prefilledValues.jobTitle, prefilledValues.email, prefilledValues.address])
+
   const onSubmit = async formData => {
     try {
       await client.post('/offres', formData)
@@ -96,5 +106,18 @@ const PostOffre = () => {
     </React.Fragment>
   )
 }
+
+function useQueryValues(useQueryParam) {
+  const [jobTitle] = useQueryParam('jobTitle', StringParam)
+  const [address] = useQueryParam('address', StringParam)
+  const [email] = useQueryParam('email', StringParam)
+
+  return {
+    jobTitle,
+    address,
+    email
+  }
+}
+
 
 export default PostOffre
