@@ -106,7 +106,7 @@ const HomeEntreprises = () => {
                     </li>
                     <br />
                     <li><b>J'ai d'autres questions</b> : pas de soucis, chattez avec nous en cliquant sur l'icône de
-                      discussion en bas à droite. On essaie de répondre rapidement.
+                      discussion en bas à gauche. On essaie de répondre rapidement.
                     </li>
                   </ul>
                 </div>
