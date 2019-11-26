@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize')
 const databaseService = require('../services/database-service')
+const sendSlackNotification = require('../infrastructure/send-slack-notification')
 const contractTypeDefault = 'cdi'
 const contractTypes = ['cdi', 'cdd-court', 'cdd-long', 'autre']
 const offreStatuses = require('./enums/offre-statuses')
@@ -80,4 +81,9 @@ const Offre = databaseService.define('offre', {
     defaultValue: offreStatuses[0]
   }
 })
+
+Offre.afterCreate((offre, options) => {
+  return sendSlackNotification({ text: `:envelope_with_arrow: 1 nouvelle offre d'immersion vient d'être déposée en statut \`draft\`: \n [\`${offre.id}\`] job de ${offre.jobTitle} situé à ${offre.address}` })
+})
+
 module.exports = Offre
