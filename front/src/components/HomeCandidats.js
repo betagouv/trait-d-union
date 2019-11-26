@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 
 const HomeCandidats = () => {
 
-    return (
+    return ( 
         <div>
         <div className="hero" role="banner">
           <div className="hero__container">
@@ -75,6 +75,7 @@ const HomeCandidats = () => {
               </div>
             </div>
           </div>
+          
         </div>
         <main role="main">
           <section className="section section-grey">
@@ -157,8 +158,11 @@ const HomeCandidats = () => {
                 </div>
               </div>
             </div></section>
+          
         </main>
+      
       </div>
+  
     )
 }
 
