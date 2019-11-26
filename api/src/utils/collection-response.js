@@ -12,6 +12,6 @@ function _currentRange (offset, collectionLength, allItemsCount) {
   } else if (collectionLength <= 1) {
     return '0'
   }
-  const rangeEnd = offset + collectionLength - 1
-  return `${offset}-${rangeEnd}`
+  const rangeEnd = (offset || 0) + collectionLength - 1
+  return `${offset || 0}-${rangeEnd}`
 }

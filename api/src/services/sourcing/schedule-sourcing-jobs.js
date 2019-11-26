@@ -6,70 +6,70 @@ const sourceOffres = require('../../services/sourcing/source-offres')(models)
 const departements = [{
   inseeCode: '54',
   scheduleTime: {
-    hour: 8,
+    hour: 0,
     minute: 36,
     tz: 'Europe/Paris'
   }
 }, {
   inseeCode: '57',
   scheduleTime: {
-    hour: 8,
+    hour: 0,
     minute: 46,
     tz: 'Europe/Paris'
   }
 }, {
   inseeCode: '08',
   scheduleTime: {
-    hour: 8,
+    hour: 0,
     minute: 56,
     tz: 'Europe/Paris'
   }
 }, {
   inseeCode: '51',
   scheduleTime: {
-    hour: 9,
+    hour: 1,
     minute: 6,
     tz: 'Europe/Paris'
   }
 }, {
   inseeCode: '67',
   scheduleTime: {
-    hour: 9,
+    hour: 1,
     minute: 16,
     tz: 'Europe/Paris'
   }
 }, {
   inseeCode: '68',
   scheduleTime: {
-    hour: 9,
+    hour: 1,
     minute: 26,
     tz: 'Europe/Paris'
   }
 }, {
   inseeCode: '88',
   scheduleTime: {
-    hour: 9,
+    hour: 1,
     minute: 36,
     tz: 'Europe/Paris'
   }
 }, {
   inseeCode: '10',
   scheduleTime: {
-    hour: 9,
+    hour: 1,
     minute: 46,
     tz: 'Europe/Paris'
   }
 }, {
   inseeCode: '52',
   scheduleTime: {
-    hour: 9,
+    hour: 1,
     minute: 56,
     tz: 'Europe/Paris'
   }
 }, {
   inseeCode: '55',
   scheduleTime: {
-    hour: 10,
+    hour: 2,
     minute: 6,
     tz: 'Europe/Paris'
   }
