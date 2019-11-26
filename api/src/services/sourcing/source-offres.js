@@ -18,8 +18,8 @@ module.exports = (models) => async (departement) => {
   logger().info(`Source ${result.length} offres, ${offresWithEmail.length} offres with email are cdi or cdd >= 6 mois`)
   offresWithEmail.forEach(async (offre) => {
     await subscribeEnterpriseToMailingContactList(offre).catch()
-    await notifyEnterpriseAddition(offre)
   })
+  await notifyEnterpriseAddition(offresWithEmail, departement)
   return offresWithEmail
 }
 
@@ -27,6 +27,6 @@ function keepOffresWithEmail (offres) {
   return offres.filter(({ contact }) => contact && contact.courriel && contact.courriel.indexOf('pole-emploi') < 0)
 }
 
-function notifyEnterpriseAddition (offre) {
-  return sendSlackNotification({ text: `:heart: Nouvelle entreprise ajoutée à la liste de prospects : ${offre.contact.nom} à ${offre.lieuTravail.libelle}` })
+function notifyEnterpriseAddition (offres, departement) {
+  return sendSlackNotification({ text: `:heart: ${offres.length} nouvelles entreprises ajoutées à la liste de prospects pour le département ${departement}` })
 }
