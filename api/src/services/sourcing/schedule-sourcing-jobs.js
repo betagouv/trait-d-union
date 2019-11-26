@@ -7,70 +7,70 @@ const departements = [{
   inseeCode: '54',
   scheduleTime: {
     hour: 8,
-    minute: 22,
+    minute: 36,
     tz: 'Europe/Paris'
   }
 }, {
   inseeCode: '57',
   scheduleTime: {
-    hour: 0,
-    minute: 10,
+    hour: 8,
+    minute: 46,
     tz: 'Europe/Paris'
   }
 }, {
   inseeCode: '08',
   scheduleTime: {
-    hour: 0,
-    minute: 20,
+    hour: 8,
+    minute: 56,
     tz: 'Europe/Paris'
   }
 }, {
   inseeCode: '51',
   scheduleTime: {
-    hour: 0,
-    minute: 30,
+    hour: 9,
+    minute: 6,
     tz: 'Europe/Paris'
   }
 }, {
   inseeCode: '67',
   scheduleTime: {
-    hour: 0,
-    minute: 40,
+    hour: 9,
+    minute: 16,
     tz: 'Europe/Paris'
   }
 }, {
   inseeCode: '68',
   scheduleTime: {
-    hour: 0,
-    minute: 50,
+    hour: 9,
+    minute: 26,
     tz: 'Europe/Paris'
   }
 }, {
   inseeCode: '88',
   scheduleTime: {
-    hour: 1,
-    minute: 0,
+    hour: 9,
+    minute: 36,
     tz: 'Europe/Paris'
   }
 }, {
   inseeCode: '10',
   scheduleTime: {
-    hour: 1,
-    minute: 10,
+    hour: 9,
+    minute: 46,
     tz: 'Europe/Paris'
   }
 }, {
   inseeCode: '52',
   scheduleTime: {
-    hour: 1,
-    minute: 20,
+    hour: 9,
+    minute: 56,
     tz: 'Europe/Paris'
   }
 }, {
   inseeCode: '55',
   scheduleTime: {
-    hour: 1,
-    minute: 30,
+    hour: 10,
+    minute: 6,
     tz: 'Europe/Paris'
   }
 }]
