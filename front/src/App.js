@@ -45,6 +45,7 @@ function App () {
             <NavBar />
             </header>
             <HomeEntreprises />
+         
           </Route>
           <Route path="/offres" exact>
             <header>
