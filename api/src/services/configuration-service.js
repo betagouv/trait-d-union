@@ -65,6 +65,12 @@ const environmentVariables = Envie({
     .default('on')
     .description('Activate notification on Slack dedicated channel'),
 
+  TU_FF_SCHEDULE_SOURCING: Joi
+    .string()
+    .allow('on', 'off')
+    .default('on')
+    .description('Activate scheduling of sourcing scripts'),
+
   SLACK_NOTIFICATION_CHANNEL: Joi
     .string()
     .default('#startup-tu-notif')

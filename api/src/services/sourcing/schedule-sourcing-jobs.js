@@ -3,82 +3,24 @@ const logger = require('../../utils/logger')
 const models = require('../../models')
 const sourceOffres = require('../../services/sourcing/source-offres')(models)
 
-const departements = [{
-  inseeCode: '54',
-  scheduleTime: {
-    hour: 0,
-    minute: 36,
-    tz: 'Europe/Paris'
-  }
-}, {
-  inseeCode: '57',
-  scheduleTime: {
-    hour: 0,
-    minute: 46,
-    tz: 'Europe/Paris'
-  }
-}, {
-  inseeCode: '08',
-  scheduleTime: {
-    hour: 0,
-    minute: 56,
-    tz: 'Europe/Paris'
-  }
-}, {
-  inseeCode: '51',
-  scheduleTime: {
-    hour: 1,
-    minute: 6,
-    tz: 'Europe/Paris'
-  }
-}, {
-  inseeCode: '67',
-  scheduleTime: {
-    hour: 1,
-    minute: 16,
-    tz: 'Europe/Paris'
-  }
-}, {
-  inseeCode: '68',
-  scheduleTime: {
-    hour: 1,
-    minute: 26,
-    tz: 'Europe/Paris'
-  }
-}, {
-  inseeCode: '88',
-  scheduleTime: {
-    hour: 1,
-    minute: 36,
-    tz: 'Europe/Paris'
-  }
-}, {
-  inseeCode: '10',
-  scheduleTime: {
-    hour: 1,
-    minute: 46,
-    tz: 'Europe/Paris'
-  }
-}, {
-  inseeCode: '52',
-  scheduleTime: {
-    hour: 1,
-    minute: 56,
-    tz: 'Europe/Paris'
-  }
-}, {
-  inseeCode: '55',
-  scheduleTime: {
-    hour: 2,
-    minute: 6,
-    tz: 'Europe/Paris'
-  }
-}]
+const departements = [
+  { inseeCode: '54' },
+  { inseeCode: '57' },
+  { inseeCode: '08' },
+  { inseeCode: '51' },
+  { inseeCode: '67' },
+  { inseeCode: '68' },
+  { inseeCode: '88' },
+  { inseeCode: '10' },
+  { inseeCode: '52' },
+  { inseeCode: '55' }
+]
 
 module.exports = (app) => {
-  departements.forEach(departement => {
-    logger().debug(`Schedule a sourcing job for departement ${departement.inseeCode} at ${JSON.stringify(departement.scheduleTime)}`)
-    const job = schedule.scheduleJob(departement.scheduleTime, async () => {
+  departements.forEach((departement, index) => {
+    const scheduleTime = computeScheduleTime(index)
+    logger().debug(`Schedule a sourcing job for departement ${departement.inseeCode} at ${JSON.stringify(scheduleTime)}`)
+    const job = schedule.scheduleJob(scheduleTime, async () => {
       logger().info(`${departement.inseeCode} - Time to source offres for the day !`)
       try {
         sourceOffres(departement.inseeCode)
@@ -88,4 +30,15 @@ module.exports = (app) => {
     })
     logger().debug(`Next invocation for departement ${departement.inseeCode} is ${job.nextInvocation()}`)
   })
+}
+
+function computeScheduleTime (index) {
+  const invocationIntervalInMinutes = 15
+  const hour = Math.floor((index * invocationIntervalInMinutes) / 60)
+  const minute = (index * invocationIntervalInMinutes) % 60
+  return {
+    hour,
+    minute,
+    tz: 'Europe/Paris'
+  }
 }
