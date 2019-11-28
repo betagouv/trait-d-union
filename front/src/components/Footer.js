@@ -26,21 +26,21 @@ const Footer = () => {
               <div className="footer-widget footer-shortcut-link">
                 <h4>Liens</h4>
                 <ul>
-                  <li><a target="_blank" href="https://www.grandest.fr">Région Grand Est</a></li>
-                  <li><a target="_blank" href="https://beta.gouv.fr">beta.gouv.fr</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://www.grandest.fr">Région Grand Est</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://beta.gouv.fr">beta.gouv.fr</a></li>
                 </ul>
                 <ul>
-                  <li><a target="_blank" href="https://www.facebook.com/traitdunion.beta.gouv.fr/" title="Facebook">
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/traitdunion.beta.gouv.fr/" title="Facebook">
                     <svg
                       className="icon icon-fb">
                     </svg>
                   </a>
-                    <a href="https://twitter.com/TraitdunionBeta" title="Twitter" target="_blank">
+                    <a href="https://twitter.com/TraitdunionBeta" title="Twitter" target="_blank" rel="noopener noreferrer">
                       <svg
                         className="icon icon-twitter">
                       </svg>
                     </a>
-                    <a href="mailto:contact@traitdunion.beta.gouv.fr" title="Nous écrire un mail">
+                    <a href="mailto:contact@traitdunion.beta.gouv.fr" title="Nous écrire un mail" rel="noopener noreferrer">
                       <svg
                         className="icon icon-mail">
                       </svg>

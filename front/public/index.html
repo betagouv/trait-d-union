@@ -65,10 +65,10 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600%7CRoboto:300i,400,500">
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/images/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="mask-icon" href="%PUBLIC_URL%/images/safari-pinned-tab.svg" color="#5bbad5">
 
     <!--[if lt IE 9]>
     <script src="assets/js/html5shiv.min.js"></script>
@@ -97,11 +97,13 @@
           slide: function () {
             if (typeof document.querySelector('.slider') != 'undefined' && document.querySelector('.slider')) {
               element = document.querySelector('.active')
-              if (element.nextElementSibling) {
+              if (element && element.nextElementSibling) {
                 element.nextElementSibling.classList.add('active')
                 element.classList.remove('active')
-              } else {
+              } else if (element) {
                 element.classList.remove('active')
+                config.img()
+              } else {
                 config.img()
               }
             }
