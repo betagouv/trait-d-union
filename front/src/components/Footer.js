@@ -21,29 +21,22 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <div className="col-md-1 col-sm-1  col-xs-12 "/>
+            <div className="col-md-1 col-sm-1  col-xs-12 " />
             <div className="col-md-4 col-sm-4  col-xs-12 ">
               <div className="footer-widget footer-shortcut-link">
                 <h4>Liens</h4>
                 <ul>
                   <li><a target="_blank" rel="noopener noreferrer" href="https://www.grandest.fr">Région Grand Est</a></li>
                   <li><a target="_blank" rel="noopener noreferrer" href="https://beta.gouv.fr">beta.gouv.fr</a></li>
-                </ul>
-                <ul>
-                  <li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/traitdunion.beta.gouv.fr/" title="Facebook">
-                    <svg
-                      className="icon icon-fb">
-                    </svg>
-                  </a>
+                  <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/traitdunion.beta.gouv.fr/" title="Facebook">
+                      <i className="fab fa-facebook-square" style={{fontSize: "4rem",  marginRight:"1rem" }}></i>
+                    </a>
                     <a href="https://twitter.com/TraitdunionBeta" title="Twitter" target="_blank" rel="noopener noreferrer">
-                      <svg
-                        className="icon icon-twitter">
-                      </svg>
+                    <i className="fab fa-twitter-square" style={{fontSize: "4rem", marginRight:"1rem" }}></i>
                     </a>
                     <a href="mailto:contact@traitdunion.beta.gouv.fr" title="Nous écrire un mail" rel="noopener noreferrer">
-                      <svg
-                        className="icon icon-mail">
-                      </svg>
+                    <i className="fas fa-envelope-square" style={{fontSize: "4rem"}}></i>
                     </a>
                   </li>
                 </ul>
