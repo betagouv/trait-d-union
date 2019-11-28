@@ -21,7 +21,8 @@ const niveauxEtude = [
 const CandidatureForm = () => {
   const { register, handleSubmit, reset } = useForm()
   const location = useLocation()
-  const [offre, setOffre] = useState(location.state.offre)
+
+  const [offre, setOffre] = useState(location.state && location.state.offre)
   const [offreId] = useQueryParam('offreId', StringParam)
 
   useEffect(() => {
@@ -62,7 +63,7 @@ const CandidatureForm = () => {
     }
   }
 
-  if (offre === null) {
+  if (!offre) {
     return (
       <div>Récupération de l'offre en cours...</div>
     )

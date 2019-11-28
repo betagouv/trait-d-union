@@ -2,7 +2,6 @@
 import './App.scss'
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 import PostOffre from './components/offres/PostOffre'
 import ListOffre from './components/offres/ListOffre'
@@ -25,7 +24,7 @@ function App () {
           </Route>
           <Route path="/poster-offre" exact>
             <header>
-              <NavBar/>
+              <Header/>
             </header>
             <PostOffre/>
           </Route>
@@ -37,25 +36,25 @@ function App () {
           </Route>
           <Route path="/offres/candidature" exact>
             <header>
-              <NavBar/>
+              <Header/>
             </header>
             <CandidatureForm/>
           </Route>
           <Route path="/entreprises" exact>
             <header>
-              <NavBar/>
+              <Header/>
             </header>
             <HomeEntreprises/>
           </Route>
           <Route path="/entreprises" exact>
             <header>
-              <NavBar/>
+              <Header/>
             </header>
             <HomeEntreprises/>
           </Route>
           <Route path="/offres" exact>
             <header>
-              <NavBar/>
+              <Header/>
             </header>
             <ListOffre/>
           </Route>
