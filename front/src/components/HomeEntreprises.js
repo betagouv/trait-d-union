@@ -20,15 +20,24 @@ const HomeEntreprises = () => {
               </div>
               <div className="col-md-6 col-sm-6 col-xs-12" style={{marginLeft: '0px'}}>
                 <div className="slider">
-                  <figure>
+                <figure>
                     <a className="effect">
-                      <img src="https://l.traitdunion.beta.gouv.fr/candidats/images//user_group.svg" />
+                      <img src="https://l.traitdunion.beta.gouv.fr/candidats/images/user_group.svg" />
                     </a>
                     <a className="effect">
-                      <img src="https://l.traitdunion.beta.gouv.fr/candidats/images//user_profile.svg" style={{position: 'absolute', top: '50%', WebkitTransform: 'translateY(-50%)', msTransform: 'translateY(-50%)', transform: 'translateY(-50%)', left: 0, right: 0, margin: 'auto', textAlign: 'center'}} />
+                      <img src="https://l.traitdunion.beta.gouv.fr/candidats/images/user_profile.svg" style={{position: 'absolute', top: '50%', WebkitTransform: 'translateY(-50%)', msTransform: 'translateY(-50%)', transform: 'translateY(-50%)', left: 0, right: 0, margin: 'auto', textAlign: 'center'}} />
                     </a>
                     <a className="effect">
-                      <img src="https://l.traitdunion.beta.gouv.fr/candidats/images//user_status.svg" style={{position: 'absolute', top: '50%', WebkitTransform: 'translateY(-50%)', msTransform: 'translateY(-50%)', transform: 'translateY(-50%)', left: 0, right: 0, margin: 'auto', textAlign: 'center'}} />
+                      <img src="https://l.traitdunion.beta.gouv.fr/candidats/images/user_status.svg" style={{position: 'absolute', top: '50%', WebkitTransform: 'translateY(-50%)', msTransform: 'translateY(-50%)', transform: 'translateY(-50%)', left: 0, right: 0, margin: 'auto', textAlign: 'center'}} />
+                    </a>
+                    <a className="effect">
+                      <img src="https://l.traitdunion.beta.gouv.fr/candidats/images/word_of_mouth.svg" />
+                    </a>
+                    <a className="effect">
+                      <img src="https://l.traitdunion.beta.gouv.fr/candidats/images/personal_data_2.svg" />
+                    </a>
+                    <a className="effect">
+                      <img src="https://l.traitdunion.beta.gouv.fr/candidats/images/complete_task_1.svg" />
                     </a>
                   </figure>
                   <figcaption />
