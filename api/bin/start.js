@@ -10,7 +10,9 @@ const start = async () => {
     auth0Mock.start()
   }
   await server.start()
-  scheduleSourcingJobs()
+  if (configurationService.get('TU_FF_SCHEDULE_SOURCING') === 'on') {
+    scheduleSourcingJobs()
+  }
 }
 
 if (process.argv.includes('-h')) {

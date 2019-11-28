@@ -1,29 +1,32 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-class ListOffreItem extends React.Component {
-  render () {
-    console.log(this.props.offre)
-    return (
-      <div className="job-list">
-        <div className="thumb">
-          <img src={this.props.offre.imageURL} className="img-fluid" alt=""/>
+const ListOffreItem = ({ offre }) => {
+
+  return (
+    <div className="job-list">
+      <div className="thumb">
+        <img src={offre.imageURL} className="img-fluid" alt=""/>
+      </div>
+      <div className="body">
+        <div className="content">
+          <h4>{offre.jobTitle}</h4>
+          <span className="office-location"><i data-feather="map-pin"/>{offre.address}</span>
         </div>
-        <div className="body">
-          <div className="content">
-            <h4><a href="job-details.html">{this.props.offre.jobTitle}</a></h4>
-            <div className="info">
-              <span className="office-location"><a href="#"><i data-feather="map-pin"/>{this.props.offre.address}</a></span>
-            </div>
-          </div>
-          <div className="more">
-            <div className="buttons">
-              <a href="#" className="button" data-toggle="modal" data-target="#apply-popup-id">Postuler</a>
-            </div>
+        <div className="more">
+          <div className="buttons">
+            <Link to={{
+              pathname: `/offres/candidature`,
+              search: `?offreId=${offre.id}`,
+              state: { offre }
+            }}>
+              <button className="button">Postuler</button>
+            </Link>
           </div>
         </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default ListOffreItem

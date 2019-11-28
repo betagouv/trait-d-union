@@ -2,7 +2,6 @@
 import './App.scss'
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 import PostOffre from './components/offres/PostOffre'
 import ListOffre from './components/offres/ListOffre'
@@ -10,46 +9,58 @@ import Home from './components/Home'
 import Header from './components/Header'
 import HomeCandidats from './components/HomeCandidats'
 import HomeEntreprises from './components/HomeEntreprises'
+import CandidatureForm from './components/offres/CandidatureForm'
 
-
-function App() {
+function App () {
   return (
     <div className="App">
       <BrowserRouter>
         <Switch>
           <Route path="/" exact>
             <header>
-              <Header />
+              <Header/>
             </header>
-            <Home />
+            <Home/>
           </Route>
           <Route path="/poster-offre" exact>
             <header>
-              <NavBar />
+              <Header/>
             </header>
-            <PostOffre />
+            <PostOffre/>
           </Route>
           <Route path="/candidats" exact>
             <header>
-            <Header />
+              <Header/>
             </header>
-            <HomeCandidats />
+            <HomeCandidats/>
+          </Route>
+          <Route path="/offres/candidature" exact>
+            <header>
+              <Header/>
+            </header>
+            <CandidatureForm/>
           </Route>
           <Route path="/entreprises" exact>
             <header>
-            <NavBar />
+              <Header/>
             </header>
-            <HomeEntreprises />
+            <HomeEntreprises/>
+          </Route>
+          <Route path="/entreprises" exact>
+            <header>
+              <Header/>
+            </header>
+            <HomeEntreprises/>
           </Route>
           <Route path="/offres" exact>
             <header>
-              <NavBar />
+              <Header/>
             </header>
-            <ListOffre />
+            <ListOffre/>
           </Route>
         </Switch>
         <footer>
-          <Footer />
+          <Footer/>
         </footer>
       </BrowserRouter>
     </div>

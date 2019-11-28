@@ -82,6 +82,10 @@ const Offre = databaseService.define('offre', {
   }
 })
 
+Offre.associate = ({ Candidature }) => {
+  Offre.hasMany(Candidature)
+}
+
 Offre.afterCreate((offre, options) => {
   return sendSlackNotification({ text: `:envelope_with_arrow: 1 nouvelle offre d'immersion vient d'être déposée en statut \`draft\`: \n [\`${offre.id}\`] job de ${offre.jobTitle} situé à ${offre.address}` })
 })

@@ -18,7 +18,7 @@ module.exports.createRoute = (pathPrefix) => ({
     plugins: {
       'hapi-swaggered': {
         responses: {
-          201: { description: 'Created' },
+          200: { description: 'Success' },
           400: { description: 'Bad Request' }
         }
       }
