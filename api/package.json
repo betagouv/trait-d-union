@@ -1,6 +1,6 @@
 {
   "name": "traitdunion-api",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "API de Trait d'Union - Version 2 - PMSMP",
   "main": "bin/start.js",
   "repository": "git@github.com:betagouv/trait-d-union.git",
