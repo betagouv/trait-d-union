@@ -46,7 +46,7 @@ module.exports = {
     await queryInterface.addColumn(
       'candidats',
       'otherJobs', {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: true
       })
     await queryInterface.addColumn(
@@ -59,14 +59,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await replaceEnum({
-      queryInterface,
-      tableName: 'candidats',
-      columnName: 'niveauEtude',
-      newValues: ['bac'],
-      defaultValue: 'bac',
-      enumName: 'enum_candidats_niveauEtude'
-    })
     await queryInterface.removeColumn('candidats', 'lastName')
     await queryInterface.removeColumn('candidats', 'zipCode')
     await queryInterface.removeColumn('candidats', 'poleEmploiId')

@@ -21,7 +21,6 @@ const niveauxEtude = [
 const CandidatureForm = () => {
   const { register, handleSubmit, reset } = useForm()
   const location = useLocation()
-
   const [offre, setOffre] = useState(location.state && location.state.offre)
   const [offreId] = useQueryParam('offreId', StringParam)
 
@@ -42,12 +41,14 @@ const CandidatureForm = () => {
 
   const onSubmit = async formData => {
     try {
+      formData.offreId = offre.id
+      console.log(formData)
       await client.post('/candidatures', formData)
       await Alert.fire({
           icon: 'success',
-          title: 'Merci this.firstName, nous enverrons votre demande à l\'entreprise bientôt. ' +
+          title: `Merci ${formData.firstName}, nous enverrons votre demande à l'entreprise bientôt. ` +
             'S\'il y a beaucoup de demandes et que vous ne pouvez faire l\'essai, nous proposerons votre candidature pour le même métier' +
-            ' () et dans la même zone géographique à une entreprise similaire.',
+            ` (${offre.jobTitle}) et dans la même zone géographique à une entreprise similaire.`,
           confirmButtonText: 'Revenir à la liste des offres',
           onClose: () => window.open('/offres', '_parent')
         }
@@ -102,6 +103,7 @@ const CandidatureForm = () => {
                                  name="poleEmploiId"
                                  className="form-control"
                                  placeholder="Exemple : 3051721Y"
+                                 ref={register({ required: false })}
                           />
                         </div>
                       </div>
@@ -149,7 +151,7 @@ const CandidatureForm = () => {
                                  className="form-control"
                                  placeholder="Exemple: 32"
                                  required="required"
-                                 ref={register({ required: true })}
+                                 ref={register({ required: false })}
                           />
                         </div>
                       </div>
@@ -173,8 +175,8 @@ const CandidatureForm = () => {
                                   placeholder=""
                                   required="required"
                                   ref={register({ required: true })}>
-                            {niveauxEtude.map((niveauEtude, index) =>
-                              <option key={index} id={niveauEtude.id}>{niveauEtude.label}</option>
+                            {niveauxEtude.map((niveauEtude) =>
+                              <option key={niveauEtude.id} value={niveauEtude.id}>{niveauEtude.label}</option>
                             )}
                           </select>
                           <i className="fa fa-caret-down"/>
@@ -185,9 +187,10 @@ const CandidatureForm = () => {
                           celui de {offre.jobTitle}, si vous avez déjà des idées</label>
                         <div className="col-md-9">
                           <input type="text"
-                                 name="otherMetiers"
+                                 name="otherJobs"
                                  className="form-control"
                                  placeholder="Si vous n'avez pas d'idée, pas de soucis"
+                                 ref={register({ required: false })}
                           />
                         </div>
                       </div>
@@ -196,12 +199,14 @@ const CandidatureForm = () => {
                           éventuellement d'accord pour partir en formation afin de pouvoir faire ce métier ?</label>
                         <div className="col-md-9">
                           <input type="checkbox"
-                                 id="acceptFormation"
-                                 name="acceptFormation"
+                                 id="acceptFollowingTraining"
+                                 name="acceptFollowingTraining"
                                  className="form-check-input"
                                  placeholder=""
+                                 defaultChecked={true}
+                                 ref={register({ required: false })}
                           />
-                          <label className="form-check-label" htmlFor="acceptFormation">Accepter</label>
+                          <label className="form-check-label" htmlFor="acceptFollowingTraining">Accepter</label>
                         </div>
                       </div>
                     </div>

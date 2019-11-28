@@ -2,11 +2,12 @@ const Sequelize = require('sequelize')
 const databaseService = require('../services/database-service')
 const niveauxEtude = require('./enums/niveaux-etude')
 
-const Candidat = databaseService.define('candidat', {
+const Candidature = databaseService.define('candidature', {
   id: {
     type: Sequelize.UUID,
     allowNull: false,
-    primaryKey: true
+    primaryKey: true,
+    defaultValue: Sequelize.UUIDV4
   },
   firstName: {
     type: Sequelize.STRING,
@@ -19,7 +20,7 @@ const Candidat = databaseService.define('candidat', {
   email: {
     type: Sequelize.STRING,
     allowNull: false,
-    unique: true
+    unique: false
   },
   niveauEtude: {
     type: Sequelize.ENUM(niveauxEtude),
@@ -52,4 +53,9 @@ const Candidat = databaseService.define('candidat', {
     defaultValue: true
   }
 })
-module.exports = Candidat
+
+Candidature.associate = ({ Offre }) => {
+  Candidature.belongsTo(Offre)
+}
+
+module.exports = Candidature
