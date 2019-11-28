@@ -12,10 +12,11 @@ module.exports = ({ contactsApiClient }) => async (offre) => {
     email: enterprise.courriel,
     attributes: {
       NOM_COMPLET: enterprise.nom.split(' - ')[1],
-      TITRE_OFFRE: offre.intitule,
+      TITRE_OFFRE: encodeURIComponent(offre.intitule),
       ORGANISME: enterprise.nom.split(' - ')[0],
       CODE_POSTAL: lieuTravail.codePostal,
-      ADRESSE: lieuTravail.libelle
+      ADRESSE: lieuTravail.libelle,
+      DATE_AJOUT_OFFRE: new Date()
     },
     listIds: [enterpriseListId]
   }
