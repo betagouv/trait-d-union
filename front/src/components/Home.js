@@ -6,7 +6,7 @@ const Home = () => {
     <div className="hero" role="banner">
       <div className="container">
         <div className="row ">
-          <div className="className="col-md-5  col-xs-12">
+          <div className="col-md-5 col-xs-12">
             <h2 style={{ paddingTop: '1em' }}>Espace entreprise</h2>
             <h4 style={{ paddingTop: '1em', paddingBottom: '1em', color: 'grey' }}>Découvrez comment nous pouvons vous aider à mieux
               recruter
@@ -44,7 +44,7 @@ const Home = () => {
             </div>
           </div>
           <div className="col-md-2 col-xs-1"></div>
-          <div className="className="col-md-5  col-xs-12" style={{ marginLeft: '0px' }}>
+          <div className="col-md-5  col-xs-12" style={{ marginLeft: '0px' }}>
             <h2 style={{ paddingTop: '1em' }}>Espace candidat</h2>
             <h4 style={{ paddingTop: '1em', paddingBottom: '1em', color: 'grey' }}>Essayez des métiers qui recrutent et forment à côté de
               chez vous
@@ -83,7 +83,6 @@ const Home = () => {
         </div>
       </div>
     </div>
-
   )
 }
 
