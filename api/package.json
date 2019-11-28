@@ -36,6 +36,7 @@
     "sendin_blue_api": "git+https://github.com/HEYGUL/APIv3-nodejs-library.git",
     "sequelize": "5.21.2",
     "sequelize-cli": "5.5.1",
+    "sequelize-replace-enum-postgres": "1.5.0",
     "uppercamelcase": "3.0.0"
   },
   "scripts": {

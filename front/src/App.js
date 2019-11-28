@@ -10,6 +10,7 @@ import Home from './components/Home'
 import Header from './components/Header'
 import HomeCandidats from './components/HomeCandidats'
 import HomeEntreprises from './components/HomeEntreprises'
+import CandidatureForm from './components/offres/CandidatureForm'
 
 function App () {
   return (
@@ -34,6 +35,12 @@ function App () {
             </header>
             <HomeCandidats/>
           </Route>
+          <Route path="/offres/candidature" exact>
+            <header>
+              <NavBar/>
+            </header>
+            <CandidatureForm/>
+          </Route>
           <Route path="/entreprises" exact>
             <header>
               <NavBar/>
@@ -42,10 +49,9 @@ function App () {
           </Route>
           <Route path="/entreprises" exact>
             <header>
-            <NavBar />
+              <NavBar/>
             </header>
-            <HomeEntreprises />
-         
+            <HomeEntreprises/>
           </Route>
           <Route path="/offres" exact>
             <header>
