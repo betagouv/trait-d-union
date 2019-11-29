@@ -8,7 +8,7 @@ const Home = () => {
         <div className="row ">
           <div className="col-md-5 col-xs-12">
             <h2 style={{ paddingTop: '1em' }}>Espace entreprise</h2>
-            <h4 style={{ paddingTop: '1em', paddingBottom: '1em', color: 'grey' }}>Découvrez comment nous pouvons vous aider à mieux
+            <h4 style={{ paddingTop: '1em', paddingBottom: '1em', color: 'grey' }}>Découvrez comment vous pouvez  mieux
               recruter
             </h4>
 
