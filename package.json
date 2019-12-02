@@ -14,7 +14,8 @@
     "lint": "cd api && yarn lint",
     "test": "cd api && yarn test",
     "release:prepare": "./scripts/release/prepare.sh",
-    "release:publish": "./scripts/release/publish.sh"
+    "release:publish": "./scripts/release/publish.sh",
+    "dev": "docker-compose up"
   },
   "devDependencies": {
     "husky": "3.1.0",

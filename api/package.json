@@ -43,7 +43,7 @@
     "display:help": "PORT=42 node bin/start.js -h",
     "postdeploy": "yarn migrate:up --env production && yarn seed:all --env production",
     "start": "node bin/start.js",
-    "start:dev": "docker-compose up",
+    "dev": "docker-compose up",
     "start:e2e": "AUTH0_BASE_URL=http://localhost:3333 E2E_TEST=true docker-compose up",
     "start:e2e:pre-push": "AUTH0_BASE_URL=http://localhost:3333 E2E_TEST=true docker-compose up &",
     "stop": "docker-compose stop",
