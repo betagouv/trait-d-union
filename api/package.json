@@ -22,6 +22,7 @@
     "hapi-auth-jwt2": "8.8.0",
     "hapi-cors": "1.0.3",
     "hapi-pino": "6.3.0",
+    "hapi-require-https": "4.0.0",
     "hapi-swaggered": "3.0.3",
     "hapi-swaggered-ui": "https://github.com/HEYGUL/hapi-swaggered-ui#master",
     "jwks-rsa": "1.6.0",

@@ -12,6 +12,7 @@ const Pack = require('./package')
 const configurationService = require('./src/services/configuration-service')
 const routes = require('./src/routes')
 const HapiCors = require('hapi-cors')
+const HapiRequireHttps = require('hapi-require-https')
 
 exports.createServer = async () => {
   const serverInstance = new Hapi.Server({
@@ -31,6 +32,7 @@ exports.registerPlugins = async (server) => {
     Inert,
     Vision,
     AuthJwt,
+    HapiRequireHttps,
     {
       plugin: HapiCors,
       options: _getCorsOptions()
