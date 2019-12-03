@@ -13,7 +13,7 @@ module.exports = ({ contactsApiClient }) => async (offre) => {
     email: enterprise.courriel,
     attributes: {
       NOM_COMPLET: enterprise.nom.split(' - ')[1],
-      TITRE_OFFRE: encodeURIComponent(offre.intitule),
+      TITRE_OFFRE: offre.intitule,
       ORGANISME: enterprise.nom.split(' - ')[0],
       CODE_POSTAL: lieuTravail.codePostal,
       ADRESSE: lieuTravail.libelle,
