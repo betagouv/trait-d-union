@@ -32,5 +32,5 @@ module.exports = ({ contactsApiClient }) => async (offre) => {
 
 function formatDate (date = new Date()) {
   const dt = DateTime.fromJSDate(date)
-  return dt.setLocale('fr').toLocaleString(DateTime.DATE_FULL)
+  return dt.setLocale('fr').toISODate()
 }
