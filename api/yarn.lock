@@ -2106,6 +2106,11 @@ hapi-pino@6.3.0:
     pino "^5.13.5"
     pino-pretty "^3.2.2"
 
+hapi-require-https@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/hapi-require-https/-/hapi-require-https-4.0.0.tgz#5e10b2358b7a56643e2f96fecea69c3e95f1c0aa"
+  integrity sha512-dT5nLoFtro3ltCMmwkt29VnZRDrKgPfQN5ZOKdukrIxKMh3aZ1f4LR7dbDHfIVIBMmQiZoMFqunDv5t1oLKERw==
+
 "hapi-swaggered-ui@https://github.com/HEYGUL/hapi-swaggered-ui#master":
   version "3.0.2"
   resolved "https://github.com/HEYGUL/hapi-swaggered-ui#e23304da8c3e0ef7054e7b01c839f49d4f10ec1e"

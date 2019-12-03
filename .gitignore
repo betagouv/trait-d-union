@@ -5,7 +5,7 @@ api/.int.env
 api/package-lock.json
 front/package-lock.json
 package-lock.json
-
+front/build/
 
 # Created by https://www.gitignore.io/api/IntelliJ,node,macos
 # Edit at https://www.gitignore.io/?templates=IntelliJ,node,macos

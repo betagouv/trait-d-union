@@ -1,6 +1,6 @@
 {
   "name": "trait-d-union",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "description": "Trait d'Union mono repository",
   "main": "index.js",
   "repository": "git@github.com:betagouv/trait-d-union.git",
@@ -14,7 +14,8 @@
     "lint": "cd api && yarn lint",
     "test": "cd api && yarn test",
     "release:prepare": "./scripts/release/prepare.sh",
-    "release:publish": "./scripts/release/publish.sh"
+    "release:publish": "./scripts/release/publish.sh",
+    "dev": "docker-compose up"
   },
   "devDependencies": {
     "husky": "3.1.0",

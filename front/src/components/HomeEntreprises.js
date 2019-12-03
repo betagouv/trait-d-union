@@ -8,7 +8,7 @@ const HomeEntreprises = () => {
       <div className="hero" role="banner">
         <div className="hero__container">
           <div className="row ">
-            <div className="col-md-6 col-sm-6  col-xs-12 ">
+            <div className="col-md-6 col-sm-12  col-xs-12 ">
               <h1 style={{ paddingTop: '1em' }}>Faites découvrir vos métiers pour mieux recruter</h1>
               <p style={{ paddingTop: '1em', paddingBottom: '1em' }}>Recevez quelques jours dans votre entreprise des futurs candidats
                 motivés avant leur départ en formation.
@@ -42,37 +42,17 @@ const HomeEntreprises = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-md-6 col-sm-6 col-xs-12" style={{ marginLeft: '0px' }}>
+            <div className="col-md-6 col-sm-12 col-xs-12" style={{ marginLeft: '0px' }}>
               <div className="slider">
                 <figure>
                   <a className="effect">
                     <img src="https://l.traitdunion.beta.gouv.fr/candidats/images/user_group.svg"/>
                   </a>
                   <a className="effect">
-                    <img src="https://l.traitdunion.beta.gouv.fr/candidats/images/user_profile.svg" style={{
-                      position: 'absolute',
-                      top: '50%',
-                      WebkitTransform: 'translateY(-50%)',
-                      msTransform: 'translateY(-50%)',
-                      transform: 'translateY(-50%)',
-                      left: 0,
-                      right: 0,
-                      margin: 'auto',
-                      textAlign: 'center'
-                    }}/>
+                    <img src="https://l.traitdunion.beta.gouv.fr/candidats/images/user_profile.svg" />
                   </a>
                   <a className="effect">
-                    <img src="https://l.traitdunion.beta.gouv.fr/candidats/images/user_status.svg" style={{
-                      position: 'absolute',
-                      top: '50%',
-                      WebkitTransform: 'translateY(-50%)',
-                      msTransform: 'translateY(-50%)',
-                      transform: 'translateY(-50%)',
-                      left: 0,
-                      right: 0,
-                      margin: 'auto',
-                      textAlign: 'center'
-                    }}/>
+                    <img src="https://l.traitdunion.beta.gouv.fr/candidats/images/user_status.svg" />
                   </a>
                 <a className="effect">
                       <img src="https://l.traitdunion.beta.gouv.fr/candidats/images/word_of_mouth.svg" />
