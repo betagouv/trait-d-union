@@ -25,9 +25,9 @@ function ensure_new_version_is_either_minor_or_patch_or_major {
 }
 
 function update_version {
-    (cd api/ && npm version $NEW_VERSION_TYPE --git-tag-version=false >> /dev/null)
-    (cd front/ && npm version $NEW_VERSION_TYPE --git-tag-version=false >> /dev/null)
-    yarn version --$NEW_VERSION_TYPE --git-tag-version=false >> /dev/null
+    (cd api/ && yarn version --$NEW_VERSION_TYPE --no-git-tag-version >> /dev/null)
+    (cd front/ && yarn version --$NEW_VERSION_TYPE --no-git-tag-version >> /dev/null)
+    yarn version --$NEW_VERSION_TYPE --no-git-tag-version >> /dev/null
     NEW_PACKAGE_VERSION=$(get_package_version)
 }
 
