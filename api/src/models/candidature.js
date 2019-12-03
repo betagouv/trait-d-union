@@ -65,7 +65,7 @@ Candidature.associate = ({ Offre }) => {
 Candidature.afterCreate(async (candidature, options) => {
   const candidatureFromDB = await Candidature.findByPk(candidature.id, { include: 'offre' })
   const requestOptions = {
-    uri: configurationService.get('OFFRE_PUBLISHED_HOOK_URL'),
+    uri: configurationService.get('CANDIDATURE_RECEIVED_HOOK_URL'),
     json: true,
     method: 'POST',
     body: {

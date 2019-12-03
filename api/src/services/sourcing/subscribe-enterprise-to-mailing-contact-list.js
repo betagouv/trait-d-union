@@ -1,5 +1,6 @@
 const logger = require('../../utils/logger')
 const configurationService = require('../../services/configuration-service')
+const { DateTime } = require('luxon')
 
 const enterpriseListId = 34
 
@@ -16,7 +17,7 @@ module.exports = ({ contactsApiClient }) => async (offre) => {
       ORGANISME: enterprise.nom.split(' - ')[0],
       CODE_POSTAL: lieuTravail.codePostal,
       ADRESSE: lieuTravail.libelle,
-      DATE_AJOUT_OFFRE: new Date()
+      DATE_AJOUT_OFFRE: formatDate()
     },
     listIds: [enterpriseListId]
   }
@@ -27,4 +28,9 @@ module.exports = ({ contactsApiClient }) => async (offre) => {
       logger().error(`Error while updating Enterprise to SendInBlue contacts - ${err.response && err.response.text}`)
     })
   })
+}
+
+function formatDate (date = new Date()) {
+  const dt = DateTime.fromJSDate(date)
+  return dt.setLocale('fr').toISODate()
 }
