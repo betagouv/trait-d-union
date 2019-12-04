@@ -39,7 +39,7 @@ const HomeCandidats = () => {
                         WebkitFontSmoothing: 'antialiased',
                         MozOsxFontSmoothing: 'grayscale'
                       }}>
-                  Voir les offres
+                  VOIR LES METIERS
                 </Link>
               </div>
             </div>
