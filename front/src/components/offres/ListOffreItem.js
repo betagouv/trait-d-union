@@ -20,7 +20,7 @@ const ListOffreItem = ({ offre }) => {
               search: `?offreId=${offre.id}`,
               state: { offre }
             }}>
-              <button className="button">Postuler</button>
+              <button className="button">Essayer</button>
             </Link>
           </div>
         </div>
