@@ -286,12 +286,14 @@
 					font-weight: 500;
 					font-size: 1.4rem;
 					margin-left: 20px;
-					background: #f9f9f9;
+					color: $white;
+					background: $primaryColor;
+					border-color: $primaryColor;
 					border: 1px solid rgba($black, .08);
 					&:hover {
-						color: $white;
-						background: $primaryColor;
-						border-color: $primaryColor;
+						color: $primaryColor;
+						background: #f9f9f9;
+						
 					}
 				}
 				.favourite {

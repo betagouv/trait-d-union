@@ -125,8 +125,8 @@ const HomeCandidats = () => {
                 <div className="col-md-3 col-sm-6 col-xs-12" style={{ padding: '0px', margin: '1em 0 1em 0' }}>
                   <span className="number">2</span>
                   <h3>Je choisis un métier</h3>
-                  <p style={{ margin: '5px' }}>Recevez par email chaque semaine <a style={{ color: '#0053B3', textDecoration: 'underline' }} href="./liste-pmsmp.html" target="_blank">une liste de
-                    métiers</a> à tester en rapport avec votre niveau
+                  <p style={{ margin: '5px' }}>Recevez par email chaque semaine <Link style={{ color: '#0053B3', textDecoration: 'underline' }} to="/offres">une liste de
+                    métiers</Link> à tester en rapport avec votre niveau
                     de qualification et à moins de 30 km de chez vous.
                   </p>
                 </div>
@@ -189,7 +189,7 @@ const HomeCandidats = () => {
                   </li>
                   <br/>
                   <li><b>J'ai d'autres questions</b> : pas de soucis, chattez avec nous en cliquant sur l'icône de
-                    discussion en bas à gauche. On essaie de répondre rapidement.
+                    discussion en bas à droite. On essaie de répondre rapidement.
                   </li>
                 </ul>
               </div>

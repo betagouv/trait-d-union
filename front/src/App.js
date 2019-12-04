@@ -12,6 +12,9 @@ import HomeEntreprises from './components/HomeEntreprises'
 import CandidatureForm from './components/offres/CandidatureForm'
 
 function App () {
+  const enterpriseHomeLink = "/entreprises"
+  const candidatHomeLink = "/candidats"
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -24,37 +27,37 @@ function App () {
           </Route>
           <Route path="/poster-offre" exact>
             <header>
-              <Header/>
+              <Header homeLink={enterpriseHomeLink}/>
             </header>
             <PostOffre/>
           </Route>
           <Route path="/candidats" exact>
             <header>
-              <Header/>
+              <Header homeLink={candidatHomeLink}/>
             </header>
             <HomeCandidats/>
           </Route>
           <Route path="/offres/candidature" exact>
             <header>
-              <Header/>
+              <Header homeLink={candidatHomeLink}/>
             </header>
             <CandidatureForm/>
           </Route>
           <Route path="/entreprises" exact>
             <header>
-              <Header/>
+              <Header homeLink={enterpriseHomeLink}/>
             </header>
             <HomeEntreprises/>
           </Route>
           <Route path="/entreprises" exact>
             <header>
-              <Header/>
+              <Header homeLink={enterpriseHomeLink}/>
             </header>
             <HomeEntreprises/>
           </Route>
           <Route path="/offres" exact>
             <header>
-              <Header/>
+              <Header homeLink={candidatHomeLink}/>
             </header>
             <ListOffre/>
           </Route>
