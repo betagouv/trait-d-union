@@ -22,7 +22,9 @@ const CandidatureForm = () => {
   const { register, handleSubmit, reset } = useForm()
   const location = useLocation()
   const [offre, setOffre] = useState(location.state && location.state.offre)
+  const [isSubmitted] = useState(false)
   const [offreId] = useQueryParam('offreId', StringParam)
+  let isEnabled = true
 
   useEffect(() => {
     async function fetchOffre () {
@@ -41,9 +43,10 @@ const CandidatureForm = () => {
 
   const onSubmit = async formData => {
     try {
+      isEnabled = false
       formData.offreId = offre.id
-      console.log(formData)
       await client.post('/candidatures', formData)
+      isEnabled = true
       await Alert.fire({
           icon: 'success',
           title: `Merci ${formData.firstName}, nous enverrons votre demande à l'entreprise bientôt. ` +
@@ -55,6 +58,7 @@ const CandidatureForm = () => {
       )
       reset()
     } catch (e) {
+      isEnabled = true
       await Alert.fire({
         icon: 'error',
         title: 'Oh non ! Une erreur s\'est produite. Merci de réessayer ultérieurement.',
@@ -84,7 +88,7 @@ const CandidatureForm = () => {
                         Afin de découvrir le métier de {offre.jobTitle}, merci de nous fournir quelques informations sur vous.
                       </h4>
                       <div className="form-group row">
-                        <label className="col-md-3 col-form-label">Merci de saisir votre email</label>
+                        <label className="col-md-3 col-form-label">Merci de saisir votre email *</label>
                         <div className="col-md-9">
                           <input type="text"
                                  className="form-control"
@@ -108,7 +112,7 @@ const CandidatureForm = () => {
                         </div>
                       </div>
                       <div className="form-group row">
-                        <label className="col-md-3 col-form-label">Prénom</label>
+                        <label className="col-md-3 col-form-label">Prénom *</label>
                         <div className="col-md-9">
                           <input type="text"
                                  name="firstName"
@@ -120,7 +124,7 @@ const CandidatureForm = () => {
                         </div>
                       </div>
                       <div className="form-group row">
-                        <label className="col-md-3 col-form-label">Nom</label>
+                        <label className="col-md-3 col-form-label">Nom *</label>
                         <div className="col-md-9">
                           <input type="text"
                                  name="lastName"
@@ -132,7 +136,7 @@ const CandidatureForm = () => {
                         </div>
                       </div>
                       <div className="form-group row">
-                        <label className="col-md-3 col-form-label">Téléphone</label>
+                        <label className="col-md-3 col-form-label">Téléphone *</label>
                         <div className="col-md-9">
                           <input type="text"
                                  name="phoneNumber"
@@ -144,7 +148,7 @@ const CandidatureForm = () => {
                         </div>
                       </div>
                       <div className="form-group row">
-                        <label className="col-md-3 col-form-label">Âge</label>
+                        <label className="col-md-3 col-form-label">Âge *</label>
                         <div className="col-md-9">
                           <input type="number"
                                  name="age"
@@ -156,7 +160,7 @@ const CandidatureForm = () => {
                         </div>
                       </div>
                       <div className="form-group row">
-                        <label className="col-md-3 col-form-label">Code postal de votre ville</label>
+                        <label className="col-md-3 col-form-label">Code postal de votre ville *</label>
                         <div className="col-md-9">
                           <input type="text"
                                  name="zipCode"
@@ -168,7 +172,7 @@ const CandidatureForm = () => {
                         </div>
                       </div>
                       <div className="form-group row">
-                        <label className="col-md-3 col-form-label">Niveau d'étude actuel</label>
+                        <label className="col-md-3 col-form-label">Niveau d'étude actuel *</label>
                         <div className="col-md-9">
                           <select name="niveauEtude"
                                   className="form-control"
@@ -183,27 +187,14 @@ const CandidatureForm = () => {
                         </div>
                       </div>
                       <div className="form-group row">
-                        <label className="col-md-3 col-form-label">Vous pouvez saisir d'autres métier que vous voudriez tester, en plus de
-                          celui de {offre.jobTitle}, si vous avez déjà des idées</label>
-                        <div className="col-md-9">
-                          <input type="text"
-                                 name="otherJobs"
-                                 className="form-control"
-                                 placeholder="Si vous n'avez pas d'idée, pas de soucis"
-                                 ref={register({ required: false })}
-                          />
-                        </div>
-                      </div>
-                      <div className="form-group row">
                         <label className="col-md-3 col-form-label">Si le job de {offre.jobTitle} vous plait bien, seriez-vous
-                          éventuellement d'accord pour partir en formation afin de pouvoir faire ce métier ?</label>
+                          éventuellement d'accord pour partir en formation afin de pouvoir faire ce métier ? *</label>
                         <div className="col-md-9">
                           <input type="checkbox"
                                  id="acceptFollowingTraining"
                                  name="acceptFollowingTraining"
                                  className="form-check-input"
                                  placeholder=""
-                                 defaultChecked={true}
                                  ref={register({ required: false })}
                           />
                           <label className="form-check-label" htmlFor="acceptFollowingTraining">Accepter</label>
@@ -213,7 +204,9 @@ const CandidatureForm = () => {
                     <div className="form-group row">
                       <label className="col-md-3 col-form-label"/>
                       <div className="col-md-9">
-                        <button className="button" type="submit">Envoyer ma candidature</button>
+                        <button className="button"
+                                disabled={isSubmitted}
+                                type="submit">Envoyer ma candidature</button>
                       </div>
                     </div>
                   </form>
