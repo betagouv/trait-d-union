@@ -129,7 +129,33 @@ const HomeEntreprises = () => {
                     <br/>
                     Par ailleurs, ces candidats ne sortent pas d'école et ont déjà eu un parcours professionnel .
                   </li>
+
                 </ul>
+                <Link to="/poster-offre" className="button large btn-xl" style={{
+                  width: '100%',
+                  display: 'inline-block',
+                  textDecoration: 'none',
+                  backgroundColor: '#0053B3',
+                  color: 'white',
+                  cursor: 'pointer',
+                  fontFamily: 'Helvetica,Arial,sans-serif',
+                  fontSize: '24px',
+                  lineHeight: '60px',
+                  textAlign: 'center',
+                  margin: 0,
+                  height: '60px',
+                  padding: '0px 40px',
+                  borderRadius: '6px',
+                  maxWidth: '100%',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  fontWeight: 'bold',
+                  WebkitFontSmoothing: 'antialiased',
+                  MozOsxFontSmoothing: 'grayscale'
+                }}>
+                  Poster une offre d'immersion
+                </Link>
               </div>
               <div className="col-md-6 col-sm-6  col-xs-12 ">
                 <h2>Questions/réponses </h2>
