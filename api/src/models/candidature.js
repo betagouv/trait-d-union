@@ -28,7 +28,7 @@ const Candidature = databaseService.define('candidature', {
   },
   niveauEtude: {
     type: Sequelize.ENUM(niveauxEtude),
-    validate: { isIn: niveauxEtude },
+    validate: { isIn: [niveauxEtude] },
     allowNull: true
   },
   zipCode: {
