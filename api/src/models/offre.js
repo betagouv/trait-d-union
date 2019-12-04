@@ -34,7 +34,7 @@ const Offre = databaseService.define('offre', {
   },
   contractType: {
     type: Sequelize.ENUM(contractTypes),
-    validate: { isIn: contractTypes },
+    validate: { isIn: [contractTypes] },
     alllowNull: false,
     defaultValue: contractTypeDefault
   },
