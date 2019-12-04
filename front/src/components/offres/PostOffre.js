@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Breadcrumb from '../common/Breadcrumb'
 import useForm from 'react-hook-form'
 import client from '../../utils/rest-module'
@@ -9,8 +9,8 @@ import { StringParam, useQueryParam } from 'use-query-params'
 const Alert = withReactContent(Swal)
 
 const PostOffre = () => {
+  const [isSubmitted] = useState(false)
   const { register, handleSubmit, reset, setValue } = useForm()
-
   const prefilledValues = useQueryValues(useQueryParam)
 
   useEffect(() => {
@@ -93,7 +93,9 @@ const PostOffre = () => {
                     <div className="form-group row">
                       <label className="col-md-3 col-form-label"/>
                       <div className="col-md-9">
-                        <button className="button" type="submit">Poster votre offre</button>
+                        <button className="button"
+                                disabled={isSubmitted}
+                                type="submit">Poster votre offre</button>
                       </div>
                     </div>
                   </form>

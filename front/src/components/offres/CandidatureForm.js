@@ -22,7 +22,9 @@ const CandidatureForm = () => {
   const { register, handleSubmit, reset } = useForm()
   const location = useLocation()
   const [offre, setOffre] = useState(location.state && location.state.offre)
+  const [isSubmitted] = useState(false)
   const [offreId] = useQueryParam('offreId', StringParam)
+  let isEnabled = true
 
   useEffect(() => {
     async function fetchOffre () {
@@ -41,9 +43,10 @@ const CandidatureForm = () => {
 
   const onSubmit = async formData => {
     try {
+      isEnabled = false
       formData.offreId = offre.id
-      console.log(formData)
       await client.post('/candidatures', formData)
+      isEnabled = true
       await Alert.fire({
           icon: 'success',
           title: `Merci ${formData.firstName}, nous enverrons votre demande à l'entreprise bientôt. ` +
@@ -55,6 +58,7 @@ const CandidatureForm = () => {
       )
       reset()
     } catch (e) {
+      isEnabled = true
       await Alert.fire({
         icon: 'error',
         title: 'Oh non ! Une erreur s\'est produite. Merci de réessayer ultérieurement.',
@@ -213,7 +217,9 @@ const CandidatureForm = () => {
                     <div className="form-group row">
                       <label className="col-md-3 col-form-label"/>
                       <div className="col-md-9">
-                        <button className="button" type="submit">Envoyer ma candidature</button>
+                        <button className="button"
+                                disabled={isSubmitted}
+                                type="submit">Envoyer ma candidature</button>
                       </div>
                     </div>
                   </form>
