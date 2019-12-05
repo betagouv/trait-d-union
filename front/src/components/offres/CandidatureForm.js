@@ -49,11 +49,12 @@ const CandidatureForm = () => {
       isEnabled = true
       await Alert.fire({
           icon: 'success',
+          timer: 3500,
           title: `Merci ${formData.firstName}, nous enverrons votre demande à l'entreprise bientôt. ` +
             'S\'il y a beaucoup de demandes et que vous ne pouvez faire l\'essai, nous proposerons votre candidature pour le même métier' +
             ` (${offre.jobTitle}) et dans la même zone géographique à une entreprise similaire.`,
           confirmButtonText: 'Revenir à la liste des offres',
-          onClose: () => window.open('/offres', '_parent')
+          onClose: () => window.open('/offres?submit_candidature_ok=true', '_parent')
         }
       )
       reset()
@@ -75,7 +76,7 @@ const CandidatureForm = () => {
   }
   return (
     <React.Fragment>
-      <Breadcrumb title={`Essayer le métier de ${offre.jobTitle}`} pageDescription="Envoyer une candidature"/>
+      <Breadcrumb title={`Essayez ce métier : ${offre.jobTitle}`} pageDescription="Envoyez une candidature"/>
       <div className="alice-bg section-padding-bottom">
         <div className="container no-gliters">
           <div className="row no-gliters">
