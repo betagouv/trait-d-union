@@ -15,7 +15,7 @@ const Footer = () => {
                 <h4>Qui sommes nous ?</h4>
                 
                 <p>
-                  Trait d'union est un service qui permet aux demandeur d'emploi de la Région Grand Est d'essayer pendant quelques jours des métiers qui recrutent et forment à côté de chez eux.
+                  Trait d'union est un service qui permet aux demandeurs d'emploi de la Région Grand Est d'essayer pendant quelques jours des métiers qui recrutent et forment à côté de chez eux.
                   Nous proposons par ailleurs aux entreprises qui le souhaitent de faire découvrir leurs métiers pour mieux recruter par la suite.
 
                 </p>
@@ -36,7 +36,7 @@ const Footer = () => {
               <div className="footer-widget footer-shortcut-link">
                 <h4>Liens</h4>
                 <ul>
-                <li><Link smooth to="/candidats#root">Espace candidats</Link></li>
+                <li><Link smooth to="/candidats#root">Espace candidat</Link></li>
                 <li> <Link smooth to="/entreprises#root">Espace entreprise</Link></li>
                   <li><a target="_blank" rel="noopener noreferrer" href="https://www.grandest.fr">Région Grand Est</a></li>
                   <li><a target="_blank" rel="noopener noreferrer" href="https://beta.gouv.fr">Beta.gouv.fr</a></li>

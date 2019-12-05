@@ -79,23 +79,20 @@ const HomeEntreprises = () => {
                 <div className="col-md-4 col-sm-6 col-xs-12" style={{ padding: '0px', margin: '1em 0 1em 0' }}>
                   <span className="number">1</span>
                   <h3>Je poste une offre d'immersion</h3>
-                  <p style={{ margin: '5px' }}>Remplissez le métier, votre code postal et votre email. C'est tout. Pas besoin de vous
-                    inscrire ou de mettre un mot de passe. On valide en suite dans les 48h votre offre. &nbsp;
-                    <Link to="/poster-offre" style={{ color: '#0053B3', textDecoration: 'underline', fontSize: '16px' }}> Cliquez ici</Link>
+                  <p style={{ margin: '5px' }}>Remplissez le métier, votre code postal et votre email. C'est tout. Pas besoin de vous inscrire ou de mettre un mot de passe. On valide votre offre d'immersion dans les 48h. &nbsp;
+                    <Link to="/poster-offre" style={{ color: '#0053B3', textDecoration: 'underline', fontSize: '16px' }}>Cliquez ici</Link>
                   </p>
                 </div>
 
                 <div className="col-md-4 col-sm-6 col-xs-12" style={{ padding: '0px', margin: '1em 0 1em 0' }}>
                   <span className="number">2</span>
                   <h3>Nous trouvons des candidats</h3>
-                  <p style={{ margin: '5px' }}>Nous diffusons votre annonce auprès de demandeurs d'emploi vivant autour de votre entreprise
-                    et ayant le niveau de qualification minimum. Sur notre site, par email, sur les réseaux sociaux, etc.
+                  <p style={{ margin: '5px' }}>Nous diffusons votre annonce (site, email, réseaux sociaux...) auprès de demandeurs d'emploi habitant autour de votre entreprise et ayant le niveau de qualification minimum. 
                   </p></div>
                 <div className="col-md-4 col-sm-6 col-xs-12" style={{ padding: '0px', margin: '1em 0 1em 0' }}>
                   <span className="number">3</span>
                   <h3>Vous faites découvrir votre métier</h3>
-                  <p style={{ margin: '5px' }}>Il ne vous reste plus qu'à l'accueillir dans votre entreprise le candidat que vous avez
-                    choisi. Si le job lui plait, il partira en formation et vous pourrez le recontacter si besoin ensuite.</p>
+                  <p style={{ margin: '5px' }}>Il ne vous reste plus qu'à accueillir le candidat que vous avez choisi dans votre entreprise. Si le job lui plait, il partira en formation et vous pourrez le recontacter si besoin ensuite.</p>
                 </div>
 
               </div>
@@ -161,8 +158,7 @@ const HomeEntreprises = () => {
                 <h2>Questions/réponses </h2>
                 <p>&nbsp; </p>
                 <ul>
-                  <li><b>À qui s'adresse ce site ?&nbsp;</b> : aux entreprises de la Région Grand Est ayant du mal à recruter des profils
-                    motivés. Ou à recruter tout court.
+                  <li><b>À qui s'adresse ce site ?&nbsp;</b> :  aux entreprises de la Région Grand Est ayant des difficultés à recruter des profils motivés. Ou à recruter tout court.
                   </li>
                   <br/>
                   <li><b>Est-ce que je peux choisir les profils ?</b> : Nous vous envoyons une liste de candidats, à vous de faire votre
