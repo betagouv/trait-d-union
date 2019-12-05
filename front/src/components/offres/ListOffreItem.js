@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom'
 const ListOffreItem = ({ offre }) => {
 
   return (
-    <div className="job-list">
+    <Link to={{
+      pathname: `/offres/candidature`,
+      search: `?offreId=${offre.id}`,
+      state: { offre }
+    }} className="job-list">
       <div className="thumb">
         <img src={offre.imageURL} className="img-fluid" alt=""/>
       </div>
@@ -25,7 +29,7 @@ const ListOffreItem = ({ offre }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 
