@@ -186,27 +186,13 @@ const CandidatureForm = () => {
                           <i className="fa fa-caret-down"/>
                         </div>
                       </div>
-                      <div className="form-group row">
-                        <label className="col-md-3 col-form-label">Si le job de {offre.jobTitle} vous plait bien, seriez-vous
-                          éventuellement d'accord pour partir en formation afin de pouvoir faire ce métier ? *</label>
-                        <div className="col-md-9">
-                          <input type="checkbox"
-                                 id="acceptFollowingTraining"
-                                 name="acceptFollowingTraining"
-                                 className="form-check-input"
-                                 placeholder=""
-                                 ref={register({ required: false })}
-                          />
-                          <label className="form-check-label" htmlFor="acceptFollowingTraining">Accepter</label>
-                        </div>
-                      </div>
                     </div>
                     <div className="form-group row">
                       <label className="col-md-3 col-form-label"/>
                       <div className="col-md-9">
                         <button className="button"
                                 disabled={isSubmitted}
-                                type="submit">Envoyer ma candidature</button>
+                                type="submit">Envoyer ma candidature à l'entreprise pour essayer ce métier</button>
                       </div>
                     </div>
                   </form>
