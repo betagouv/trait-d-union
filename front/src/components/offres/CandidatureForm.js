@@ -49,6 +49,7 @@ const CandidatureForm = () => {
       isEnabled = true
       await Alert.fire({
           icon: 'success',
+          timer: 3500,
           title: `Merci ${formData.firstName}, nous enverrons votre demande à l'entreprise bientôt. ` +
             'S\'il y a beaucoup de demandes et que vous ne pouvez faire l\'essai, nous proposerons votre candidature pour le même métier' +
             ` (${offre.jobTitle}) et dans la même zone géographique à une entreprise similaire.`,
