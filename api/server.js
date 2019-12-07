@@ -5,14 +5,13 @@ const Vision = require('@hapi/vision')
 const Pino = require('hapi-pino')
 const HapiSwagger = require('hapi-swaggered')
 const HapiSwaggerUI = require('hapi-swaggered-ui')
-const AuthJwt = require('hapi-auth-jwt2')
-const jwksRsa = require('jwks-rsa')
 const pinoBaseOptions = require('./src/utils/pino-options')
 const Pack = require('./package')
 const configurationService = require('./src/services/configuration-service')
 const routes = require('./src/routes')
 const HapiCors = require('hapi-cors')
 const HapiRequireHttps = require('hapi-require-https')
+const HapiAuthCookie = require('@hapi/cookie')
 
 exports.createServer = async () => {
   const serverInstance = new Hapi.Server({
@@ -26,12 +25,10 @@ exports.createServer = async () => {
 }
 
 exports.registerPlugins = async (server) => {
-  const auth0BaseUrl = configurationService.get('AUTH0_BASE_URL')
-
   await server.register([
     Inert,
     Vision,
-    AuthJwt,
+    HapiAuthCookie,
     HapiRequireHttps,
     {
       plugin: HapiCors,
@@ -51,19 +48,15 @@ exports.registerPlugins = async (server) => {
     }
   ])
 
-  server.auth.strategy('jwt', 'jwt', {
-    complete: true,
-    key: jwksRsa.hapiJwt2KeyAsync({
-      cache: true,
-      rateLimit: true,
-      jwksRequestsPerMinute: 5,
-      jwksUri: `${auth0BaseUrl}/.well-known/jwks.json`
-    }),
-    verifyOptions: {
-      issuer: `${auth0BaseUrl}/`,
-      algorithms: ['RS256']
+  server.auth.strategy('session', 'cookie', {
+    cookie: {
+      password: configurationService.get('COOKIE_PASSWORD'),
+      isSecure: false, // required for non-https applications
+      ttl: 24 * 60 * 60 * 1000 // Set session to 1 day
     },
-    validate: _validateUser
+    validateFunc: async (request, session) => {
+      return { valid: true }
+    }
   })
 
   server.ext('onPreResponse', (request, h) => {
@@ -82,21 +75,6 @@ exports.registerPlugins = async (server) => {
 
   server.route(routes)
   return server
-
-  function _validateUser (decoded, request, callback) {
-    // This is a simple check that the `sub` claim
-    // exists in the Access Token. Modify it to suit
-    // the needs of your application
-    if (decoded && decoded.sub) {
-      if (decoded.scope) {
-        return callback(null, true, { scope: decoded.scope.split(' ') })
-      }
-
-      return callback(null, true)
-    }
-
-    return callback(null, false)
-  }
 
   function _getCorsOptions () {
     return { origins: [configurationService.get('ALLOWED_ORIGIN')] }

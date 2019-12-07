@@ -7,7 +7,7 @@ module.exports = recursiveReadDirSync(__dirname)
   .map(({ createRoute }) => createRoute('/api/v1'))
   .reduce((all, routes) => all.concat(routes), [])
   .map((route) => {
-    route.config.handler = _buildHandler(route.config.handler)
+    route.handler = _buildHandler(route.handler)
     return route
   })
 

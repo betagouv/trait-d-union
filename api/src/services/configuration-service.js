@@ -79,7 +79,12 @@ const environmentVariables = Envie({
   SLACK_HOOK_URL: Joi
     .string()
     .uri({ scheme: 'https' })
-    .description('Slack hook url')
+    .description('Slack hook url'),
+
+  COOKIE_PASSWORD: Joi
+    .string()
+    .min(32)
+    .description('Authentication cookie password. Should be at least 32 characters long')
 })
 
 module.exports = environmentVariables

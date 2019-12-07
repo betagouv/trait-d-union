@@ -1,10 +1,10 @@
 const Models = require('../../models')
-const createOffre = require('../../services/candidatures/create-candidatures-service')(Models)
+const createCandidature = require('../../services/candidatures/create-candidatures-service')(Models)
 
 module.exports.createRoute = (pathPrefix) => ({
   method: 'POST',
   path: `${pathPrefix}/candidatures`,
-  config: {
+  options: {
     description: 'Création d\'une candidature à une offre de PMSMP donnée',
     tags: ['api', 'candidature'],
     plugins: {
@@ -14,10 +14,10 @@ module.exports.createRoute = (pathPrefix) => ({
           400: { description: 'Bad Request' }
         }
       }
-    },
-    handler: async (request, h) => {
-      const offre = await createOffre(request.payload)
-      return h.response(offre).created()
     }
+  },
+  handler: async (request, h) => {
+    const offre = await createCandidature(request.payload)
+    return h.response(offre).created()
   }
 })

@@ -5,9 +5,8 @@ const getStatus = require('../services/status/status-service')(Models)
 module.exports.createRoute = (pathPrefix) => ({
   method: 'GET',
   path: `${pathPrefix}/status`,
-  config: {
+  options: {
     auth: false,
-    handler,
     description: 'API status to get current version and sha1 commit',
     tags: ['api', 'status'],
     plugins: {
@@ -21,7 +20,8 @@ module.exports.createRoute = (pathPrefix) => ({
         }
       }
     }
-  }
+  },
+  handler
 })
 
 async function handler () {

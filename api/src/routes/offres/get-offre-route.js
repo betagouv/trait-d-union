@@ -5,7 +5,7 @@ const getOffre = require('../../services/offres/get-offre-service')(Models)
 module.exports.createRoute = (pathPrefix) => ({
   method: 'GET',
   path: `${pathPrefix}/offres/{offreId}`,
-  config: {
+  options: {
     description: 'Récupération d\'une offre de PMSMP',
     tags: ['api', 'offres'],
     validate: {
@@ -22,9 +22,9 @@ module.exports.createRoute = (pathPrefix) => ({
           400: { description: 'Bad Request' }
         }
       }
-    },
-    handler: async (request, h) => {
-      return getOffre(request.params.offreId)
     }
+  },
+  handler: async (request, h) => {
+    return getOffre(request.params.offreId)
   }
 })
