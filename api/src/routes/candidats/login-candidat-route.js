@@ -6,7 +6,7 @@ const Boom = require('@hapi/boom')
 
 module.exports.createRoute = (pathPrefix) => ({
   method: 'POST',
-  path: `${pathPrefix}/candidats/register`,
+  path: `${pathPrefix}/candidats/login`,
   options: {
     validate: {
       payload: Joi.object({
@@ -14,12 +14,12 @@ module.exports.createRoute = (pathPrefix) => ({
         password: Joi.string().required()
       })
     },
-    description: 'Register new candidat',
+    description: 'Login candidat',
     tags: ['api', 'candidat'],
     plugins: {
       'hapi-swaggered': {
         responses: {
-          201: { description: 'Created' },
+          200: { description: 'Success' },
           400: { description: 'Bad Request' }
         }
       }
@@ -28,18 +28,19 @@ module.exports.createRoute = (pathPrefix) => ({
   handler: async (request, h) => {
     const { payload } = request
     const { Candidat } = Models
-    const userToCreate = new Candidat({ email: payload.email })
-
-    const registerUser = promisify(Candidat.register)
+    const authenticateUser = promisify(Candidat.authenticate())
     try {
-      const { id } = await registerUser.call(Candidat, userToCreate, payload.password)
-      request.cookieAuth.set({ id })
-      return h.response().created()
-    } catch (err) {
-      logger().error(`Register new candidat errored: ${err}`)
-      if (err.message.startsWith('User already exists with ')) {
-        throw Boom.conflict(err.message)
+      const candidat = await authenticateUser.call(Candidat, payload.email, payload.password)
+      if (!candidat) {
+        throw Boom.badRequest('Cannot login user with provided credentials.')
       }
+      request.cookieAuth.set({ id: candidat.id })
+      return h.response()
+    } catch (err) {
+      if (err.message.startsWith('Cannot login user with provided credentials.')) {
+        throw err
+      }
+      logger().error(`Login candidat errored: ${err}`)
       throw Boom.badImplementation(err.message, err)
     }
   }
