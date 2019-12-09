@@ -115,11 +115,6 @@ const HomeCandidats = () => {
                   <h3>Je m'inscris</h3>
                   <p style={{ margin: '5px' }}>Inscrivez-vous au service avec votre email, votre adresse, votre niveau de
                     qualification, etc. Cela ne vous engage à rien.
-                    <a href="https://traitdunion.typeform.com/to/xiVFgw"
-                       style={{ color: '#0053B3', textDecoration: 'underline' }} target="_blank"
-                       rel="noopener noreferrer"> Cliquez
-                      ici</a> pour
-                    vous inscrire
                   </p>
                 </div>
                 <div className="col-md-3 col-sm-6 col-xs-12" style={{ padding: '0px', margin: '1em 0 1em 0' }}>
