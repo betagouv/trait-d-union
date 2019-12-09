@@ -25,7 +25,7 @@ const PostOffre = () => {
       await Alert.fire({
         icon: 'success',
         timer: 4000,
-        title: 'Félicitations ! Votre offre a bien été créée et va être diffusée largement !',
+        title: 'Félicitations ! Votre offre a bien été créée et va être diffusée largement après validation de notre part. Vous recevrez les candidatures par email ensuite',
         confirmButtonText: 'Poster une nouvelle offre',
         onClose: () => window.open('/poster-offre?submit_offre_ok=true', '_parent')
       })
