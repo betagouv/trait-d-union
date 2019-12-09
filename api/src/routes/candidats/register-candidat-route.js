@@ -32,7 +32,8 @@ module.exports.createRoute = (pathPrefix) => ({
 
     const registerUser = promisify(Candidat.register)
     try {
-      await registerUser.call(Candidat, userToCreate, payload.password)
+      const { id } = await registerUser.call(Candidat, userToCreate, payload.password)
+      request.cookieAuth.set({ id })
       return h.response().created()
     } catch (err) {
       logger().error(`Register new candidat errored: ${err}`)
