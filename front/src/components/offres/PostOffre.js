@@ -24,8 +24,10 @@ const PostOffre = () => {
       await client.post('/offres', formData)
       await Alert.fire({
         icon: 'success',
+        timer: 4000,
         title: 'Félicitations ! Votre offre a bien été créée et va être diffusée largement !',
-        confirmButtonText: 'Poster une nouvelle offre'
+        confirmButtonText: 'Poster une nouvelle offre',
+        onClose: () => window.open('/poster-offre?submit_offre_ok=true', '_parent')
       })
       reset()
     } catch (e) {
