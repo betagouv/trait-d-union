@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useState, useEffect } from 'react'
 import client from './utils/rest-module'
 
 const authContext = createContext(null)
@@ -14,10 +14,7 @@ export const useAuth = () => {
 
 // Provider hook that creates auth object and handles state
 function useProvideAuth () {
-  const [user, setUser] = useState(async () => {
-    const { data } = client.get('/candidats/me')
-    return data
-  })
+  const [user, setUser] = useState(null)
 
   const login = async (email, password) => {
     await client.post('/candidats/login', { email, password })
@@ -43,6 +40,10 @@ function useProvideAuth () {
     setUser(data)
     return data
   }
+
+  useEffect( () => {
+    getUser()
+  }, [])
 
   return {
     user,
