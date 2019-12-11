@@ -38,6 +38,7 @@ const Footer = () => {
                 <ul>
                 <li><Link smooth to="/candidats#root">Espace candidat</Link></li>
                 <li> <Link smooth to="/entreprises#root">Espace entreprise</Link></li>
+                <li><a target="_blank" rel="noopener noreferrer" href="http://metabase.traitdunion.beta.gouv.fr/public/dashboard/804877c6-a815-4061-8858-feffda560130">Statistiques</a></li>
                   <li><a target="_blank" rel="noopener noreferrer" href="https://www.grandest.fr">Région Grand Est</a></li>
                   <li><a target="_blank" rel="noopener noreferrer" href="https://beta.gouv.fr">Beta.gouv.fr</a></li>
                   <li>
@@ -46,6 +47,9 @@ const Footer = () => {
                     </a>
                     <a href="https://twitter.com/TraitdunionBeta" title="Twitter" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-twitter-square" style={{fontSize: "4rem", marginRight:"1rem" }}></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/trait-d-union-beta/" title="Linkedin" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-linkedin" style={{fontSize: "4rem", marginRight:"1rem" }}></i>
                     </a>
                     <a href="mailto:contact@traitdunion.beta.gouv.fr" title="Nous écrire un mail" rel="noopener noreferrer">
                     <i className="fas fa-envelope-square" style={{fontSize: "4rem"}}></i>
