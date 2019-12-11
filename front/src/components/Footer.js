@@ -47,6 +47,9 @@ const Footer = () => {
                     <a href="https://twitter.com/TraitdunionBeta" title="Twitter" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-twitter-square" style={{fontSize: "4rem", marginRight:"1rem" }}></i>
                     </a>
+                    <a href="https://www.linkedin.com/company/trait-d-union-beta/" title="Linkedin" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-linkedin" style={{fontSize: "4rem", marginRight:"1rem" }}></i>
+                    </a>
                     <a href="mailto:contact@traitdunion.beta.gouv.fr" title="Nous écrire un mail" rel="noopener noreferrer">
                     <i className="fas fa-envelope-square" style={{fontSize: "4rem"}}></i>
                     </a>
