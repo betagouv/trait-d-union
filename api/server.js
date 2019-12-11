@@ -12,6 +12,8 @@ const routes = require('./src/routes')
 const HapiCors = require('hapi-cors')
 const HapiRequireHttps = require('hapi-require-https')
 const HapiAuthCookie = require('@hapi/cookie')
+const Models = require('./src/models')
+const credentialsFromCookie = require('./src/services/authentication-service')(Models)
 
 exports.createServer = async () => {
   const serverInstance = new Hapi.Server({
@@ -50,13 +52,20 @@ exports.registerPlugins = async (server) => {
 
   server.auth.strategy('session', 'cookie', {
     cookie: {
+      name: 'traitdunion',
       password: configurationService.get('COOKIE_PASSWORD'),
       path: '/',
       isSecure: false, // required for non-https applications
-      ttl: 24 * 60 * 60 * 1000 // Set session to 1 day
+      ttl: 24 * 60 * 60 * 1000, // Set session to 1 day,
+      clearInvalid: true
     },
+    keepAlive: true,
     validateFunc: async (request, session) => {
-      return { valid: true }
+      const { valid, credentials } = await credentialsFromCookie(session)
+      return {
+        credentials,
+        valid
+      }
     }
   })
 
