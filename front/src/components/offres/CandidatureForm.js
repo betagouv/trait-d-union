@@ -24,7 +24,6 @@ const CandidatureForm = () => {
   const [offre, setOffre] = useState(location.state && location.state.offre)
   const [isSubmitted] = useState(false)
   const [offreId] = useQueryParam('offreId', StringParam)
-  let isEnabled = true
 
   useEffect(() => {
     async function fetchOffre () {
@@ -43,10 +42,8 @@ const CandidatureForm = () => {
 
   const onSubmit = async formData => {
     try {
-      isEnabled = false
       formData.offreId = offre.id
       await client.post('/candidatures', formData)
-      isEnabled = true
       await Alert.fire({
           icon: 'success',
           timer: 3500,
@@ -59,7 +56,6 @@ const CandidatureForm = () => {
       )
       reset()
     } catch (e) {
-      isEnabled = true
       await Alert.fire({
         icon: 'error',
         title: 'Oh non ! Une erreur s\'est produite. Merci de réessayer ultérieurement.',

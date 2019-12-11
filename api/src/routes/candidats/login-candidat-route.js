@@ -34,7 +34,12 @@ module.exports.createRoute = (pathPrefix) => ({
       if (!candidat) {
         throw Boom.badRequest('Cannot login user with provided credentials.')
       }
-      request.cookieAuth.set({ id: candidat.id })
+      request.cookieAuth.set({
+        id: candidat.id,
+        email: candidat.email,
+        firstName: candidat.firstName,
+        lastName: candidat.lastName
+      })
       return h.response()
     } catch (err) {
       if (err.message.startsWith('Cannot login user with provided credentials.')) {

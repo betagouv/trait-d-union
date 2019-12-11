@@ -19,7 +19,7 @@ module.exports.createRoute = (pathPrefix) => ({
     plugins: {
       'hapi-swaggered': {
         responses: {
-          201: { description: 'Created' },
+          204: { description: 'No Content' },
           400: { description: 'Bad Request' }
         }
       }
@@ -34,7 +34,7 @@ module.exports.createRoute = (pathPrefix) => ({
     try {
       const { id } = await registerUser.call(Candidat, userToCreate, payload.password)
       request.cookieAuth.set({ id })
-      return h.response().created()
+      return h.response().code(204)
     } catch (err) {
       logger().error(`Register new candidat errored: ${err}`)
       if (err.message.startsWith('User already exists with ')) {

@@ -10,9 +10,15 @@ class ListOffre extends React.Component {
   }
 
   async componentDidMount () {
+    this._mounted = true
     const { data: offres } = await client.get('/offres?status=published')
+    if (!this._mounted) return
     this.setState({ offresCount: offres.length })
     this.setState({ offres })
+  }
+
+  async componentWillUnmount () {
+    this._mounted = false
   }
 
   render () {
