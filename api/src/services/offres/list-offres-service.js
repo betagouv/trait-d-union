@@ -1,5 +1,16 @@
-module.exports = ({ Offre }) => async ({ limit, offset, status } = {}) => {
+module.exports = ({ Offre, Candidature, Candidat }) => async (userId, { limit, offset, status } = {}) => {
   const options = {
+    include: [
+      {
+        model: Candidature,
+        required: true,
+        include: [{
+          model: Candidat,
+          attributes: ['id'],
+          where: { id: userId }
+        }]
+      }
+    ],
     offset,
     limit
   }

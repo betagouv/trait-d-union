@@ -20,7 +20,6 @@ module.exports = {
 
     const createCandidaturesPromises = rawOldCandidatures.map(async candidature => {
       const candidat = await Candidat.findOne({ where: { email: candidature.email } })
-      console.log('Found candidat=', candidat.email)
       return candidat.addOffre(candidature.offreId)
     })
     return Promise.all(createCandidaturesPromises)

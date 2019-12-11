@@ -4,8 +4,9 @@ const listCandidats = require('../../services/candidats/list-candidats-service')
 
 module.exports.createRoute = (pathPrefix) => ({
   method: 'GET',
-  path: `${pathPrefix}/candidatures`,
+  path: `${pathPrefix}/candidats`,
   options: {
+    auth: 'session',
     description: 'Liste tous les candidats',
     tags: ['api', 'candidats'],
     validate: {},

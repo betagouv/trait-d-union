@@ -51,6 +51,7 @@ exports.registerPlugins = async (server) => {
   server.auth.strategy('session', 'cookie', {
     cookie: {
       password: configurationService.get('COOKIE_PASSWORD'),
+      path: '/',
       isSecure: false, // required for non-https applications
       ttl: 24 * 60 * 60 * 1000 // Set session to 1 day
     },
