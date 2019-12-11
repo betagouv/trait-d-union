@@ -1,5 +1,6 @@
 const Models = require('../../models')
 const Joi = require('@hapi/joi')
+const niveauxEtude = require('../../models/enums/niveaux-etude')
 const logger = require('../../utils/logger')
 const { promisify } = require('util')
 const Boom = require('@hapi/boom')
@@ -11,7 +12,12 @@ module.exports.createRoute = (pathPrefix) => ({
     validate: {
       payload: Joi.object({
         email: Joi.string().required(),
-        password: Joi.string().required()
+        password: Joi.string().required(),
+        firstName: Joi.string(),
+        lastName: Joi.string(),
+        niveauEtude: Joi.string().only()
+          .allow(...niveauxEtude),
+        phoneNumber: Joi.string()
       })
     },
     description: 'Register new candidat',

@@ -3,7 +3,6 @@ module.exports = ({ Offre, Candidature, Candidat }) => async (userId, { limit, o
     include: [
       {
         model: Candidature,
-        required: true,
         include: [{
           model: Candidat,
           attributes: ['id'],

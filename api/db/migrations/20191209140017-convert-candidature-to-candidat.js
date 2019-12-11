@@ -94,6 +94,6 @@ function createCandidat (Candidat, registerUser) {
       otherJobs: candidature.otherJobs,
       acceptFollowingTraining: candidature.acceptFollowingTraining
     })
-    return registerUser.call(Candidat, candidat, 'password')
+    return registerUser.call(Candidat, candidat, process.env.DEFAULT_TEMP_PASSWORD)
   }
 }

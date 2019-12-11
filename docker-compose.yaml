@@ -3,7 +3,7 @@ version: '3'
 services:
   api:
     image: node:12.13
-    command: ['api/node_modules/node-dev/bin/node-dev', 'api/bin/start.js']
+    command: 'api/node_modules/node-dev/bin/node-dev --all-deps  api/bin/start.js'
     working_dir: /usr/src
     restart: on-failure:5
     env_file:
