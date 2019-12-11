@@ -38,6 +38,7 @@ const Footer = () => {
                 <ul>
                 <li><Link smooth to="/candidats#root">Espace candidat</Link></li>
                 <li> <Link smooth to="/entreprises#root">Espace entreprise</Link></li>
+                <li><a target="_blank" rel="noopener noreferrer" href="http://metabase.traitdunion.beta.gouv.fr/public/dashboard/804877c6-a815-4061-8858-feffda560130">Statistiques</a></li>
                   <li><a target="_blank" rel="noopener noreferrer" href="https://www.grandest.fr">Région Grand Est</a></li>
                   <li><a target="_blank" rel="noopener noreferrer" href="https://beta.gouv.fr">Beta.gouv.fr</a></li>
                   <li>
