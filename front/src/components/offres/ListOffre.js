@@ -1,6 +1,7 @@
 import React from 'react'
 import Breadcrumb from '../common/Breadcrumb'
 import ListOffreItem from './ListOffreItem'
+import ListOffreItemApplied from './ListOffreItemApplied'
 import client from '../../utils/rest-module'
 
 class ListOffre extends React.Component {
@@ -38,9 +39,12 @@ class ListOffre extends React.Component {
                       </div>
                     </div>
                     <div className="job-filter-result">
-                      {this.state.offres.map((offre) => (
-                        <ListOffreItem offre={offre} key={offre.id}/>
-                      ))}
+                      {this.state.offres.map((offre) => {
+                          return offre.candidatures.length > 0 ?
+                            <ListOffreItemApplied offre={offre} key={offre.id}/>
+                            : <ListOffreItem offre={offre} key={offre.id}/>
+                        }
+                      )}
                     </div>
                   </div>
                 </div>
