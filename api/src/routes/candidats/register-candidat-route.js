@@ -1,6 +1,8 @@
 const Models = require('../../models')
-const Joi = require('@hapi/joi')
+const Joi = require('@hapi/joi').extend(require('@hapi/joi-date'))
 const niveauxEtude = require('../../models/enums/niveaux-etude')
+const deStatuses = require('../../models/enums/de-statuses')
+
 const logger = require('../../utils/logger')
 const { promisify } = require('util')
 const Boom = require('@hapi/boom')
@@ -19,7 +21,11 @@ module.exports.createRoute = (pathPrefix) => ({
           .allow(...niveauxEtude),
         phoneNumber: Joi.string(),
         zipCode: Joi.string(),
-        age: Joi.number()
+        deStatus: Joi.string().only()
+          .allow(...deStatuses),
+        birthdate: Joi.date()
+          .format('YYYY-MM-DD')
+          .raw()
       })
     },
     description: 'Register new candidat',
@@ -42,7 +48,9 @@ module.exports.createRoute = (pathPrefix) => ({
       lastName: payload.lastName,
       niveauEtude: payload.niveauEtude,
       phoneNumber: payload.phoneNumber,
-      zipCode: payload.zipCode
+      zipCode: payload.zipCode,
+      birthdate: payload.birthdate,
+      deStatus: payload.deStatus
     })
 
     const registerUser = promisify(Candidat.register)

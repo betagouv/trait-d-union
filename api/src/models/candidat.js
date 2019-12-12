@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize')
 const databaseService = require('../services/database-service')
 const niveauxEtude = require('./enums/niveaux-etude')
+const deStatuses = require('./enums/de-statuses')
 const passportLocalSequelize = require('passport-local-sequelize')
 const sendSlackNotification = require('../infrastructure/send-slack-notification')
 const request = require('request-promise-native')
@@ -75,6 +76,15 @@ const Candidat = databaseService.define('candidat', {
   },
   password: {
     type: Sequelize.TEXT,
+    allowNull: true
+  },
+  birthdate: {
+    type: Sequelize.DATEONLY,
+    allowNull: true
+  },
+  deStatus: {
+    type: Sequelize.ENUM(deStatuses),
+    validate: { isIn: [deStatuses] },
     allowNull: true
   }
 })

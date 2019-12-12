@@ -10,6 +10,8 @@ import { useRouter } from '../../use-router'
 import niveauxEtude from '../../utils/enums/niveaux-etude'
 import { useRequireAuth } from '../../use-require-auth'
 
+const deStatuses = require('../../utils/enums/de-statuses')
+
 const Alert = withReactContent(Swal)
 
 const CandidatureForm = () => {
@@ -32,7 +34,7 @@ const CandidatureForm = () => {
       }
     }
 
-    ['email', 'firstName', 'lastName', 'phoneNumber', 'niveauEtude', 'zipCode', 'age'].forEach(field => {
+    ['email', 'firstName', 'lastName', 'phoneNumber', 'niveauEtude', 'zipCode', 'birthdate', 'deStatus'].forEach(field => {
       setValue(field, user && user[field])
     })
 
@@ -105,15 +107,19 @@ const CandidatureForm = () => {
                         </div>
                       </div>
                       <div className="form-group row">
-                        <label className="col-md-3 col-form-label">Identifiant Pôle emploi (si vous êtes demandeur d'emploi)</label>
+                        <label className="col-md-3 col-form-label">Quelle est votre situation ?</label>
                         <div className="col-md-9">
-                          <input autoFocus
-                                 type="text"
-                                 name="poleEmploiId"
-                                 className="form-control"
-                                 placeholder="Exemple : 3051721Y"
-                                 ref={register({ required: false })}
-                          />
+                          <select name="deStatus"
+                                  className="form-control"
+                                  placeholder="Quelle est votre situation ?"
+                                  required="required"
+                                  ref={register({ required: true })}>
+                            <option defaultValue disabled>Quelle est votre situation ?</option>
+                            {deStatuses.map((deStatus) =>
+                              <option key={deStatus.id} value={deStatus.id}>{deStatus.label}</option>
+                            )}
+                          </select>
+                          <i className="fa fa-caret-down"/>
                         </div>
                       </div>
                       <div className="form-group row">
@@ -153,15 +159,17 @@ const CandidatureForm = () => {
                         </div>
                       </div>
                       <div className="form-group row">
-                        <label className="col-md-3 col-form-label">Âge *</label>
+                        <label className="col-md-3 col-form-label">Date de naissance *</label>
                         <div className="col-md-9">
-                          <input type="number"
-                                 name="age"
+                          <input type="date"
+                                 name="birthdate"
                                  className="form-control"
-                                 placeholder="Exemple: 32"
+                                 placeholder="Date de naissance *"
                                  required="required"
-                                 ref={register({ required: false })}
-                          />
+                                 ref={register({
+                                   required: true
+                                 })}>
+                          </input>
                         </div>
                       </div>
                       <div className="form-group row">

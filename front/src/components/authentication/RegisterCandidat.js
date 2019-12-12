@@ -6,6 +6,7 @@ import { useAuth } from '../../use-auth'
 import { Link } from 'react-router-dom'
 
 const niveauxEtude = require('../../utils/enums/niveaux-etude')
+const deStatuses = require('../../utils/enums/de-statuses')
 
 const Alert = withReactContent(Swal)
 
@@ -58,6 +59,18 @@ const RegisterCandidat = () => {
                     />
                   </div>
                   <div className="form-group">
+                    <select name="deStatus"
+                            className="form-control"
+                            placeholder="Quelle est votre situation ?"
+                            required="required"
+                            ref={register({ required: true })}>
+                      <option defaultValue disabled>Quelle est votre situation ?</option>
+                      {deStatuses.map((deStatus) =>
+                        <option key={deStatus.id} value={deStatus.id}>{deStatus.label}</option>
+                      )}
+                    </select>
+                  </div>
+                  <div className="form-group">
                     <input type="text"
                            name="firstName"
                            className="form-control"
@@ -94,14 +107,13 @@ const RegisterCandidat = () => {
                     </input>
                   </div>
                   <div className="form-group">
-                    <input type="number"
-                           name="age"
+                    <input type="date"
+                           name="birthdate"
                            className="form-control"
-                           placeholder="Age *"
+                           placeholder="Date de naissance *"
                            required="required"
                            ref={register({
-                             required: true,
-                             min: 18, max: 99
+                             required: true
                            })}>
                     </input>
                   </div>

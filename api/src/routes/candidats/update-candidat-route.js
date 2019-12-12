@@ -1,6 +1,7 @@
 const Models = require('../../models')
-const Joi = require('@hapi/joi')
+const Joi = require('@hapi/joi').extend(require('@hapi/joi-date'))
 const niveauxEtude = require('../../models/enums/niveaux-etude')
+const deStatuses = require('../../models/enums/de-statuses')
 const logger = require('../../utils/logger')
 const Boom = require('@hapi/boom')
 
@@ -17,8 +18,11 @@ module.exports.createRoute = (pathPrefix) => ({
           .allow(...niveauxEtude),
         phoneNumber: Joi.string(),
         zipCode: Joi.string(),
-        age: Joi.number(),
-        poleEmploiId: Joi.string().allow('')
+        deStatus: Joi.only()
+          .allow(...deStatuses),
+        birthdate: Joi.date()
+          .format('YYYY-MM-DD')
+          .raw()
       })
     },
     description: 'Met à jour le profil du candidat connecté',
