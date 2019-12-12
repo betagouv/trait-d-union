@@ -122,7 +122,7 @@ const Login = () => {
                   <p> <a href="#">Mot de passe oublié ?</a></p>
                 </div>
                   <div className="form-group row">
-                    <button cclassName="button large btn-xl"
+                    <button className="button large btn-xl"
                     style={{
                       width: '100%',
                       display: 'inline-block',
