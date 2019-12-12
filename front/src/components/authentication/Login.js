@@ -36,52 +36,131 @@ const Login = () => {
 
   return (
     <React.Fragment>
-      <div className="padding-top-90 padding-bottom-90 access-page-bg">
+      <div className="padding-top-60 padding-bottom-60 ">
         <div className="container">
           <div className="row">
-            <div className="col-xl-4 col-md-6">
+          <div className="col-xl-6 col-md-6 ">
               <div className="access-form">
                 <div className="form-header">
-                  <h5><i data-feather="user"/>Se connecter</h5>
+                  <h3>Pas encore de compte? Inscrivez-vous</h3>
+                </div>
+
+                <div style={{height: '50px', marginBottom: '30px'}}>
+                  <p>✅ Accedez à une liste de plus de 200 métiers qui recrutent à essayer à coté de chez vous.  </p>
+
+                </div>
+
+                <div style={{height: '50px',marginBottom: '30px'}} >
+                  <p>✅ Une formation gratuite est proposé si besoin pour les demandeurs d'emplois et les jeunes.</p>
+
+                </div>
+
+
+                <div style={{height: '50px',marginBottom: '30px'}} >
+                  <p>✅ Ce service est gratuit et fournis par la Région Grand Est. </p>
+                </div>
+
+                <div className="form-group" >
+
+                  <Link to="/candidats/register"
+                    className="button large btn-xl"
+                    style={{
+                      width: '100%',
+                      display: 'inline-block',
+                      textDecoration: 'none',
+                      backgroundColor: '#0053B3',
+                      color: 'white',
+                      cursor: 'pointer',
+                      fontFamily: 'Helvetica,Arial,sans-serif',
+                      fontSize: '24px',
+                      lineHeight: '60px',
+                      textAlign: 'center',
+                      margin: 0,
+                      height: '60px',
+                      padding: '0px 40px',
+                      borderRadius: '6px',
+                      maxWidth: '100%',
+                      whiteSpace: 'nowrap',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      fontWeight: 'bold',
+                      WebkitFontSmoothing: 'antialiased',
+                      MozOsxFontSmoothing: 'grayscale'
+                    }}>
+                    👉 INSCRIPTION RAPIDE
+                </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-xl-6 col-md-6">
+              <div className="access-form">
+                <div className="form-header">
+                  <h3>Déjà un compte? Connectez-vous</h3>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="form-group">
                     <input autoFocus
-                           type="email"
-                           name="email"
-                           placeholder="Votre adresse email"
-                           className="form-control"
-                           required="required"
-                           ref={register({ required: true, pattern: /^\S+@\S+$/i })}
+                      type="email"
+                      name="email"
+                      placeholder="Votre adresse email"
+                      className="form-control"
+                      required="required"
+                      ref={register({ required: true, pattern: /^\S+@\S+$/i })}
                     />
                   </div>
                   <div className="form-group">
                     <input type="password"
-                           name="password"
-                           placeholder="Votre mot de passe"
-                           className="form-control"
-                           required="required"
-                           autoComplete="current-password"
+                      name="password"
+                      placeholder="Votre mot de passe"
+                      className="form-control"
+                      required="required"
+                      autoComplete="current-password"
                            ref={register({ required: true })}
                     />
                   </div>
-                  <a href="#">Mot de passe oublié ?</a>
-                  <div className="form-group row">
 
-                    <button className="button primary-bg btn-block"
-                            type="submit"
-                            disabled={isSubmitted}>Se connecter
+                  <div className="form-group" style={{height: '50px', marginBottom: '30px'}} >
+                  <p> <a href="#">Mot de passe oublié ?</a></p>
+                </div>
+                  <div className="form-group row">
+                    <button cclassName="button large btn-xl"
+                    style={{
+                      width: '100%',
+                      display: 'inline-block',
+                      textDecoration: 'none',
+                      backgroundColor: '#0053B3',
+                      color: 'white',
+                      cursor: 'pointer',
+                      fontFamily: 'Helvetica,Arial,sans-serif',
+                      fontSize: '24px',
+                      lineHeight: '60px',
+                      textAlign: 'center',
+                      margin: 0,
+                      height: '60px',
+                      padding: '0px 40px',
+                      borderRadius: '6px',
+                      maxWidth: '100%',
+                      whiteSpace: 'nowrap',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      fontWeight: 'bold',
+                      WebkitFontSmoothing: 'antialiased',
+                      MozOsxFontSmoothing: 'grayscale'
+                    }}
+                      type="submit"
+                      disabled={isSubmitted}>SE CONNECTER
                     </button>
                   </div>
+
                 </form>
-                <div className="shortcut-login">
-                  <Link to='/candidats/register'>
-                  <p>Pas encore de compte ? S'enregistrer</p>
-                  </Link>
-                </div>
               </div>
             </div>
+
+
           </div>
+
+
         </div>
       </div>
     </React.Fragment>
