@@ -13,15 +13,15 @@ const Footer = () => {
             <div className="col-md-7 col-sm-7 col-xs-12">
               <div className="footer-widget footer-shortcut-link">
                 <h4>Qui sommes nous ?</h4>
-                
+
                 <p>
                   Trait d'union est un service qui permet aux demandeurs d'emploi de la Région Grand Est d'essayer pendant quelques jours des métiers qui recrutent et forment à côté de chez eux.
                   Nous proposons par ailleurs aux entreprises qui le souhaitent de faire découvrir leurs métiers pour mieux recruter par la suite.
 
                 </p>
-                
+
                 <p>
-                  Nous sommes une petite équipe de 4 personnes, travaillant ensemble à la DINSIC (Paris)
+                  Nous sommes une petite équipe de 4 personnes, travaillant ensemble à la DINUM (Paris)
                   et à la Région Grand Est (Metz) depuis début 2019.
                 </p>
                 <p>

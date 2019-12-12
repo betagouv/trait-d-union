@@ -3,6 +3,7 @@ import './App.scss'
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Footer from './components/Footer'
+import NotFoundPage from './components/NotFoundPage'
 import PostOffre from './components/offres/PostOffre'
 import Home from './components/Home'
 import Header from './components/Header'
@@ -10,7 +11,7 @@ import HomeCandidats from './components/HomeCandidats'
 import HomeEntreprises from './components/HomeEntreprises'
 import CandidatureForm from './components/offres/CandidatureForm'
 import Login from './components/authentication/Login'
-import { ProvideAuth } from './use-auth'
+import { ProvideAuth, useAuth } from './use-auth'
 import ListOffresPage from './components/offres/ListOffresPage'
 import RegisterCandidat from './components/authentication/RegisterCandidat'
 
@@ -68,6 +69,12 @@ function App () {
                 <Header homeLink={candidatHomeLink}/>
               </header>
               <RegisterCandidat/>
+            </Route>
+            <Route path="*">
+              <header>
+              <Header homeLink="/"/>
+              </header>
+              <NotFoundPage />
             </Route>
           </Switch>
           <footer>
