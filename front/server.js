@@ -4,13 +4,16 @@ const path = require('path')
 const port = process.env.PORT || 8080
 const app = express()
 
+
 app.get('/*', (req, res, next) => {
   const receivedUrl = `${req.protocol}://${req.hostname}:${port}${req.url}`
-
+  console.log(`Received request on ${receivedUrl}`)
   if (req.get('X-Forwarded-Proto') === 'http') {
     const redirectTo = `https://${req.hostname}${req.url}`
     console.log(`${new Date()} Redirecting ${receivedUrl} --> ${redirectTo}`)
     res.redirect(301, redirectTo)
+  } else if (req.hostname.startsWith(('candidat.'))) {
+    res.redirect(301, 'https://traitdunion.beta.gouv.fr/candidats')
   } else {
     next()
   }
