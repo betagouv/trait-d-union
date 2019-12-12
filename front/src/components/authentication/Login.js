@@ -46,18 +46,16 @@ const Login = () => {
                 </div>
 
                 <div style={{height: '50px', marginBottom: '30px'}}>
-                  <p>✅ Accedez à une liste de plus de 200 métiers qui recrutent à essayer à coté de chez vous.  </p>
-
+                  <p>✅ Accédez à 200 métiers à essayer à côté de chez vous : ils recrutent tous.  </p>
                 </div>
 
                 <div style={{height: '50px',marginBottom: '30px'}} >
-                  <p>✅ Une formation gratuite est proposé si besoin pour les demandeurs d'emplois et les jeunes.</p>
-
+                  <p>✅ Une formation gratuite est proposée si besoin pour les demandeurs d'emploi et les jeunes.</p>
                 </div>
 
 
                 <div style={{height: '50px',marginBottom: '30px'}} >
-                  <p>✅ Ce service est gratuit et fournis par la Région Grand Est. </p>
+                  <p>✅ Ce service est gratuit et fourni par la Région Grand Est. </p>
                 </div>
 
                 <div className="form-group" >
