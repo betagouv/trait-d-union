@@ -81,6 +81,21 @@ const environmentVariables = Envie({
     .uri({ scheme: 'https' })
     .description('Slack hook url'),
 
+  OFFRE_PUBLISHED_HOOK_URL: Joi
+    .string()
+    .uri({ scheme: 'https' })
+    .description('Zapier hook url called when a offre is published'),
+
+  CANDIDATURE_RECEIVED_HOOK_URL: Joi
+    .string()
+    .uri({ scheme: 'https' })
+    .description('Zapier hook url called when a candidature is created'),
+
+  CANDIDAT_CREATED_HOOK_URL: Joi
+    .string()
+    .uri({ scheme: 'https' })
+    .description('Zapier hook url called when a candidat is created'),
+
   COOKIE_PASSWORD: Joi
     .string()
     .min(32)
