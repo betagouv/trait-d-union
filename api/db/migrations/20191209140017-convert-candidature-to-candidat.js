@@ -92,7 +92,9 @@ function createCandidat (Candidat, registerUser) {
       phoneNumber: candidature.phoneNumber,
       age: candidature.age,
       otherJobs: candidature.otherJobs,
-      acceptFollowingTraining: candidature.acceptFollowingTraining
+      acceptFollowingTraining: candidature.acceptFollowingTraining,
+      createdAt: candidature.createdAt,
+      updatedAt: candidature.updatedAt
     })
     return registerUser.call(Candidat, candidat, process.env.DEFAULT_TEMP_PASSWORD)
   }
