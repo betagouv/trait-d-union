@@ -98,6 +98,12 @@ const PostOffre = () => {
                                 type="submit">Poster votre offre</button>
                       </div>
                     </div>
+                    <div className="form-group row">
+                      <label className="col-md-3 col-form-label"/>
+                      <div className="col-md-9">
+                        <p>Ça ne vous engage à rien, seulement à recevoir par email des candidatures. Vos coordonnées ne seront pas diffusées. Vous pourrez retirer votre offre à tout moment ensuite.</p>
+                      </div>
+                    </div>
                   </form>
                 </div>
               </div>
