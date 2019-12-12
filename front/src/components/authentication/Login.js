@@ -19,7 +19,7 @@ const Login = () => {
       const user = await login(formData.email, formData.password)
       await Alert.fire({
         icon: 'success',
-        title: `Content de vous revoir ${user.email} !`,
+        title: `Content de vous revoir ${user.firstName} ${user.lastName} !`,
         confirmButtonText: 'Ok',
         onClose: () => router.push('/offres')
 

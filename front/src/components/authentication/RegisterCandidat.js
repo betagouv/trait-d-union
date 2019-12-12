@@ -22,7 +22,7 @@ const RegisterCandidat = () => {
       const user = await registerCandidat(userToCreate)
       await Alert.fire({
         icon: 'success',
-        title: `Merci de rejoindre Trait d'Union ${user.email} !`,
+        title: `Merci de rejoindre Trait d'Union ${user.firstName} ${user.lastName} !`,
         confirmButtonText: 'Ok',
         onClose: () => window.open('/offres', '_parent')
 
