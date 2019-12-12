@@ -39,13 +39,13 @@ const RegisterCandidat = () => {
 
   return (
     <React.Fragment>
-      <div className="padding-top-90 padding-bottom-90 access-page-bg">
+      <div className="padding-top-70 padding-bottom-70 ">
         <div className="container">
           <div className="row">
-            <div className="col-xl-4 col-md-6">
+            <div className="col-xl-12 col-md-12">
               <div className="access-form">
-                <div className="form-header">
-                  <h5><i data-feather="user"/>Créer un compte</h5>
+              <div className="form-header">
+                  <h3>Inscription</h3>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="form-group">
@@ -132,7 +132,7 @@ const RegisterCandidat = () => {
                   <div className="form-group">
                     <input type="password"
                            name="password"
-                           placeholder="Votre mot de passe"
+                           placeholder="Votre mot de passe *"
                            className="form-control"
                            required="required"
                            ref={register({ required: true })}
@@ -141,7 +141,7 @@ const RegisterCandidat = () => {
                   <div className="form-group">
                     <input type="password"
                            name="confirmPassword"
-                           placeholder="Confirmez votre mot de passe"
+                           placeholder="Confirmez votre mot de passe *"
                            className="form-control"
                            required="required"
                            ref={register({
@@ -158,11 +158,36 @@ const RegisterCandidat = () => {
 
                     <button className="button primary-bg btn-block"
                             type="submit"
-                            disabled={isSubmitted}>Créer un compte
+                            disabled={isSubmitted}
+                            className="button large btn-xl"
+                    style={{
+                      width: '100%',
+                      display: 'inline-block',
+                      textDecoration: 'none',
+                      backgroundColor: '#0053B3',
+                      color: 'white',
+                      cursor: 'pointer',
+                      fontFamily: 'Helvetica,Arial,sans-serif',
+                      fontSize: '24px',
+                      lineHeight: '60px',
+                      textAlign: 'center',
+                      margin: 0,
+                      height: '60px',
+                      padding: '0px 40px',
+                      borderRadius: '6px',
+                      maxWidth: '100%',
+                      whiteSpace: 'nowrap',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      fontWeight: 'bold',
+                      WebkitFontSmoothing: 'antialiased',
+                      MozOsxFontSmoothing: 'grayscale'
+                    }}
+                            >VALIDER
                     </button>
                   </div>
                 </form>
-                <div className="shortcut-login">
+                <div className="shortcut-login" >
                   <Link to="/candidats/login">
                     <p>Déjà enregistré ? <b>Se connecter</b></p>
                   </Link>
