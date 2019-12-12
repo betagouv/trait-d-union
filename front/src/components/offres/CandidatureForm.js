@@ -56,9 +56,7 @@ const CandidatureForm = () => {
       await Alert.fire({
           icon: 'success',
           timer: 3500,
-          title: `Merci ${formData.firstName}, nous enverrons votre demande à l'entreprise bientôt. ` +
-            'S\'il y a beaucoup de demandes et que vous ne pouvez faire l\'essai, nous proposerons votre candidature pour le même métier' +
-            ` (${offre.jobTitle}) et dans la même zone géographique à une entreprise similaire.`,
+          title: `Merci ${user.firstName}, nous allons envoyé votre demande à l'entreprise. Regardez sur la liste si d'autres offres vous intéressent et postulez`,
           confirmButtonText: 'Revenir à la liste des offres',
           onClose: () => window.open('/offres?submit_candidature_ok=true', '_parent')
         }
