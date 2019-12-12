@@ -2,27 +2,26 @@ const Models = require('../../models')
 const Joi = require('@hapi/joi')
 const niveauxEtude = require('../../models/enums/niveaux-etude')
 const logger = require('../../utils/logger')
-const { promisify } = require('util')
 const Boom = require('@hapi/boom')
 
 module.exports.createRoute = (pathPrefix) => ({
-  method: 'POST',
-  path: `${pathPrefix}/candidats/register`,
+  method: 'PATCH',
+  path: `${pathPrefix}/candidats/me`,
   options: {
+    auth: 'session',
     validate: {
       payload: Joi.object({
-        email: Joi.string().required(),
-        password: Joi.string().required(),
         firstName: Joi.string(),
         lastName: Joi.string(),
         niveauEtude: Joi.string().only()
           .allow(...niveauxEtude),
         phoneNumber: Joi.string(),
         zipCode: Joi.string(),
-        age: Joi.number()
+        age: Joi.number(),
+        poleEmploiId: Joi.string().allow('')
       })
     },
-    description: 'Register new candidat',
+    description: 'Met à jour le profil du candidat connecté',
     tags: ['api', 'candidat'],
     plugins: {
       'hapi-swaggered': {
@@ -36,25 +35,14 @@ module.exports.createRoute = (pathPrefix) => ({
   handler: async (request, h) => {
     const { payload } = request
     const { Candidat } = Models
-    const userToCreate = new Candidat({
-      email: payload.email,
-      firstName: payload.firstName,
-      lastName: payload.lastName,
-      niveauEtude: payload.niveauEtude,
-      phoneNumber: payload.phoneNumber,
-      zipCode: payload.zipCode
-    })
 
-    const registerUser = promisify(Candidat.register)
     try {
-      const { id } = await registerUser.call(Candidat, userToCreate, payload.password)
-      request.cookieAuth.set({ id })
-      return h.response().code(204)
+      await Candidat.update(payload, { where: { id: request.auth.credentials.id } })
+      return Candidat.findByPk(request.auth.credentials.id,
+        { attributes: { exclude: ['password', 'salt', 'activationKey', 'verified', 'resetPasswordKey'] } }
+      )
     } catch (err) {
-      logger().error(`Register new candidat errored: ${err}`)
-      if (err.message.startsWith('User already exists with ')) {
-        throw Boom.conflict(err.message)
-      }
+      logger().error(`Update candidat errored: ${err}`)
       throw Boom.badImplementation(err.message, err)
     }
   }

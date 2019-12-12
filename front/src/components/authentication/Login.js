@@ -61,6 +61,7 @@ const Login = () => {
                            placeholder="Votre mot de passe"
                            className="form-control"
                            required="required"
+                           autoComplete="current-password"
                            ref={register({ required: true })}
                     />
                   </div>

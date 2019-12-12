@@ -4,10 +4,9 @@ import ListOffre from './ListOffre'
 import Header from '../Header'
 
 const ListOffresPage = () => {
-  const { isAuthenticated } = useRequireAuth()
+  const auth  = useRequireAuth()
 
-  if (!isAuthenticated()) {
-    console.log('not Authenticated', )
+  if (!auth.user) {
     return <div>Chargement...</div>
   }
 

@@ -11,7 +11,7 @@ import HomeCandidats from './components/HomeCandidats'
 import HomeEntreprises from './components/HomeEntreprises'
 import CandidatureForm from './components/offres/CandidatureForm'
 import Login from './components/authentication/Login'
-import { ProvideAuth, useAuth } from './use-auth'
+import { ProvideAuth } from './use-auth'
 import ListOffresPage from './components/offres/ListOffresPage'
 import RegisterCandidat from './components/authentication/RegisterCandidat'
 
@@ -72,9 +72,9 @@ function App () {
             </Route>
             <Route path="*">
               <header>
-              <Header homeLink="/"/>
+                <Header homeLink="/"/>
               </header>
-              <NotFoundPage />
+              <NotFoundPage/>
             </Route>
           </Switch>
           <footer>

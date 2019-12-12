@@ -51,7 +51,7 @@ const RegisterCandidat = () => {
                     <input autoFocus
                            type="email"
                            name="email"
-                           placeholder="Votre adresse email"
+                           placeholder="Votre adresse email *"
                            className="form-control"
                            required="required"
                            ref={register({ required: true, pattern: /^\S+@\S+$/i })}
@@ -76,12 +76,42 @@ const RegisterCandidat = () => {
                     />
                   </div>
                   <div className="form-group">
+                    <input type="text"
+                           name="phoneNumber"
+                           className="form-control"
+                           placeholder="Téléphone *"
+                           required="required"
+                           ref={register({ required: true })}>
+                    </input>
+                  </div>
+                  <div className="form-group">
+                    <input type="text"
+                           name="zipCode"
+                           className="form-control"
+                           placeholder="Code Postal *"
+                           required="required"
+                           ref={register({ required: true })}>
+                    </input>
+                  </div>
+                  <div className="form-group">
+                    <input type="number"
+                           name="age"
+                           className="form-control"
+                           placeholder="Age *"
+                           required="required"
+                           ref={register({
+                             required: true,
+                             min: 18, max: 99
+                           })}>
+                    </input>
+                  </div>
+                  <div className="form-group">
                     <select name="niveauEtude"
                             className="form-control"
                             placeholder="Niveau d'étude actuel *"
                             required="required"
                             ref={register({ required: true })}>
-                      <option selected disabled>Niveau d'étude actuel *</option>
+                      <option defaultValue disabled>Niveau d'étude actuel *</option>
                       {niveauxEtude.map((niveauEtude) =>
                         <option key={niveauEtude.id} value={niveauEtude.id}>{niveauEtude.label}</option>
                       )}

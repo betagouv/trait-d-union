@@ -1,16 +1,16 @@
-import { useEffect } from "react";
-import { useAuth } from "./use-auth";
-import { useRouter } from "./use-router";
+import { useEffect } from 'react'
+import { useAuth } from './use-auth'
+import { useRouter } from './use-router'
 
-export function useRequireAuth(redirectUrl = '/candidats/login'){
-  const auth = useAuth();
-  const router = useRouter();
+export function useRequireAuth (redirectUrl = '/candidats/login') {
+  const auth = useAuth()
+  const router = useRouter()
 
   useEffect(() => {
-    if (!auth.user){
-      router.push(redirectUrl);
+    if (auth.user === false) {
+      router.replace(redirectUrl)
     }
-  }, [auth, router, redirectUrl]);
+  }, [auth, router, redirectUrl])
 
-  return auth;
+  return auth
 }

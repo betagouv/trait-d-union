@@ -44,7 +44,23 @@ Candidature.associate = ({ Candidature, Offre, Candidat }) => {
 }
 
 Candidature.afterCreate(async (candidature, options) => {
-  const candidatureFromDB = await Candidature.findByPk(candidature.id, { include: 'offre' })
+  const Offre = require('./offre')
+  const Candidat = require('./candidat')
+  const candidatureFromDB = await Candidature.findOne({
+    where: { id: candidature.id },
+    include: [
+      {
+        required: true,
+        model: Offre,
+        where: { id: candidature.offreId }
+      },
+      {
+        required: true,
+        model: Candidat,
+        where: { id: candidature.candidatId }
+      }
+    ]
+  })
   const requestOptions = {
     uri: configurationService.get('CANDIDATURE_RECEIVED_HOOK_URL'),
     json: true,
@@ -56,7 +72,7 @@ Candidature.afterCreate(async (candidature, options) => {
   }
   logger().debug('New candidature received: calling Zapier', { candidature: candidatureFromDB })
   await request(requestOptions).catch(error => logger().error(`Zapier webhook failed: ${error}`))
-  return sendSlackNotification({ text: `:mailbox_with_mail: 1 nouvelle candidature vient d'être déposée par ${candidatureFromDB.firstName} ${candidatureFromDB.lastName} : \n [Offre \`${candidatureFromDB.offre.id}\`] job de ${candidatureFromDB.offre.jobTitle} situé à ${candidatureFromDB.offre.address}` })
+  return sendSlackNotification({ text: `:mailbox_with_mail: 1 nouvelle candidature vient d'être déposée par ${candidatureFromDB.candidat.firstName} ${candidatureFromDB.candidat.lastName} : \n [Offre \`${candidatureFromDB.offre.id}\`] job de ${candidatureFromDB.offre.jobTitle} situé à ${candidatureFromDB.offre.address}` })
 })
 
 module.exports = Candidature

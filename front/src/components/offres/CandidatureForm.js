@@ -6,12 +6,16 @@ import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { StringParam, useQueryParam } from 'use-query-params'
 import { useLocation } from 'react-router-dom'
-const niveauxEtude = require('../../utils/enums/niveaux-etude')
+import { useRouter } from '../../use-router'
+import niveauxEtude from '../../utils/enums/niveaux-etude'
+import { useRequireAuth } from '../../use-require-auth'
 
 const Alert = withReactContent(Swal)
 
 const CandidatureForm = () => {
-  const { register, handleSubmit, reset } = useForm()
+  const { user } = useRequireAuth()
+  const router = useRouter()
+  const { register, handleSubmit, reset, setValue } = useForm()
   const location = useLocation()
   const [offre, setOffre] = useState(location.state && location.state.offre)
   const [isSubmitted] = useState(false)
@@ -20,6 +24,7 @@ const CandidatureForm = () => {
   useEffect(() => {
     async function fetchOffre () {
       try {
+        console.log(offreId)
         const { data } = await client.get(`/offres/${offreId}`)
         setOffre(data)
       } catch (e) {
@@ -27,15 +32,25 @@ const CandidatureForm = () => {
       }
     }
 
+    ['email', 'firstName', 'lastName', 'phoneNumber', 'niveauEtude', 'zipCode', 'age'].forEach(field => {
+      setValue(field, user && user[field])
+    })
+
     if (!offre) {
-      redirectToOffresListIfOffreIsNotValid(fetchOffre)
+      redirectToOffresListIfOffreIsNotValid(router, fetchOffre)
     }
-  }, [offre, offreId])
+  }, [router, setValue, user, offre, offreId])
+
+  if (!user) {
+    return <div>Chargement ... </div>
+  }
 
   const onSubmit = async formData => {
     try {
-      formData.offreId = offre.id
-      await client.post('/candidatures', formData)
+      const profile = Object.assign({}, formData)
+      delete profile.email
+      await client.patch(`/candidats/me`, profile)
+      await client.post(`/offres/${offre.id}/candidatures`)
       await Alert.fire({
           icon: 'success',
           timer: 3500,
@@ -79,7 +94,8 @@ const CandidatureForm = () => {
                       <div className="form-group row">
                         <label className="col-md-3 col-form-label">Merci de saisir votre email *</label>
                         <div className="col-md-9">
-                          <input type="text"
+                          <input disabled
+                                 type="text"
                                  className="form-control"
                                  name="email"
                                  placeholder="Votre adresse email"
@@ -181,7 +197,8 @@ const CandidatureForm = () => {
                       <div className="col-md-9">
                         <button className="button"
                                 disabled={isSubmitted}
-                                type="submit">Envoyer ma candidature à l'entreprise pour essayer ce métier</button>
+                                type="submit">Envoyer ma candidature à l'entreprise pour essayer ce métier
+                        </button>
                       </div>
                     </div>
                   </form>
@@ -195,13 +212,13 @@ const CandidatureForm = () => {
   )
 }
 
-function redirectToOffresListIfOffreIsNotValid (fetchOffre) {
+function redirectToOffresListIfOffreIsNotValid (router, fetchOffre) {
   fetchOffre().catch(() => {
     Alert.fire({
       icon: 'error',
       title: 'Cette offre n\'est plus disponible. Vous allez être redirigé vers la liste des offres.',
       confirmButtonText: 'OK',
-      onClose: () => window.open('/offres', '_parent'),
+      onClose: () => router.push('/offres'),
       footer: '<a href="mailto:contact@traitdunion.beta.gouv.fr">Nous contacter</a>'
     })
   })

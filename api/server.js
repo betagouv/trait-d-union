@@ -87,7 +87,10 @@ exports.registerPlugins = async (server) => {
   return server
 
   function _getCorsOptions () {
-    return { origins: [configurationService.get('ALLOWED_ORIGIN')] }
+    return {
+      origins: [configurationService.get('ALLOWED_ORIGIN')],
+      methods: ['POST', 'GET', 'OPTIONS', 'PATCH', 'PUT']
+    }
   }
 
   function _getSwaggerUIOptions (protocol) {

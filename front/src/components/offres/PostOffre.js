@@ -17,7 +17,7 @@ const PostOffre = () => {
     setValue('jobTitle', prefilledValues.jobTitle)
     setValue('email', prefilledValues.email)
     setValue('address', prefilledValues.address)
-  }, [prefilledValues.jobTitle, prefilledValues.email, prefilledValues.address])
+  }, [prefilledValues.jobTitle, prefilledValues.email, prefilledValues.address, setValue])
 
   const onSubmit = async formData => {
     try {
