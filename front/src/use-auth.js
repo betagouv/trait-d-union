@@ -8,7 +8,7 @@ export function ProvideAuth ({ children }) {
   return <authContext.Provider value={auth}>{children}</authContext.Provider>
 }
 
-export const useAuth = () => {
+export const useAuth = (redirecUrl) => {
   return useContext(authContext)
 }
 
