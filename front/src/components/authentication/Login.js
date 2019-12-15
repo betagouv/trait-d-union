@@ -11,7 +11,7 @@ const Alert = withReactContent(Swal)
 const Login = () => {
   const [isSubmitted] = useState(false)
   const router = useRouter();
-  const { login } = useAuth()
+  const { login, redirectUrl } = useAuth()
   const { register, handleSubmit } = useForm()
 
   const onSubmit = async formData => {
@@ -21,7 +21,7 @@ const Login = () => {
         icon: 'success',
         title: `Content de vous revoir ${user.firstName} ${user.lastName} !`,
         confirmButtonText: 'Ok',
-        onClose: () => router.push('/offres')
+        onClose: () => router.push(redirectUrl)
 
       })
     } catch (e) {

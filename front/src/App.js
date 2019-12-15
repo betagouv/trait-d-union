@@ -9,7 +9,7 @@ import Home from './components/Home'
 import Header from './components/Header'
 import HomeCandidats from './components/HomeCandidats'
 import HomeEntreprises from './components/HomeEntreprises'
-import CandidatureForm from './components/offres/CandidatureForm'
+import CandidatureFormPage from './components/offres/CandidatureFormPage'
 import Login from './components/authentication/Login'
 import { ProvideAuth } from './use-auth'
 import ListOffresPage from './components/offres/ListOffresPage'
@@ -42,11 +42,10 @@ function App () {
               </header>
               <HomeCandidats/>
             </Route>
-            <Route path="/offres/candidature" component={CandidatureForm}>
-              <header>
-                <Header homeLink={candidatHomeLink}/>
-              </header>
-              <CandidatureForm/>
+            <Route exact
+                   path="/offres/candidature"
+                   component={CandidatureFormPage}>
+              <CandidatureFormPage/>
             </Route>
             <Route path="/entreprises" exact>
               <header>

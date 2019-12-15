@@ -4,8 +4,6 @@ import useForm from 'react-hook-form'
 import client from '../../utils/rest-module'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import { StringParam, useQueryParam } from 'use-query-params'
-import { useLocation } from 'react-router-dom'
 import { useRouter } from '../../use-router'
 import niveauxEtude from '../../utils/enums/niveaux-etude'
 import { useRequireAuth } from '../../use-require-auth'
@@ -14,34 +12,17 @@ const deStatuses = require('../../utils/enums/de-statuses')
 
 const Alert = withReactContent(Swal)
 
-const CandidatureForm = () => {
+const CandidatureForm = ({ offre }) => {
   const { user } = useRequireAuth()
   const router = useRouter()
   const { register, handleSubmit, reset, setValue } = useForm()
-  const location = useLocation()
-  const [offre, setOffre] = useState(location.state && location.state.offre)
-  const [isSubmitted] = useState(false)
-  const [offreId] = useQueryParam('offreId', StringParam)
+  const isSubmitted = useState(false)
 
   useEffect(() => {
-    async function fetchOffre () {
-      try {
-        console.log(offreId)
-        const { data } = await client.get(`/offres/${offreId}`)
-        setOffre(data)
-      } catch (e) {
-        throw e
-      }
-    }
-
     ['email', 'firstName', 'lastName', 'phoneNumber', 'niveauEtude', 'zipCode', 'birthdate', 'deStatus'].forEach(field => {
       setValue(field, user && user[field])
     })
-
-    if (!offre) {
-      redirectToOffresListIfOffreIsNotValid(router, fetchOffre)
-    }
-  }, [router, setValue, user, offre, offreId])
+  }, [router, setValue, user])
 
   if (!user) {
     return <div>Chargement ... </div>
@@ -72,11 +53,6 @@ const CandidatureForm = () => {
     }
   }
 
-  if (!offre) {
-    return (
-      <div>Récupération de l'offre en cours...</div>
-    )
-  }
   return (
     <React.Fragment>
       <Breadcrumb title={`Essayez ce métier : ${offre.jobTitle}`} pageDescription="Envoyez une candidature"/>
@@ -216,18 +192,6 @@ const CandidatureForm = () => {
       </div>
     </React.Fragment>
   )
-}
-
-function redirectToOffresListIfOffreIsNotValid (router, fetchOffre) {
-  fetchOffre().catch(() => {
-    Alert.fire({
-      icon: 'error',
-      title: 'Cette offre n\'est plus disponible. Vous allez être redirigé vers la liste des offres.',
-      confirmButtonText: 'OK',
-      onClose: () => router.push('/offres'),
-      footer: '<a href="mailto:contact@traitdunion.beta.gouv.fr">Nous contacter</a>'
-    })
-  })
 }
 
 export default CandidatureForm

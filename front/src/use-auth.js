@@ -8,12 +8,13 @@ export function ProvideAuth ({ children }) {
   return <authContext.Provider value={auth}>{children}</authContext.Provider>
 }
 
-export const useAuth = (redirecUrl) => {
+export const useAuth = () => {
   return useContext(authContext)
 }
 
 function useProvideAuth () {
   const [user, setUser] = useState(null)
+  const [redirectUrl, setRedirectUrl] = useState('/offres')
 
   const login = async (email, password) => {
     await client.post('/candidats/login', { email, password })
@@ -53,6 +54,8 @@ function useProvideAuth () {
     login,
     register,
     logout,
-    getUser
+    getUser,
+    setRedirectUrl,
+    redirectUrl
   }
 }
