@@ -59,13 +59,13 @@ function App () {
             </Route>
             <Route path="/candidats/login" exact>
               <header>
-                <Header homeLink={candidatHomeLink}/>
+                <Header homeLink="/candidats/login"/>
               </header>
               <Login/>
             </Route>
             <Route path="/candidats/register" exact>
               <header>
-                <Header homeLink={candidatHomeLink}/>
+                <Header homeLink="/candidats/login"/>
               </header>
               <RegisterCandidat/>
             </Route>
