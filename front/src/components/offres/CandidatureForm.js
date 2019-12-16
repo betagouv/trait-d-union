@@ -4,62 +4,46 @@ import useForm from 'react-hook-form'
 import client from '../../utils/rest-module'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import { StringParam, useQueryParam } from 'use-query-params'
-import { useLocation } from 'react-router-dom'
+import { useRouter } from '../../use-router'
+import niveauxEtude from '../../utils/enums/niveaux-etude'
+import { useRequireAuth } from '../../use-require-auth'
+
+const deStatuses = require('../../utils/enums/de-statuses')
 
 const Alert = withReactContent(Swal)
 
-const niveauxEtude = [
-  { id: 'sans-diplome', label: 'Sans diplôme' },
-  { id: 'cap-bep', label: 'CAP-BEP' },
-  { id: 'bac-0-1', label: 'Bac ou Bac+1' },
-  { id: 'bac-2', label: 'Bac+2' },
-  { id: 'bac-3-4', label: 'Bac+3 ou Bac+4' },
-  { id: 'bac-5', label: 'Bac + 5 et supérieur' }
-]
-
-const CandidatureForm = () => {
-  const { register, handleSubmit, reset } = useForm()
-  const location = useLocation()
-  const [offre, setOffre] = useState(location.state && location.state.offre)
+const CandidatureForm = ({ offre }) => {
+  const { user } = useRequireAuth()
+  const router = useRouter()
+  const { register, handleSubmit, reset, setValue } = useForm()
   const [isSubmitted] = useState(false)
-  const [offreId] = useQueryParam('offreId', StringParam)
-  let isEnabled = true
 
   useEffect(() => {
-    async function fetchOffre () {
-      try {
-        const { data } = await client.get(`/offres/${offreId}`)
-        setOffre(data)
-      } catch (e) {
-        throw e
-      }
-    }
+    ['email', 'firstName', 'lastName', 'phoneNumber', 'niveauEtude', 'zipCode', 'birthdate', 'deStatus'].forEach(field => {
+      setValue(field, user && user[field])
+    })
+  }, [router, setValue, user])
 
-    if (!offre) {
-      redirectToOffresListIfOffreIsNotValid(fetchOffre)
-    }
-  }, [offre, offreId])
+  if (!user) {
+    return <div>Chargement ... </div>
+  }
 
   const onSubmit = async formData => {
     try {
-      isEnabled = false
-      formData.offreId = offre.id
-      await client.post('/candidatures', formData)
-      isEnabled = true
+      const profile = Object.assign({}, formData)
+      delete profile.email
+      await client.patch(`/candidats/me`, profile)
+      await client.post(`/offres/${offre.id}/candidatures`)
       await Alert.fire({
           icon: 'success',
           timer: 3500,
-          title: `Merci ${formData.firstName}, nous enverrons votre demande à l'entreprise bientôt. ` +
-            'S\'il y a beaucoup de demandes et que vous ne pouvez faire l\'essai, nous proposerons votre candidature pour le même métier' +
-            ` (${offre.jobTitle}) et dans la même zone géographique à une entreprise similaire.`,
+          title: `Merci ${user.firstName}, nous allons envoyé votre demande à l'entreprise. Regardez sur la liste si d'autres offres vous intéressent et postulez`,
           confirmButtonText: 'Revenir à la liste des offres',
           onClose: () => window.open('/offres?submit_candidature_ok=true', '_parent')
         }
       )
       reset()
     } catch (e) {
-      isEnabled = true
       await Alert.fire({
         icon: 'error',
         title: 'Oh non ! Une erreur s\'est produite. Merci de réessayer ultérieurement.',
@@ -69,11 +53,6 @@ const CandidatureForm = () => {
     }
   }
 
-  if (!offre) {
-    return (
-      <div>Récupération de l'offre en cours...</div>
-    )
-  }
   return (
     <React.Fragment>
       <Breadcrumb title={`Essayez ce métier : ${offre.jobTitle}`} pageDescription="Envoyez une candidature"/>
@@ -91,7 +70,8 @@ const CandidatureForm = () => {
                       <div className="form-group row">
                         <label className="col-md-3 col-form-label">Merci de saisir votre email *</label>
                         <div className="col-md-9">
-                          <input type="text"
+                          <input disabled
+                                 type="text"
                                  className="form-control"
                                  name="email"
                                  placeholder="Votre adresse email"
@@ -101,15 +81,19 @@ const CandidatureForm = () => {
                         </div>
                       </div>
                       <div className="form-group row">
-                        <label className="col-md-3 col-form-label">Identifiant Pôle emploi (si vous êtes demandeur d'emploi)</label>
+                        <label className="col-md-3 col-form-label">Quelle est votre situation ?</label>
                         <div className="col-md-9">
-                          <input autoFocus
-                                 type="text"
-                                 name="poleEmploiId"
-                                 className="form-control"
-                                 placeholder="Exemple : 3051721Y"
-                                 ref={register({ required: false })}
-                          />
+                          <select name="deStatus"
+                                  className="form-control"
+                                  placeholder="Quelle est votre situation ?"
+                                  required="required"
+                                  ref={register({ required: true })}>
+                            <option defaultValue disabled>Quelle est votre situation ?</option>
+                            {deStatuses.map((deStatus) =>
+                              <option key={deStatus.id} value={deStatus.id}>{deStatus.label}</option>
+                            )}
+                          </select>
+                          <i className="fa fa-caret-down"/>
                         </div>
                       </div>
                       <div className="form-group row">
@@ -149,15 +133,17 @@ const CandidatureForm = () => {
                         </div>
                       </div>
                       <div className="form-group row">
-                        <label className="col-md-3 col-form-label">Âge *</label>
+                        <label className="col-md-3 col-form-label">Date de naissance *</label>
                         <div className="col-md-9">
-                          <input type="number"
-                                 name="age"
+                          <input type="date"
+                                 name="birthdate"
                                  className="form-control"
-                                 placeholder="Exemple: 32"
+                                 placeholder="Date de naissance *"
                                  required="required"
-                                 ref={register({ required: false })}
-                          />
+                                 ref={register({
+                                   required: true
+                                 })}>
+                          </input>
                         </div>
                       </div>
                       <div className="form-group row">
@@ -193,7 +179,8 @@ const CandidatureForm = () => {
                       <div className="col-md-9">
                         <button className="button"
                                 disabled={isSubmitted}
-                                type="submit">Envoyer ma candidature à l'entreprise pour essayer ce métier</button>
+                                type="submit">Envoyer ma candidature à l'entreprise pour essayer ce métier
+                        </button>
                       </div>
                     </div>
                   </form>
@@ -205,18 +192,6 @@ const CandidatureForm = () => {
       </div>
     </React.Fragment>
   )
-}
-
-function redirectToOffresListIfOffreIsNotValid (fetchOffre) {
-  fetchOffre().catch(() => {
-    Alert.fire({
-      icon: 'error',
-      title: 'Cette offre n\'est plus disponible. Vous allez être redirigé vers la liste des offres.',
-      confirmButtonText: 'OK',
-      onClose: () => window.open('/offres', '_parent'),
-      footer: '<a href="mailto:contact@traitdunion.beta.gouv.fr">Nous contacter</a>'
-    })
-  })
 }
 
 export default CandidatureForm

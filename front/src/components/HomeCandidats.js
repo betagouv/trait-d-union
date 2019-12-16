@@ -115,11 +115,6 @@ const HomeCandidats = () => {
                   <h3>Je m'inscris</h3>
                   <p style={{ margin: '5px' }}>Inscrivez-vous au service avec votre email, votre adresse, votre niveau de
                     qualification, etc. Cela ne vous engage à rien.
-                    <a href="https://traitdunion.typeform.com/to/xiVFgw"
-                       style={{ color: '#0053B3', textDecoration: 'underline' }} target="_blank"
-                       rel="noopener noreferrer"> Cliquez
-                      ici</a> pour
-                    vous inscrire
                   </p>
                 </div>
                 <div className="col-md-3 col-sm-6 col-xs-12" style={{ padding: '0px', margin: '1em 0 1em 0' }}>
@@ -174,18 +169,17 @@ const HomeCandidats = () => {
                 <h2>Questions/réponses </h2>
                 <p>&nbsp; </p>
                 <ul>
-                  <li><b>À qui s'adresse ce site ? </b> : aux demandeurs d'emploi de la Région Grand Est, habitant près de
-                    Metz et Nancy (ouverture prochaine dans d'autres villes)
+                  <li><b>À qui s'adresse ce site ? </b> : aux demandeurs d'emploi ou jeunes suivis par une mission locale, habitants dans la Région Grand Est (service gratuit)
                   </li>
                   <br/>
                   <li><b>Que proposez-vous ?</b> : nous proposons de réaliser des périodes de mise en situation en milieu
                     professionnel (<a href="https://clara.pole-emploi.fr/aides/detail/pmsmp?utm_source=traitdunion"
                                       target="_blank">PMSMP</a>)
-                    dans des entreprises partenaires.
+                    dans des entreprises partenaires. Pour chaque métier proposé ici, la demande d'embauche est forte et il existe une formation financée par la Région. 
+
                   </li>
                   <br/>
-                  <li><b>Est-ce gratuit ?</b> : oui, ce site est financé par la Région Grand Est en partenariat avec
-                    beta.gouv.fr (DINUM)
+                  <li><b>Je cherche une formation, pouvez-vous m'aider ?</b> : Non, nous ne proposons pas directement de formation sur ce site, uniquement la possibilité d'essayer des métiers.
                   </li>
                   <br/>
                   <li><b>J'ai d'autres questions</b> : pas de soucis, chattez avec nous en cliquant sur l'icône de

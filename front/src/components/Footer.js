@@ -13,15 +13,15 @@ const Footer = () => {
             <div className="col-md-7 col-sm-7 col-xs-12">
               <div className="footer-widget footer-shortcut-link">
                 <h4>Qui sommes nous ?</h4>
-                
+
                 <p>
                   Trait d'union est un service qui permet aux demandeurs d'emploi de la Région Grand Est d'essayer pendant quelques jours des métiers qui recrutent et forment à côté de chez eux.
                   Nous proposons par ailleurs aux entreprises qui le souhaitent de faire découvrir leurs métiers pour mieux recruter par la suite.
 
                 </p>
-                
+
                 <p>
-                  Nous sommes une petite équipe de 4 personnes, travaillant ensemble à la DINSIC (Paris)
+                  Nous sommes une petite équipe de 4 personnes, travaillant ensemble à la DINUM (Paris)
                   et à la Région Grand Est (Metz) depuis début 2019.
                 </p>
                 <p>
@@ -38,6 +38,7 @@ const Footer = () => {
                 <ul>
                 <li><Link smooth to="/candidats#root">Espace candidat</Link></li>
                 <li> <Link smooth to="/entreprises#root">Espace entreprise</Link></li>
+                <li><a target="_blank" rel="noopener noreferrer" href="http://metabase.traitdunion.beta.gouv.fr/public/dashboard/804877c6-a815-4061-8858-feffda560130">Statistiques</a></li>
                   <li><a target="_blank" rel="noopener noreferrer" href="https://www.grandest.fr">Région Grand Est</a></li>
                   <li><a target="_blank" rel="noopener noreferrer" href="https://beta.gouv.fr">Beta.gouv.fr</a></li>
                   <li>
@@ -46,6 +47,9 @@ const Footer = () => {
                     </a>
                     <a href="https://twitter.com/TraitdunionBeta" title="Twitter" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-twitter-square" style={{fontSize: "4rem", marginRight:"1rem" }}></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/trait-d-union-beta/" title="Linkedin" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-linkedin" style={{fontSize: "4rem", marginRight:"1rem" }}></i>
                     </a>
                     <a href="mailto:contact@traitdunion.beta.gouv.fr" title="Nous écrire un mail" rel="noopener noreferrer">
                     <i className="fas fa-envelope-square" style={{fontSize: "4rem"}}></i>

@@ -3,7 +3,7 @@ version: '3'
 services:
   api:
     image: node:12.13
-    command: ['api/node_modules/node-dev/bin/node-dev', 'api/bin/start.js']
+    command: 'api/node_modules/node-dev/bin/node-dev --all-deps  api/bin/start.js'
     working_dir: /usr/src
     restart: on-failure:5
     env_file:
@@ -26,6 +26,8 @@ services:
       - TU_FF_SCHEDULE_SOURCING=$TU_FF_SCHEDULE_SOURCING
       - CANDIDATURE_RECEIVED_HOOK_URL=$CANDIDATURE_RECEIVED_HOOK_URL
       - OFFRE_PUBLISHED_HOOK_URL=$OFFRE_PUBLISHED_HOOK_URL
+      - CANDIDAT_CREATED_HOOK_URL=$CANDIDAT_CREATED_HOOK_URL
+      - COOKIE_PASSWORD=$COOKIE_PASSWORD
     ports:
       - 8080:8080
       - 3333:3333

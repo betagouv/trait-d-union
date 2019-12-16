@@ -17,7 +17,7 @@ const PostOffre = () => {
     setValue('jobTitle', prefilledValues.jobTitle)
     setValue('email', prefilledValues.email)
     setValue('address', prefilledValues.address)
-  }, [prefilledValues.jobTitle, prefilledValues.email, prefilledValues.address])
+  }, [prefilledValues.jobTitle, prefilledValues.email, prefilledValues.address, setValue])
 
   const onSubmit = async formData => {
     try {
@@ -96,6 +96,12 @@ const PostOffre = () => {
                         <button className="button"
                                 disabled={isSubmitted}
                                 type="submit">Poster votre offre</button>
+                      </div>
+                    </div>
+                    <div className="form-group row">
+                      <label className="col-md-3 col-form-label"/>
+                      <div className="col-md-9">
+                        <p>Ça ne vous engage à rien, seulement à recevoir par email des candidatures. Vos coordonnées ne seront pas diffusées. Vous pourrez retirer votre offre à tout moment ensuite.</p>
                       </div>
                     </div>
                   </form>

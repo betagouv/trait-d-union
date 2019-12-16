@@ -1,6 +1,5 @@
 const Sequelize = require('sequelize')
 const databaseService = require('../services/database-service')
-const niveauxEtude = require('./enums/niveaux-etude')
 const sendSlackNotification = require('../infrastructure/send-slack-notification')
 const request = require('request-promise-native')
 const configurationService = require('../services/configuration-service')
@@ -13,57 +12,55 @@ const Candidature = databaseService.define('candidature', {
     primaryKey: true,
     defaultValue: Sequelize.UUIDV4
   },
-  firstName: {
-    type: Sequelize.STRING,
-    allowNull: true
+  offreId: {
+    type: Sequelize.UUID,
+    allowNull: false
   },
-  lastName: {
-    type: Sequelize.STRING,
-    allowNull: true
+  candidatId: {
+    type: Sequelize.UUID,
+    allowNull: false
   },
-  email: {
-    type: Sequelize.STRING,
+  createdAt: {
+    type: Sequelize.DATE,
     allowNull: false,
-    unique: false
+    defaultValue: new Date()
   },
-  niveauEtude: {
-    type: Sequelize.ENUM(niveauxEtude),
-    validate: { isIn: [niveauxEtude] },
-    allowNull: true
-  },
-  zipCode: {
-    type: Sequelize.STRING,
-    allowNull: true
-  },
-  poleEmploiId: {
-    type: Sequelize.STRING,
-    allowNull: true
-  },
-  phoneNumber: {
-    type: Sequelize.STRING,
-    allowNull: true
-  },
-  age: {
-    type: Sequelize.INTEGER,
-    allowNull: true
-  },
-  otherJobs: {
-    type: Sequelize.STRING,
-    allowNull: true
-  },
-  acceptFollowingTraining: {
-    type: Sequelize.BOOLEAN,
+  updatedAt: {
+    type: Sequelize.DATE,
     allowNull: false,
-    defaultValue: true
+    defaultValue: new Date()
   }
+}, {
+  freezeTableName: true,
+  tableName: 'candidatures'
 })
 
-Candidature.associate = ({ Offre }) => {
+Candidature.associate = ({ Candidature, Offre, Candidat }) => {
+  Offre.Candidats = Offre.belongsToMany(Candidat, { through: { model: Candidature } })
+  Candidat.belongsToMany(Offre, { through: { model: Candidature } })
+  Offre.Candidatures = Candidat.hasMany(Candidature)
   Candidature.belongsTo(Offre)
+  Candidature.belongsTo(Candidat)
 }
 
 Candidature.afterCreate(async (candidature, options) => {
-  const candidatureFromDB = await Candidature.findByPk(candidature.id, { include: 'offre' })
+  const Offre = require('./offre')
+  const Candidat = require('./candidat')
+  const candidatureFromDB = await Candidature.findOne({
+    where: { id: candidature.id },
+    include: [
+      {
+        required: true,
+        model: Offre,
+        where: { id: candidature.offreId }
+      },
+      {
+        required: true,
+        model: Candidat,
+        where: { id: candidature.candidatId }
+      }
+    ]
+  })
   const requestOptions = {
     uri: configurationService.get('CANDIDATURE_RECEIVED_HOOK_URL'),
     json: true,
@@ -75,7 +72,7 @@ Candidature.afterCreate(async (candidature, options) => {
   }
   logger().debug('New candidature received: calling Zapier', { candidature: candidatureFromDB })
   await request(requestOptions).catch(error => logger().error(`Zapier webhook failed: ${error}`))
-  return sendSlackNotification({ text: `:mailbox_with_mail: 1 nouvelle candidature vient d'être déposée par ${candidatureFromDB.firstName} ${candidatureFromDB.lastName} : \n [Offre \`${candidatureFromDB.offre.id}\`] job de ${candidatureFromDB.offre.jobTitle} situé à ${candidatureFromDB.offre.address}` })
+  return sendSlackNotification({ text: `:mailbox_with_mail: 1 nouvelle candidature vient d'être déposée par ${candidatureFromDB.candidat.firstName} ${candidatureFromDB.candidat.lastName} : \n [Offre \`${candidatureFromDB.offre.id}\`] job de ${candidatureFromDB.offre.jobTitle} situé à ${candidatureFromDB.offre.address}` })
 })
 
 module.exports = Candidature

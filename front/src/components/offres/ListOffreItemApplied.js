@@ -1,15 +1,10 @@
 import React, { Fragment } from 'react'
-import { Link } from 'react-router-dom'
 
-const ListOffreItem = ({ offre }) => {
+const ListOffreItemApplied = ({ offre }) => {
 
   return (
     <Fragment>
-      <Link to={{
-        pathname: `/offres/candidature`,
-        search: `?offreId=${offre.id}`,
-        state: { offre }
-      }} className="job-list">
+      <div className="job-list">
         <div className="thumb">
           <img src={offre.imageURL} className="img-fluid" alt=""/>
         </div>
@@ -20,13 +15,15 @@ const ListOffreItem = ({ offre }) => {
           </div>
           <div className="more">
             <div className="buttons">
-              <button className="button">Essayer</button>
+              <div className="deadline">
+                Candidature déjà envoyée
+              </div>
             </div>
           </div>
         </div>
-      </Link>
+      </div>
     </Fragment>
   )
 }
 
-export default ListOffreItem
+export default ListOffreItemApplied

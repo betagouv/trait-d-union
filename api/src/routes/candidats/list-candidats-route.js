@@ -4,8 +4,9 @@ const listCandidats = require('../../services/candidats/list-candidats-service')
 
 module.exports.createRoute = (pathPrefix) => ({
   method: 'GET',
-  path: `${pathPrefix}/candidatures`,
-  config: {
+  path: `${pathPrefix}/candidats`,
+  options: {
+    auth: 'session',
     description: 'Liste tous les candidats',
     tags: ['api', 'candidats'],
     validate: {},
@@ -14,19 +15,19 @@ module.exports.createRoute = (pathPrefix) => ({
         security: [{ OAuth: ['openid', 'profile'] }],
         responses: { 200: { description: 'Success' } }
       }
-    },
-    handler: async (request, h) => {
-      const { rows: candidats, count } = await listCandidats()
-      const { offset, limit } = request.query
-
-      return collectionResponse({
-        h,
-        itemName: 'candidats',
-        collection: candidats,
-        allItemsCount: count,
-        offset,
-        limit
-      })
     }
+  },
+  handler: async (request, h) => {
+    const { rows: candidats, count } = await listCandidats()
+    const { offset, limit } = request.query
+
+    return collectionResponse({
+      h,
+      itemName: 'candidats',
+      collection: candidats,
+      allItemsCount: count,
+      offset,
+      limit
+    })
   }
 })
