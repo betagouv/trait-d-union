@@ -21,7 +21,7 @@ module.exports.createRoute = (pathPrefix) => ({
         deStatus: Joi.only()
           .allow(...deStatuses),
         birthdate: Joi.date()
-          .format('YYYY-MM-DD')
+          .format(['YYYY-MM-DD', 'YYYY/MM/DD', 'DD-MM-YYYY', 'DD/MM/YYYY'])
           .raw()
       })
     },

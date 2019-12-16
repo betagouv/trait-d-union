@@ -16,7 +16,7 @@ const CandidatureForm = ({ offre }) => {
   const { user } = useRequireAuth()
   const router = useRouter()
   const { register, handleSubmit, reset, setValue } = useForm()
-  const isSubmitted = useState(false)
+  const [isSubmitted] = useState(false)
 
   useEffect(() => {
     ['email', 'firstName', 'lastName', 'phoneNumber', 'niveauEtude', 'zipCode', 'birthdate', 'deStatus'].forEach(field => {
