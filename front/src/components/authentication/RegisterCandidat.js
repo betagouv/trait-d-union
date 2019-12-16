@@ -21,10 +21,11 @@ const RegisterCandidat = () => {
       delete userToCreate.confirmPassword
       const user = await registerCandidat(userToCreate)
       await Alert.fire({
+        time: 3500,
         icon: 'success',
         title: `Merci de rejoindre Trait d'Union ${user.firstName} ${user.lastName} !`,
         confirmButtonText: 'Ok',
-        onClose: () => window.open('/offres', '_parent')
+        onClose: () => window.open('/offres?inscription_DE_ok=true', '_parent')
 
       })
     } catch (e) {
