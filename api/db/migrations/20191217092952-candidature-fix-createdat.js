@@ -22,6 +22,7 @@ module.exports = {
             }
           ]
         }, { transaction })
+        // eslint-disable-next-line no-console
         console.log(`Updating candidatures createdAt - ${id} - ${oldCandidature}`)
         await queryInterface.sequelize.query(
           'UPDATE "candidatures" SET "createdAt" = :createdAt WHERE "id" = :id',
