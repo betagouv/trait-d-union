@@ -3,26 +3,30 @@ const databaseService = require('../config/database-service')
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    databaseService.configure(queryInterface)
-    const { Candidat } = require('../../src/models')
-    const registerUser = promisify(Candidat.register)
+    try {
+      databaseService.configure(queryInterface)
+      const { Candidat } = require('../../src/models')
+      const registerUser = promisify(Candidat.register)
 
-    const [rawOldCandidatures] = await queryInterface.sequelize.query('SELECT * FROM "old-candidatures"')
+      const [rawOldCandidatures] = await queryInterface.sequelize.query('SELECT * FROM "old-candidatures"')
 
-    if (rawOldCandidatures.length === 0) {
-      return
+      if (rawOldCandidatures.length === 0) {
+        return
+      }
+
+      const oldCandidatures = uniqBy(rawOldCandidatures, 'email')
+      await Promise.all(oldCandidatures.map(createCandidat(Candidat, registerUser)))
+
+      await createCandidatureTable(queryInterface, Sequelize)
+
+      const createCandidaturesPromises = rawOldCandidatures.map(async candidature => {
+        const candidat = await Candidat.findOne({ where: { email: candidature.email } })
+        return candidat.addOffre(candidature.offreId)
+      })
+      await Promise.all(createCandidaturesPromises)
+    } catch (error) {
+      return true
     }
-
-    const oldCandidatures = uniqBy(rawOldCandidatures, 'email')
-    await Promise.all(oldCandidatures.map(createCandidat(Candidat, registerUser)))
-
-    await createCandidatureTable(queryInterface, Sequelize)
-
-    const createCandidaturesPromises = rawOldCandidatures.map(async candidature => {
-      const candidat = await Candidat.findOne({ where: { email: candidature.email } })
-      return candidat.addOffre(candidature.offreId)
-    })
-    return Promise.all(createCandidaturesPromises)
   },
 
   down: async (queryInterface, Sequelize) => {
