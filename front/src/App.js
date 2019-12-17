@@ -14,6 +14,7 @@ import Login from './components/authentication/Login'
 import { ProvideAuth } from './use-auth'
 import ListOffresPage from './components/offres/ListOffresPage'
 import RegisterCandidat from './components/authentication/RegisterCandidat'
+import Stats from './components/Stats'
 
 function App () {
   const enterpriseHomeLink = '/entreprises'
@@ -29,6 +30,12 @@ function App () {
                 <Header/>
               </header>
               <Home/>
+            </Route>
+            <Route path="/stats" exact>
+              <header>
+                <Header homeLink='/'/>
+              </header>
+              <Stats/>
             </Route>
             <Route path="/poster-offre" exact>
               <header>
