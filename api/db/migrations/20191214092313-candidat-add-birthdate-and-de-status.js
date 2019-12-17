@@ -3,14 +3,18 @@ const { dropEnum } = require('sequelize-replace-enum-postgres')
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.addColumn('candidats', 'birthdate', {
-      type: Sequelize.DATEONLY,
-      allowNull: true
-    })
-    return queryInterface.addColumn('candidats', 'deStatus', {
-      type: Sequelize.ENUM(deStatuses),
-      allowNull: true
-    })
+    try {
+      await queryInterface.addColumn('candidats', 'birthdate', {
+        type: Sequelize.DATEONLY,
+        allowNull: true
+      })
+      await queryInterface.addColumn('candidats', 'deStatus', {
+        type: Sequelize.ENUM(deStatuses),
+        allowNull: true
+      })
+    } catch (error) {
+      return true
+    }
   },
 
   down: async (queryInterface, Sequelize) => {

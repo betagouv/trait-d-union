@@ -1,6 +1,6 @@
 {
   "name": "trait-d-union",
-  "version": "0.1.23",
+  "version": "0.1.24",
   "description": "Trait d'Union mono repository",
   "main": "index.js",
   "repository": "git@github.com:betagouv/trait-d-union.git",
