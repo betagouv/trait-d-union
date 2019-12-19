@@ -75,7 +75,6 @@ const PostOffre = () => {
                                  name="codeROME"
                                  className="form-control"
                                  placeholder="Exemple : 57100"
-                                 required="required"
                                  ref={register({ required: false })}
                           />
                         </div>
