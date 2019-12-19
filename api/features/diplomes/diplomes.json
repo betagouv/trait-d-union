@@ -1,0 +1,5664 @@
+[
+  {
+    "codesROME": [
+      "H2903"
+    ],
+    "codeDiplome": "23160",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPM opérateur-régleur sur machine-outil à commande numérique par enlèvement de matière",
+    "commune": "SARREGUEMINES"
+  },
+  {
+    "codesROME": [
+      "H2906",
+      "H3301"
+    ],
+    "codeDiplome": "25038",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel conducteur(trice) d'installations et de machines automatisées",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "H2901",
+      "H2909"
+    ],
+    "codeDiplome": "82693",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel monteur(se) qualifié(e) d'équipements industriels",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "M1302"
+    ],
+    "codeDiplome": "63027",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Entrepreneur(euse) de petite entreprise",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "H2902",
+      "H3201"
+    ],
+    "codeDiplome": "84315",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP propreté de l'environnement urbain - collecte et recyclage",
+    "commune": "TOUL"
+  },
+  {
+    "codesROME": [
+      "G1401",
+      "G1403",
+      "G1404",
+      "K1305",
+      "M1605"
+    ],
+    "codeDiplome": "31237",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Économe gestionnaire de collectivité",
+    "commune": "MALZEVILLE"
+  },
+  {
+    "codesROME": [
+      "K2503"
+    ],
+    "codeDiplome": "96175",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQP agent de sûreté aéroportuaire",
+    "commune": "SAINT-LOUIS"
+  },
+  {
+    "codesROME": [
+      "N4101",
+      "N4105"
+    ],
+    "codeDiplome": "25050",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel conducteur(trice) du transport routier de marchandises sur tous véhicules",
+    "commune": "RETHEL"
+  },
+  {
+    "codesROME": [
+      "H2903",
+      "H2906"
+    ],
+    "codeDiplome": "83971",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel opérateur(trice) régleur(se) d'usinage en commande numérique",
+    "commune": "SAVERNE"
+  },
+  {
+    "codesROME": [
+      "N4101",
+      "N4105"
+    ],
+    "codeDiplome": "103897",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel conducteur du transport routier de marchandises sur tous véhicules",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "N4101",
+      "N4105"
+    ],
+    "codeDiplome": "25039",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel conducteur(trice) du transport routier de marchandises sur porteur",
+    "commune": "TORVILLIERS"
+  },
+  {
+    "codesROME": [
+      "N4103"
+    ],
+    "codeDiplome": "100817",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel conducteur de transport en commun sur route",
+    "commune": "SAUSHEIM"
+  },
+  {
+    "codesROME": [
+      "I1304"
+    ],
+    "codeDiplome": "82735",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPI opérateur de maintenance industrielle",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "K1302",
+      "K1303",
+      "K1304",
+      "K1305"
+    ],
+    "codeDiplome": "88309",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel assistant(e) de vie aux familles",
+    "commune": "LUNEVILLE"
+  },
+  {
+    "codesROME": [
+      "N4101",
+      "N4105"
+    ],
+    "codeDiplome": "103807",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel conducteur du transport routier de marchandises sur porteur",
+    "commune": "JARVILLE-LA-MALGRANGE"
+  },
+  {
+    "codesROME": [
+      "A1405"
+    ],
+    "codeDiplome": "55722",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BPA option travaux de la vigne et du vin spécialité travaux de la vigne",
+    "commune": "EPERNAY"
+  },
+  {
+    "codesROME": [
+      "A1416"
+    ],
+    "codeDiplome": "56310",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BP option responsable d'exploitation agricole",
+    "commune": "EPERNAY"
+  },
+  {
+    "codesROME": [
+      "D1211",
+      "D1212",
+      "D1214",
+      "D1408"
+    ],
+    "codeDiplome": "20182",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Bac pro commerce",
+    "commune": "LUNEVILLE"
+  },
+  {
+    "codesROME": [
+      "M1203",
+      "M1604",
+      "M1605"
+    ],
+    "codeDiplome": "63193",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "BTS assistant de gestion de PME-PMI à référentiel commun européen",
+    "commune": "LUNEVILLE"
+  },
+  {
+    "codesROME": [
+      "J1501",
+      "K1301",
+      "K1302",
+      "K1303"
+    ],
+    "codeDiplome": "87187",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Diplôme d'État d'accompagnant éducatif et social spécialité accompagnement de la vie en structure collective",
+    "commune": "LUNEVILLE"
+  },
+  {
+    "codesROME": [
+      "G1602"
+    ],
+    "codeDiplome": "83257",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQP commis de cuisine",
+    "commune": "SARREBOURG"
+  },
+  {
+    "codesROME": [
+      "A1407",
+      "A1409",
+      "A1410",
+      "A1411",
+      "A1416"
+    ],
+    "codeDiplome": "94611",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "BP option responsable d'entreprise agricole",
+    "commune": "COURCELLES-CHAUSSY"
+  },
+  {
+    "codesROME": [
+      "G1602"
+    ],
+    "codeDiplome": "82180",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel cuisinier(ière)",
+    "commune": "GOLBEY"
+  },
+  {
+    "codesROME": [
+      "K1302",
+      "K2204"
+    ],
+    "codeDiplome": "30958",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Agent d'accompagnement auprès des personnes âgées et des personnes dépendantes",
+    "commune": "FREYMING-MERLEBACH"
+  },
+  {
+    "codesROME": [
+      "A1414"
+    ],
+    "codeDiplome": "46799",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Certificat de spécialisation conduite de productions en agriculture biologique et commercialisation",
+    "commune": "COURCELLES-CHAUSSY"
+  },
+  {
+    "codesROME": [
+      "A1202",
+      "A1203"
+    ],
+    "codeDiplome": "85117",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP agricole jardinier paysagiste",
+    "commune": "COURCELLES-CHAUSSY"
+  },
+  {
+    "codesROME": [
+      "J1501",
+      "K1301",
+      "K1302",
+      "K1303"
+    ],
+    "codeDiplome": "87185",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Diplôme d'État d'accompagnant éducatif et social spécialité accompagnement de la vie à domicile",
+    "commune": "SARREGUEMINES"
+  },
+  {
+    "codesROME": [
+      "G1801",
+      "G1803"
+    ],
+    "codeDiplome": "82774",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel serveur(se) en restauration",
+    "commune": "GOLBEY"
+  },
+  {
+    "codesROME": [
+      "K2110"
+    ],
+    "codeDiplome": "88675",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel enseignant(e) de la conduite et de la sécurité routière",
+    "commune": "MAXEVILLE"
+  },
+  {
+    "codesROME": [
+      "M1203"
+    ],
+    "codeDiplome": "83602",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "BTS comptabilité et gestion",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "A1203"
+    ],
+    "codeDiplome": "63446",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "BP option aménagements paysagers",
+    "commune": "COURCELLES-CHAUSSY"
+  },
+  {
+    "codesROME": [
+      "M1607"
+    ],
+    "codeDiplome": "56918",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel secrétaire assistant(e)",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "C1102",
+      "C1206",
+      "D1402",
+      "D1403",
+      "D1407"
+    ],
+    "codeDiplome": "74844",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Attaché(e) commercial(e)",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "D1106",
+      "D1507"
+    ],
+    "codeDiplome": "83079",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel employé(e) commercial(e) en magasin",
+    "commune": "HAGUENAU"
+  },
+  {
+    "codesROME": [
+      "D1209",
+      "D1210",
+      "D1211",
+      "D1212",
+      "D1214"
+    ],
+    "codeDiplome": "77069",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel vendeur(se)-conseil en magasin",
+    "commune": "HAGUENAU"
+  },
+  {
+    "codesROME": [
+      "D1107",
+      "D1407",
+      "D1502"
+    ],
+    "codeDiplome": "73433",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "BTSA technico-commercial jardins et végétaux d'ornement",
+    "commune": "COURCELLES-CHAUSSY"
+  },
+  {
+    "codesROME": [
+      "F1602"
+    ],
+    "codeDiplome": "100431",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel électricien d'équipement du bâtiment",
+    "commune": "SAINT-AVOLD"
+  },
+  {
+    "codesROME": [
+      "F1602",
+      "H1504",
+      "H2602",
+      "I1304"
+    ],
+    "codeDiplome": "100427",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien d'équipement et d'exploitation en électricité",
+    "commune": "SAINT-AVOLD"
+  },
+  {
+    "codesROME": [
+      "D1402",
+      "D1403",
+      "D1408"
+    ],
+    "codeDiplome": "20326",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Bac pro vente prospection négociation suivi de clientèle",
+    "commune": "THIONVILLE"
+  },
+  {
+    "codesROME": [
+      "F1705"
+    ],
+    "codeDiplome": "90683",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel canalisateur(trice)",
+    "commune": "FAULQUEMONT"
+  },
+  {
+    "codesROME": [
+      "F1202"
+    ],
+    "codeDiplome": "90691",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel chef de chantier travaux publics routes et canalisations",
+    "commune": "FAULQUEMONT"
+  },
+  {
+    "codesROME": [
+      "F1302"
+    ],
+    "codeDiplome": "83333",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel conducteur de bouteur et de chargeuse",
+    "commune": "FAULQUEMONT"
+  },
+  {
+    "codesROME": [
+      "F1302"
+    ],
+    "codeDiplome": "83332",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel conducteur(trice) de pelle hydraulique et de chargeuse pelleteuse",
+    "commune": "FAULQUEMONT"
+  },
+  {
+    "codesROME": [
+      "N4103"
+    ],
+    "codeDiplome": "81023",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel conducteur(trice) du transport routier interurbain de voyageurs",
+    "commune": "YUTZ"
+  },
+  {
+    "codesROME": [
+      "F1702"
+    ],
+    "codeDiplome": "103767",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel maçon en voirie et réseaux divers",
+    "commune": "FAULQUEMONT"
+  },
+  {
+    "codesROME": [
+      "I1606"
+    ],
+    "codeDiplome": "83150",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel carrossier réparateur",
+    "commune": "YUTZ"
+  },
+  {
+    "codesROME": [
+      "D1502",
+      "D1503"
+    ],
+    "codeDiplome": "82509",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel manager(euse) d'univers marchand",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "M1604"
+    ],
+    "codeDiplome": "82685",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel assistant(e) de direction",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "D1401"
+    ],
+    "codeDiplome": "81505",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel assistant(e) commercial(e)",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1608"
+    ],
+    "codeDiplome": "25238",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel secrétaire comptable",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "H3404",
+      "I1606"
+    ],
+    "codeDiplome": "83152",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel peintre en carrosserie",
+    "commune": "YUTZ"
+  },
+  {
+    "codesROME": [
+      "N1301",
+      "N1303"
+    ],
+    "codeDiplome": "93753",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel technicien(ne) en logistique d'entreposage",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "M1203"
+    ],
+    "codeDiplome": "56922",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel comptable assistant(e)",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1203",
+      "M1206"
+    ],
+    "codeDiplome": "102925",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel gestionnaire comptable et fiscal",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1203",
+      "M1501"
+    ],
+    "codeDiplome": "82687",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel gestionnaire de paie",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "H2301"
+    ],
+    "codeDiplome": "25022",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel conducteur(trice) d'appareils de l'industrie chimique",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "I1310"
+    ],
+    "codeDiplome": "31991",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Bac pro maintenance des équipements industriels",
+    "commune": "THIONVILLE"
+  },
+  {
+    "codesROME": [
+      "D1502",
+      "D1503"
+    ],
+    "codeDiplome": "81418",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel responsable de rayon",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "D1408",
+      "M1401"
+    ],
+    "codeDiplome": "87073",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel conseiller(ère) relation client à distance",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "D1408",
+      "M1401"
+    ],
+    "codeDiplome": "53827",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel superviseur(se) relations clients à distance",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "I1302",
+      "I1304",
+      "I1309",
+      "I1310"
+    ],
+    "codeDiplome": "82779",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "BTS maintenance des systèmes option A : systèmes de production",
+    "commune": "THIONVILLE"
+  },
+  {
+    "codesROME": [
+      "M1501"
+    ],
+    "codeDiplome": "81506",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel assistant ressources humaines",
+    "commune": "HAGUENAU"
+  },
+  {
+    "codesROME": [
+      "D1211",
+      "D1212",
+      "D1214"
+    ],
+    "codeDiplome": "63799",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BEP métiers de la relation aux clients et aux usagers",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "K1302"
+    ],
+    "codeDiplome": "63670",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Assistant(e) de vie dépendance",
+    "commune": "SCHILTIGHEIM"
+  },
+  {
+    "codesROME": [
+      "D1402",
+      "D1407"
+    ],
+    "codeDiplome": "82511",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Titre professionnel négociateur(trice) technico-commercial(e)",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "G1602"
+    ],
+    "codeDiplome": "88543",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP cuisine",
+    "commune": "SCHILTIGHEIM"
+  },
+  {
+    "codesROME": [
+      "F1702"
+    ],
+    "codeDiplome": "81195",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel constructeur(trice) professionnel(le) en voirie et réseaux",
+    "commune": "CHALONS-EN-CHAMPAGNE"
+  },
+  {
+    "codesROME": [
+      "H2902"
+    ],
+    "codeDiplome": "23196",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPM assembleur au plan industriel",
+    "commune": "FREYMING-MERLEBACH"
+  },
+  {
+    "codesROME": [
+      "F1701"
+    ],
+    "codeDiplome": "88121",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel coffreur(euse) bancheur(euse)",
+    "commune": "CHALONS-EN-CHAMPAGNE"
+  },
+  {
+    "codesROME": [
+      "H2904",
+      "H2907"
+    ],
+    "codeDiplome": "77473",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP conducteur d'installations de production",
+    "commune": "FORBACH"
+  },
+  {
+    "codesROME": [
+      "H2910",
+      "H3203"
+    ],
+    "codeDiplome": "90803",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "CQPM outilleur(se) de forme (matrices ou moules métalliques)",
+    "commune": "CREUTZWALD"
+  },
+  {
+    "codesROME": [
+      "H3202"
+    ],
+    "codeDiplome": "79685",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "CQP monteur régleur d'équipement de fabrication - Plasturgie",
+    "commune": "CREUTZWALD"
+  },
+  {
+    "codesROME": [
+      "F1605"
+    ],
+    "codeDiplome": "100429",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel installateur de réseaux de télécommunications",
+    "commune": "BUSSY-LETTREE"
+  },
+  {
+    "codesROME": [
+      "K2503"
+    ],
+    "codeDiplome": "83419",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel agent(e) de sûreté et de sécurité privée",
+    "commune": "LANDRES"
+  },
+  {
+    "codesROME": [
+      "G1703"
+    ],
+    "codeDiplome": "82780",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel réceptionniste en hôtellerie",
+    "commune": "GOLBEY"
+  },
+  {
+    "codesROME": [
+      "G1101"
+    ],
+    "codeDiplome": "99515",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel chargé d'accueil touristique et de loisirs",
+    "commune": "EPINAL"
+  },
+  {
+    "codesROME": [
+      "G1201"
+    ],
+    "codeDiplome": "82182",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel d'accompagnateur(trice) de tourisme",
+    "commune": "EPINAL"
+  },
+  {
+    "codesROME": [
+      "H2902",
+      "H2909",
+      "H2911"
+    ],
+    "codeDiplome": "84564",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Qualification de soudeur suivant la norme NF EN ISO 9606-1 (anciennement NF EN 287-1)",
+    "commune": "FREYMING-MERLEBACH"
+  },
+  {
+    "codesROME": [
+      "H2914"
+    ],
+    "codeDiplome": "23199",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPM tuyauteur(euse) industriel(le)",
+    "commune": "SAINT-AVOLD"
+  },
+  {
+    "codesROME": [
+      "D1209"
+    ],
+    "codeDiplome": "21412",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP fleuriste",
+    "commune": "SAINT-MAURICE-SUR-MORTAGNE"
+  },
+  {
+    "codesROME": [
+      "N1201",
+      "N4203"
+    ],
+    "codeDiplome": "82669",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien(ne) d'exploitation en transports terrestres de marchandises",
+    "commune": "EPINAL"
+  },
+  {
+    "codesROME": [
+      "F1602",
+      "H2602"
+    ],
+    "codeDiplome": "25075",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel électricien(ne) d'équipement",
+    "commune": "LONGWY"
+  },
+  {
+    "codesROME": [
+      "F1603"
+    ],
+    "codeDiplome": "100923",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP monteur en installations thermiques",
+    "commune": "LONGWY"
+  },
+  {
+    "codesROME": [
+      "I1301"
+    ],
+    "codeDiplome": "50035",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "MC technicien(ne) ascensoriste (service et modernisation)",
+    "commune": "LONGWY"
+  },
+  {
+    "codesROME": [
+      "A1101",
+      "A1205",
+      "A1405"
+    ],
+    "codeDiplome": "55730",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BPA option travaux forestiers spécialité travaux de bûcheronnage",
+    "commune": "SAINT-LAURENT"
+  },
+  {
+    "codesROME": [
+      "A1101",
+      "A1205",
+      "A1405"
+    ],
+    "codeDiplome": "55729",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BPA option travaux forestiers spécialité conduite de machines forestières",
+    "commune": "SAINT-LAURENT"
+  },
+  {
+    "codesROME": [
+      "D1211",
+      "D1212",
+      "D1214"
+    ],
+    "codeDiplome": "21365",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP employé de vente spécialisé option B : produits d'équipement courant",
+    "commune": "JARNY"
+  },
+  {
+    "codesROME": [
+      "F1606"
+    ],
+    "codeDiplome": "81194",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel peintre en bâtiment",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "F1603",
+      "I1308"
+    ],
+    "codeDiplome": "103805",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel agent de maintenance d'équipements de confort climatique",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "F1611"
+    ],
+    "codeDiplome": "99495",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel façadier-peintre",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "F1604"
+    ],
+    "codeDiplome": "80735",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel plaquiste",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "F1703"
+    ],
+    "codeDiplome": "87137",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel maçon(ne)",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "F1608"
+    ],
+    "codeDiplome": "88533",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel carreleur(se)",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "F1603"
+    ],
+    "codeDiplome": "84238",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel installateur(trice) en thermique et sanitaire",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "F1610"
+    ],
+    "codeDiplome": "94169",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel couvreur(se)-zingueur(se)",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "F1703"
+    ],
+    "codeDiplome": "49806",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel maçon(ne) du bâti ancien",
+    "commune": "VERDUN"
+  },
+  {
+    "codesROME": [
+      "F1606"
+    ],
+    "codeDiplome": "98649",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel peintre en bâtiment",
+    "commune": "VERDUN"
+  },
+  {
+    "codesROME": [
+      "F1604",
+      "F1607"
+    ],
+    "codeDiplome": "100209",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel menuisier poseur-installateur",
+    "commune": "VERDUN"
+  },
+  {
+    "codesROME": [
+      "H2903",
+      "H2912"
+    ],
+    "codeDiplome": "93639",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel fraiseur(se) sur machines conventionnelles et à commande numérique",
+    "commune": "SAINT-DIZIER"
+  },
+  {
+    "codesROME": [
+      "H2903",
+      "H2912"
+    ],
+    "codeDiplome": "53659",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel tourneur(se) sur machines conventionnelles et à commande numérique",
+    "commune": "SAINT-DIZIER"
+  },
+  {
+    "codesROME": [
+      "H2913"
+    ],
+    "codeDiplome": "83970",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel soudeur(se)",
+    "commune": "SAINT-DIZIER"
+  },
+  {
+    "codesROME": [
+      "I1604"
+    ],
+    "codeDiplome": "91845",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel mécanicien(ne) de maintenance automobile",
+    "commune": "SAINT-DIZIER"
+  },
+  {
+    "codesROME": [
+      "N1103"
+    ],
+    "codeDiplome": "84244",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel préparateur(trice) de commandes en entrepôt",
+    "commune": "SAINT-DIZIER"
+  },
+  {
+    "codesROME": [
+      "H2503",
+      "H2504"
+    ],
+    "codeDiplome": "63636",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien(ne) de production industrielle",
+    "commune": "SAINT-DIZIER"
+  },
+  {
+    "codesROME": [
+      "D1403"
+    ],
+    "codeDiplome": "80728",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel commercial(e)",
+    "commune": "SEDAN"
+  },
+  {
+    "codesROME": [
+      "D1502",
+      "D1503"
+    ],
+    "codeDiplome": "99149",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel responsable de rayon",
+    "commune": "SEDAN"
+  },
+  {
+    "codesROME": [
+      "G1602"
+    ],
+    "codeDiplome": "21306",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP cuisine",
+    "commune": "SAINT-DIZIER"
+  },
+  {
+    "codesROME": [
+      "G1603",
+      "G1801",
+      "G1803"
+    ],
+    "codeDiplome": "94559",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP commercialisation et services en hôtel-café-restaurant",
+    "commune": "SAINT-DIZIER"
+  },
+  {
+    "codesROME": [
+      "H2911"
+    ],
+    "codeDiplome": "81319",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel métallier(ière)",
+    "commune": "SAINT-DIZIER"
+  },
+  {
+    "codesROME": [
+      "F1501"
+    ],
+    "codeDiplome": "88571",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel constructeur bois",
+    "commune": "SAINT-DIZIER"
+  },
+  {
+    "codesROME": [
+      "F1611"
+    ],
+    "codeDiplome": "25082",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel façadier(ière)-peintre",
+    "commune": "SAINT-DIZIER"
+  },
+  {
+    "codesROME": [
+      "F1604"
+    ],
+    "codeDiplome": "100029",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel plaquiste-plâtrier",
+    "commune": "SAINT-DIZIER"
+  },
+  {
+    "codesROME": [
+      "I1306"
+    ],
+    "codeDiplome": "81129",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel monteur(se) dépanneur(se) frigoriste",
+    "commune": "SAINT-DIZIER"
+  },
+  {
+    "codesROME": [
+      "I1607"
+    ],
+    "codeDiplome": "83153",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel mécanicien(ne) réparateur(trice) de cycles et motocycles",
+    "commune": "VERDUN"
+  },
+  {
+    "codesROME": [
+      "I1603"
+    ],
+    "codeDiplome": "78597",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel mécanicien(ne) réparateur(trice) de matériels agricoles et d'espaces verts option parcs et jardins",
+    "commune": "VERDUN"
+  },
+  {
+    "codesROME": [
+      "M1203"
+    ],
+    "codeDiplome": "99153",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel comptable assistant",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "H2911",
+      "H2914"
+    ],
+    "codeDiplome": "52862",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel agent(e) de fabrication d'ensembles métalliques",
+    "commune": "VERDUN"
+  },
+  {
+    "codesROME": [
+      "K2204"
+    ],
+    "codeDiplome": "57707",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQP agent machiniste classique en propreté",
+    "commune": "VERDUN"
+  },
+  {
+    "codesROME": [
+      "N1103",
+      "N1303"
+    ],
+    "codeDiplome": "69402",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Bac pro logistique",
+    "commune": "VERDUN"
+  },
+  {
+    "codesROME": [
+      "H1502",
+      "H2502",
+      "H2503",
+      "H2903"
+    ],
+    "codeDiplome": "83652",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "CQPM technicien(ne) d'usinage sur machines-outils à commande numérique",
+    "commune": "HAGUENAU"
+  },
+  {
+    "codesROME": [
+      "M1805"
+    ],
+    "codeDiplome": "66016",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Certificat de compétence concepteur et développeur d'Intranets - modélisation conception et développement avancés de sites web dynamiques d'Intranets",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "F1611"
+    ],
+    "codeDiplome": "58272",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQP enduiseur façadier",
+    "commune": "LUNEVILLE"
+  },
+  {
+    "codesROME": [
+      "D1101"
+    ],
+    "codeDiplome": "31999",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "CAP boucher",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "D1104"
+    ],
+    "codeDiplome": "53384",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "CAP pâtissier",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "D1102"
+    ],
+    "codeDiplome": "82703",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "CAP boulanger",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "D1103",
+      "H2101"
+    ],
+    "codeDiplome": "21211",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "CAP charcutier-traiteur",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "H1209",
+      "H1504",
+      "I1307"
+    ],
+    "codeDiplome": "18894",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "BTS électrotechnique",
+    "commune": "EPINAL"
+  },
+  {
+    "codesROME": [
+      "A1203"
+    ],
+    "codeDiplome": "55724",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BPA option travaux des aménagements paysagers spécialité travaux de création et d'entretien",
+    "commune": "SAINT-MAURICE-SUR-MORTAGNE"
+  },
+  {
+    "codesROME": [
+      "A1405",
+      "A1414"
+    ],
+    "codeDiplome": "75948",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "BP option responsable d'atelier de productions horticoles",
+    "commune": "SAINT-MAURICE-SUR-MORTAGNE"
+  },
+  {
+    "codesROME": [
+      "A1303"
+    ],
+    "codeDiplome": "53538",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Licence pro aménagement du paysage spécialité aménagement paysager (conception, gestion, entretien)",
+    "commune": "EPINAL"
+  },
+  {
+    "codesROME": [
+      "H2902",
+      "H2911"
+    ],
+    "codeDiplome": "23158",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPM opérateur(trice) en tôlerie",
+    "commune": "CAPAVENIR VOSGES"
+  },
+  {
+    "codesROME": [
+      "H2902"
+    ],
+    "codeDiplome": "69812",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel chaudronnier",
+    "commune": "CAPAVENIR VOSGES"
+  },
+  {
+    "codesROME": [
+      "F1605",
+      "I1307"
+    ],
+    "codeDiplome": "96809",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Câbleur(se)-raccordeur(se) de réseaux fibre optique et FTTH",
+    "commune": "GOLBEY"
+  },
+  {
+    "codesROME": [
+      "F1605"
+    ],
+    "codeDiplome": "81321",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel installateur(trice) de réseaux câblés de communications",
+    "commune": "EPINAL"
+  },
+  {
+    "codesROME": [
+      "I1307"
+    ],
+    "codeDiplome": "81317",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien(ne) de réseaux câblés de communications",
+    "commune": "EPINAL"
+  },
+  {
+    "codesROME": [
+      "H2903",
+      "H2904",
+      "H2905",
+      "H2906",
+      "H2907"
+    ],
+    "codeDiplome": "80139",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPM conducteur de systèmes de production automatisée",
+    "commune": "TROYES"
+  },
+  {
+    "codesROME": [
+      "I1304",
+      "I1310"
+    ],
+    "codeDiplome": "57804",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPM technicien(ne) en maintenance industrielle",
+    "commune": "ROSIERES-PRES-TROYES"
+  },
+  {
+    "codesROME": [
+      "G1303"
+    ],
+    "codeDiplome": "53826",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel conseiller(ère) en séjours et voyages",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "G1202"
+    ],
+    "codeDiplome": "82184",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel d'animateur(trice) d'activités touristiques et de loisirs",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "G1401",
+      "G1402",
+      "G1403"
+    ],
+    "codeDiplome": "25226",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel responsable d'établissement touristique",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "H2301",
+      "H2701",
+      "H2904",
+      "H2907"
+    ],
+    "codeDiplome": "77480",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Bac pro pilote de ligne de production",
+    "commune": "NEUFCHATEAU"
+  },
+  {
+    "codesROME": [
+      "A1204",
+      "A1205",
+      "A1301",
+      "K1802"
+    ],
+    "codeDiplome": "78105",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "BTSA gestion forestière",
+    "commune": "MIRECOURT"
+  },
+  {
+    "codesROME": [
+      "N1103"
+    ],
+    "codeDiplome": "81440",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel agent(e) magasinier(ière)",
+    "commune": "CHAUMONT"
+  },
+  {
+    "codesROME": [
+      "G1204"
+    ],
+    "codeDiplome": "23774",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BPJEPS spécialité activités physiques pour tous",
+    "commune": "BAZEILLES"
+  },
+  {
+    "codesROME": [
+      "I1203"
+    ],
+    "codeDiplome": "88525",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel agent d'entretien du bâtiment",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "F1604",
+      "F1606",
+      "F1611"
+    ],
+    "codeDiplome": "25007",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel chef d'équipe aménagement-finitions",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "H2906",
+      "H3301"
+    ],
+    "codeDiplome": "99221",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel conducteur d'installations et de machines automatisées",
+    "commune": "EPERNAY"
+  },
+  {
+    "codesROME": [
+      "F1603"
+    ],
+    "codeDiplome": "63806",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BEP maintenance des systèmes énergétiques et climatiques",
+    "commune": "CERNAY"
+  },
+  {
+    "codesROME": [
+      "M1203",
+      "M1602",
+      "M1608"
+    ],
+    "codeDiplome": "59627",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Assistant(e) de comptabilité et d'administration",
+    "commune": "TROYES"
+  },
+  {
+    "codesROME": [
+      "F1603"
+    ],
+    "codeDiplome": "21451",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP installateur thermique",
+    "commune": "LAXOU"
+  },
+  {
+    "codesROME": [
+      "F1606",
+      "L1503"
+    ],
+    "codeDiplome": "101949",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel peintre décorateur",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "N1103"
+    ],
+    "codeDiplome": "84314",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP opérateur/opératrice logistique",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "F1602",
+      "H1504",
+      "I1309"
+    ],
+    "codeDiplome": "88281",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Bac pro métiers de l'électricité et de ses environnements connectés",
+    "commune": "ALTKIRCH"
+  },
+  {
+    "codesROME": [
+      "I1306"
+    ],
+    "codeDiplome": "81455",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Bac pro technicien de maintenance des systèmes énergétiques et climatiques",
+    "commune": "CERNAY"
+  },
+  {
+    "codesROME": [
+      "N1302",
+      "N1303"
+    ],
+    "codeDiplome": "57928",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Titre professionnel technicien(ne) supérieur(e) en méthodes et exploitation logistique",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "D1107",
+      "D1407",
+      "D1502"
+    ],
+    "codeDiplome": "73434",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "BTSA technico-commercial produits alimentaires et boissons",
+    "commune": "LAXOU"
+  },
+  {
+    "codesROME": [
+      "D1106"
+    ],
+    "codeDiplome": "73288",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Bac pro technicien conseil vente en alimentation option produits alimentaires",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "H2903"
+    ],
+    "codeDiplome": "20311",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Bac pro technicien d'usinage",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "H2902",
+      "H2913",
+      "H2914",
+      "I1606"
+    ],
+    "codeDiplome": "62838",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Bac pro technicien en chaudronnerie industrielle",
+    "commune": "MOLSHEIM"
+  },
+  {
+    "codesROME": [
+      "A1101",
+      "A1205",
+      "A1405"
+    ],
+    "codeDiplome": "55731",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BPA option travaux forestiers spécialité travaux de sylviculture",
+    "commune": "LES LOGES-MARGUERON"
+  },
+  {
+    "codesROME": [
+      "D1402",
+      "D1403",
+      "D1408"
+    ],
+    "codeDiplome": "19004",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "BTS négociation et relation client",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "G1703"
+    ],
+    "codeDiplome": "58475",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "MC accueil-réception",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "M1604"
+    ],
+    "codeDiplome": "57473",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "BTS assistant de manager",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "D1301",
+      "D1406",
+      "D1503",
+      "D1508",
+      "M1701"
+    ],
+    "codeDiplome": "18990",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "BTS management des unités commerciales",
+    "commune": "BAR-LE-DUC"
+  },
+  {
+    "codesROME": [
+      "N1101"
+    ],
+    "codeDiplome": "84242",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel cariste d'entrepôt",
+    "commune": "FORBACH"
+  },
+  {
+    "codesROME": [
+      "I1603"
+    ],
+    "codeDiplome": "76866",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel technicien(ne) de maintenance d'engins et de matériels - machinisme agricole",
+    "commune": "TROYES"
+  },
+  {
+    "codesROME": [
+      "M1203"
+    ],
+    "codeDiplome": "18866",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "BTS comptabilité et gestion des organisations",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "I1604"
+    ],
+    "codeDiplome": "99521",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel contrôleur technique de véhicules légers",
+    "commune": "TROYES"
+  },
+  {
+    "codesROME": [
+      "M1609"
+    ],
+    "codeDiplome": "56315",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel secrétaire assistant médico-social",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "A1405",
+      "A1413"
+    ],
+    "codeDiplome": "20870",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Certificat de spécialisation commercialisation des vins",
+    "commune": "AVIZE"
+  },
+  {
+    "codesROME": [
+      "C1206"
+    ],
+    "codeDiplome": "82776",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "BTS banque conseiller de clientèle (particuliers)",
+    "commune": "TROYES"
+  },
+  {
+    "codesROME": [
+      "F1603"
+    ],
+    "codeDiplome": "84239",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien(ne) installateur(trice) en chauffage, climatisation, sanitaire et énergies renouvelables",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "I1306"
+    ],
+    "codeDiplome": "82624",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel monteur(se) - dépanneur(se) en climatisation",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "I1306",
+      "I1308"
+    ],
+    "codeDiplome": "83076",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien(ne) de maintenance des équipements thermiques",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "I1306",
+      "I1308"
+    ],
+    "codeDiplome": "103803",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien de maintenance d'équipements de confort climatique",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "F1104"
+    ],
+    "codeDiplome": "94757",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien(ne) d'études du bâtiment en dessin de projet",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "F1108"
+    ],
+    "codeDiplome": "94761",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien en économie de la construction et étude de prix",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "I1306"
+    ],
+    "codeDiplome": "101365",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien d'intervention en froid commercial et climatisation",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "F1106",
+      "I1306",
+      "I1308"
+    ],
+    "codeDiplome": "25382",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien(ne) supérieur(e) de maintenance et d'exploitation en climatique",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "F1602"
+    ],
+    "codeDiplome": "84579",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien(ne) en électricité et automatismes du bâtiment",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "I1302",
+      "I1309"
+    ],
+    "codeDiplome": "82458",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel électricien(ne) de maintenance de systèmes automatisés",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "M1808"
+    ],
+    "codeDiplome": "94141",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Titre professionnel technicien(ne) supérieur(e) en système d'information géographique",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "H2902"
+    ],
+    "codeDiplome": "81153",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPM chaudronnier d'atelier",
+    "commune": "MAXEVILLE"
+  },
+  {
+    "codesROME": [
+      "F1604",
+      "F1703"
+    ],
+    "codeDiplome": "46770",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP plâtrier-plaquiste",
+    "commune": "BAR-LE-DUC"
+  },
+  {
+    "codesROME": [
+      "H2202"
+    ],
+    "codeDiplome": "21255",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP conducteur-opérateur de scierie",
+    "commune": "SAULXURES-SUR-MOSELOTTE"
+  },
+  {
+    "codesROME": [
+      "H2205"
+    ],
+    "codeDiplome": "49902",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Bac pro technicien de scierie",
+    "commune": "SAULXURES-SUR-MOSELOTTE"
+  },
+  {
+    "codesROME": [
+      "F1503"
+    ],
+    "codeDiplome": "88569",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel charpentier(ière) bois",
+    "commune": "REMIREMONT"
+  },
+  {
+    "codesROME": [
+      "H2206"
+    ],
+    "codeDiplome": "90685",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel menuisier(ière) agenceur(se)",
+    "commune": "REMIREMONT"
+  },
+  {
+    "codesROME": [
+      "A1410"
+    ],
+    "codeDiplome": "80820",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Certificat de spécialisation conduite d'un élevage ovin viande",
+    "commune": "MIRECOURT"
+  },
+  {
+    "codesROME": [
+      "K1303"
+    ],
+    "codeDiplome": "63671",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Assistant(e) maternel(le) / garde d'enfants",
+    "commune": "VILLERS-LES-NANCY"
+  },
+  {
+    "codesROME": [
+      "G1203",
+      "K1206"
+    ],
+    "codeDiplome": "69623",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQP animateur périscolaire",
+    "commune": "MAXEVILLE"
+  },
+  {
+    "codesROME": [
+      "N1301",
+      "N1302",
+      "N1303"
+    ],
+    "codeDiplome": "74851",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Responsable en logistique",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "I1501"
+    ],
+    "codeDiplome": "50694",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQP ouvrier cordiste niveau 1",
+    "commune": "SCY-CHAZELLES"
+  },
+  {
+    "codesROME": [
+      "K2111"
+    ],
+    "codeDiplome": "25086",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel formateur(trice) professionnel(le) d'adultes",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "G1403"
+    ],
+    "codeDiplome": "46818",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Certificat de spécialisation tourisme vert, accueil et animation en milieu rural",
+    "commune": "TOUL"
+  },
+  {
+    "codesROME": [
+      "I1604"
+    ],
+    "codeDiplome": "82939",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP maintenance des véhicules option véhicules de transport routier",
+    "commune": "CHALONS-EN-CHAMPAGNE"
+  },
+  {
+    "codesROME": [
+      "G1204"
+    ],
+    "codeDiplome": "61204",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BPJEPS spécialité activités sports collectifs mention football",
+    "commune": "TROYES"
+  },
+  {
+    "codesROME": [
+      "G1202",
+      "G1203"
+    ],
+    "codeDiplome": "90313",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BPJEPS spécialité animateur mention loisirs tous publics",
+    "commune": "LA CHAPELLE-SAINT-LUC"
+  },
+  {
+    "codesROME": [
+      "F1602",
+      "F1605"
+    ],
+    "codeDiplome": "21644",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP préparation et réalisation d'ouvrages électriques",
+    "commune": "TINQUEUX"
+  },
+  {
+    "codesROME": [
+      "F1606",
+      "F1609",
+      "F1611"
+    ],
+    "codeDiplome": "21609",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP peintre-applicateur de revêtements",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "F1602"
+    ],
+    "codeDiplome": "81022",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel technicien(ne) d'équipement en électricité",
+    "commune": "TINQUEUX"
+  },
+  {
+    "codesROME": [
+      "N4101"
+    ],
+    "codeDiplome": "54647",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP conducteur routier marchandises",
+    "commune": "CHALONS-EN-CHAMPAGNE"
+  },
+  {
+    "codesROME": [
+      "F1501",
+      "F1604",
+      "F1607",
+      "F1613",
+      "F1703"
+    ],
+    "codeDiplome": "74813",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Technicien bâtiment basse consommation-Technicien BBC",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "D1212",
+      "D1214",
+      "D1401",
+      "D1403",
+      "D1408"
+    ],
+    "codeDiplome": "77533",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Vendeur conseiller commercial",
+    "commune": "TROYES"
+  },
+  {
+    "codesROME": [
+      "F1607"
+    ],
+    "codeDiplome": "51549",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP serrurier métallier",
+    "commune": "MUIZON"
+  },
+  {
+    "codesROME": [
+      "F1610"
+    ],
+    "codeDiplome": "21303",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP couvreur",
+    "commune": "MUIZON"
+  },
+  {
+    "codesROME": [
+      "F1503",
+      "H2202",
+      "H2206"
+    ],
+    "codeDiplome": "84808",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP menuisier fabricant de menuiserie, mobilier et agencement",
+    "commune": "MUIZON"
+  },
+  {
+    "codesROME": [
+      "B1601"
+    ],
+    "codeDiplome": "84261",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP ferronnier d'art",
+    "commune": "MUIZON"
+  },
+  {
+    "codesROME": [
+      "B1601"
+    ],
+    "codeDiplome": "82748",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BMA ferronnier d'art",
+    "commune": "MUIZON"
+  },
+  {
+    "codesROME": [
+      "H2903",
+      "H2912"
+    ],
+    "codeDiplome": "93641",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel tourneur(se) sur machines conventionnelles et à commande numérique",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "H2503",
+      "H2912"
+    ],
+    "codeDiplome": "86525",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien(ne) d'usinage en commande numérique",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "H1208"
+    ],
+    "codeDiplome": "94091",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien(ne) supérieur(e) en automatique et informatique industrielle",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "I1302",
+      "I1304"
+    ],
+    "codeDiplome": "93637",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien(ne) supérieur(e) de maintenance industrielle",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "D1211",
+      "D1503"
+    ],
+    "codeDiplome": "89585",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Technico-commercial en produits culturels option musique vidéo mutimédia",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "D1402",
+      "D1406",
+      "D1407",
+      "H1102"
+    ],
+    "codeDiplome": "57823",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Responsable technico-commercial France et international",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "G1204"
+    ],
+    "codeDiplome": "55735",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BPJEPS spécialité activités équestres mention équitation",
+    "commune": "LUDRES"
+  },
+  {
+    "codesROME": [
+      "A1407",
+      "A1410"
+    ],
+    "codeDiplome": "20878",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Certificat de spécialisation conduite de l'élevage laitier",
+    "commune": "HAROUE"
+  },
+  {
+    "codesROME": [
+      "I1307"
+    ],
+    "codeDiplome": "100835",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel technicien de réseaux de télécommunications",
+    "commune": "REMIREMONT"
+  },
+  {
+    "codesROME": [
+      "I1401",
+      "M1801",
+      "M1810"
+    ],
+    "codeDiplome": "100813",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Titre professionnel technicien supérieur systèmes et réseaux",
+    "commune": "REMIREMONT"
+  },
+  {
+    "codesROME": [
+      "D1403",
+      "D1404",
+      "D1501"
+    ],
+    "codeDiplome": "99295",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel conseiller commercial",
+    "commune": "REMIREMONT"
+  },
+  {
+    "codesROME": [
+      "A1412"
+    ],
+    "codeDiplome": "20893",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Certificat de spécialisation production, transformation et commercialisation des produits fermiers",
+    "commune": "HAROUE"
+  },
+  {
+    "codesROME": [
+      "A1409",
+      "A1416"
+    ],
+    "codeDiplome": "55721",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "BPA option travaux de la production animale spécialité polyculture-élevage",
+    "commune": "HAROUE"
+  },
+  {
+    "codesROME": [
+      "G1101"
+    ],
+    "codeDiplome": "80693",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel agent(e) d'accueil touristique",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "G1803"
+    ],
+    "codeDiplome": "89425",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQP serveur en restauration,spécialisation sommellerie",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "K1302",
+      "K1303",
+      "K1304"
+    ],
+    "codeDiplome": "63669",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Employé(e) familial(e)",
+    "commune": "CHAUMONT"
+  },
+  {
+    "codesROME": [
+      "H2914"
+    ],
+    "codeDiplome": "83968",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel tuyauteur(se) industriel(le)",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "G1202",
+      "G1203"
+    ],
+    "codeDiplome": "106401",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CPJEPS mention animateur d'activités et de vie quotidienne",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "H2501",
+      "H2503"
+    ],
+    "codeDiplome": "93643",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Titre professionnel technicien(ne) supérieur(e) en production industrielle",
+    "commune": "ECKBOLSHEIM"
+  },
+  {
+    "codesROME": [
+      "I1306"
+    ],
+    "codeDiplome": "81130",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien(ne) d'intervention en froid commercial et climatisation",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "H3401",
+      "H3402"
+    ],
+    "codeDiplome": "89043",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Bac pro traitements des matériaux",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "I1304",
+      "I1309",
+      "I1310"
+    ],
+    "codeDiplome": "25301",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel technicien(ne) de maintenance industrielle",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "E1103",
+      "E1104",
+      "E1205"
+    ],
+    "codeDiplome": "76754",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Développeur web",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "I1401",
+      "M1810"
+    ],
+    "codeDiplome": "53280",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Gestionnaire en maintenance et support informatique",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "M1802",
+      "M1803",
+      "M1804",
+      "M1806"
+    ],
+    "codeDiplome": "95141",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Responsable en ingénierie systèmes et réseaux",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "K1801"
+    ],
+    "codeDiplome": "99285",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Titre professionnel conseiller en insertion professionnelle",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "I1305",
+      "I1307",
+      "I1402"
+    ],
+    "codeDiplome": "82718",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel agent(e) d'installation et de maintenance des équipements numériques",
+    "commune": "REMIREMONT"
+  },
+  {
+    "codesROME": [
+      "H2503"
+    ],
+    "codeDiplome": "57803",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPM pilote de systèmes de production automatisée",
+    "commune": "SAINTE-MARGUERITE"
+  },
+  {
+    "codesROME": [
+      "K2503"
+    ],
+    "codeDiplome": "68986",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP agent de sécurité",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "D1408"
+    ],
+    "codeDiplome": "20635",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "MC assistance, conseil, vente à distance",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "F1601",
+      "F1602",
+      "F1603",
+      "F1604",
+      "F1606"
+    ],
+    "codeDiplome": "65937",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Habilitation électrique B0 chargé de travaux d'ordre non électrique, basse tension",
+    "commune": "FREYMING-MERLEBACH"
+  },
+  {
+    "codesROME": [
+      "I1306",
+      "I1308"
+    ],
+    "codeDiplome": "86005",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien de maintenance d'équipements de chauffage, de climatisation et d'énergies renouvelables",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "F1607"
+    ],
+    "codeDiplome": "25212",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel poseur(se) installateur(trice) menuiseries, fermetures et équipements",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "F1202",
+      "H1202"
+    ],
+    "codeDiplome": "84578",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel de technicien(ne) de bureau d'études en électricité",
+    "commune": "FROUARD"
+  },
+  {
+    "codesROME": [
+      "I1401"
+    ],
+    "codeDiplome": "82686",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel installateur(trice) dépanneur(se) en informatique",
+    "commune": "FROUARD"
+  },
+  {
+    "codesROME": [
+      "I1401"
+    ],
+    "codeDiplome": "80272",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel technicien(ne) d'assistance en informatique",
+    "commune": "FROUARD"
+  },
+  {
+    "codesROME": [
+      "I1402"
+    ],
+    "codeDiplome": "83147",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien(ne) de maintenance en multimédia et électrodomestique",
+    "commune": "FROUARD"
+  },
+  {
+    "codesROME": [
+      "A1201"
+    ],
+    "codeDiplome": "22073",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "CAPA travaux forestiers spécialité bûcheronnage",
+    "commune": "SELESTAT"
+  },
+  {
+    "codesROME": [
+      "M1805"
+    ],
+    "codeDiplome": "100805",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Titre professionnel concepteur développeur d'applications",
+    "commune": "FROUARD"
+  },
+  {
+    "codesROME": [
+      "M1805"
+    ],
+    "codeDiplome": "100809",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Titre professionnel développeur web et web mobile",
+    "commune": "FROUARD"
+  },
+  {
+    "codesROME": [
+      "I1302",
+      "I1304"
+    ],
+    "codeDiplome": "31969",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Titre professionnel technicien(ne) supérieur(e) de maintenance industrielle",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "A1101",
+      "A1201",
+      "A1205"
+    ],
+    "codeDiplome": "75841",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "BP option responsable de chantiers forestiers",
+    "commune": "MIRECOURT"
+  },
+  {
+    "codesROME": [
+      "M1805"
+    ],
+    "codeDiplome": "80738",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel développeur(se) logiciel",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "F1108"
+    ],
+    "codeDiplome": "94755",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien(ne) métreur(euse) en réhabilitation de l'habitat",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "F1104",
+      "F1106"
+    ],
+    "codeDiplome": "86222",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien(ne) études en construction bois",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "F1201"
+    ],
+    "codeDiplome": "81020",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel conducteur de travaux aménagement finitions",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "F1104",
+      "H2209"
+    ],
+    "codeDiplome": "95011",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien(ne) d'études en menuiserie d'agencement",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "F1106",
+      "F1108"
+    ],
+    "codeDiplome": "94609",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien supérieur du bâtiment en économie de la construction",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "F1104",
+      "F1106"
+    ],
+    "codeDiplome": "81025",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel technicien(ne) supérieur(e) d'études en génie climatique",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "G1603"
+    ],
+    "codeDiplome": "88687",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel agent(e) de restauration",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "G1602"
+    ],
+    "codeDiplome": "68507",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Cuisinier",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "M1203",
+      "M1206"
+    ],
+    "codeDiplome": "81504",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Titre professionnel comptable gestionnaire",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "G1603"
+    ],
+    "codeDiplome": "89409",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQP agent de restauration",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "H2102"
+    ],
+    "codeDiplome": "84985",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP agricole opérateur en industries agroalimentaires option transformation de produits alimentaires",
+    "commune": "BAR-LE-DUC"
+  },
+  {
+    "codesROME": [
+      "D1101",
+      "D1103",
+      "H2101",
+      "H2102"
+    ],
+    "codeDiplome": "58833",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BPA option transformations alimentaires spécialité transformation de produits alimentaires",
+    "commune": "BAR-LE-DUC"
+  },
+  {
+    "codesROME": [
+      "H2102",
+      "H3301",
+      "H3302"
+    ],
+    "codeDiplome": "63447",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BP option industries alimentaires",
+    "commune": "BAR-LE-DUC"
+  },
+  {
+    "codesROME": [
+      "B1401"
+    ],
+    "codeDiplome": "21769",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP vannerie",
+    "commune": "FAYL-BILLOT"
+  },
+  {
+    "codesROME": [
+      "B1101",
+      "B1201",
+      "F1102",
+      "G1203",
+      "K1206"
+    ],
+    "codeDiplome": "78924",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Plasticien-céramiste",
+    "commune": "BOIS-DE-HAYE"
+  },
+  {
+    "codesROME": [
+      "B1101",
+      "B1201",
+      "B1301",
+      "G1202",
+      "G1203"
+    ],
+    "codeDiplome": "96941",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Créateur en arts céramiques",
+    "commune": "GUEBWILLER"
+  },
+  {
+    "codesROME": [
+      "H2207",
+      "H2208"
+    ],
+    "codeDiplome": "21338",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP ébéniste",
+    "commune": "LIFFOL-LE-GRAND"
+  },
+  {
+    "codesROME": [
+      "H2206"
+    ],
+    "codeDiplome": "21523",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP menuisier en sièges",
+    "commune": "NEUFCHATEAU"
+  },
+  {
+    "codesROME": [
+      "B1302",
+      "F1503",
+      "H2206",
+      "H2207",
+      "H2208"
+    ],
+    "codeDiplome": "21154",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP arts du bois option sculpteur ornemaniste",
+    "commune": "NEUFCHATEAU"
+  },
+  {
+    "codesROME": [
+      "H2204",
+      "H2207",
+      "H2208"
+    ],
+    "codeDiplome": "82627",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BMA ébéniste",
+    "commune": "NEUFCHATEAU"
+  },
+  {
+    "codesROME": [
+      "B1806",
+      "H2207",
+      "H2208"
+    ],
+    "codeDiplome": "46619",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "DMA habitat option décors et mobiliers",
+    "commune": "NEUFCHATEAU"
+  },
+  {
+    "codesROME": [
+      "B1806"
+    ],
+    "codeDiplome": "21739",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP tapissier-tapissière d'ameublement en décor",
+    "commune": "NEUFCHATEAU"
+  },
+  {
+    "codesROME": [
+      "B1806"
+    ],
+    "codeDiplome": "20167",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Bac pro artisanat et métiers d'art option tapissier d'ameublement",
+    "commune": "NEUFCHATEAU"
+  },
+  {
+    "codesROME": [
+      "F1612"
+    ],
+    "codeDiplome": "80757",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP tailleur de pierre",
+    "commune": "REMIREMONT"
+  },
+  {
+    "codesROME": [
+      "F1612"
+    ],
+    "codeDiplome": "82179",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BMA spécialité gravure sur pierre",
+    "commune": "REMIREMONT"
+  },
+  {
+    "codesROME": [
+      "B1803",
+      "H2402"
+    ],
+    "codeDiplome": "74733",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP métiers de la mode, vêtement flou",
+    "commune": "CAPAVENIR VOSGES"
+  },
+  {
+    "codesROME": [
+      "B1804"
+    ],
+    "codeDiplome": "55800",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP arts de la broderie dominante broderie à la main",
+    "commune": "LUNEVILLE"
+  },
+  {
+    "codesROME": [
+      "B1804"
+    ],
+    "codeDiplome": "81665",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BMA spécialité broderie",
+    "commune": "LUNEVILLE"
+  },
+  {
+    "codesROME": [
+      "F1501",
+      "F1503",
+      "H2206"
+    ],
+    "codeDiplome": "84805",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP constructeur bois",
+    "commune": "EPINAL"
+  },
+  {
+    "codesROME": [
+      "A1203"
+    ],
+    "codeDiplome": "81196",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel ouvrier du paysage",
+    "commune": "MONTMEDY"
+  },
+  {
+    "codesROME": [
+      "H2913"
+    ],
+    "codeDiplome": "23162",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPM soudeur(euse)",
+    "commune": "TOUL"
+  },
+  {
+    "codesROME": [
+      "G1603"
+    ],
+    "codeDiplome": "85007",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Formation spécifique en matière d'hygiène alimentaire adaptée à l'activité des établissements de restauration commerciale",
+    "commune": "MAXEVILLE"
+  },
+  {
+    "codesROME": [
+      "K2111"
+    ],
+    "codeDiplome": "86204",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Formateur en sauvetage secourisme du travail (SST)",
+    "commune": "MAXEVILLE"
+  },
+  {
+    "codesROME": [
+      "H3302"
+    ],
+    "codeDiplome": "24906",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel agent(e) de fabrication industrielle",
+    "commune": "OERMINGEN"
+  },
+  {
+    "codesROME": [
+      "B1602"
+    ],
+    "codeDiplome": "21164",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "CAP arts et techniques du verre option vitrailliste",
+    "commune": "VANNES-LE-CHATEL"
+  },
+  {
+    "codesROME": [
+      "B1602"
+    ],
+    "codeDiplome": "21160",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "CAP arts et techniques du verre option décorateur sur verre",
+    "commune": "VANNES-LE-CHATEL"
+  },
+  {
+    "codesROME": [
+      "B1602"
+    ],
+    "codeDiplome": "63655",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "CAP arts du verre et du cristal",
+    "commune": "VANNES-LE-CHATEL"
+  },
+  {
+    "codesROME": [
+      "B1101",
+      "B1302",
+      "B1602"
+    ],
+    "codeDiplome": "94527",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Créateur verrier",
+    "commune": "VANNES-LE-CHATEL"
+  },
+  {
+    "codesROME": [
+      "G1202",
+      "G1203"
+    ],
+    "codeDiplome": "94573",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "BPJEPS spécialité animateur mention animation culturelle",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "D1202"
+    ],
+    "codeDiplome": "54649",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP coiffure",
+    "commune": "THIONVILLE"
+  },
+  {
+    "codesROME": [
+      "D1208"
+    ],
+    "codeDiplome": "58778",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP esthétique, cosmétique, parfumerie",
+    "commune": "THIONVILLE"
+  },
+  {
+    "codesROME": [
+      "D1106"
+    ],
+    "codeDiplome": "77487",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Vendeur en boulangerie-pâtisserie (CTM)",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "G1204"
+    ],
+    "codeDiplome": "93223",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "BPJEPS spécialité éducateur sportif mention activités équestres option B : approfondissement technique",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "G1204"
+    ],
+    "codeDiplome": "90831",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BPJEPS spécialité éducateur sportif mention activités de la forme option cours collectifs",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "G1204"
+    ],
+    "codeDiplome": "71557",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BPJEPS spécialité activités aquatiques et de la natation",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "G1204"
+    ],
+    "codeDiplome": "89805",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BPJEPS spécialité éducateur sportif mention activités physiques pour tous",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "H2903"
+    ],
+    "codeDiplome": "50486",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPM équipier(ère) autonome de production industrielle",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "K2503"
+    ],
+    "codeDiplome": "96173",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQP agent de prévention et de sécurité",
+    "commune": "VILLERS-LES-NANCY"
+  },
+  {
+    "codesROME": [
+      "A1401",
+      "A1405"
+    ],
+    "codeDiplome": "91909",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Certificat d'aptitude à la taille de la vigne",
+    "commune": "BAR-SUR-SEINE"
+  },
+  {
+    "codesROME": [
+      "G1603",
+      "G1803"
+    ],
+    "codeDiplome": "21129",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP agent polyvalent de restauration",
+    "commune": "MOLSHEIM"
+  },
+  {
+    "codesROME": [
+      "G1603"
+    ],
+    "codeDiplome": "83551",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQP employé(e) de restauration rapide",
+    "commune": "BAR-SUR-AUBE"
+  },
+  {
+    "codesROME": [
+      "G1501"
+    ],
+    "codeDiplome": "21685",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP services hôteliers",
+    "commune": "SCHILTIGHEIM"
+  },
+  {
+    "codesROME": [
+      "K1706",
+      "K2502",
+      "K2503"
+    ],
+    "codeDiplome": "55515",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Service de sécurité incendie et d'assistance aux personnes de niveau 1 (SSIAP 1) - diplôme d'agent de service",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "G1204"
+    ],
+    "codeDiplome": "23714",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Brevet national de sécurité et sauvetage aquatique",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "H2902",
+      "H2913"
+    ],
+    "codeDiplome": "83997",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Soudeur TIG et semi-automatique",
+    "commune": "CHALONS-EN-CHAMPAGNE"
+  },
+  {
+    "codesROME": [
+      "J1301",
+      "K2204"
+    ],
+    "codeDiplome": "99291",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel agent de propreté et d'hygiène",
+    "commune": "TOUL"
+  },
+  {
+    "codesROME": [
+      "J1301",
+      "K2204"
+    ],
+    "codeDiplome": "81122",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel agent(e) de propreté et d'hygiène",
+    "commune": "SARREBOURG"
+  },
+  {
+    "codesROME": [
+      "D1106",
+      "D1505",
+      "D1507"
+    ],
+    "codeDiplome": "50304",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "CQP employé de commerce",
+    "commune": "SARREBOURG"
+  },
+  {
+    "codesROME": [
+      "N4105"
+    ],
+    "codeDiplome": "25049",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel conducteur(trice) livreur(euse) sur véhicule utilitaire léger",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1403",
+      "M1802",
+      "M1805",
+      "M1806"
+    ],
+    "codeDiplome": "100203",
+    "niveauEtudeEntree": "bac-5",
+    "intitule": "Analyser les données : intégration, exploitation, visualisation, industrialisation",
+    "commune": "SCHILTIGHEIM"
+  },
+  {
+    "codesROME": [
+      "K2503"
+    ],
+    "codeDiplome": "77099",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Agent de prévention et de sécurité",
+    "commune": "YUTZ"
+  },
+  {
+    "codesROME": [
+      "M1805"
+    ],
+    "codeDiplome": "80737",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Titre professionnel concepteur(trice)-développeur(se) informatique",
+    "commune": "FROUARD"
+  },
+  {
+    "codesROME": [
+      "G1503"
+    ],
+    "codeDiplome": "83601",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "CQP gouvernant d'hôtel",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "A1101"
+    ],
+    "codeDiplome": "91911",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Certificat d'agroéquipement viticole",
+    "commune": "BAR-SUR-SEINE"
+  },
+  {
+    "codesROME": [
+      "F1605"
+    ],
+    "codeDiplome": "80564",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQP monteur raccordeur FTTH (fiber to the home)",
+    "commune": "VERDUN"
+  },
+  {
+    "codesROME": [
+      "F1612"
+    ],
+    "codeDiplome": "25255",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel tailleur de pierre",
+    "commune": "LANGRES"
+  },
+  {
+    "codesROME": [
+      "I1604"
+    ],
+    "codeDiplome": "82940",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP maintenance des véhicules option voitures particulières",
+    "commune": "SAVERNE"
+  },
+  {
+    "codesROME": [
+      "F1107"
+    ],
+    "codeDiplome": "25413",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Titre professionnel technicien(ne) supérieur(e) géomètre topographe option entreprise de travaux publics",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "I1401"
+    ],
+    "codeDiplome": "100833",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel technicien d'assistance en informatique",
+    "commune": "YUTZ"
+  },
+  {
+    "codesROME": [
+      "F1602",
+      "F1603"
+    ],
+    "codeDiplome": "69036",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "MC technicien en énergies renouvelables option A : énergie électrique",
+    "commune": "LONGWY"
+  },
+  {
+    "codesROME": [
+      "K2111"
+    ],
+    "codeDiplome": "99289",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Titre professionnel formateur professionnel d'adultes",
+    "commune": "TROYES"
+  },
+  {
+    "codesROME": [
+      "F1705"
+    ],
+    "codeDiplome": "21277",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP constructeur en canalisations des travaux publics",
+    "commune": "LUNEVILLE"
+  },
+  {
+    "codesROME": [
+      "M1802",
+      "M1805"
+    ],
+    "codeDiplome": "85665",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Licence pro métiers de l'informatique : conception, développement et test de logiciels",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "I1606"
+    ],
+    "codeDiplome": "58560",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Bac pro réparation des carrosseries",
+    "commune": "BEHREN-LES-FORBACH"
+  },
+  {
+    "codesROME": [
+      "N4101",
+      "N4104",
+      "N4105"
+    ],
+    "codeDiplome": "84557",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Formation continue obligatoire (FCO) - transport de marchandises",
+    "commune": "FORBACH"
+  },
+  {
+    "codesROME": [
+      "F1701",
+      "F1703"
+    ],
+    "codeDiplome": "21466",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP maçon",
+    "commune": "BAR-LE-DUC"
+  },
+  {
+    "codesROME": [
+      "A1405",
+      "A1413"
+    ],
+    "codeDiplome": "64256",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "BTSA viticulture-oenologie",
+    "commune": "ROUFFACH"
+  },
+  {
+    "codesROME": [
+      "H2903"
+    ],
+    "codeDiplome": "23190",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPM tourneur(euse) industriel",
+    "commune": "GUEBWILLER"
+  },
+  {
+    "codesROME": [
+      "H2903"
+    ],
+    "codeDiplome": "23153",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPM fraiseur(euse) industriel",
+    "commune": "GUEBWILLER"
+  },
+  {
+    "codesROME": [
+      "I1604"
+    ],
+    "codeDiplome": "82775",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Bac pro maintenance des véhicules option A voitures particulières",
+    "commune": "BEHREN-LES-FORBACH"
+  },
+  {
+    "codesROME": [
+      "H2909"
+    ],
+    "codeDiplome": "23137",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPM assembleur(euse) monteur(euse) de systèmes mécanisés",
+    "commune": "ECKBOLSHEIM"
+  },
+  {
+    "codesROME": [
+      "H2102",
+      "H2903",
+      "H2904",
+      "H2905",
+      "H2907"
+    ],
+    "codeDiplome": "57785",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPM conducteur d'équipements industriels",
+    "commune": "ECKBOLSHEIM"
+  },
+  {
+    "codesROME": [
+      "I1304",
+      "I1310"
+    ],
+    "codeDiplome": "57800",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "CQPM opérateur(trice) en maintenance industrielle",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "F1301"
+    ],
+    "codeDiplome": "83331",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel conducteur de grue à tour",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "H2913"
+    ],
+    "codeDiplome": "23163",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPM soudeur industriel",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "N1103"
+    ],
+    "codeDiplome": "102923",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel agent magasinier",
+    "commune": "TOUL"
+  },
+  {
+    "codesROME": [
+      "H2603",
+      "H2903",
+      "H2905"
+    ],
+    "codeDiplome": "23159",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPM opérateur sur machines outils de production",
+    "commune": "SAVERNE"
+  },
+  {
+    "codesROME": [
+      "E1101",
+      "G1202"
+    ],
+    "codeDiplome": "86555",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel conseiller(ère) médiateur(trice) en numérique",
+    "commune": "TROYES"
+  },
+  {
+    "codesROME": [
+      "G1203",
+      "K1206"
+    ],
+    "codeDiplome": "75945",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "BPJEPS spécialité éducation à l'environnement vers un développement durable",
+    "commune": "SELESTAT"
+  },
+  {
+    "codesROME": [
+      "K1302"
+    ],
+    "codeDiplome": "22077",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "MC aide à domicile",
+    "commune": "SAVERNE"
+  },
+  {
+    "codesROME": [
+      "F1103",
+      "F1105",
+      "F1106",
+      "F1201",
+      "F1204"
+    ],
+    "codeDiplome": "53397",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Ingénieur diplômé du conservatoire national des arts et métiers spécialité construction et aménagement",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "H1206",
+      "H2502"
+    ],
+    "codeDiplome": "58967",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Ingénieur diplômé du conservatoire national des arts et métiers spécialité matériaux",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "H1206"
+    ],
+    "codeDiplome": "50921",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Titre d'ingénieur diplômé par l'Etat spécialité mécanique",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "F1103",
+      "F1105",
+      "F1106",
+      "F1201",
+      "F1204"
+    ],
+    "codeDiplome": "104389",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Ingénieur diplômé du conservatoire national des arts et métiers spécialité construction et aménagement en partenariat avec l'IF3E",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "H1206"
+    ],
+    "codeDiplome": "85124",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Titre d'ingénieur diplômé par l'Etat spécialité génie électrique",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "H1206",
+      "H2502"
+    ],
+    "codeDiplome": "80038",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Ingénieur diplômé du conservatoire national des arts et métiers spécialité systèmes électroniques",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "F1106",
+      "H1206",
+      "H1302",
+      "K2306"
+    ],
+    "codeDiplome": "58963",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Ingénieur diplômé du conservatoire national des arts et métiers spécialité énergétique",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "H2502"
+    ],
+    "codeDiplome": "81080",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Ingénieur diplômé du conservatoire national des arts et métiers spécialité génie des procédés",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "H1206",
+      "H1501",
+      "H1502",
+      "H2502"
+    ],
+    "codeDiplome": "58966",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Ingénieur diplômé du conservatoire national des arts et métiers spécialité mesure-analyse",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "D1407",
+      "H1206",
+      "H1302",
+      "H1502",
+      "H2502"
+    ],
+    "codeDiplome": "80080",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Ingénieur diplômé du conservatoire national des arts et métiers spécialité agroalimentaire",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "H1206",
+      "H1402",
+      "H2505"
+    ],
+    "codeDiplome": "58968",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Ingénieur diplômé du conservatoire national des arts et métiers spécialité mécanique",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "H1206",
+      "H1402",
+      "H1502",
+      "H2502"
+    ],
+    "codeDiplome": "96833",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Responsable en ingénierie d'étude et de production option production",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "F1106",
+      "F1201"
+    ],
+    "codeDiplome": "103507",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro mention métiers du BTP : bâtiment et construction",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "F1201"
+    ],
+    "codeDiplome": "78955",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "DEUST sciences, technologies, santé spécialité bâtiment et construction spécialité(s) : conduite de travaux en éco-construction",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "K1201",
+      "K1205",
+      "K1206",
+      "K1801",
+      "K2101"
+    ],
+    "codeDiplome": "63695",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Chargé d'accompagnement social et professionnel",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "N4201"
+    ],
+    "codeDiplome": "65982",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Certificat de compétence responsable d'une unité de transports de marchandises et logistique",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "K1206",
+      "K1801",
+      "K2111",
+      "K2112"
+    ],
+    "codeDiplome": "79301",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro sciences humaines et sociales mention intervention sociale spécialité intervention sociale",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "K2101",
+      "K2102",
+      "K2103",
+      "K2111",
+      "M1502"
+    ],
+    "codeDiplome": "53699",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Responsable de projets de formation",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "K1206",
+      "K1302",
+      "K1403",
+      "K1802"
+    ],
+    "codeDiplome": "95139",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Responsable associatif",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "G1102",
+      "G1201"
+    ],
+    "codeDiplome": "91055",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro arts, lettres, langues mention guide conférencier",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "K1104",
+      "K2112",
+      "K2401",
+      "M1402"
+    ],
+    "codeDiplome": "82860",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Psychologue du travail",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "G1101",
+      "G1703",
+      "M1601"
+    ],
+    "codeDiplome": "96931",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Chargé(e) d'accueil",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "K1601"
+    ],
+    "codeDiplome": "98253",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro sciences humaines et sociales mention métiers de l'information : archives, médiation et patrimoine",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "H1302"
+    ],
+    "codeDiplome": "77015",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Responsable de projet santé, sécurité au travail",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "J1502",
+      "K1403",
+      "M1205",
+      "M1302",
+      "M1503"
+    ],
+    "codeDiplome": "62725",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Gestionnaire d'établissements médicaux et médico-sociaux",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "K1403",
+      "K1903"
+    ],
+    "codeDiplome": "60876",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Master droit, économie, gestion mention droit spécialité droit de la santé",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1805",
+      "M1810"
+    ],
+    "codeDiplome": "96949",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Technicien(ne) développeur(euse)",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "I1401"
+    ],
+    "codeDiplome": "54522",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Certificat professionnel technicien de maintenance micro réseaux et internet spécialisation cybersécurité des PME",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1805"
+    ],
+    "codeDiplome": "54547",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Certificat professionnel programmation de sites web",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "I1401",
+      "M1801",
+      "M1802",
+      "M1805",
+      "M1810"
+    ],
+    "codeDiplome": "92897",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence mention informatique",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1801",
+      "M1805"
+    ],
+    "codeDiplome": "52840",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Concepteur en architecture informatique",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1803",
+      "M1804",
+      "M1805",
+      "M1806"
+    ],
+    "codeDiplome": "58965",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Ingénieur diplômé du conservatoire national des arts et métiers spécialité informatique",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "D1407"
+    ],
+    "codeDiplome": "80867",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "CQP Technicien, agent de maintenance qualifié (domaine informatique)",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1402",
+      "M1503"
+    ],
+    "codeDiplome": "86383",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Management de proximité - CP FFP",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "C1501",
+      "C1502"
+    ],
+    "codeDiplome": "77552",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Gestionnaire immobilier",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "C1503",
+      "C1504"
+    ],
+    "codeDiplome": "77531",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Responsable de programme immobilier",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "D1408"
+    ],
+    "codeDiplome": "82849",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Certificat professionnel téléconseiller / télévendeur",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "D1401",
+      "M1203",
+      "M1501",
+      "M1604",
+      "M1605"
+    ],
+    "codeDiplome": "53272",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Assistant de gestion",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1202",
+      "M1203",
+      "M1204",
+      "M1205",
+      "M1206"
+    ],
+    "codeDiplome": "31461",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Responsable comptable",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1203",
+      "M1205"
+    ],
+    "codeDiplome": "65974",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Certificat de compétence contrôle de gestion",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "K1902"
+    ],
+    "codeDiplome": "65968",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Certificat de compétence droit des affaires",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1203",
+      "M1205",
+      "M1401",
+      "M1604",
+      "M1605"
+    ],
+    "codeDiplome": "92839",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence mention gestion",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1203",
+      "M1501",
+      "M1605"
+    ],
+    "codeDiplome": "103621",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro mention métiers de la gestion et de la comptabilité : comptabilité et paie",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1202",
+      "M1203"
+    ],
+    "codeDiplome": "91607",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Master droit, économie, gestion mention comptabilité - contrôle - audit",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1203"
+    ],
+    "codeDiplome": "56788",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Diplôme de gestion et de comptabilité",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1704",
+      "M1705",
+      "M1706",
+      "M1707"
+    ],
+    "codeDiplome": "69906",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Responsable commercial et marketing",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "K1403",
+      "M1205",
+      "M1301",
+      "M1302"
+    ],
+    "codeDiplome": "31512",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Responsable en gestion",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "D1407",
+      "M1205",
+      "M1605"
+    ],
+    "codeDiplome": "91237",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro droit, économie, gestion mention management et gestion des organisations",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1502",
+      "M1503"
+    ],
+    "codeDiplome": "65975",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Certificat de compétence initiation à la fonction RH",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "K1104",
+      "K2401"
+    ],
+    "codeDiplome": "84493",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Master sciences humaines et sociales mention psychologie",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "K1902"
+    ],
+    "codeDiplome": "65969",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Certificat de compétence conseil en droit social appliqué à l'entreprise",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1502",
+      "M1503"
+    ],
+    "codeDiplome": "52900",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Responsable ressources humaines",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1203"
+    ],
+    "codeDiplome": "56794",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Diplôme supérieur de gestion et de comptabilité",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1805",
+      "M1810"
+    ],
+    "codeDiplome": "105119",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Technicien développeur",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "F1611"
+    ],
+    "codeDiplome": "80557",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQP façadier iteiste",
+    "commune": "ARCHES"
+  },
+  {
+    "codesROME": [
+      "K2501",
+      "K2502",
+      "K2503"
+    ],
+    "codeDiplome": "94459",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Agent de prévention et de sécurité",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "K2203"
+    ],
+    "codeDiplome": "78841",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Bac pro hygiène, propreté, stérilisation",
+    "commune": "HAGUENAU"
+  },
+  {
+    "codesROME": [
+      "J1302"
+    ],
+    "codeDiplome": "54459",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BTS analyses de biologie médicale",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "H1210",
+      "H1404",
+      "H1503",
+      "H1506",
+      "H2301"
+    ],
+    "codeDiplome": "87931",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BTS métiers de la chimie",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "K1201",
+      "K1403"
+    ],
+    "codeDiplome": "53410",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BTS services et prestations des secteurs sanitaire et social",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "D1401",
+      "M1203",
+      "M1501",
+      "M1607"
+    ],
+    "codeDiplome": "76930",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Bac pro gestion-administration",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "C1501",
+      "C1502",
+      "C1503",
+      "C1504"
+    ],
+    "codeDiplome": "77615",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BTS professions immobilières",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "H1208",
+      "I1301",
+      "I1302"
+    ],
+    "codeDiplome": "75791",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BTS conception et réalisation de systèmes automatiques",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "F1608"
+    ],
+    "codeDiplome": "21197",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP carreleur mosaïste",
+    "commune": "ILLKIRCH-GRAFFENSTADEN"
+  },
+  {
+    "codesROME": [
+      "F1202"
+    ],
+    "codeDiplome": "81448",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Bac pro technicien d'études du bâtiment option assistant en architecture",
+    "commune": "ILLKIRCH-GRAFFENSTADEN"
+  },
+  {
+    "codesROME": [
+      "N3103"
+    ],
+    "codeDiplome": "74779",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP transport fluvial",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "D1104"
+    ],
+    "codeDiplome": "106291",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP pâtissier",
+    "commune": "SARREBOURG"
+  },
+  {
+    "codesROME": [
+      "D1105"
+    ],
+    "codeDiplome": "53385",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP poissonnier écailler",
+    "commune": "SAVERNE"
+  },
+  {
+    "codesROME": [
+      "D1104",
+      "G1602"
+    ],
+    "codeDiplome": "58434",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "MC cuisinier en desserts de restaurant",
+    "commune": "ILLKIRCH-GRAFFENSTADEN"
+  },
+  {
+    "codesROME": [
+      "I1606"
+    ],
+    "codeDiplome": "53381",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP réparation des carrosseries",
+    "commune": "SCHILTIGHEIM"
+  },
+  {
+    "codesROME": [
+      "M1203",
+      "M1501",
+      "M1604"
+    ],
+    "codeDiplome": "100367",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BTS gestion de la PME",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "D1408",
+      "M1601"
+    ],
+    "codeDiplome": "69404",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Bac pro accueil - relation clients et usagers",
+    "commune": "ROMILLY-SUR-SEINE"
+  },
+  {
+    "codesROME": [
+      "K1302",
+      "K1305"
+    ],
+    "codeDiplome": "21169",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP assistant(e) technique en milieux familial et collectif",
+    "commune": "SAINT-DIE-DES-VOSGES"
+  },
+  {
+    "codesROME": [
+      "H1208",
+      "M1805"
+    ],
+    "codeDiplome": "76576",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BTS services informatiques aux organisations option B : solutions logicielles et applications métiers",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "I1305",
+      "I1307"
+    ],
+    "codeDiplome": "88073",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Bac pro systèmes numériques option C réseaux informatiques et systèmes communicants",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "D1106"
+    ],
+    "codeDiplome": "21364",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP employé de vente spécialisé option A : produits alimentaires",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "F1607",
+      "H2201",
+      "H2202",
+      "H2206"
+    ],
+    "codeDiplome": "84811",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP menuisier installateur",
+    "commune": "SAVERNE"
+  },
+  {
+    "codesROME": [
+      "K1302"
+    ],
+    "codeDiplome": "74914",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Bac pro accompagnement, soins et services à la personne option B en structure",
+    "commune": "SAINT-DIE-DES-VOSGES"
+  },
+  {
+    "codesROME": [
+      "H2902",
+      "H2913",
+      "H2914",
+      "I1606"
+    ],
+    "codeDiplome": "97049",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Bac pro technicien en chaudronnerie industrielle",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "F1607"
+    ],
+    "codeDiplome": "83069",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP menuisier aluminium-verre",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "G1402"
+    ],
+    "codeDiplome": "37548",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "MC organisateur de réceptions",
+    "commune": "ILLKIRCH-GRAFFENSTADEN"
+  },
+  {
+    "codesROME": [
+      "D1401",
+      "E1103",
+      "M1607",
+      "M1608"
+    ],
+    "codeDiplome": "96929",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Assistant(e) d'administration commerciale et de communication",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "D1209"
+    ],
+    "codeDiplome": "100735",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP fleuriste",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "D1103",
+      "D1106"
+    ],
+    "codeDiplome": "22098",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "MC employé traiteur",
+    "commune": "ILLKIRCH-GRAFFENSTADEN"
+  },
+  {
+    "codesROME": [
+      "F1503",
+      "F1607",
+      "H2206"
+    ],
+    "codeDiplome": "84818",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Bac pro technicien menuisier agenceur",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "I1604"
+    ],
+    "codeDiplome": "82936",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP maintenance des véhicules option motocycles",
+    "commune": "OBERNAI"
+  },
+  {
+    "codesROME": [
+      "G1804"
+    ],
+    "codeDiplome": "58310",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "MC sommellerie",
+    "commune": "GUEBWILLER"
+  },
+  {
+    "codesROME": [
+      "I1203"
+    ],
+    "codeDiplome": "21469",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP maintenance de bâtiments de collectivités",
+    "commune": "HAGUENAU"
+  },
+  {
+    "codesROME": [
+      "F1602",
+      "F1605"
+    ],
+    "codeDiplome": "100739",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP électricien",
+    "commune": "INGERSHEIM"
+  },
+  {
+    "codesROME": [
+      "G1503"
+    ],
+    "codeDiplome": "103091",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQP gouvernant en établissement de santé",
+    "commune": "ILLKIRCH-GRAFFENSTADEN"
+  },
+  {
+    "codesROME": [
+      "H3404"
+    ],
+    "codeDiplome": "53383",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP peinture en carrosserie",
+    "commune": "ILLZACH"
+  },
+  {
+    "codesROME": [
+      "K2502",
+      "K2503"
+    ],
+    "codeDiplome": "20669",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BP agent technique de prévention et de sécurité",
+    "commune": "SCHILTIGHEIM"
+  },
+  {
+    "codesROME": [
+      "D1102",
+      "D1104"
+    ],
+    "codeDiplome": "62812",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Bac pro boulanger pâtissier",
+    "commune": "SARREGUEMINES"
+  },
+  {
+    "codesROME": [
+      "H2505"
+    ],
+    "codeDiplome": "62534",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Bac pro métiers de la mode - vêtements",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "F1104"
+    ],
+    "codeDiplome": "81451",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Bac pro technicien d'études du bâtiment option études et économie",
+    "commune": "MONTIGNY-LES-METZ"
+  },
+  {
+    "codesROME": [
+      "H2907",
+      "H3401"
+    ],
+    "codeDiplome": "87929",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BTS fonderie",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "D1401",
+      "D1406",
+      "D1501",
+      "M1703",
+      "M1704"
+    ],
+    "codeDiplome": "100357",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BTS négociation et digitalisation de la relation client",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "G1301",
+      "G1303"
+    ],
+    "codeDiplome": "77618",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BTS tourisme",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "K1303"
+    ],
+    "codeDiplome": "95009",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP accompagnant éducatif petite enfance",
+    "commune": "PONT-SAINT-VINCENT"
+  },
+  {
+    "codesROME": [
+      "H2207",
+      "H2208"
+    ],
+    "codeDiplome": "94681",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CAP ébéniste",
+    "commune": "LUNEVILLE"
+  },
+  {
+    "codesROME": [
+      "G1602"
+    ],
+    "codeDiplome": "75137",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Bac pro cuisine",
+    "commune": "BAZEILLES"
+  },
+  {
+    "codesROME": [
+      "K1201"
+    ],
+    "codeDiplome": "64218",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BTS économie sociale familiale",
+    "commune": "TROYES"
+  },
+  {
+    "codesROME": [
+      "H2911"
+    ],
+    "codeDiplome": "50471",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPM conducteur d'installations à mouler sous pression les matériaux métalliques",
+    "commune": "CREUTZWALD"
+  },
+  {
+    "codesROME": [
+      "M1501",
+      "M1502",
+      "M1503"
+    ],
+    "codeDiplome": "103609",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Licence pro mention métiers de la GRH : assistant",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "M1202",
+      "M1203",
+      "M1204",
+      "M1205",
+      "M1207"
+    ],
+    "codeDiplome": "103615",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Licence pro mention métiers de la gestion et de la comptabilité : gestion comptable et financière",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "D1214",
+      "K2104",
+      "M1601",
+      "M1602"
+    ],
+    "codeDiplome": "21072",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "DAEU diplôme d'accès aux études universitaires option A",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "K1801",
+      "K2111",
+      "K2112",
+      "M1501"
+    ],
+    "codeDiplome": "63041",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Licence pro gestion des ressources humaines spécialité métiers de la formation, de l'insertion et de l'accompagnement",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "K2101",
+      "K2102",
+      "K2111",
+      "M1502"
+    ],
+    "codeDiplome": "76234",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Responsable formation et développement des compétences",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "H1303",
+      "H1401",
+      "H1402",
+      "H1403",
+      "H1502"
+    ],
+    "codeDiplome": "103543",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro mention métiers de l'industrie : logistique industrielle",
+    "commune": "EPINAL"
+  },
+  {
+    "codesROME": [
+      "H1302",
+      "H1303",
+      "H1402",
+      "H1502",
+      "K2306"
+    ],
+    "codeDiplome": "103459",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro mention qualité, hygiène, sécurité, santé, environnement",
+    "commune": "SARREGUEMINES"
+  },
+  {
+    "codesROME": [
+      "E1101",
+      "E1103",
+      "E1104",
+      "E1205"
+    ],
+    "codeDiplome": "81484",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "DUT métiers du multimédia et de l'internet",
+    "commune": "SAINT-DIE-DES-VOSGES"
+  },
+  {
+    "codesROME": [
+      "C1102",
+      "C1202",
+      "D1401",
+      "D1502",
+      "E1103"
+    ],
+    "codeDiplome": "81401",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "DUT techniques de commercialisation",
+    "commune": "YUTZ"
+  },
+  {
+    "codesROME": [
+      "I1102",
+      "I1302",
+      "I1304",
+      "I1305"
+    ],
+    "codeDiplome": "81372",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "DUT génie industriel et maintenance",
+    "commune": "YUTZ"
+  },
+  {
+    "codesROME": [
+      "C1102",
+      "C1103",
+      "C1203",
+      "C1206"
+    ],
+    "codeDiplome": "64829",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro commerce spécialité commercialisation des produits et services financiers",
+    "commune": "YUTZ"
+  },
+  {
+    "codesROME": [
+      "H1301",
+      "H1302",
+      "H1303",
+      "I1503"
+    ],
+    "codeDiplome": "103859",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro mention gestion des risques industriels et technologiques",
+    "commune": "YUTZ"
+  },
+  {
+    "codesROME": [
+      "A1204",
+      "A1303",
+      "H1302"
+    ],
+    "codeDiplome": "105737",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Master mention gestion de l'environnement",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "E1101",
+      "M1805"
+    ],
+    "codeDiplome": "81377",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "DUT informatique",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "E1101",
+      "E1103",
+      "E1402",
+      "M1705"
+    ],
+    "codeDiplome": "103877",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro mention e-commerce et marketing numérique",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "H1206",
+      "H1210",
+      "H1301",
+      "H1503",
+      "H2301"
+    ],
+    "codeDiplome": "81380",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "DUT chimie option chimie industrielle",
+    "commune": "SARREGUEMINES"
+  },
+  {
+    "codesROME": [
+      "C1503",
+      "K1401",
+      "K1404",
+      "K1802",
+      "M1403"
+    ],
+    "codeDiplome": "105977",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Master mention urbanisme et aménagement",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "K1103",
+      "K1104",
+      "K2101",
+      "K2111",
+      "K2401"
+    ],
+    "codeDiplome": "105895",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Master mention psychologie clinique, psychopathologie et psychologie de la santé",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "K1401",
+      "K1403",
+      "K2101",
+      "K2111"
+    ],
+    "codeDiplome": "105925",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Master mention sciences de l'éducation",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "K1903",
+      "M1206",
+      "M1402",
+      "M1502"
+    ],
+    "codeDiplome": "105653",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Master mention droit social",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "D1407",
+      "J1405",
+      "J1407",
+      "M1701",
+      "M1704"
+    ],
+    "codeDiplome": "103473",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro mention optique professionnelle",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "D1407",
+      "M1205",
+      "M1605"
+    ],
+    "codeDiplome": "103643",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro mention management et gestion des organisations",
+    "commune": "COSNES-ET-ROMAIN"
+  },
+  {
+    "codesROME": [
+      "C1401",
+      "M1203"
+    ],
+    "codeDiplome": "81373",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "DUT gestion des entreprises et des administrations option gestion comptable et financière",
+    "commune": "COSNES-ET-ROMAIN"
+  },
+  {
+    "codesROME": [
+      "H1102",
+      "K1902",
+      "K1903",
+      "M1205",
+      "M1402"
+    ],
+    "codeDiplome": "105625",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Master mention droit des affaires",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "D1402",
+      "M1101",
+      "M1703",
+      "M1704"
+    ],
+    "codeDiplome": "103885",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro mention coopération et développement international",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "D1402",
+      "E1106",
+      "E1402"
+    ],
+    "codeDiplome": "103631",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro mention métiers de la communication : publicité",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "D1211",
+      "E1103",
+      "E1105",
+      "K1601",
+      "K1602"
+    ],
+    "codeDiplome": "81489",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "DUT information-communication option métiers du livre et du patrimoine",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "E1101",
+      "E1103",
+      "E1107"
+    ],
+    "codeDiplome": "81486",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "DUT information-communication option communication des organisations",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "H1401",
+      "M1101",
+      "M1102",
+      "M1301",
+      "M1302"
+    ],
+    "codeDiplome": "105741",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Master mention gestion de production, logistique, achats",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "C1202",
+      "C1205",
+      "C1303",
+      "M1201",
+      "M1205"
+    ],
+    "codeDiplome": "105711",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Master mention finance",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "E1103",
+      "E1401",
+      "M1703",
+      "M1705",
+      "M1707"
+    ],
+    "codeDiplome": "105829",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Master mention marketing, vente",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "H1102",
+      "M1302",
+      "M1402",
+      "M1801"
+    ],
+    "codeDiplome": "105689",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Master mention entrepreneuriat et management de projets",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "G1204",
+      "K1206"
+    ],
+    "codeDiplome": "77645",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro activités sportives spécialité animation, gestion et organisation des activités physiques et sportives",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "A1301",
+      "A1403",
+      "A1407",
+      "A1408",
+      "A1416"
+    ],
+    "codeDiplome": "103465",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro mention productions animales",
+    "commune": "VILLERS-LES-NANCY"
+  },
+  {
+    "codesROME": [
+      "H1210",
+      "H1503",
+      "J1302"
+    ],
+    "codeDiplome": "103427",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro mention bio-industries et biotechnologies",
+    "commune": "VILLERS-LES-NANCY"
+  },
+  {
+    "codesROME": [
+      "H1210",
+      "H2102",
+      "H2502"
+    ],
+    "codeDiplome": "103847",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro mention industries agroalimentaires : gestion, production et valorisation",
+    "commune": "VILLERS-LES-NANCY"
+  },
+  {
+    "codesROME": [
+      "M1801",
+      "M1805",
+      "M1806"
+    ],
+    "codeDiplome": "103527",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Licence pro mention métiers de l'informatique : administration et sécurité des systèmes et des réseaux.",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "D1405",
+      "H1210",
+      "H2502",
+      "J1402",
+      "K1205"
+    ],
+    "codeDiplome": "81386",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "DUT génie biologique option diététique",
+    "commune": "VILLERS-LES-NANCY"
+  },
+  {
+    "codesROME": [
+      "H1102",
+      "M1205",
+      "M1301",
+      "M1302"
+    ],
+    "codeDiplome": "105819",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Master mention management et administration des entreprises",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "K2111",
+      "M1402",
+      "M1502",
+      "M1503"
+    ],
+    "codeDiplome": "105743",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Master mention gestion des ressources humaines",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "E1107"
+    ],
+    "codeDiplome": "105825",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Master mention management sectoriel",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "K1401",
+      "K1404",
+      "K1802",
+      "K2103",
+      "M1602"
+    ],
+    "codeDiplome": "105823",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Master mention management public",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "A1301",
+      "A1302"
+    ],
+    "codeDiplome": "103463",
+    "niveauEtudeEntree": "bac-3-4",
+    "intitule": "Licence pro mention productions végétales",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "H1206",
+      "H1402",
+      "H1502",
+      "H1503",
+      "H2502"
+    ],
+    "codeDiplome": "103537",
+    "niveauEtudeEntree": "bac-3-4",
+    "intitule": "Licence pro mention métiers de l'industrie : métallurgie, mise en forme des matériaux et soudage",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "D1401",
+      "M1707",
+      "N1202"
+    ],
+    "codeDiplome": "103499",
+    "niveauEtudeEntree": "bac-3-4",
+    "intitule": "Licence pro mention métiers du commerce international",
+    "commune": "AVIZE"
+  },
+  {
+    "codesROME": [
+      "E1104",
+      "E1205",
+      "M1805"
+    ],
+    "codeDiplome": "103483",
+    "niveauEtudeEntree": "bac-3-4",
+    "intitule": "Licence pro mention métiers du numérique : conception, rédaction et réalisation web",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "H1206",
+      "H1402",
+      "H1502",
+      "H1503",
+      "H2502"
+    ],
+    "codeDiplome": "103551",
+    "niveauEtudeEntree": "bac-3-4",
+    "intitule": "Licence pro mention métiers de l'industrie : conception et processus de mise en forme des matériaux",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "K1201",
+      "K1207",
+      "K1801",
+      "K2111"
+    ],
+    "codeDiplome": "103835",
+    "niveauEtudeEntree": "bac-3-4",
+    "intitule": "Licence pro mention intervention sociale : insertion et réinsertion sociale et professionnelle",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "K1207",
+      "K1403",
+      "K1802"
+    ],
+    "codeDiplome": "103861",
+    "niveauEtudeEntree": "bac-3-4",
+    "intitule": "Licence pro mention gestion des organisations de l'économie sociale et solidaire",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "C1102",
+      "C1201",
+      "C1206",
+      "D1401",
+      "D1406"
+    ],
+    "codeDiplome": "103457",
+    "niveauEtudeEntree": "bac-3-4",
+    "intitule": "Licence pro mention commercialisation de produits et services",
+    "commune": "TROYES"
+  },
+  {
+    "codesROME": [
+      "K1801",
+      "K2101",
+      "K2111",
+      "M1501",
+      "M1503"
+    ],
+    "codeDiplome": "103607",
+    "niveauEtudeEntree": "bac-3-4",
+    "intitule": "Licence pro mention métiers de la GRH : formation, compétences et emploi",
+    "commune": "TROYES"
+  },
+  {
+    "codesROME": [
+      "C1202",
+      "C1203",
+      "C1205",
+      "C1207",
+      "C1303"
+    ],
+    "codeDiplome": "105857",
+    "niveauEtudeEntree": "bac-3-4",
+    "intitule": "Master mention monnaie, banque, finance, assurance",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "M1201",
+      "M1202",
+      "M1204",
+      "M1205",
+      "M1206"
+    ],
+    "codeDiplome": "105575",
+    "niveauEtudeEntree": "bac-3-4",
+    "intitule": "Master mention comptabilité - contrôle - audit",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "K1403",
+      "K1404",
+      "K1802"
+    ],
+    "codeDiplome": "105791",
+    "niveauEtudeEntree": "bac-3-4",
+    "intitule": "Master mention intervention et développement social",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "D1214",
+      "K2104",
+      "M1601",
+      "M1602"
+    ],
+    "codeDiplome": "21073",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "DAEU diplôme d'accès aux études universitaires option B",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "H1210",
+      "H1502",
+      "H1503",
+      "H2301",
+      "H2504"
+    ],
+    "codeDiplome": "81394",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "DUT génie mécanique et productique",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "F1106",
+      "F1108",
+      "F1201",
+      "F1202",
+      "F1204"
+    ],
+    "codeDiplome": "81322",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "DUT génie civil - construction durable",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "M1402",
+      "M1501",
+      "M1604",
+      "M1608",
+      "M1705"
+    ],
+    "codeDiplome": "81483",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "DUT gestion administrative et commerciale des organisations",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "D1402",
+      "D1407"
+    ],
+    "codeDiplome": "104489",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel négociateur technico-commercial",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "E1301"
+    ],
+    "codeDiplome": "80938",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "CQP conducteur de presse numérique",
+    "commune": "SAINTE-MENEHOULD"
+  },
+  {
+    "codesROME": [
+      "I1305",
+      "J1303",
+      "N4105"
+    ],
+    "codeDiplome": "105309",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel technicien d'équipement d'aide à la personne",
+    "commune": "SAINT-DIZIER"
+  },
+  {
+    "codesROME": [
+      "E1101",
+      "M1704",
+      "M1705",
+      "M1707"
+    ],
+    "codeDiplome": "96903",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Responsable commercial(e) et marketing digital",
+    "commune": "METZ"
+  },
+  {
+    "codesROME": [
+      "D1214"
+    ],
+    "codeDiplome": "80914",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQPI vendeur conseil en magasin",
+    "commune": "VANDOEUVRE-LES-NANCY"
+  },
+  {
+    "codesROME": [
+      "A1402",
+      "A1414"
+    ],
+    "codeDiplome": "81428",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQP ouvrier spécialisé en productions légumières",
+    "commune": "BARR"
+  },
+  {
+    "codesROME": [
+      "F1603"
+    ],
+    "codeDiplome": "21450",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "CAP installateur sanitaire",
+    "commune": "TROYES"
+  },
+  {
+    "codesROME": [
+      "I1306"
+    ],
+    "codeDiplome": "81452",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Bac pro technicien en installation des systèmes énergétiques et climatiques",
+    "commune": "TROYES"
+  },
+  {
+    "codesROME": [
+      "F1703"
+    ],
+    "codeDiplome": "82497",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Bac pro interventions sur le patrimoine bâti option A maçonnerie",
+    "commune": "TROYES"
+  },
+  {
+    "codesROME": [
+      "G1204"
+    ],
+    "codeDiplome": "80825",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQP animateur de loisir sportif option jeux sportifs et jeux d'opposition",
+    "commune": "BAZEILLES"
+  },
+  {
+    "codesROME": [
+      "A1409"
+    ],
+    "codeDiplome": "20872",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Certificat de spécialisation conduite d'un élevage avicole et commercialisation des produits",
+    "commune": "HAROUE"
+  },
+  {
+    "codesROME": [
+      "H3101"
+    ],
+    "codeDiplome": "104743",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "CQP conducteur en transformation (Papier Carton)",
+    "commune": "GERARDMER"
+  },
+  {
+    "codesROME": [
+      "H1206",
+      "H1210",
+      "H1303",
+      "H1503"
+    ],
+    "codeDiplome": "103437",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Licence pro mention chimie analytique, contrôle, qualité, environnement",
+    "commune": "ILLKIRCH-GRAFFENSTADEN"
+  },
+  {
+    "codesROME": [
+      "K1902",
+      "K1903"
+    ],
+    "codeDiplome": "103485",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Licence pro mention métiers du notariat",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "G1102",
+      "G1201"
+    ],
+    "codeDiplome": "103849",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Licence pro mention guide conférencier",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1802",
+      "M1805"
+    ],
+    "codeDiplome": "103525",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Licence pro mention métiers de l'informatique : conception, développement et test de logiciels",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "E1102",
+      "E1106",
+      "K2107",
+      "K2108",
+      "K2401"
+    ],
+    "codeDiplome": "87151",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Master arts, lettres, langues mention lettres",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "K1901",
+      "K1902",
+      "K1903"
+    ],
+    "codeDiplome": "105635",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Master mention droit du patrimoine",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "H1502"
+    ],
+    "codeDiplome": "103165",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Master sciences, technologies, santé mention sciences du médicament",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "H1206",
+      "M1403",
+      "M1702",
+      "M1703"
+    ],
+    "codeDiplome": "105813",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Master mention management de l'innovation",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "M1801",
+      "M1802",
+      "M1803",
+      "M1805",
+      "M1806"
+    ],
+    "codeDiplome": "105773",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Master mention informatique",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "D1406",
+      "M1204",
+      "M1503",
+      "M1704",
+      "N1301"
+    ],
+    "codeDiplome": "105811",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Master mention management",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "K1401",
+      "K1404",
+      "K1802",
+      "M1205"
+    ],
+    "codeDiplome": "105913",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Master mention science politique",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "C1102",
+      "C1201",
+      "C1203",
+      "C1205",
+      "C1206"
+    ],
+    "codeDiplome": "103423",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Licence pro mention assurance, banque, finance : chargé de clientèle",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "K1206",
+      "K1602",
+      "K1802"
+    ],
+    "codeDiplome": "103867",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Licence pro mention gestion de projets et structures artistiques et culturels",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "D1201",
+      "E1105"
+    ],
+    "codeDiplome": "103489",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Licence pro mention métiers du livre : édition et commerce du livre",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "M1101",
+      "M1102"
+    ],
+    "codeDiplome": "86088",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Licence pro commerce spécialité gestion des achats et des approvisionnements",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "E1103",
+      "E1401",
+      "E1402"
+    ],
+    "codeDiplome": "103637",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Licence pro mention métiers de la communication : chargé de communication",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "H1202",
+      "H1203",
+      "H1402",
+      "H2502"
+    ],
+    "codeDiplome": "103555",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Licence pro mention métiers de l'industrie : conception de produits industriels",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "K2102",
+      "K2111"
+    ],
+    "codeDiplome": "103855",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Licence pro mention gestion et accompagnement de projets pédagogiques",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "K1203",
+      "K1402",
+      "K1404",
+      "K1802"
+    ],
+    "codeDiplome": "89141",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Master droit, économie, gestion mention économie sociale et solidaire",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "E1103",
+      "E1104",
+      "E1106",
+      "K2401",
+      "M1402"
+    ],
+    "codeDiplome": "105769",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Master mention information, communication",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "K2401"
+    ],
+    "codeDiplome": "102539",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Master sciences, technologies, santé mention sciences et technologie de l'agriculture, de l'alimentation et de l'environnement",
+    "commune": "COLMAR"
+  },
+  {
+    "codesROME": [
+      "H1202",
+      "H1206",
+      "H1208",
+      "H1209",
+      "M1804"
+    ],
+    "codeDiplome": "105683",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Master mention électronique, énergie électrique, automatique",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "H1102"
+    ],
+    "codeDiplome": "68963",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Licence pro droit, économie, gestion mention management des organisations spécialité gestion et pilotage de projets",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "H1302"
+    ],
+    "codeDiplome": "43924",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Mastère spécialisé éco-conseiller",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "K2306"
+    ],
+    "codeDiplome": "43921",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Mastère spécialisé eau potable et assainissement",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "K2304",
+      "K2306"
+    ],
+    "codeDiplome": "44024",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Mastère spécialisé gestion, traitement et valorisation des déchets",
+    "commune": "STRASBOURG"
+  },
+  {
+    "codesROME": [
+      "K1204"
+    ],
+    "codeDiplome": "88541",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel agent(e) de médiation information services",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "J1305"
+    ],
+    "codeDiplome": "54912",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Diplôme d'État d'ambulancier",
+    "commune": "TORVILLIERS"
+  },
+  {
+    "codesROME": [
+      "C1102",
+      "C1206",
+      "D1407",
+      "M1707"
+    ],
+    "codeDiplome": "99355",
+    "niveauEtudeEntree": "bac-2",
+    "intitule": "Responsable de développement commercial (option banque-assurance)",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "H3203"
+    ],
+    "codeDiplome": "100997",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Opérateur sur matériaux composites",
+    "commune": "COMMERCY"
+  },
+  {
+    "codesROME": [
+      "J1501"
+    ],
+    "codeDiplome": "54913",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Diplôme d'État d'aide-soignant",
+    "commune": "BISCHWILLER"
+  },
+  {
+    "codesROME": [
+      "E1106"
+    ],
+    "codeDiplome": "77006",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Journaliste multimédia",
+    "commune": "PARIS"
+  },
+  {
+    "codesROME": [
+      "G1203",
+      "K1206"
+    ],
+    "codeDiplome": "53982",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "DEJEPS spécialité animation socio-éducative ou culturelle mention développement de projets, territoires et réseaux",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "A1201"
+    ],
+    "codeDiplome": "22318",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Certificat de spécialisation taille et soins des arbres",
+    "commune": "SAINT-LAURENT"
+  },
+  {
+    "codesROME": [
+      "F1603",
+      "I1308"
+    ],
+    "codeDiplome": "82191",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel agent de maintenance en chauffage",
+    "commune": "CHARLEVILLE-MEZIERES"
+  },
+  {
+    "codesROME": [
+      "F1502",
+      "F1607"
+    ],
+    "codeDiplome": "81320",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel menuisier(ière) aluminium",
+    "commune": "VERDUN"
+  },
+  {
+    "codesROME": [
+      "F1606",
+      "L1503"
+    ],
+    "codeDiplome": "25202",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel peintre en décors",
+    "commune": "NANCY"
+  },
+  {
+    "codesROME": [
+      "I1604"
+    ],
+    "codeDiplome": "82457",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "Titre professionnel contrôleur(se) technique automobile",
+    "commune": "TROYES"
+  },
+  {
+    "codesROME": [
+      "I1307",
+      "I1401"
+    ],
+    "codeDiplome": "86554",
+    "niveauEtudeEntree": "cap-bep",
+    "intitule": "Titre professionnel technicien(ne) réseaux et télécommunications d'entreprise",
+    "commune": "REMIREMONT"
+  },
+  {
+    "codesROME": [
+      "M1801",
+      "M1810"
+    ],
+    "codeDiplome": "80740",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Titre professionnel technicien(ne) supérieur(e) en réseaux informatiques et télécommunications",
+    "commune": "REMIREMONT"
+  },
+  {
+    "codesROME": [
+      "G1203"
+    ],
+    "codeDiplome": "23533",
+    "niveauEtudeEntree": "sans-diplome",
+    "intitule": "BAPAAT option loisirs du jeune et de l'enfant",
+    "commune": "MULHOUSE"
+  },
+  {
+    "codesROME": [
+      "K1801"
+    ],
+    "codeDiplome": "80539",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Titre professionnel conseiller(ère) en insertion professionnelle",
+    "commune": "REIMS"
+  },
+  {
+    "codesROME": [
+      "I1401",
+      "M1801"
+    ],
+    "codeDiplome": "80739",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Titre professionnel technicien(ne) supérieur(e) de support en informatique",
+    "commune": "REMIREMONT"
+  },
+  {
+    "codesROME": [
+      "M1801",
+      "M1810"
+    ],
+    "codeDiplome": "80741",
+    "niveauEtudeEntree": "bac-0-1",
+    "intitule": "Titre professionnel technicien(ne) supérieur(e) gestionnaire exploitant(e) de ressources informatiques",
+    "commune": "FROUARD"
+  }
+]
