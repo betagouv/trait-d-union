@@ -1,5 +1,4 @@
 import React from 'react'
-import Breadcrumb from '../common/Breadcrumb'
 import ListOffreItem from './ListOffreItem'
 import ListOffreItemApplied from './ListOffreItemApplied'
 import client from '../../utils/rest-module'
@@ -25,7 +24,24 @@ class ListOffre extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <Breadcrumb title="Liste des offres d'immersion" pageDescription="Liste des offres"/>
+        <div className="alice-bg padding-top-40 padding-bottom-40">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6">
+                <div className="breadcrumb-area">
+                  <h1>Liste des offres d'immersion</h1>
+                  <nav aria-label="breadcrumb">
+                    <ol className="breadcrumb">
+                      <li className="breadcrumb-item">
+                        🔍 Pour rechercher dans la liste, appuyez sur CTRL+F (windows) ou CMD+F (macOS)
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="alice-bg section-padding-bottom">
           <div className="container">
             <div className="row no-gutters">
