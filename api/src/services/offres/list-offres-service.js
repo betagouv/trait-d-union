@@ -1,5 +1,8 @@
 module.exports = ({ Offre, Candidature, Candidat }) => async (userId, { limit, offset, status } = {}) => {
   const options = {
+    order: [
+      ['address', 'ASC']
+    ],
     include: [
       {
         model: Candidature,
