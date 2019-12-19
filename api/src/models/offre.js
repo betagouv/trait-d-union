@@ -73,7 +73,7 @@ const Offre = databaseService.define('offre', {
   imageURL: {
     type: Sequelize.STRING,
     allowNull: true,
-    defaultValue: 'http://l.traitdunion.beta.gouv.fr/candidats/images/waitress.svg'
+    defaultValue: 'http://l.traitdunion.beta.gouv.fr/candidats/images/user_group.png'
   },
   status: {
     type: Sequelize.ENUM(offreStatuses),
