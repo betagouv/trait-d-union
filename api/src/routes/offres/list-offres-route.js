@@ -14,7 +14,8 @@ module.exports.createRoute = (pathPrefix) => ({
   handler: async (request, h) => {
     const { offset, limit, status } = request.query
     const userId = request.auth.credentials.id
-    const { rows: offres, count } = await listOffres(userId, {
+    const userNiveauEtude = request.auth.credentials.niveauEtude
+    const { rows: offres, count } = await listOffres(userId, userNiveauEtude, {
       offset,
       limit,
       status

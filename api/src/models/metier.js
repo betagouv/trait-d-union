@@ -2,14 +2,9 @@ const Sequelize = require('sequelize')
 const databaseService = require('../services/database-service')
 
 const Metier = databaseService.define('Metier', {
-  id: {
-    type: Sequelize.UUID,
-    defaultValue: Sequelize.UUIDV4,
-    allowNull: false,
-    primaryKey: true
-  },
   codeROME: {
     type: Sequelize.STRING,
+    primaryKey: true,
     allowNull: false
   },
   categorie: {
@@ -17,5 +12,9 @@ const Metier = databaseService.define('Metier', {
     allowNull: false
   }
 })
+
+Metier.associate = ({ Offre }) => {
+  Metier.hasMany(Offre, { foreignKey: 'codeROME' })
+}
 
 module.exports = Metier

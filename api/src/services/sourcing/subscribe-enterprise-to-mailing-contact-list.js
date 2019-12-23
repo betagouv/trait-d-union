@@ -17,7 +17,8 @@ module.exports = ({ contactsApiClient }) => async (offre) => {
       ORGANISME: enterprise.nom.split(' - ')[0],
       CODE_POSTAL: lieuTravail.codePostal,
       ADRESSE: lieuTravail.libelle,
-      DATE_AJOUT_OFFRE: formatDate()
+      DATE_AJOUT_OFFRE: formatDate(),
+      CODE_ROME_OFFRE: offre.romeCode
     },
     listIds: [enterpriseListId]
   }

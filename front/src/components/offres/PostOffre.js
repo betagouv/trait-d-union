@@ -17,7 +17,10 @@ const PostOffre = () => {
     setValue('jobTitle', prefilledValues.jobTitle)
     setValue('email', prefilledValues.email)
     setValue('address', prefilledValues.address)
-  }, [prefilledValues.jobTitle, prefilledValues.email, prefilledValues.address, setValue])
+    setValue('codeROME', prefilledValues.codeROME)
+    setValue('companyName', prefilledValues.companyName)
+  }, [prefilledValues.jobTitle, prefilledValues.email, prefilledValues.address,
+    prefilledValues.companyName, prefilledValues.codeROME, setValue])
 
   const onSubmit = async formData => {
     try {
@@ -65,13 +68,36 @@ const PostOffre = () => {
                           />
                         </div>
                       </div>
+                      <div className="form-group row" hidden={true}>
+                        <label className="col-md-3 col-form-label">Code ROME ?</label>
+                        <div className="col-md-9">
+                          <input type="text"
+                                 name="codeROME"
+                                 className="form-control"
+                                 placeholder="Exemple : 57100"
+                                 ref={register({ required: false })}
+                          />
+                        </div>
+                      </div>
                       <div className="form-group row">
-                        <label className="col-md-3 col-form-label">Code postal du lieu de l'immersion ?</label>
+                        <label className="col-md-3 col-form-label">Nom de l'entreprise ?</label>
+                        <div className="col-md-9">
+                          <input type="text"
+                                 name="companyName"
+                                 className="form-control"
+                                 placeholder="Exemple : entreprise SAS"
+                                 required="required"
+                                 ref={register({ required: true })}
+                          />
+                        </div>
+                      </div>
+                      <div className="form-group row">
+                        <label className="col-md-3 col-form-label">Département et ville de l'immersion ?</label>
                         <div className="col-md-9">
                           <input type="text"
                                  name="address"
                                  className="form-control"
-                                 placeholder="Exemple : 57100"
+                                 placeholder="Exemple : 57 - Metz"
                                  required="required"
                                  ref={register({ required: true })}
                           />
@@ -95,13 +121,15 @@ const PostOffre = () => {
                       <div className="col-md-9">
                         <button className="button"
                                 disabled={isSubmitted}
-                                type="submit">Poster votre offre</button>
+                                type="submit">Poster votre offre
+                        </button>
                       </div>
                     </div>
                     <div className="form-group row">
                       <label className="col-md-3 col-form-label"/>
                       <div className="col-md-9">
-                        <p>Ça ne vous engage à rien, seulement à recevoir par email des candidatures. Vos coordonnées ne seront pas diffusées. Vous pourrez retirer votre offre à tout moment ensuite.</p>
+                        <p>Ça ne vous engage à rien, seulement à recevoir par email des candidatures. Vos coordonnées ne seront pas
+                          diffusées. Vous pourrez retirer votre offre à tout moment ensuite.</p>
                       </div>
                     </div>
                   </form>
@@ -115,17 +143,20 @@ const PostOffre = () => {
   )
 }
 
-function useQueryValues(useQueryParam) {
+function useQueryValues (useQueryParam) {
   const [jobTitle] = useQueryParam('jobTitle', StringParam)
   const [address] = useQueryParam('address', StringParam)
   const [email] = useQueryParam('email', StringParam)
+  const [companyName] = useQueryParam('company_name', StringParam)
+  const [codeROME] = useQueryParam('code_rome', StringParam)
 
   return {
     jobTitle,
     address,
-    email
+    email,
+    companyName,
+    codeROME
   }
 }
-
 
 export default PostOffre
