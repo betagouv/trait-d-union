@@ -45,7 +45,7 @@ const createSearchOffres = (poleEmploiApiService, departement) => async (codesRO
 
 function sanitizeOffre (offre) {
   const properties = [
-    'id', 'description', 'dureeTravailLibelle', 'secteurActiviteLibelle', 'lieuTravail', 'intitule',
+    'id', 'description', 'dureeTravailLibelle', 'secteurActiviteLibelle', 'lieuTravail', 'intitule', 'romeCode',
     'appellationlibelle', 'salaire', 'permis', 'natureContrat', 'typeContrat', 'contact', 'typeContratLibelle'
   ]
   const result = keepDefinedProperties(offre, properties)
