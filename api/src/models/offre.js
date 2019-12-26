@@ -4,6 +4,8 @@ const sendSlackNotification = require('../infrastructure/send-slack-notification
 const contractTypeDefault = 'cdi'
 const contractTypes = ['cdi', 'cdd-court', 'cdd-long', 'autre']
 const offreStatuses = require('./enums/offre-statuses')
+const request = require('request-promise-native')
+const logger = require('../utils/logger')
 
 const Offre = databaseService.define('offre', {
   id: {
@@ -91,8 +93,27 @@ Offre.associate = ({ Candidature, Metier }) => {
   })
 }
 
-Offre.afterCreate((offre, options) => {
-  return sendSlackNotification({ text: `:envelope_with_arrow: 1 nouvelle offre d'immersion vient d'être déposée en statut \`draft\`: \n [\`${offre.id}\`] job de ${offre.jobTitle} situé à ${offre.address}` })
+Offre.afterCreate(async (offre, options) => {
+  if (offre.status === 'published') {
+    await notifyOffreIsPublished(offre)
+  }
+  return sendSlackNotification({ text: `:envelope_with_arrow: 1 nouvelle offre d'immersion vient d'être déposée en statut \`${offre.status}\`: \n [\`${offre.id}\`] job de ${offre.jobTitle} situé à ${offre.address}` })
 })
+
+function notifyOffreIsPublished (offre) {
+  const requestOptions = {
+    uri: process.env.OFFRE_PUBLISHED_HOOK_URL,
+    json: true,
+    method: 'POST',
+    body: {
+      eventType: 'published-offre',
+      offre
+    }
+  }
+  logger().debug(`New offre set to published [${offre.id}]: calling Zapier`)
+  return request(requestOptions).catch((error) =>
+    logger().error(`Zapier webhook failed: ${error}`)
+  )
+}
 
 module.exports = Offre
