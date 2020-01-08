@@ -21,7 +21,9 @@ const Login = () => {
         icon: 'success',
         title: `Content de vous revoir ${user.firstName} ${user.lastName} !`,
         confirmButtonText: 'Ok',
-        onClose: () => router.push(redirectUrl)
+        onClose: () => {
+          router.push(redirectUrl || '/offres')
+        }
 
       })
     } catch (e) {
