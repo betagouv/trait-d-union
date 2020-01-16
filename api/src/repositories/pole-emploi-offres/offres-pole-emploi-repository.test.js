@@ -17,35 +17,14 @@ describe('Offres Pole Emploi Repository', () => {
     })
 
     it('requests poleEmploiApi', async () => {
-      await offresPoleEmploiRepository.getOffres([codeROME])
+      const departement = 57
+      await offresPoleEmploiRepository.getOffres([codeROME], departement)
 
       expect(poleEmploiApiService.request).to.have.been.calledWith('/offresdemploi/v2/offres/search', {
         codeROME: codeROME,
         range: '1-149',
-        experience: 1,
-        experienceExigence: 'D',
         sort: 2,
-        commune: 57463,
-        distance: 10,
-        typeContrat: 'CDI,CDD'
-      })
-    })
-
-    context('when offer contains an undefined property', async () => {
-      ['id', 'description', 'dureeTravailLibelle', 'secteurActiviteLibelle', 'lieuTravail',
-        'appellationlibelle', 'salaire', 'permis', 'natureContrat', 'typeContrat'].forEach((undefinedProperty) => {
-        const expectedOffre = createExpectedOffre()
-        const fullOffre = createFullOffre()
-        it(`returns sanitized poleEmploiApi offres without ${undefinedProperty}`, async () => {
-          delete fullOffre[undefinedProperty]
-          poleEmploiApiService.request = sinon.spy(async () => {
-            return { resultats: [fullOffre] }
-          })
-          delete expectedOffre[undefinedProperty]
-          const offres = await offresPoleEmploiRepository.getOffres([codeROME])
-
-          expect(offres).to.deep.equal([expectedOffre])
-        })
+        departement
       })
     })
 
@@ -58,17 +37,14 @@ describe('Offres Pole Emploi Repository', () => {
     context('when there are three codesROME', () => {
       it('requests poleEmploiApi', async () => {
         const codesROME = ['premier', 'deuxieme', 'troisieme']
-        await offresPoleEmploiRepository.getOffres(codesROME)
+        const departement = 57
+        await offresPoleEmploiRepository.getOffres(codesROME, departement)
 
         expect(poleEmploiApiService.request).to.have.been.calledWith('/offresdemploi/v2/offres/search', {
           codeROME: 'premier,deuxieme,troisieme',
           range: '1-149',
-          experience: 1,
-          experienceExigence: 'D',
           sort: 2,
-          commune: 57463,
-          distance: 10,
-          typeContrat: 'CDI,CDD'
+          departement
         })
       })
     })
@@ -83,28 +59,20 @@ describe('Offres Pole Emploi Repository', () => {
       })
 
       it('requests poleEmploiApi twice, grouping codesROME by 3', async () => {
-        await offresPoleEmploiRepository.getOffres(codesROME)
+        await offresPoleEmploiRepository.getOffres(codesROME, 57)
 
         expect(poleEmploiApiService.request).to.have.been.calledWith('/offresdemploi/v2/offres/search', {
           codeROME: 'premier,deuxieme,troisieme',
           range: '1-149',
-          experience: 1,
-          experienceExigence: 'D',
           sort: 2,
-          commune: 57463,
-          distance: 10,
-          typeContrat: 'CDI,CDD'
+          departement: 57
         })
 
         expect(poleEmploiApiService.request).to.have.been.calledWith('/offresdemploi/v2/offres/search', {
           codeROME: 'quatrieme,cinquieme,sixieme',
           range: '1-149',
-          experience: 1,
-          experienceExigence: 'D',
           sort: 2,
-          commune: 57463,
-          distance: 10,
-          typeContrat: 'CDI,CDD'
+          departement: 57
         })
       })
 
@@ -229,6 +197,7 @@ function createExpectedOffre (id = '086QKQK') {
     id,
     intitule: 'Serveur/Serveuse (H/F)',
     codeROME: 'codeROME',
+    romeCode: 'codeROME',
     source: 'pole-emploi',
     // eslint-disable-next-line max-len
     description: 'Nous recherchons un serveur(se) (H/F) CDI à temps plein 39H hebdomadaire pour le service du soir.\nMissions\n- Accueillir les clients et les installer\n- Présenter la carte et prendre la commande\n- Servir les plats et boissons\n- S\'assurer du bon déroulement du service\n- Encaissement\nProfil \n- Créer une relation avec les clients\n- Travailler en équipe\n- Dynamique et motivé(e)\nRémunération en fonction de l\'expérience.\nPoste à pourvoir immédiatement.',

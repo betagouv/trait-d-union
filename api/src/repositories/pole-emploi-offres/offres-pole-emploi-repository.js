@@ -5,7 +5,7 @@ const executePromisesSequentially = require('../../infrastructure/execute-promis
 
 const computeCourrielFromContact = require('./compute-courriel-from-contact')
 
-const maxCodesROMEPerRequest = 1
+const maxCodesROMEPerRequest = 3
 
 module.exports = ({ poleEmploiApiService }) => {
   return {
