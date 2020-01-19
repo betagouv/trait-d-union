@@ -1,8 +1,8 @@
 Présentation
 ------------
 
-[Trait d'Union](https://traitdunion.beta.gouv.fr) s’adresse à tous les demandeurs d'emploi de la Région Grand Est.
-
+[Trait d'Union](https://traitdunion.beta.gouv.fr) s’adresse à tous les demandeurs d'emploi de la Région Grand Est.  
+Toutes les informations sur le produit sont disponibles sur à cette adresse : [https://beta.gouv.fr/startups/trait-d-union.html](https://beta.gouv.fr/startups/trait-d-union.html)
 
 Installation
 ------------
