@@ -1,6 +1,6 @@
 {
   "name": "traitdunion-api",
-  "version": "0.1.29",
+  "version": "0.2.0",
   "description": "API de Trait d'Union - Version 2 - PMSMP",
   "main": "bin/start.js",
   "repository": "git@github.com:betagouv/trait-d-union.git",
@@ -57,7 +57,7 @@
     "seed:undo:all": "sequelize db:seed:undo:all",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "test": "nyc -r text -r html -r lcov mocha src/**/**/**/**/*test.js",
+    "test": "NODE_ENV=test nyc -r text -r html -r lcov mocha src/**/**/**/**/*test.js",
     "test:e2e": "yarn e2e:db:drop ; yarn e2e:db:create && yarn e2e:db:migrate && yarn e2e:seed && yarn e2e:test:run",
     "e2e:test:run": "cucumber-js features/**/*.feature --require features/steps.js --format node_modules/cucumber-pretty",
     "e2e:db:create": "yarn sequelize db:create --env local-e2e",

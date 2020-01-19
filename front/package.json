@@ -1,6 +1,6 @@
 {
   "name": "traitdunion-pmsmp-front",
-  "version": "0.1.29",
+  "version": "0.2.0",
   "private": true,
   "engines": {
     "node": "12.13.x",

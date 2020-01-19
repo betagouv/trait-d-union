@@ -25,7 +25,7 @@ describe('Pole Emploi API Service', () => {
 
   beforeEach(() => {
     poleEmploiApi = nock(apiConfiguration.apiBaseUrl)
-    poleEmploiAuthentApi = nock(apiConfiguration.authentBaseUrl)
+    poleEmploiAuthentApi = nock('https://test.pole-emploi.fr/api')
   })
   afterEach(() => {
     nock.cleanAll()
@@ -38,7 +38,7 @@ describe('Pole Emploi API Service', () => {
       describe('when Authenticate on PE API fails', () => {
         it('throws corresponding Boom error', () => {
           poleEmploiAuthentApi
-            .post('')
+            .post('/access_token')
             .query({
               realm: '/partenaire',
               grant_type: 'client_credentials',
@@ -62,7 +62,7 @@ describe('Pole Emploi API Service', () => {
             .matchHeader('Authorization', 'Bearer fake_apikey')
             .reply(200, { data: 'value' })
           poleEmploiAuthentApi
-            .post('')
+            .post('/access_token')
             .query({
               realm: '/partenaire',
               grant_type: 'client_credentials',
@@ -140,7 +140,7 @@ describe('Pole Emploi API Service', () => {
               .matchHeader('Authorization', 'Bearer fake_apikey')
               .reply(403)
             poleEmploiAuthentApi
-              .post('')
+              .post('/access_token')
               .query({
                 realm: '/partenaire',
                 grant_type: 'client_credentials',
@@ -177,7 +177,7 @@ describe('Pole Emploi API Service', () => {
               .matchHeader('Authorization', 'Bearer fake_apikey')
               .reply(401)
             poleEmploiAuthentApi
-              .post('')
+              .post('/access_token')
               .query({
                 realm: '/partenaire',
                 grant_type: 'client_credentials',
