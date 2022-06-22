@@ -21,7 +21,7 @@
     "@hapi/vision": "5.5.4",
     "camelcase": "5.3.1",
     "envie": "3.0.0-alpha",
-    "got": "9.6.0",
+    "got": "11.8.5",
     "hapi-cors": "1.0.3",
     "hapi-pino": "6.3.0",
     "hapi-require-https": "4.0.0",
